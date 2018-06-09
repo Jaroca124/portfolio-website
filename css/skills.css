@@ -1,0 +1,14 @@
+.jumbotron-fluid {
+    background-image: url(../assets/skills/quino-al-110318.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.stage_button {
+    height: 20vh;
+    width: 20vh;
+}

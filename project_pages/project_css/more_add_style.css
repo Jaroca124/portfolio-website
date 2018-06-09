@@ -1,0 +1,149 @@
+#nav_bar {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+}
+
+.nav_link {
+    color: white;
+    text-decoration: none;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.link:hover {
+    color: #4ea3e5;
+}
+
+.icon {
+    height: 5vh;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    margin-top: 3vh;
+}
+
+.link_wrap {
+    text-decoration: none;   
+}
+
+.wrapper {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: auto;
+    float: right;
+    margin-right: 1.5vh;
+    margin-left: 1.5vh;
+    bottom: 0px;
+}
+
+#nav_home {
+    float: left;
+}
+
+.link_text {
+    display: block;
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5vh;
+}
+
+#jacob {
+    font-size: 4vh;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 1163px) {
+
+    #nav_bar {
+        width: 100%;
+        height: 10vh;
+        background-color: rgba(0,0,0,.5);
+        z-index: 1500;
+        overflow: hidden;
+    }
+
+    .link:hover {
+        color: #4ea3e5;
+    }
+
+    .icon {
+        height: 5vh;
+        width: auto;
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-top: 3vh;
+    }
+
+    .middle {
+        display: block;
+        position: relative;
+        height: 90vh;
+        top: 10vh;
+        width: auto;
+    }
+    
+    #link_wrap {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    #nav_bar {
+        width: 100%;
+        height: auto;
+        background-color: rgba(0,0,0,1);
+        z-index: 1000;
+        display: block;
+        position: relative;
+        height: auto;
+    }
+    
+    .wrapper {
+        display: block;
+        position: relative;
+        height: auto;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    .link_text {
+        display: block;
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5vh;
+    }
+
+    #jacob {
+        margin-top: 3vh;
+        font-size: 4vh;
+    }
+    
+    #nav_home {
+        float: none;
+    }
+}

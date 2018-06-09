@@ -1,0 +1,162 @@
+.jumbotron-fluid hr {
+    border: .5px solid #ffffff;
+}
+
+#headshot {
+    height: 40vh;
+}
+
+.card-img-top {
+    height: 18vh;
+}
+
+#feed_post h3 {
+    font-size: 1.5rem;   
+}
+
+#feed_post .post {
+    background-color: white;
+    height: auto;
+    padding: 2vh;
+    margin: 0 auto;
+}
+
+#feed_post .img-thumbnail {
+    height: auto;
+    width: 50vw;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+#feed_post .date {
+    padding-top: 1.5vh;
+}
+
+#feed_post .author {
+    padding-top: 1.5vh;
+}
+
+#feed_post #header {
+    margin: 0;
+    padding: 0;
+}
+
+.badge {
+    margin-right: .25vw;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+#banner {
+    color: white;
+    overflow: hidden !important;
+    background-image: url(../assets/index/annie-spratt-216207.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+#home_overlay {
+    overflow: hidden !important;
+    background-color: rgba(0,0,0,.2);
+}
+
+#md_screen {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/index/mjx_bgAsset.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+}
+.mobile-ui {
+    height: 600px;
+    width: auto;
+}
+
+.visit_port {
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    border: 0;
+}
+
+.portfolio_img {
+    height: 40vh;
+    width: auto;
+}
+
+/*.fillWidth {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+    bottom: 0;
+    overflow: hidden !important;*/
+}
+
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    
+    .portfolio_img {
+        width: 90%;
+        height: auto;
+    }
+    
+    /*.fillWidth {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+        bottom: 0;
+        overflow: hidden !important;
+    }*/
+    
+
+}
+
+@media (min-width: 989px) { 
+    /*.fillWidth {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        z-index: -1;
+        bottom: 0;
+        overflow: hidden !important;
+    }*/
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    
+    .portfolio_img {
+        width: 90%;
+        height: auto;
+    }
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }

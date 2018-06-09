@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jacob Caccamo - The Feed</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  
+  <!-- Font & Favicons -->
+  <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+  
+  <link rel="stylesheet" href="css/material-design.css"/>
+  <link rel="stylesheet" href="css/style_main.css">
+  <link rel="stylesheet" href="css/feed.css">
+  
+  <script src="js/feed/feed.js"></script>
+  
+</head>
+<body ng-app="JakeFeed">
+
+    <nav class="navbar navbar-expand-md navbar-light custom-toggler md-whiteframe-4dp" id="nav_style">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-text">&nbsp;</span>
+      <a class="navbar-brand text-white" href="index.html">Jacob Caccamo</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link text-white" href="portfolio.html">Portfolio</a>
+          <a class="nav-item nav-link text-white" href="experience.html">Experience</a>
+          <a class="nav-item nav-link text-white" href="education.html">Education</a>
+          <a class="nav-item nav-link text-white" href="skills.html">Skills</a>
+          <a class="nav-item nav-link text-white" href="feed.html">The Feed</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron-fluid">
+        <div class="container-fluid">
+            <h1 class="display-3">The Feed</h1>
+            <p class="lead">Find interesting articles on design, development, emerging technologies, and more.</p>
+            <hr class="my-4" style="color: white;">
+            <p>This page was built using Angular.</p>
+        </div>
+    </div>
+   
+    <div class="container" ng-controller="ArticleData">
+        <!--<div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 mt-3">
+                <i class="fa fa-filter d-inline-block" aria-hidden="true"></i>
+                <p id="filterList" class="d-inline-block p-0 m-0 ml-2">Click on a tag to filter.</p>
+            </div>
+        </div>-->
+        <div ng-repeat="article in articles" class="row main">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="card my-4 md-whiteframe-2dp">
+                    <div class="card-body">
+                        <a class="title" ng-href="{{ article.url }}">{{ article.title }}</a>
+                        <p class="date">Posted: {{ article.datePosted | date }}</p>
+                        <p class="comment">{{ article.comment }}</p>
+                        <a ng-href="{{ article.url }}"><img class="img-thumbnail md-whiteframe-2dp" ng-src="{{ article.thumbnail}}"></a>
+                        <p class="author">Author(s): {{ article.author }}</p>
+                        <p class="source">Source: {{ article.source }}</p>
+                        <hr>
+                        <span onclick="filter(this)" ng-repeat="tag in article.tags" class="p-2 badge badge-pill badge-primary badgeNative"> {{ tag.tagName }} </span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modules -->
+    <script src="js/feed/FeedApp.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/feed/controllers/MainController.js"></script>
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

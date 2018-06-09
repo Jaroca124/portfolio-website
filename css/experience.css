@@ -1,0 +1,38 @@
+.jumbotron-fluid {
+    background-image: url(../assets/experience/carlos-muza-84523.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+#logo {
+    height: 5vh;
+    width: auto;   
+}
+
+.display-3 {
+    font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+    #logo {
+        height: 5vh;
+        width: auto;
+    }
+    
+    .display-3 {
+        font-size: 4.5rem;
+    }
+    
+}
+
+#heading {
+    margin-left: 12.5%;
+}

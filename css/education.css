@@ -1,0 +1,35 @@
+.jumbotron-fluid {
+    background-image: url(../assets/education/william-iven-19843.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#tufts_logo {
+    height: 15vh;
+}
+
+#banner_text {
+    text-align: center;
+}
+
+.act_logo {
+    height: 10vh;
+}
+
+@media (min-width: 576px) {
+    .gpa_text {
+        font-size: 2vw;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 768px) {
+    .gpa_text {
+        font-size: 1vw;
+        display:inline-block;
+    }
+}

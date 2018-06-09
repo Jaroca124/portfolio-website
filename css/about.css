@@ -1,0 +1,87 @@
+.jumbotron-fluid {
+    background-image: url(../assets/about/slide_backgrounds/aziz-acharki-253909.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#im2 {
+    background-image: url(../assets/about/slide_backgrounds/nick-woods-83962.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#im3 {
+    background-image: url(../assets/about/slide_backgrounds/erol-ahmed-197445.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#im4 {
+    background-image: url(../assets/about/slide_backgrounds/william-iven-19843.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#im5 {
+    background-image: url(../assets/about/slide_backgrounds/markus-spiske-135768.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-thumbnail {
+    height: 45vh;
+    width: auto;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+.row {
+    height: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.col-sm-4 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.col-sm {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.slideOverlay {
+    background-color: rgba(0,0,0,.7);
+    height: 100%;
+}
+
+#interestList {
+    text-align: left;
+}
