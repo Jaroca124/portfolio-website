@@ -1,6 +1,16 @@
 app.controller('ArticleData', ['$scope', function($scope) {
   $scope.articles = [
     { 
+      title: 'Pattern Lab - An Atomic Design System', 
+      datePosted: new Date('2018', '6', '28'),  
+      source: 'Pattern Lab', 
+      thumbnail: '../../assets/feed/thumbnails/pattern_lab.PNG',
+      url: "https://patternlab.io/",
+      comment: "Pattern Lab is an incredibly powerful atomic design system that allows for rapid frontend development. The principle behind Pattern Lab and atomic design is that web components can be distilled into their most basic form, such as color, font, and button style, which are called atoms. Atoms can be combined to create molecules, like a search bar consisting of a button and an input field. Molecules can be combined to create organisms, such as a navigation bar, and finally, organisms can be used to create templates. When templates are supplied with data, they become full-fledged pages. The power of Pattern Lab is in its modularity – when you make a change to a button, for example, the same change will be applied everywhere that button appears. I am currently using Pattern Lab to build out a personal project and I highly recommend looking into it!",
+      author: "Pattern Lab",
+      tags: [{"tagName": "Pattern Lab"}, {"tagName": "Atomic Design"}, {"tagName": "Development"}, {"tagName": "Frontend"}]
+    },
+    { 
       title: 'Agile + UX: What I Learned from Living with an Agile Developer', 
       datePosted: new Date('2018', '1', '18'),  
       source: 'Prototypr', 
