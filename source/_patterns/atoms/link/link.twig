@@ -1,0 +1,5 @@
+{% set link_href = link_href|default() %}
+{% set link_classes = link_classes|default() %}
+{% set link_text = link_text|default('Link Text') %}
+
+<a class="{{ link_classes }}" href="{{ link_href }}">{{ link_text }}</a>

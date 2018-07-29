@@ -1,0 +1,7 @@
+{% columns = columns|default('6') %}
+{% columns_classes = columns_classes|default('6') %}
+{% columns_breakpoint = columns_breakpoint|default('md') %}
+
+<div class="col-{{ columns_breakpoint }}-{{ columns }} {{ columns_classes }}">
+    {% block column_content %}{% endblock %}
+</div>
