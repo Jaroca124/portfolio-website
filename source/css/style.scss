@@ -1,3 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../css/scss/global/main.scss";
+@import "../css/scss/global/material-design.scss";
+
+@import "../css/scss/components/buttons.scss";
     
 @import "../_patterns/molecules/navigation/navigation.scss";
+@import "../_patterns/molecules/blocks/jumbotron/jumbotron.scss";
+@import "../_patterns/organisms/global/footer/footer.scss";

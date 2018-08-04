@@ -11,7 +11,9 @@
     {"id": "Quinn", "src":"./assets/quinn.png"},
     {"id": "Kyle", "src":"./assets/kyle.png"},
     {"id": "Skizzy", "src":"./assets/skizzy.png"},
-    {"id": "Marc", "src":"./assets/marc.png"}
+    {"id": "Marc", "src":"./assets/marc.png"},
+    {"id": "Eden", "src":"./assets/eden.png"},
+    {"id": "Illenium", "src":"./assets/illenium.png"}
   ],
   "links": [
     {"source": "G", "target": "Skizzy", "value": 30},
@@ -36,6 +38,9 @@
     {"source": "Kyle", "target": "Marc", "value": 15},
     {"source": "Kyle", "target": "Hoodie", "value": 15},
     {"source": "Phoebe", "target": "Quinn", "value": 15},
-    {"source": "Kehlani", "target": "Marc", "value": 30}
+    {"source": "Kehlani", "target": "Marc", "value": 30},
+    {"source": "Kehlani", "target": "Post", "value": 15},
+    {"source": "Gnash", "target": "Eden", "value": 15},
+    {"source": "Eden", "target": "Illenium", "value": 15}
   ]
 }

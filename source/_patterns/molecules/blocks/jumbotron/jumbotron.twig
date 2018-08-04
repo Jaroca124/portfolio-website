@@ -1,0 +1,11 @@
+{% set jumbo_classes = jumbo_classes|default('') %}
+{% set jumbo_id = jumbo_id|default('') %}
+{% set jumbo_overlay_id = jumbo_overlay_id|default('') %}
+
+<div class="jumbotron-fluid" id="{{ jumbo_id }}">
+    <div class="container-fluid" id="{{ jumbo_overlay_id }}">
+        {% block jumbotron_content %}{% endblock %}
+    </div>
+</div>
+        
+        

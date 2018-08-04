@@ -3,7 +3,38 @@
         {% include "@molecules/navigation/navigation.twig" %}
     {% endblock %}
     
+    {% block hero %}
+        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'banner','jumbo_overlay_id':'home_overlay'} %}
+            {% block jumbotron_content %}
+                <h1 class="display-3">Welcome</h1>
+                <p class="lead">UI/UX Designer at Booz Allen Hamilton</p>
+                <p class="my-4">I believe that sound UX is the basis for all successful projects. Take a look and see what I mean!</p>
+                <hr class="my-4" style="color: white;">
+                <p>This website was coded using Bootstrap 4, Angular, HTML, CSS, JavaScript, &amp; jQuery</p>
+                {% include "@atoms/button/primary/primary.twig" with
+                    {
+                        "btn_href": "../../assets/Jacob_Caccamo.pdf",
+                        "btn_text": "View Resume (PDF)"
+                    }
+                %}
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+
     {% block main %}
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-md my-4">
+                    <img id="headshot" src="../../assets/index/headshot2.jpg" alt="Jacob Caccamo Headshot" class="img-thumbnail mx-auto my-auto d-block md-whiteframe-2dp">
+                </div>
+                <div class="col-md my-auto">
+                     <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/footer/footer.twig" %}
     {% endblock %}
 {% endembed %}

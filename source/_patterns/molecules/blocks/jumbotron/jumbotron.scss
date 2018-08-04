@@ -1,0 +1,27 @@
+.jumbotron-fluid {
+    hr {
+        border: .5px solid #ffffff;
+    }
+    
+    .container-fluid {
+        background-color: rgba(0,0,0,.6);
+        padding: 15vh 15vw;
+    }
+}
+
+#banner {
+    color: white;
+    overflow: hidden !important;
+    background-image: url(../../../../../assets/index/annie-spratt-216207.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#home_overlay {
+    overflow: hidden !important;
+    background-color: rgba(0,0,0,.2);
+}
