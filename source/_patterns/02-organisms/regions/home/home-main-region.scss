@@ -1,0 +1,6 @@
+.home-headshot {
+    @extend .img-thumbnail;
+    @extend .mx-auto;
+    @extend .my-auto;
+    height: 40vh;
+}

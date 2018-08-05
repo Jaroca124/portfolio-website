@@ -477,7 +477,7 @@ mark,
   height: auto;
 }
 
-.img-thumbnail {
+.img-thumbnail, .home-headshot {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -7035,22 +7035,26 @@ button.bg-dark:focus {
 }
 
 .mt-auto,
-.my-auto {
+.my-auto,
+.home-headshot {
   margin-top: auto !important;
 }
 
 .mr-auto,
-.mx-auto {
+.mx-auto,
+.home-headshot {
   margin-right: auto !important;
 }
 
 .mb-auto,
-.my-auto {
+.my-auto,
+.home-headshot {
   margin-bottom: auto !important;
 }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+.home-headshot {
   margin-left: auto !important;
 }
 
@@ -8621,6 +8625,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.default-image {
+  display: block;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.home-headshot {
+  height: 40vh;
 }
 
 .navbar {

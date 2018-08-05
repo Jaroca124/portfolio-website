@@ -22,16 +22,24 @@
     {% endblock %}
 
     {% block main %}
-        <div class="container">
-            <div class="row">
-                <div class="col-md my-4">
-                    <img id="headshot" src="../../assets/index/headshot2.jpg" alt="Jacob Caccamo Headshot" class="img-thumbnail mx-auto my-auto d-block md-whiteframe-2dp">
+        {% embed "@organisms/regions/home/home-main-region.twig" %}
+            {% block home_main_region %}
+                <div class="row">
+                    <div class="col-md my-4">
+                        {% include "@atoms/images/default-image/default-image.twig" with 
+                            {
+                                "image_src": "../../assets/index/headshot2.jpg",
+                                "image_alt": "Jacob Caccamo Headshot",
+                                "image_style": "home-headshot"
+                            }
+                        %}
+                    </div>
+                    <div class="col-md my-auto">
+                         <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
+                    </div>
                 </div>
-                <div class="col-md my-auto">
-                     <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
-                </div>
-            </div>
-        </div>
+            {% endblock %}
+        {% endembed %}
     {% endblock %}
 
     {% block footer %}

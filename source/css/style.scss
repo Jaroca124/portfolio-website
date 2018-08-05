@@ -3,7 +3,11 @@
 @import "../css/scss/global/material-design.scss";
 
 @import "../css/scss/components/buttons.scss";
+
+@import "../_patterns/00-atoms/images/default-image/default-image.scss";
+@import "../_patterns/00-atoms/regions/home/home-main-region.scss";
     
-@import "../_patterns/molecules/navigation/navigation.scss";
-@import "../_patterns/molecules/blocks/jumbotron/jumbotron.scss";
-@import "../_patterns/organisms/global/footer/footer.scss";
+@import "../_patterns/01-molecules/navigation/navigation.scss";
+@import "../_patterns/01-molecules/blocks/jumbotron/jumbotron.scss";
+
+@import "../_patterns/02-organisms/global/footer/footer.scss";
