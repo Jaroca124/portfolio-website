@@ -13,7 +13,8 @@
     {"id": "Skizzy", "src":"./assets/skizzy.png"},
     {"id": "Marc", "src":"./assets/marc.png"},
     {"id": "Eden", "src":"./assets/eden.png"},
-    {"id": "Illenium", "src":"./assets/illenium.png"}
+    {"id": "Illenium", "src":"./assets/illenium.png"},
+    {"id": "Bebe", "src":"./assets/bebe.png"}
   ],
   "links": [
     {"source": "G", "target": "Skizzy", "value": 30},
@@ -43,6 +44,8 @@
     {"source": "Gnash", "target": "Eden", "value": 15},
     {"source": "Eden", "target": "Illenium", "value": 15},
     {"source": "Eden", "target": "Illenium", "value": 15},
-    {"source": "Illenium", "target": "Quinn", "value": 15}
+    {"source": "Illenium", "target": "Quinn", "value": 15},
+    {"source": "Bebe", "target": "G", "value": 30},
+    {"source": "Bebe", "target": "G", "value": 30}
   ]
 }
