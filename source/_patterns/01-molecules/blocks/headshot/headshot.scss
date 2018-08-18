@@ -1,0 +1,10 @@
+.headshot {
+    @extend .my-3;
+    
+    .home-headshot {
+        @extend .img-thumbnail;
+        @extend .mx-auto;
+        @extend .my-auto;
+        height: 40vh;
+    }
+}

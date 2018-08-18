@@ -1,7 +1,7 @@
-{% set columns = columns|default('6') %}
-{% set columns_classes = columns_classes|default('6') %}
-{% set columns_breakpoint = columns_breakpoint|default('md') %}
+{% set columns = columns|default() %}
+{% set columns_classes = columns_classes|default() %}
+{% set columns_breakpoint = columns_breakpoint|default() %}
 
-<div class="col-{{ columns_breakpoint }}-{{ columns }} {{ columns_classes }}">
+<div class="col-{{ columns_breakpoint }}{% if columns is not empty %}-{{ columns }}{% endif %} {{ columns_classes }}">
     {% block column_content %}{% endblock %}
 </div>

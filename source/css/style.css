@@ -477,7 +477,7 @@ mark,
   height: auto;
 }
 
-.img-thumbnail, .home-headshot {
+.img-thumbnail, .headshot .home-headshot {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -6756,7 +6756,7 @@ button.bg-dark:focus {
   margin-right: 0 !important;
 }
 
-.mb-0,
+.mb-0, .blockquote p,
 .my-0 {
   margin-bottom: 0 !important;
 }
@@ -6819,7 +6819,8 @@ button.bg-dark:focus {
 }
 
 .mt-3,
-.my-3 {
+.my-3,
+.headshot {
   margin-top: 1rem !important;
 }
 
@@ -6829,7 +6830,8 @@ button.bg-dark:focus {
 }
 
 .mb-3,
-.my-3 {
+.my-3,
+.headshot {
   margin-bottom: 1rem !important;
 }
 
@@ -6843,7 +6845,8 @@ button.bg-dark:focus {
 }
 
 .mt-4,
-.my-4 {
+.my-4,
+.hr {
   margin-top: 1.5rem !important;
 }
 
@@ -6853,7 +6856,8 @@ button.bg-dark:focus {
 }
 
 .mb-4,
-.my-4 {
+.my-4,
+.hr {
   margin-bottom: 1.5rem !important;
 }
 
@@ -6968,7 +6972,8 @@ button.bg-dark:focus {
 }
 
 .pr-3,
-.px-3 {
+.px-3,
+.blockquote p {
   padding-right: 1rem !important;
 }
 
@@ -6978,7 +6983,8 @@ button.bg-dark:focus {
 }
 
 .pl-3,
-.px-3 {
+.px-3,
+.blockquote p {
   padding-left: 1rem !important;
 }
 
@@ -7036,25 +7042,25 @@ button.bg-dark:focus {
 
 .mt-auto,
 .my-auto,
-.home-headshot {
+.headshot .home-headshot {
   margin-top: auto !important;
 }
 
 .mr-auto,
 .mx-auto,
-.home-headshot {
+.headshot .home-headshot {
   margin-right: auto !important;
 }
 
 .mb-auto,
 .my-auto,
-.home-headshot {
+.headshot .home-headshot {
   margin-bottom: auto !important;
 }
 
 .ml-auto,
 .mx-auto,
-.home-headshot {
+.headshot .home-headshot {
   margin-left: auto !important;
 }
 
@@ -7136,7 +7142,8 @@ button.bg-dark:focus {
   }
 
   .mt-sm-3,
-.my-sm-3 {
+.my-sm-3,
+.blockquote {
     margin-top: 1rem !important;
   }
 
@@ -7146,7 +7153,8 @@ button.bg-dark:focus {
   }
 
   .mb-sm-3,
-.my-sm-3 {
+.my-sm-3,
+.blockquote {
     margin-bottom: 1rem !important;
   }
 
@@ -8336,7 +8344,7 @@ button.bg-dark:focus {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .blockquote {
   text-align: center !important;
 }
 
@@ -8632,8 +8640,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 }
 
-.home-headshot {
-  height: 40vh;
+.hr {
+  width: 90vw;
 }
 
 .navbar {
@@ -8689,6 +8697,10 @@ h1, h2, h3, h4, h5, h6 {
 #home_overlay {
   overflow: hidden !important;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.headshot .home-headshot {
+  height: 40vh;
 }
 
 .footer {

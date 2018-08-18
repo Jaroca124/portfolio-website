@@ -1,0 +1,10 @@
+.blockquote {
+    @extend .my-sm-3;
+    @extend .text-center;
+    
+    p {
+        @extend .mb-0;
+        @extend .px-3;
+        
+    }
+}
