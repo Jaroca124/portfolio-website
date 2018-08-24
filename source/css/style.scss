@@ -6,10 +6,12 @@
 
 @import "../_patterns/00-atoms/images/default-image/default-image.scss";
 @import "../_patterns/00-atoms/misc/hr/hr.scss";
-    
+
 @import "../_patterns/01-molecules/navigation/navigation.scss";
 @import "../_patterns/01-molecules/blocks/jumbotron/jumbotron.scss";
 @import "../_patterns/01-molecules/blocks/headshot/headshot.scss";
+@import "../_patterns/01-molecules/blocks/particles/particles.scss";
+
 @import "../_patterns/01-molecules/text/blockquote/blockquote.scss";
 
 @import "../_patterns/02-organisms/global/footer/footer.scss";

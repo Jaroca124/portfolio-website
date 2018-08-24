@@ -111,7 +111,7 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-
+console.log("test");
 /* ---- stats.js config ---- */
 
 var count_particles, stats, update;
