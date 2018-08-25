@@ -6,6 +6,8 @@
     .container-fluid {
         background-color: rgba(0,0,0,.6);
         padding: 15vh 15vw;
+        position: relative;
+        z-index: 1;
     }
 }
 

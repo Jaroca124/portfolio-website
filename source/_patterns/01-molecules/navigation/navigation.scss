@@ -8,6 +8,8 @@
     height: auto;
     padding-top: 0;
     padding-bottom: 0;
+    position: relative;
+    z-index: 100;
     
     .navbar-text {
         height: 10vh;
