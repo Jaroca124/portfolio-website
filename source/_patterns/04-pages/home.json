@@ -40,5 +40,17 @@
             "btn_text": "The Feed",
             "btn_href": "feed.html"
         }
+    ],
+    "featured": [
+        {
+            "src": "index/mjx_1Asset1.png",
+            "alt": "Home page of MJx Music's webpage.",
+            "style": "mobile-screen my-4 mt-sm-5"
+        },
+        {
+            "src": "index/mjx_2Asset2.png",
+            "alt": "Music page of MJx Music's webpage.",
+            "style": "mobile-screen my-4 mb-sm-5"
+        }
     ]
 }

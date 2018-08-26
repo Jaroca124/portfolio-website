@@ -46,6 +46,13 @@
                     }
                 %}
             {% endblock %}
+            {% block featured %}
+                {% include "@molecules/blocks/featured-item/_featured-item-master.twig" with
+                    {
+                        "featured_img": featured
+                    }
+                %}
+            {% endblock %}
         {% endembed %}
     {% endblock %}
 
