@@ -1,15 +1,18 @@
-<div class="container">
+<div class="overview container">
     <div class="row">
         {% block overview %}{% endblock %}
     </div>
 </div>
-<div class="container-fluid">
+<div class="quote container-fluid">
     <div class="row">
         <div class="col-12">
             {% block quote %}{% endblock %}
         </div>
     </div>
-    <div class="row">
-        {% block cards %}{% endblock %}
-    </div>
+</div>
+<div class="cards container">
+    {% block cards %}{% endblock %}
+</div>
+<div class="featured-portfolio-piece container">
+    {% block featured %}{% endblock %}
 </div>

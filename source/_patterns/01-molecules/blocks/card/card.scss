@@ -2,6 +2,10 @@
     @include md-2dp;
     max-width: 15rem;
  
+    .card-img-top {
+        height: 18vh;
+    }
+
     .btn {
         width: 100%;
     }

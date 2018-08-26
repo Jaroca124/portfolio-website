@@ -1,18 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../css/scss/global/main.scss";
-@import "../css/scss/global/material-design.scss";
 
-@import "../css/scss/components/buttons.scss";
-
-@import "../_patterns/00-atoms/images/default-image/default-image.scss";
-@import "../_patterns/00-atoms/misc/hr/hr.scss";
-
-@import "../_patterns/01-molecules/navigation/navigation.scss";
-@import "../_patterns/01-molecules/blocks/jumbotron/jumbotron.scss";
-@import "../_patterns/01-molecules/blocks/headshot/headshot.scss";
-@import "../_patterns/01-molecules/blocks/particles/particles.scss";
-@import "../_patterns/01-molecules/blocks/card/card.scss";
-
-@import "../_patterns/01-molecules/text/blockquote/blockquote.scss";
-
-@import "../_patterns/02-organisms/global/footer/footer.scss";
+@import "scss/global/*.scss";
+@import "scss/components/*.scss";
+@import "../_patterns/**/*.scss";

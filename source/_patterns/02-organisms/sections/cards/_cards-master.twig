@@ -1,7 +1,7 @@
 {% set cards_data = cards_data|default() %}
 {% set cards_style = cards_style|default() %}
 
-<div class="cards {{ cards_style }}">
+<div class="cards row {{ cards_style }}">
     {% for card in cards_data %}
         <div class="col-sm">
             {% include "@molecules/blocks/card/_card-master.twig" with 
