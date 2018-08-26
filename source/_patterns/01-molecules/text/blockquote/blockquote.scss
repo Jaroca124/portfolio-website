@@ -2,9 +2,12 @@
     @extend .my-sm-3;
     @extend .text-center;
     
+    hr {
+        width: auto;
+    }
+
     p {
         @extend .mb-0;
-        @extend .px-3;
-        
+        @extend .px-3;  
     }
 }

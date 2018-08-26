@@ -8724,6 +8724,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.blockquote hr {
+  width: auto;
+}
 .footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#191919+0,000000+100 */
   background: #191919;
