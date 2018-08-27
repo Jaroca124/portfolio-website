@@ -1,0 +1,7 @@
+{% set pill_text = pill_text|default() %}
+{% set pill_classes = pill_classes|default() %}
+{% set pill_href = pill_href|default() %}
+
+{% if pill_href is not empty %}%<a href"{{ pill_href }}">{% endif %}
+<span class="pill {{ pill_classes }}">{{ pill_text }}</span>
+{% if pill_href is not empty %}%</a>{% endif %}

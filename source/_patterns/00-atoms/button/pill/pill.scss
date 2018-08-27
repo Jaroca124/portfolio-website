@@ -1,0 +1,6 @@
+.pill {
+    @extend .badge;
+    @extend .badge-pill;
+    @extend .badge-primary;
+    @extend .p-2;
+}

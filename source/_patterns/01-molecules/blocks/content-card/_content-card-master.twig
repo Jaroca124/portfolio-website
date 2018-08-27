@@ -6,7 +6,7 @@
 {% set card_btn_text = card_btn_text|default() %}
 {% set card_btn_href = card_btn_href|default() %}
 
-<div class="card {{ card_style }}">
+<div class="content-card {{ card_style }}">
     {% include "@atoms/images/default-image/default-image.twig" with 
         {
             "image_src": card_img_src,

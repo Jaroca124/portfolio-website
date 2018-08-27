@@ -6,6 +6,7 @@
 {% set feed_post_img = feed_post_img|default() %}
 {% set feed_post_author = feed_post_author|default() %}
 {% set feed_post_source = feed_post_source|default() %}
+{% set feed_post_tags = feed_post_tags|default() %}
 
 <div class="feed-post {{ feed_post_classes }}">
     <div class="card-body">
@@ -27,7 +28,11 @@
                     <p class="author">Author(s): {{ feed_post_author }}</p>
                     <p class="source">Source: {{ feed_post_source }}</p>
                     <hr>
-                    {#<span ng-repeat="tag in articles[0].tags" class="p-2 my-1 badge badge-pill badge-primary"> {{ tag.tagName }} </span>#}
+                    {% include "@molecules/text/pills/_pills-master.twig" with
+                        {
+                            "pills": feed_post_tags
+                        }
+                    %}
                 </div>
             </div>
         </div>

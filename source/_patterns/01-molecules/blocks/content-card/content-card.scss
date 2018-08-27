@@ -1,4 +1,5 @@
 .content-card {
+    @extend .card;
     @include md-2dp;
     max-width: 15rem;
  
