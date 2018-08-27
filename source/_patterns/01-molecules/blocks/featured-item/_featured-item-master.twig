@@ -20,7 +20,12 @@
         {% embed "@atoms/layout/_column.twig" with {"columns": 12, "columns_classes": "description col-sm-12 col-md-6"} %}
             {% block column_content %}
                 <p class="text-left px-3">My friend Michael Jacob is an aspiring rapper under the stage name MJx. He needed a website designed and developed for his music career and I offered to help him out. So far, I've completed the Music and About pages. Here are a few shots (Home, Music) from the mobile design concept. Click below to view the live site.</p>
-                <a href="http://mjxofficial.com/" class="btn btn-primary md-whiteframe-2dp">View Project</a>
+                {% include "@atoms/button/primary/primary.twig" with
+                    {
+                        "btn_href": "http://mjxofficial.com/",
+                        "btn_text": "View Project"
+                    }
+                %}
             {% endblock %}
         {% endembed %}
     </div>

@@ -53,6 +53,22 @@
                     }
                 %}
             {% endblock %}
+            {% block feed %}
+                {% include "@molecules/blocks/feed-post/_feed-post-master.twig" with
+                    {
+                        "feed_post_title": feedPost.title, 
+                        "feed_post_date_posted": feedPost.date_posted,  
+                        "feed_post_source": feedPost.source, 
+                        "feed_post_img": {
+                            "src": feedPost.img.src,
+                            "alt": feedPost.img.alt
+                        },
+                        "feed_post_href": feedPost.href,
+                        "feed_post_comment": feedPost.comment,
+                        "feed_post_author": feedPost.author
+                    }
+                %}
+            {% endblock %}
         {% endembed %}
     {% endblock %}
 

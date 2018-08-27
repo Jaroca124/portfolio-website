@@ -5,6 +5,7 @@
 
 var BUILD = false;
 var DEV = false;
+var PROD = true;
 // Ends configuration setting
 
 if (BUILD && DEV) {
@@ -25,8 +26,13 @@ var config = {
     sassPath: './source/css',
     bootstrapPath: './source/node_modules/bootstrap/scss',
     nodeModules: './source/node_modules',
-    sassWebFontPath: './node_modules/sass-web-fonts'
+    sassWebFontPath: './node_modules/sass-web-fonts',
+    prodFolder: './pl/public'
 };
+
+var pages = {
+    home: './pl/public/patterns/04-pages-home/04-pages-home.html'
+}
 
 var sassOption = {
     errLogToConsole: true,
@@ -60,8 +66,15 @@ gulp.task('pl', ['sass'], function (cb) {
   });
 });
 
+gulp.task('export', ['sass', 'pl'], function (cb) {
+    exec('php ./pl/core/console --export', function (err, stdout, stderr) {
+      console.log("Patterns Exported Successfully")
+      cb(err);
+    });
+  });
+
 // Start Static Server
-gulp.task('serve', ['sass', 'pl'], function() {
+gulp.task('serve', ['sass', 'pl', 'export'], function() {
   browserSync.init({
     server: {
       baseDir: './',
@@ -73,7 +86,7 @@ gulp.task('serve', ['sass', 'pl'], function() {
 
 // Watching Source Files
 gulp.task('source:watch', ['sass', 'pl'], function () {
-    gulp.watch('./source/**/*.twig', ['pl']);
+    gulp.watch('./source/**/*.twig', ['pl','export']);
 });
 
 gulp.task('default', ['source:watch', 'serve']);

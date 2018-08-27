@@ -1,0 +1,35 @@
+{% set feed_post_classes = feed_post_classes|default() %}
+{% set feed_post_title = feed_post_title|default() %}
+{% set feed_post_href = feed_post_href|default() %}
+{% set feed_post_date_posted = feed_post_date_posted|default() %}
+{% set feed_post_comment = feed_post_comment|default() %}
+{% set feed_post_img = feed_post_img|default() %}
+{% set feed_post_author = feed_post_author|default() %}
+{% set feed_post_source = feed_post_source|default() %}
+
+<div class="feed-post {{ feed_post_classes }}">
+    <div class="card-body">
+        <div class="row main">
+            <div class="post col-md-10 col-md-offset-1">
+                <div class="content"> 
+                    <a class="title" href="{{ feed_post_href }}">{{ feed_post_title }}</a>
+                    <p class="date">Posted: {{ feed_post_date_posted }}</p>
+                    <p class="comment">{{ feed_post_comment }}</p>
+                    <a href="{{ feed_post_href }}">
+                        {% include "@atoms/images/default-image/default-image.twig" with
+                            {
+                                "image_src": feed_post_img.src,
+                                "image_alt": feed_post_img.alt,
+                                "image_style": "img-thumbnail"
+                            }
+                        %}
+                    </a>
+                    <p class="author">Author(s): {{ feed_post_author }}</p>
+                    <p class="source">Source: {{ feed_post_source }}</p>
+                    <hr>
+                    {#<span ng-repeat="tag in articles[0].tags" class="p-2 my-1 badge badge-pill badge-primary"> {{ tag.tagName }} </span>#}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
