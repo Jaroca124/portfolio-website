@@ -3,4 +3,4 @@
 {% set image_alt = image_alt|default('') %}
 {% set image_style = image_style|default('') %}
 
-<img id="{{ image_id }}" src="../../assets/{{ image_src }}" alt="{{ image_alt }}" class="default-image {{ image_style }}">
+<img id="{{ image_id }}" src="{{ path_to_assets }}assets/{{ image_src }}" alt="{{ image_alt }}" class="default-image {{ image_style }}">

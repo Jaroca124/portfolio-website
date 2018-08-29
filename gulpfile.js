@@ -30,8 +30,10 @@ var config = {
     prodFolder: './pl/public'
 };
 
-var pages = {
-    home: './pl/public/patterns/04-pages-home/04-pages-home.html'
+var buildPaths = {
+    target: './production',
+    styleGuide: './pl/public/index.html',
+    home: './pl/public/patterns/05-prod-index/05-prod-index.html'
 }
 
 var sassOption = {
@@ -66,15 +68,21 @@ gulp.task('pl', ['sass'], function (cb) {
   });
 });
 
-gulp.task('export', ['sass', 'pl'], function (cb) {
-    exec('php ./pl/core/console --export', function (err, stdout, stderr) {
-      console.log("Patterns Exported Successfully")
-      cb(err);
-    });
-  });
+gulp.task('build_prod', ['sass', 'pl'], function (cb) {
+    
+    // Home Page
+    console.log("Starting Home Build...");
+    gulp.src(buildPaths.home)
+    .pipe(rename({
+        basename: 'index',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest(buildPaths.target));
+    console.log("Home Build Finished");
+});
 
 // Start Static Server
-gulp.task('serve', ['sass', 'pl', 'export'], function() {
+gulp.task('serve', ['sass', 'pl'], function() {
   browserSync.init({
     server: {
       baseDir: './',
@@ -86,7 +94,7 @@ gulp.task('serve', ['sass', 'pl', 'export'], function() {
 
 // Watching Source Files
 gulp.task('source:watch', ['sass', 'pl'], function () {
-    gulp.watch('./source/**/*.twig', ['pl','export']);
+    gulp.watch('./source/**/*.twig', ['pl']);
 });
 
 gulp.task('default', ['source:watch', 'serve']);
