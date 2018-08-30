@@ -94,7 +94,8 @@ gulp.task('serve', ['sass', 'pl'], function() {
 
 // Watching Source Files
 gulp.task('source:watch', ['sass', 'pl'], function () {
-    gulp.watch('./source/**/*.twig', ['pl']);
+    gulp.watch('./source/_patterns/**/*.twig', ['pl']);
+    gulp.watch('./source/_patterns/**/*.scss', ['sass', 'pl']);
 });
 
 gulp.task('default', ['source:watch', 'serve']);

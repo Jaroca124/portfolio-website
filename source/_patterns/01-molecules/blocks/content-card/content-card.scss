@@ -2,7 +2,14 @@
     @extend .card;
     @include md-2dp;
     max-width: 15rem;
- 
+    min-width: 225px;
+    @extend .my-3;
+
+    @include media-breakpoint-up(md) {
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+
     .card-img-top {
         height: 18vh;
     }
