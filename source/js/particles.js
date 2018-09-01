@@ -3,6 +3,16 @@ window.onload = function() {
     selector: '.background',
     color: "#ffffff",
     connectParticles: true,
-    speed: .25
+    speed: .25,
+    responsive: [
+        {
+            breakpoint: 
+                768,
+                options: {
+                    maxParticles: 0,
+                    connectParticles: true
+                }
+        }
+    ]
   });
 };

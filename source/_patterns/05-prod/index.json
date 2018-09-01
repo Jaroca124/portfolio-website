@@ -1,5 +1,6 @@
 {
-    "path_to_assets": "../pl/public/",
+    "path_to_assets": "pl/public/",
+    "dep_path": "",
     "title": "Jacob Caccamo",
     "cards": [
         {

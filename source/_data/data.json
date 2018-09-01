@@ -1,3 +1,4 @@
 {
-    "path_to_assets": "../../"
+    "path_to_assets": "../../",
+    "dep_path": "../"
 }
