@@ -1,0 +1,18 @@
+.btn {
+    @include md-2dp;
+    @extend .hoverable;
+    background-color: #007bff;
+
+    &:hover {
+        background-color: #007bff;
+    }
+
+    &.disabled {
+        opacity: .65;
+        @include md-0dp;
+
+        &:hover {
+            @include md-0dp;
+        }
+    }
+}

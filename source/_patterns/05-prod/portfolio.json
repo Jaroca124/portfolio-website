@@ -1,0 +1,87 @@
+{
+    "path_to_assets": "pl/public/",
+    "dep_path": "",
+    "title": "Portfolio - Jacob Caccamo",
+    "projects": [
+        {
+            "img_src": "portfolio/pattern-lab.PNG",
+            "img_alt": "Screenshot of the home page of this site.",
+            "title": "Pattern Lab - Portfolio Website",
+            "context": "Atomic Design Implementation of This Site",
+            "btn_text": "View Project",
+            "btn_href": "pl/public/index.html"
+        },
+        {
+            "img_src": "portfolio/connected-crew.png",
+            "img_alt": "Screenshot of Connected Crew",
+            "title": "Connected Crew",
+            "context": "See how some of my favorite artists connect in terms of music collaborations.",
+            "btn_text": "View Project",
+            "btn_href": "connected-crew/connected-crew.html"
+        },
+        {
+            "img_src": "portfolio/login_page.png",
+            "img_alt": "Login to Ansible Galaxy - Redesigned",
+            "title": "Ansible Galaxy Redesign",
+            "context": "RedHat, Inc. - Tufts Senior Capstone Project",
+            "btn_text": "View Project",
+            "btn_href": "project_pages/redhat.html"
+        },
+        {
+            "img_src": "portfolio/matthew-brodeur-214573.jpg",
+            "img_alt": "Image of a Drone",
+            "title": "Drone Operator Monitoring",
+            "context": "CABCS - Independent Research",
+            "btn_text": "View Project",
+            "btn_href": "project_pages/op_monitoring.html"
+        },
+        {
+            "img_src": "portfolio/benjamin-combs-27617.jpg",
+            "img_alt": "Picture of someone holding a plant.",
+            "title": "3-in-1 Horticultural Device",
+            "context": "ENP 161 - Tufts Class Project",
+            "btn_text": "View Project",
+            "btn_href": "project_pages/vft_design.html"
+        },
+        {
+            "img_src": "portfolio/Editorial_Page.jpg",
+            "img_alt": "A picture of an editorial page design.",
+            "title": "Innovation Center - Internal Website",
+            "context": "Booz Allen Hamilton",
+            "btn_text": "Coming Soon",
+            "btn_classes": "disabled" 
+        },
+        {
+            "img_src": "portfolio/mjx.PNG",
+            "img_alt": "MJx Music Splash Page",
+            "title": "MJx Music Splash Page",
+            "context": "Website Design Inspired by Rowlan & G-Eazy",
+            "btn_text": "Visit Page",
+            "btn_href": "http://mjxofficial.com/"
+        },
+        {
+            "img_src": "portfolio/ff.PNG",
+            "img_alt": "Picture of Fluency Fact Learner",
+            "title": "Fluency Fact Learner",
+            "context": "Created by Jacob Caccamo & Dylan Santos",
+            "btn_text": "Learn US History",
+            "btn_href": "ff.html"
+        },
+        {
+            "img_src": "portfolio/s0.png",
+            "img_alt": "Title slide from presentation.",
+            "title": "The Role of Engineering Psychology in Video Game Controller Design",
+            "context": "COMP23 - Tufts Class Project",
+            "btn_text": "Watch Presentation",
+            "btn_href": "https://www.youtube.com/watch?v=2qqKjUXdKmI&t=3s"
+        },
+        {
+            "img_src": "portfolio/raze.PNG",
+            "img_alt": "Screenshot from Project Raze gameplay.",
+            "title": "Project Raze - phaser.io Game",
+            "context": "COMP23 - Tufts Class Project",
+            "btn_text": "Play Game",
+            "btn_href": "http://jaroca124.github.io/comp23-project_raze/"
+        }
+    ]
+}

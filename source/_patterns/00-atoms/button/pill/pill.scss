@@ -3,4 +3,5 @@
     @extend .badge-pill;
     @extend .badge-primary;
     @extend .p-2;
+    @include md-2dp;
 }

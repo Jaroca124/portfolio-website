@@ -31,9 +31,10 @@ var config = {
 };
 
 var buildPaths = {
-    target: './production',
+    target: './',
     styleGuide: './pl/public/index.html',
-    home: './pl/public/patterns/05-prod-index/05-prod-index.html'
+    home: './pl/public/patterns/05-prod-index/05-prod-index.html',
+    portfolio: './pl/public/patterns/05-prod-portfolio/05-prod-portfolio.html'
 }
 
 var sassOption = {
@@ -79,6 +80,16 @@ gulp.task('build_prod', ['sass', 'pl'], function (cb) {
     }))
     .pipe(gulp.dest(buildPaths.target));
     console.log("Home Build Finished");
+
+    // Portfolio
+    console.log("Starting Portfolio Build...");
+    gulp.src(buildPaths.portfolio)
+    .pipe(rename({
+        basename: 'portfolio',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest(buildPaths.target));
+    console.log("Portfolio Build Finished");
 });
 
 // Start Static Server

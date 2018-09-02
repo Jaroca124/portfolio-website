@@ -1,5 +1,6 @@
 {% set btn_href = btn_href|default() %}
 {% set btn_classes = btn_classes|default() %}
 {% set btn_text = btn_text|default('Primary Button') %}
+{% set btn_attributes = btn_attributes|default() %}
 
-<a href="{{ btn_href }}" class="btn btn-primary {{ btn_classes }}">{{ btn_text }}</a>
+<a href="{{ btn_href }}" class="btn btn-primary {{ btn_classes }}" {{ btn_attributes }}>{{ btn_text }}</a>

@@ -95,6 +95,10 @@
     0px 24px 38px 3px rgba(0, 0, 0, 0.14),
     0px 9px 46px 8px rgba(0, 0, 0, 0.12); }
 
+@mixin md-0dp {
+    box-shadow: none;
+}
+
 .hoverable {
     transition: box-shadow .25s;
     &:hover {

@@ -1,4 +1,13 @@
 .jumbotron-fluid {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    overflow: hidden !important;
+
     hr {
         border: .5px solid #ffffff;
     }
@@ -12,15 +21,11 @@
 }
 
 #banner {
-    color: white;
-    overflow: hidden !important;
     background-image: url(../assets/index/annie-spratt-216207.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+#portfolio-banner {
+    background-image: url(../assets/portfolio/banner.jpg);
 }
 
 #home_overlay {

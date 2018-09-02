@@ -1,0 +1,30 @@
+{% embed "@atoms/layout/_site.twig" %}
+    {% block header %}
+        {% include "@molecules/navigation/navigation.twig" %}
+    {% endblock %}
+
+    {% block hero %}
+        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'portfolio-banner'} %}
+            {% block jumbotron_content %}
+                <h1 class="display-3">My Portfolio</h1>
+                <p class="lead">See my work in UI/UX design as well as other cool projects.</p>
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+
+    {% block main %}
+        {% embed "@organisms/regions/portfolio/portfolio-main-region.twig" %}
+            {% block projects %}
+                {% include "@organisms/sections/projects/_projects-master.twig" with 
+                    {
+                        "projects_data": projects
+                    }
+                %}
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/footer/footer.twig" %}
+    {% endblock %}
+{% endembed %}
