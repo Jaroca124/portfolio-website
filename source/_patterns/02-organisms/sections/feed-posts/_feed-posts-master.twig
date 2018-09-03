@@ -1,0 +1,23 @@
+{% set feed_posts_data = feed_posts_data|default() %}
+{% set feed_posts_classes = feed_posts_classes|default() %}
+
+<div class="feed-posts row {{ feed_posts_classes }}">
+    {% for post in feed_posts_data %}
+        {% include "@molecules/blocks/feed-post/_feed-post-master.twig" with
+            {
+                "feed_post_classes": "col-12",
+                "feed_post_title": post.title, 
+                "feed_post_date_posted": post.datePosted,  
+                "feed_post_source": post.source, 
+                "feed_post_img": {
+                    "src": post.img.src,
+                    "alt": post.img.alt
+                },
+                "feed_post_href": post.href,
+                "feed_post_comment": post.comment,
+                "feed_post_author": post.author,
+                "feed_post_tags": post.tags
+            }
+        %}
+    {% endfor %}
+</div>

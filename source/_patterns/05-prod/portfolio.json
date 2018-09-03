@@ -6,15 +6,15 @@
         {
             "img_src": "portfolio/pattern-lab.PNG",
             "img_alt": "Screenshot of the home page of this site.",
-            "title": "Pattern Lab - Portfolio Website",
+            "title": "Pattern Lab - Portfolio Website (In Progress)",
             "context": "Atomic Design Implementation of This Site",
             "btn_text": "View Project",
             "btn_href": "pl/public/index.html"
         },
         {
-            "img_src": "portfolio/connected-crew.png",
+            "img_src": "portfolio/connected-crew.PNG",
             "img_alt": "Screenshot of Connected Crew",
-            "title": "Connected Crew",
+            "title": "Connected Crew (In Progress)",
             "context": "See how some of my favorite artists connect in terms of music collaborations.",
             "btn_text": "View Project",
             "btn_href": "connected-crew/connected-crew.html"

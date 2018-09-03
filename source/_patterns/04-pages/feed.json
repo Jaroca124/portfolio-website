@@ -1,0 +1,122 @@
+{
+    "feedData": [
+        { 
+            "title": "Pattern Lab - An Atomic Design System", 
+            "datePosted": "July 28, 2018",  
+            "source": "Pattern Lab", 
+            "img": {
+                "src": "feed/thumbnails/pattern_lab.PNG",
+                "alt": "Picture of Pattern Lab website."
+            },
+            "href": "https://patternlab.io/",
+            "comment": "Pattern Lab is an incredibly powerful atomic design system that allows for rapid frontend development. The principle behind Pattern Lab and atomic design is that web components can be distilled into their most basic form, such as color, font, and button style, which are called atoms. Atoms can be combined to create molecules, like a search bar consisting of a button and an input field. Molecules can be combined to create organisms, such as a navigation bar, and finally, organisms can be used to create templates. When templates are supplied with data, they become full-fledged pages. The power of Pattern Lab is in its modularity – when you make a change to a button, for example, the same change will be applied everywhere that button appears. I am currently using Pattern Lab to build out a personal project and I highly recommend looking into it!",
+            "author": "Pattern Lab",
+            "tags": [{"text": "Pattern Lab"}, {"text": "Atomic Design"}, {"text": "Development"}, {"text": "Frontend"}]
+          },
+          { 
+            "title": "Agile + UX: What I Learned from Living with an Agile Developer", 
+            "datePosted": "February 18, 2018",  
+            "source": "Prototypr",
+            "img": {
+                "src": "feed/thumbnails/agileux.PNG",
+                "alt": "Picture of Dana's article about Agile and UX"
+            },
+            "href": "https://blog.prototypr.io/agile-ux-what-i-learned-from-living-with-an-agile-developer-4173a60a8172",
+            "comment": "I had the pleasure of working with Dana briefly on client site through Booz Allen. She is a UX rockstar who, unfortunately for me, is leaving the company to work at an exciting new startup. Dana wrote this article describing how UX can be more effectively incorporated into the Agile development process and keep designers and developers happy and productive.",
+            "author": "Dana Solano",
+            "tags": [{"text": "User Experience"}, {"text": "Agile"}, {"text": "Development"}, {"text": "Usability"}]
+          },
+          { 
+            "title": "UX design: or the hidden face of the moon", 
+            "datePosted": "January 17, 2018",  
+            "source": "Laurence Pilon",
+            "img": {
+                "src": "feed/thumbnails/pilon.PNG",
+                "alt": "Picture of moon phases"
+            },
+            "href": "http://laurencepilon.ca/2017/ux-design-or-the-hidden-face-of-the-moon",
+            "comment": "Here's an interesting article by Laurence Pilon that details the differences between UI and UX. I particularly like the portion that contrasts what people think UX is with what it actually is. We UX-ers have a critical role to play, not just in the visual design of a system, but also in the design of its structure, functionality, and usability.",
+            "author": "Laurence Pilon",
+            "tags": [{"text": "User Interface"}, {"text": "User Experience"}, {"text": "Design"}]
+          },
+          { 
+            "title": "D3", 
+            "datePosted": "January 15, 2018",  
+            "source": "D3",
+            "img": {
+                "src": "feed/thumbnails/d3.PNG",
+                "alt": "Picture of D3 visualizations"
+            },
+            "href": "https://d3js.org/",
+            "comment": "I recently used D3 for a project at Booz Allen. It's a fantastic way to communicate the meaning of a dataset in a visual way and is extremely flexible to suit your design needs.",
+            "author": "D3",
+            "tags": [{"text": "Data"}, {"text": "Data Visualization"}, {"text": "JavaScript"}, {"text": "Web Development"}]
+          },
+          { 
+            "title": "Unsplash", 
+            "datePosted": "December 24, 2017",  
+            "source": "Unsplash.com",
+            "img": {
+                "src": "feed/thumbnails/unsplash.PNG",
+                "alt": "Picture of Unsplash website"
+            },
+            "href": "https://unsplash.com/",
+            "comment": "This is my go-to website for high fidelity images that I use in my designs. I am constantly satisfied with the selection of images from incredibly talented photographers.",
+            "author": "Unsplash.com",
+            "tags": [{"text": "Photography"}, {"text": "User Experience"}, {"text": "Design"}]
+          },
+          {
+            "title": "Interface Hall of Shame", 
+            "datePosted": "October 11, 2017", 
+            "source": "Isys Information Architects Inc.", 
+            "img": { 
+                "src": "feed/thumbnails/post3.PNG",
+                "alt": "Picture of the Interface Hall of Shame website."
+            },
+            "href": "http://hallofshame.gp.co.at/index.php?mode=original",
+            "comment": "I came across this website back when I was at Tufts. Yet another example of how I love design fails.",
+            "author": "Isys Information Architects Inc.",
+            "tags": [{"text": "User Experience"}, {"text": "Fails"}]
+          },
+          {
+            "title": "Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing", 
+            "datePosted": "October 11, 2017", 
+            "source": "AutoDesk Research", 
+            "img": {
+                "src": "feed/thumbnails/post0.PNG",
+                "alt": "Picture of a dinosaur made of data points presented in this article"
+            },
+            "href": "https://www.autodeskresearch.com/publications/samestats",
+            "comment": "Great article about how numbers alone can be misleading. Check out how descriptive stats can be manipulated to create crazy graphs!",
+            "author": "Justin Matejka, George Fitzmaurice",
+            "tags": [{"text": "Statistics"}, {"text": "Data"}]
+          },
+          {
+            "title": "Engineering Psychology Careers", 
+            "datePosted": "October 11, 2017",  
+            "source": "Careers in Psychology", 
+            "img": {
+                "src": "feed/thumbnails/post1.PNG",
+                "alt": "Picture of the engineering psychology website"
+            },
+            "href": "https://careersinpsychology.org/engineering-psychology-careers/",
+            "comment": "Learn about what I majored in at Tufts University!",
+            "author": "careersinpsychology.org",
+            "tags": [{"text": "Engineering Psychology"}, {"text": "Careers"}]
+          },
+          { 
+            "title": "UX Fails", 
+            "datePosted": "October 11, 2017",  
+            "source": "Pinterest", 
+            "img": {
+                "src": "feed/thumbnails/post2.PNG",
+                "alt": "Picture of the UX fails board on Pinterest"
+            },
+            "href": "https://www.pinterest.com/uxfails/ux-fails/",
+            "comment": "For some reason, I love looking at bad designs. Check out these epic design fails:",
+            "author": "Pinterest",
+            "tags": [{"text": "User Experience"}, {"text": "Design"}, {"text": "Fails"}]
+          }
+    ]
+
+}
