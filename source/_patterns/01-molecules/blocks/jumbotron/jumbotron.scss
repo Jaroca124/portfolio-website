@@ -7,6 +7,7 @@
     background-position: center;
     color: white;
     overflow: hidden !important;
+    position: relative;
 
     hr {
         border: .5px solid #ffffff;
@@ -21,7 +22,7 @@
 }
 
 #banner {
-    background-image: url(../assets/index/annie-spratt-216207.jpg);
+    background-image: url(../assets/index/trevor-wilson-44346-unsplash.jpg);
 }
 
 #portfolio-banner {
@@ -34,5 +35,5 @@
 
 #home_overlay {
     overflow: hidden !important;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.3);
 }

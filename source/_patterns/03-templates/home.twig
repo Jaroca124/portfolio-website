@@ -4,7 +4,7 @@
     {% endblock %}
 
     {% block hero %}
-        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'banner','jumbo_overlay_id':'home_overlay'} %}
+        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'banner','jumbo_overlay_id':'home_overlay',"jumbo_image_credit": imageCredit} %}
             {% block jumbotron_content %}
                 <h1 class="display-3">Welcome</h1>
                 <p class="lead">UI/UX Designer at Booz Allen Hamilton</p>

@@ -1,0 +1,41 @@
+.image-credit {
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    padding: 4px 6px;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+    border-radius: 3px;
+    @include md-2dp;
+    @extend .hoverable;
+    float: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    .wrapper {
+        display: inline-block;
+        padding:2px 3px;
+
+        .camera-icon {
+            height: 12px;
+            width: auto;
+            position: relative;
+            vertical-align: middle;
+            top: -1px;
+            fill: white;
+        }
+
+        .credit-image-name {
+            display: inline-block;
+            padding: 2px 3px;
+        }
+    }
+}
