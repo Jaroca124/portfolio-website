@@ -5,9 +5,7 @@
         @extend .img-thumbnail;
         @extend .mx-auto;
         @extend .my-auto;
-        min-height: 300px;
-        max-height: 500px;
-        height: 40vh;
+        max-height: 375px;
         width: auto;
     }
 }

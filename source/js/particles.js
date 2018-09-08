@@ -3,6 +3,7 @@ window.onload = function() {
     selector: '.background',
     color: "#ffffff",
     connectParticles: true,
+    maxParticles: 50,
     speed: .25,
     responsive: [
         {
