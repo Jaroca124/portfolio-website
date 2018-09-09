@@ -14,7 +14,8 @@
     {"id": "Marc", "src":"./assets/marc.png"},
     {"id": "Eden", "src":"./assets/eden.png"},
     {"id": "Illenium", "src":"./assets/illenium.png"},
-    {"id": "Bebe", "src":"./assets/bebe.png"}
+    {"id": "Bebe", "src":"./assets/bebe.png"},
+    {"id": "Alessia_Cara", "src":"./assets/alessia.png"}
   ],
   "links": [
     {"source": "G", "target": "Skizzy", "value": 30},
@@ -46,6 +47,8 @@
     {"source": "Eden", "target": "Illenium", "value": 15},
     {"source": "Illenium", "target": "Quinn", "value": 15},
     {"source": "Bebe", "target": "G", "value": 30},
-    {"source": "Bebe", "target": "G", "value": 30}
+    {"source": "Bebe", "target": "G", "value": 30},
+    {"source": "Alessia_Cara", "target": "Kyle", "value": 15},
+    {"source": "Alessia_Cara", "target": "G", "value": 15}
   ]
 }
