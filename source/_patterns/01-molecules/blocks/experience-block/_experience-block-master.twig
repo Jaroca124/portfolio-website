@@ -1,6 +1,6 @@
 {% set experience_block_classes = experience_block_classes|default() %}
-{% set experience_block_logo_img_src = experience_block_img_src|default() %}
-{% set experience_block_logo_img_alt = experience_block_img_alt|default() %}
+{% set experience_block_logo_img_src = experience_block_logo_img_src|default() %}
+{% set experience_block_logo_img_alt = experience_block_logo_img_alt|default() %}
 {% set experience_block_company = experience_block_company|default() %}
 {% set experience_block_position = experience_block_position|default() %}
 {% set experience_block_time_period = experience_block_time_period|default() %}
@@ -12,22 +12,25 @@
         <div class="logo-wrapper">
             {% include "@atoms/images/default-image/default-image.twig" with
                 {
-                    "img_src": experience_block_logo_img_src,
-                    "img_alt": experience_block_logo_img_alt,
-                    "img_style": "experience-block-logo"
+                    "image_src": experience_block_logo_img_src,
+                    "image_alt": experience_block_logo_img_alt,
+                    "image_style": "experience-block-logo"
                 }
             %}
         </div>
-        <h2 class="companyName">{{ experience_block_company }}</h2>
-        <p class="position my-2">{{ experience_block_position }}</p>
-        <p class="period my-2">{{ experience_block_time_period }}</p>
+        <h2 class="company-name">{{ experience_block_company }}</h2>
+        <p class="company-position">{{ experience_block_position }}</p>
+        <p class="time-period">{{ experience_block_time_period }}</p>
         <hr>
-        <p class="companyDescription mx-auto">{{ experience_block_description }}</p>
+        <p class="company-description">{{ experience_block_description }}</p>
         <hr>
         <ul class="mx-auto">
-            <li ng-repeat="bullet in exp.responsibilitiesList"> {{ bullet }} </li>
+            {% for bullet in experience_block_responsibilities %}
+                <li>{{ bullet.text }}</li>
+            {% endfor %}
         </ul>
         
+        <!--
         <div class="row">
             <div class="col-md-6 pr-1">
                 <img class="d-block img-fluid mx-auto" ng-src="{{ exp.galleryImages[0].url }}" alt="{{ exp.galleryImages[0].alt }}">
@@ -41,5 +44,6 @@
                 <img class="d-block img-fluid mx-auto" ng-src="{{ exp.galleryImages[2].url }}" alt="{{ exp.galleryImages[2].alt }}">
             </div>
         </div>
+        -->
     </div>   
 </div>
