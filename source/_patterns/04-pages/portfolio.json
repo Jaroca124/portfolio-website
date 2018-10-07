@@ -1,4 +1,9 @@
 {
+    "title": "Portfolio - Jacob Caccamo",
+    "imageCredit": {
+        "name": "Trevor Wilson",
+        "href": "https://unsplash.com/@clevertrevor?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+    },
     "projects": [
         {
             "img_src": "portfolio/login_page.png",
@@ -6,7 +11,8 @@
             "title": "Ansible Galaxy Redesign",
             "context": "RedHat, Inc. - Tufts Senior Capstone Project",
             "btn_text": "View Project",
-            "btn_href": "project_pages/redhat.html"
+            "btn_href": "project_pages/redhat.html",
+            "tags": [{"text": "Pattern Lab"}, {"text": "Atomic Design"}, {"text": "Development"}, {"text": "Frontend"}]
         },
         {
             "img_src": "portfolio/matthew-brodeur-214573.jpg",

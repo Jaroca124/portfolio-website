@@ -1,79 +1,91 @@
-{% embed "@atoms/layout/_site.twig" %}
-    {% block header %}
-        {% include "@molecules/navigation/navigation.twig" %}
+{% embed "@atoms/layout/site/_site.twig" %}
+    {% block background %}
+        {% include "@atoms/images/posterboard-background/_posterboard-background-master.twig" with
+            {
+                "posterboard_background_classes": "home-background"
+            }
+        %}
     {% endblock %}
-
-    {% block hero %}
-        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'banner','jumbo_overlay_id':'home_overlay',"jumbo_image_credit": imageCredit} %}
-            {% block jumbotron_content %}
-                <h1 class="display-3">Welcome</h1>
-                <p class="lead">UI/UX Designer at Booz Allen Hamilton</p>
-                <p class="my-4">I believe that sound UX is the basis for all successful projects. Take a look and see what I mean!</p>
-                <hr class="my-4" style="color: white;">
-                <p>This website was coded using Bootstrap 4, Angular, HTML, CSS, JavaScript, &amp; jQuery</p>
-                {% include "@atoms/button/primary/primary.twig" with
-                    {
-                        "btn_href": dep_path ~ "assets/Jacob_Caccamo.pdf",
-                        "btn_text": "View Resume (PDF)"
-                    }
-                %}
+    
+    {% block main_content %}
+        {% embed "@atoms/layout/posterboard/_posterboard-master.twig" %}
+            {% block header %}
+                {% include "@molecules/navigation/navigation.twig" %}
             {% endblock %}
-        {% endembed %}
-    {% endblock %}
 
-    {% block main %}
-        {% embed "@organisms/regions/home/home-main-region.twig" %}
-            {% block overview %}
-                {% include "@molecules/blocks/headshot/_headshot-master.twig" %}
-                {% embed "@atoms/layout/_column.twig" with {"columns_classes": "intro-paragraph my-auto", "columns_breakpoint": "md"} %}
-                    {% block column_content %}
-                         <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
+            {% block hero %}
+                {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'banner','jumbo_overlay_id':'home_overlay',"jumbo_image_credit": imageCredit} %}
+                    {% block jumbotron_content %}
+                        <h1 class="display-3">Welcome</h1>
+                        <p class="lead">UI/UX Designer at Booz Allen Hamilton</p>
+                        <p class="my-4">I believe that sound UX is the basis for all successful projects. Take a look and see what I mean!</p>
+                        <hr class="my-4" style="color: white;">
+                        <p>This website was coded using Bootstrap 4, Angular, HTML, CSS, JavaScript, &amp; jQuery</p>
+                        {% include "@atoms/button/primary/primary.twig" with
+                            {
+                                "btn_href": dep_path ~ "assets/Jacob_Caccamo.pdf",
+                                "btn_text": "View Resume (PDF)"
+                            }
+                        %}
                     {% endblock %}
                 {% endembed %}
             {% endblock %}
-            {% block quote %}
-                {% include "@molecules/text/blockquote/_blockquote-master.twig" with
-                    {
-                        "blockquote_text": "Good design, when it's done well, becomes invisible. It's only when it's done poorly that we notice it.",
-                        "blockquote_author": "Jared Spool"
-                    }
-                %}
+
+            {% block main %}
+                {% embed "@organisms/regions/home/home-main-region.twig" %}
+                    {% block overview %}
+                        {% include "@molecules/blocks/headshot/_headshot-master.twig" %}
+                        {% embed "@atoms/layout/_column.twig" with {"columns_classes": "intro-paragraph my-auto", "columns_breakpoint": "md"} %}
+                            {% block column_content %}
+                                <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
+                            {% endblock %}
+                        {% endembed %}
+                    {% endblock %}
+                    {% block quote %}
+                        {% include "@molecules/text/blockquote/_blockquote-master.twig" with
+                            {
+                                "blockquote_text": "Good design, when it's done well, becomes invisible. It's only when it's done poorly that we notice it.",
+                                "blockquote_author": "Jared Spool"
+                            }
+                        %}
+                    {% endblock %}
+                    {% block cards %}
+                        {% include "@organisms/sections/cards/_cards-master.twig" with
+                            {
+                                "cards_data": cards
+                            }
+                        %}
+                    {% endblock %}
+                    {% block featured %}
+                        {% include "@molecules/blocks/featured-item/_featured-item-master.twig" with
+                            {
+                                "featured_img": featured
+                            }
+                        %}
+                    {% endblock %}
+                    {% block feed %}
+                        {% include "@molecules/blocks/feed-post/_feed-post-master.twig" with
+                            {
+                                "feed_post_title": feedPost.title, 
+                                "feed_post_date_posted": feedPost.date_posted,  
+                                "feed_post_source": feedPost.source, 
+                                "feed_post_img": {
+                                    "src": feedPost.img.src,
+                                    "alt": feedPost.img.alt
+                                },
+                                "feed_post_href": feedPost.href,
+                                "feed_post_comment": feedPost.comment,
+                                "feed_post_author": feedPost.author,
+                                "feed_post_tags": feedPost.tags
+                            }
+                        %}
+                    {% endblock %}
+                {% endembed %}
             {% endblock %}
-            {% block cards %}
-                {% include "@organisms/sections/cards/_cards-master.twig" with
-                    {
-                        "cards_data": cards
-                    }
-                %}
-            {% endblock %}
-            {% block featured %}
-                {% include "@molecules/blocks/featured-item/_featured-item-master.twig" with
-                    {
-                        "featured_img": featured
-                    }
-                %}
-            {% endblock %}
-            {% block feed %}
-                {% include "@molecules/blocks/feed-post/_feed-post-master.twig" with
-                    {
-                        "feed_post_title": feedPost.title, 
-                        "feed_post_date_posted": feedPost.date_posted,  
-                        "feed_post_source": feedPost.source, 
-                        "feed_post_img": {
-                            "src": feedPost.img.src,
-                            "alt": feedPost.img.alt
-                        },
-                        "feed_post_href": feedPost.href,
-                        "feed_post_comment": feedPost.comment,
-                        "feed_post_author": feedPost.author,
-                        "feed_post_tags": feedPost.tags
-                    }
-                %}
+
+            {% block footer %}
+                {% include "@organisms/global/footer/footer.twig" %}
             {% endblock %}
         {% endembed %}
-    {% endblock %}
-
-    {% block footer %}
-        {% include "@organisms/global/footer/footer.twig" %}
     {% endblock %}
 {% endembed %}

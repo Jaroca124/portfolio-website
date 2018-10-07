@@ -23,4 +23,12 @@
             @include md-0dp;
         }
     }
+
+    .project-tags {
+        @extend .mt-3;
+
+        .tag-title {
+            font-size: 1rem;
+        }
+    }
 }

@@ -6,6 +6,7 @@
  {% set project_btn_href = project_btn_href|default() %}
  {% set project_btn_classes = project_btn_classes|default() %}
  {% set project_classes = project_classes|default() %}
+ {% set project_tags = project_tags|default() %}
  
  <div class="project {{ project_classes }}">
     <div class="image-wrapper">
@@ -28,4 +29,12 @@
             }
         %}
     </a>
+    <div class="project-tags">
+        <h3 class="tag-title">Tags:</h3>
+        {% include "@molecules/text/pills/_pills-master.twig" with
+            {
+                "pills": project_tags
+            }
+        %}
+    </div>
 </div>
