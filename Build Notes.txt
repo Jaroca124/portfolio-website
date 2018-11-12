@@ -1,0 +1,11 @@
+Build Notes
+
+Start Pattern Lab: gulp
+
+Build Production Pages: gulp build_prod
+- Assets should be put in the pl/assets folder
+- Prod pages will replace the pages in the root folder
+
+Releasing:
+- HTML - Take from ./
+- CSS - Take from pl/public/css -> put in pl/public/css folder
