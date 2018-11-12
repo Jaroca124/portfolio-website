@@ -1,6 +1,14 @@
 {% embed "@atoms/layout/site/_site.twig" %}
+    {% block background %}
+        {% include "@atoms/images/posterboard-background/_posterboard-background-master.twig" with
+            {
+                "posterboard_background_classes": "home-background"
+            }
+        %}
+    {% endblock %}
+    
     {% block main_content %}
-        {% embed "@atoms/layout/default/_default-master.twig" %}   
+        {% embed "@atoms/layout/posterboard/_posterboard-master.twig" %}
             {% block header %}
                 {% include "@molecules/navigation/navigation.twig" %}
             {% endblock %}

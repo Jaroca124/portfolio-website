@@ -3,7 +3,8 @@
 {% set jumbo_overlay_id = jumbo_overlay_id|default('') %}
 {% set jumbo_image_credit = jumbo_image_credit|default('') %}
 
-<div class="jumbotron-fluid" id="{{ jumbo_id }}">
+<div class="jumbotron-fluid">
+    <div class="jumbotron-image" id="{{ jumbo_id }}"></div>
     <div class="container-fluid" id="{{ jumbo_overlay_id }}">
         {% block jumbotron_content %}{% endblock %}
         {% include "@atoms/button/image-credit/_image-credit-master.twig" with
