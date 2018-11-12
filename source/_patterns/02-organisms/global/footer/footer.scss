@@ -8,10 +8,15 @@
     @include md-6dp;
     
     .col-xs-auto {
-        margin-left: 5vh;
-        margin-right: 5vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
         height: 7vh;
         
+        @include media-breakpoint-up(md) {
+            margin-left: 5vh;
+            margin-right: 5vh;
+        }
+
         .icon {
             height: 3vh;
             display: block;
