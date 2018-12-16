@@ -1,0 +1,24 @@
+{
+    "title": "Skills - Jacob Caccamo",
+    "imageCredit": {
+        "name": "Quino Al",
+        "href": "https://unsplash.com/@quinoal"
+    },
+    "stagesData": [
+        {
+            "img_src": "skills/stage1.png",
+            "img_alt": "Identify",
+            "description": "Identify: In this stage, I work to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience."
+        },
+        {
+            "img_src": "skills/stage2.png",
+            "img_alt": "Design",
+            "description": "Design: In this stage, I brainstorm different features or modifications for inclusion in the redesign. I will then typically creates wireframes, templates, and design concepts utilizing the user needs generated from Identify as a guide. Multiple designs are generated in order to present a range of different choices."
+        },
+        {
+            "img_src": "skills/stage3.png",
+            "img_alt": "Verify &amp; Validate",
+            "description": "Verify &amp; Validate: After multiple design concepts have been created, I test the feasibility of these designs with potential users. I then incorporate the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, I may implement this verified design."
+        }
+    ]
+}

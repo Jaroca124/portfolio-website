@@ -1,0 +1,14 @@
+.block--stage {
+    &__badge-image {
+        @extend .mx-auto;
+        @extend .my-4;
+        height: 20vh;
+        width: 20vh;
+        @include md-0dp;
+    }
+
+    &__description {
+        @extend .my-4;
+        @extend .mx-3; 
+    }
+}
