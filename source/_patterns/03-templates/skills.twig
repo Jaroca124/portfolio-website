@@ -19,94 +19,23 @@
                     <div class="container">
                         {% include "@organisms/sections/section-stages/_section-stages-master.twig" with
                             {
-                                "section_stages_data": stagesData
+                                "section_stages_data": stagesData,
+                                "section_stages_classes": "mb-4"
                             }
                         %}
-                        <div class="row mt-3">
-                            <div class="col-md-4">
-                                <h3 class="w-100 text-center">Identify Techniques</h3>
-                                <ul class="my-3">
-                                    <li>Literature Review</li>
-                                    <li>Heuristic Analysis</li>
-                                    <li>Expert Review</li>
-                                    <li>User Personas</li>
-                                    <li>Market Research</li>
-                                    <li>Exploration Interviews</li>
-                                    <li>User Needs Generation</li>
-                                    <li>System Requirements Generation</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h3 class="w-100 text-center">Design Techniques</h3>
-                                <ul class="my-3">
-                                    <li>Design Thinking/Brainstorming</li>
-                                    <li>Wireframes</li>
-                                    <li>High Fidelity Mockups (Illustrator/Sketch/Photoshop)</li>
-                                    <li>Structural Diagram Creation</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h3 class="w-100 text-center">Verify Techniques</h3>
-                                <ul class="my-3">
-                                    <li>Focus Groups for Design Iteration</li>
-                                    <li>A/B Testing</li>
-                                    <li>Simulated Use Testing</li>
-                                    <li>Hazard Identification</li>
-                                    <li>Use-Related Risk Assessment</li>
-                                    <li>508 Compliance Testing</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr class="my-4 body_hr" style="color: white;">
-                    
-                    <div id="programs">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h3 class="mb-4 text-center">Programs &amp; Software</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm">
-                                    <h4 class="mb-3 text-center">UI/UX &amp; Graphic Design</h4>
-                                    <ul class="my-3">
-                                        <li>Adobe Illustrator</li>
-                                        <li>Sketch</li>
-                                        <li>Adobe PhotoShop</li>
-                                        <li>Axure</li>
-                                        <li>Balsamiq</li>
-                                        <li>Adobe XD</li>
-                                        <li>inVision</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm">
-                                    <h4 class="mb-3 text-center">3D Design &amp; Modeling</h4>
-                                    <ul class="my-3">
-                                        <li>Unity</li>
-                                        <li>SketchUp</li>
-                                        <li>3DSMax</li>
-                                        <li>AutoCad</li>
-                                        <li>Inventor</li>
-                                        <li>Revit</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm">
-                                    <h4 class="mb-3 text-center">Web Development</h4>
-                                    <ul class="my-3">
-                                        <li>HTML, CSS, JavaScript, jQuery, Node.js</li>
-                                        <li>Bootstrap 4, Materialize, D3</li>
-                                        <li>Pattern Lab, Twig, Gulp</li>
-                                        <li>VBA</li>
-                                        <li>C++</li>
-                                        <li>Python</li>
-                                        <li>MATLAB</li>
-                                        <li>Git</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                            {
+                                "section_lists_data": techniquesData
+                            }
+                        %}
+                        <hr class="my-4 body_hr" style="color: white;">
+                        {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                            {
+                                "section_lists_data": programsData,
+                                "section_lists_title": "Programs & Software",
+                                "section_lists_classes": "mb-4"
+                            }
+                        %}
                     </div>
                 </div>
             {% endblock %}

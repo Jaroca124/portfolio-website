@@ -1,0 +1,7 @@
+.section--lists {
+    &__title {
+        text-align: center;
+        width: 100%;
+        @extend .mb-4;
+    }
+}

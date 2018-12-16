@@ -35,7 +35,8 @@ var buildPaths = {
     styleGuide: './pl/public/index.html',
     home: './pl/public/patterns/05-prod-index/05-prod-index.html',
     portfolio: './pl/public/patterns/05-prod-portfolio/05-prod-portfolio.html',
-    feed: './pl/public/patterns/05-prod-feed/05-prod-feed.html'
+    feed: './pl/public/patterns/05-prod-feed/05-prod-feed.html',
+    skills: './pl/public/patterns/05-prod-skills/05-prod-skills.html'
 }
 
 var sassOption = {
@@ -101,6 +102,16 @@ gulp.task('build_prod', ['sass', 'pl'], function (cb) {
     }))
     .pipe(gulp.dest(buildPaths.target));
     console.log("Feed Build Finished");
+
+    // Skills
+    console.log("Starting Skills Build...");
+    gulp.src(buildPaths.skills)
+    .pipe(rename({
+        basename: 'skills',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest(buildPaths.target));
+    console.log("Skills Build Finished");
 });
 
 // Start Static Server

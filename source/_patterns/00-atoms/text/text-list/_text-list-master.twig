@@ -1,0 +1,9 @@
+{% set text_list_classes = text_list_classes|default() %}
+{% set text_list_data = text_list_data|default() %}
+{% set text_list_type = text_list_type|default() %}
+
+<{{text_list_type}} class="text text--list {{ text_list_classes }}">
+    {% for item in text_list_data %}
+        <li>{{ item.text }}</li>
+    {% endfor %}
+</{{text_list_type}}>
