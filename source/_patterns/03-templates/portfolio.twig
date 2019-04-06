@@ -17,9 +17,10 @@
             {% block main %}
                 {% embed "@organisms/regions/portfolio/portfolio-main-region.twig" %}
                     {% block projects %}
-                        {% include "@organisms/sections/projects/_projects-master.twig" with 
+                        <div id="shots"></div>
+                        {% include "@organisms/sections/view-projects/_view-projects-master.twig" with 
                             {
-                                "projects_data": projects
+                                "view_project_data": projects
                             }
                         %}
                     {% endblock %}

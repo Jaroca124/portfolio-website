@@ -1,0 +1,23 @@
+{% set view_projects_classes = view_projects_classes|default() %}
+{% set view_project_data = view_project_data|default() %}
+
+<div class="view-pl view--projects container-fluid {{ view_projects_classes }}">
+    <div class="row">
+        {% for project in view_project_data %}
+            <div class="col-lg-6">
+                {% include "@molecules/blocks/block-project/_block-project-master.twig" with 
+                    {
+                        "block_project_img_src": project.img_src,
+                        "block_project_img_alt": project.img_alt,
+                        "block_project_title": project.title,
+                        "block_project_context": project.context,
+                        "block_project_btn_text": project.btn_text,
+                        "block_project_btn_href": project.btn_href,
+                        "block_project_btn_classes": project.btn_classes,
+                        "block_project_tags": project.tags
+                    }
+                %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
