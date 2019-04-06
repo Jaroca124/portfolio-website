@@ -1,0 +1,33 @@
+ {% set block_project_classes = block_project_classes|default() %}
+ {% set block_project_img_src = block_project_img_src|default() %}
+ {% set block_project_img_alt = block_project_img_alt|default() %}
+ {% set block_project_title = block_project_title|default() %}
+ {% set block_project_context = block_project_context|default() %}
+ {% set block_project_btn_text = block_project_btn_text|default() %}
+ {% set block_project_btn_href = block_project_btn_href|default() %}
+ {% set block_project_btn_classes = block_project_btn_classes|default() %}
+ {% set block_project_tags = block_project_tags|default() %}
+ 
+ <div class="block-pl block--project {{ block_project_classes }}">
+    <div class="block--project__image-wrapper">
+        {% include "@atoms/images/default-image/default-image.twig" with
+            {
+                "image_src": block_project_img_src,
+                "image_alt": block_project_img_alt,
+                "image_style": "block--project__image-wrapper__image"
+            }
+        %}
+    </div>
+    <div class="block--project__text-wrapper">
+        <h2>{% if block_project_btn_href is not empty %}<a href="{{ block_project_btn_href }}">{% endif %}{{ block_project_title }}{% if block_project_btn_href is not empty %}</a>{% endif %}</h2>
+        <p>{{ block_project_context }}</p>
+        <div class="block--project__text-wrapper__tags">
+            <h3 class="tag-title">Tags:</h3>
+            {% include "@molecules/text/pills/_pills-master.twig" with
+                {
+                    "pills": block_project_tags
+                }
+            %}
+        </div>
+    </div>
+</div>

@@ -51,10 +51,8 @@
         {
             "img_src": "portfolio/Editorial_Page.jpg",
             "img_alt": "A picture of an editorial page design.",
-            "title": "Innovation Center - Internal Website",
+            "title": "Innovation Center Internal Website",
             "context": "Booz Allen Hamilton",
-            "btn_text": "Coming Soon",
-            "btn_classes": "disabled",
             "tags": [{"text": "UI Design"}, {"text": "UX Design"}, {"text": "Frontend Development"}] 
         },
         {
