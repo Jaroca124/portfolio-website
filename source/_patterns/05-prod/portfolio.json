@@ -9,7 +9,8 @@
             "title": "Pattern Lab - Portfolio Website (In Progress)",
             "context": "Atomic Design Implementation of This Site",
             "btn_text": "View Project",
-            "btn_href": "pl/public/index.html"
+            "btn_href": "pl/public/index.html",
+            "tags": [{"text": "Pattern Lab"}, {"text": "Atomic Design"}, {"text": "Development"}, {"text": "Frontend"}]
         },
         {
             "img_src": "portfolio/connected-crew.PNG",
@@ -17,7 +18,8 @@
             "title": "Connected Crew (In Progress)",
             "context": "See how some of my favorite artists connect in terms of music collaborations.",
             "btn_text": "View Project",
-            "btn_href": "connected-crew/connected-crew.html"
+            "btn_href": "connected-crew/connected-crew.html",
+            "tags": [{"text": "D3"}, {"text": "UX Design"}, {"text": "Development"}, {"text": "Frontend"}]
         },
         {
             "img_src": "portfolio/login_page.png",
@@ -25,7 +27,8 @@
             "title": "Ansible Galaxy Redesign",
             "context": "RedHat, Inc. - Tufts Senior Capstone Project",
             "btn_text": "View Project",
-            "btn_href": "project_pages/redhat.html"
+            "btn_href": "project_pages/redhat.html",
+            "tags": [{"text": "Human Factors"}, {"text": "UX Design"}, {"text": "UI Design"}, {"text": "Engineering Psychology"}]
         },
         {
             "img_src": "portfolio/matthew-brodeur-214573.jpg",
@@ -33,7 +36,8 @@
             "title": "Drone Operator Monitoring",
             "context": "CABCS - Independent Research",
             "btn_text": "View Project",
-            "btn_href": "project_pages/op_monitoring.html"
+            "btn_href": "project_pages/op_monitoring.html",
+            "tags": [{"text": "Engineering Psychology"}, {"text": "Research"}, {"text": "Interface Design"}, {"text": "Unity"}]
         },
         {
             "img_src": "portfolio/benjamin-combs-27617.jpg",
@@ -41,7 +45,8 @@
             "title": "3-in-1 Horticultural Device",
             "context": "ENP 161 - Tufts Class Project",
             "btn_text": "View Project",
-            "btn_href": "project_pages/vft_design.html"
+            "btn_href": "project_pages/vft_design.html",
+            "tags": [{"text": "Human Factors"}, {"text": "Product Design"}, {"text": "UX Design"}, {"text": "Engineering Psychology"}]
         },
         {
             "img_src": "portfolio/Editorial_Page.jpg",
@@ -49,7 +54,8 @@
             "title": "Innovation Center - Internal Website",
             "context": "Booz Allen Hamilton",
             "btn_text": "Coming Soon",
-            "btn_classes": "disabled" 
+            "btn_classes": "disabled",
+            "tags": [{"text": "UI Design"}, {"text": "UX Design"}, {"text": "Frontend Development"}] 
         },
         {
             "img_src": "portfolio/mjx.PNG",
@@ -57,7 +63,8 @@
             "title": "MJx Music Splash Page",
             "context": "Website Design Inspired by Rowlan & G-Eazy",
             "btn_text": "Visit Page",
-            "btn_href": "http://mjxofficial.com/"
+            "btn_href": "http://mjxofficial.com/",
+            "tags": [{"text": "UI Design"}, {"text": "UX Design"}, {"text": "Frontend Development"}] 
         },
         {
             "img_src": "portfolio/ff.PNG",
@@ -65,7 +72,8 @@
             "title": "Fluency Fact Learner",
             "context": "Created by Jacob Caccamo & Dylan Santos",
             "btn_text": "Learn US History",
-            "btn_href": "ff.html"
+            "btn_href": "ff.html",
+            "tags": [{"text": "Frontend Development"}]
         },
         {
             "img_src": "portfolio/s0.png",
@@ -73,7 +81,8 @@
             "title": "The Role of Engineering Psychology in Video Game Controller Design",
             "context": "COMP23 - Tufts Class Project",
             "btn_text": "Watch Presentation",
-            "btn_href": "https://www.youtube.com/watch?v=2qqKjUXdKmI&t=3s"
+            "btn_href": "https://www.youtube.com/watch?v=2qqKjUXdKmI&t=3s",
+            "tags": [{"text": "Game Design"}, {"text": "Game Research"}, {"text": "Product Design"}]
         },
         {
             "img_src": "portfolio/raze.PNG",
@@ -81,7 +90,8 @@
             "title": "Project Raze - phaser.io Game",
             "context": "COMP23 - Tufts Class Project",
             "btn_text": "Play Game",
-            "btn_href": "http://jaroca124.github.io/comp23-project_raze/"
+            "btn_href": "http://jaroca124.github.io/comp23-project_raze/",
+            "tags": [{"text": "Phaser.io"}, {"text": "Game Development"}, {"text": "Game Design"}]
         }
     ]
 }

@@ -1,0 +1,11 @@
+{% set block_d3_chart_classes = block_d3_chart_classes|default() %}
+{% set block_d3_chart_name = block_d3_chart_name|default() %}
+{% set block_d3_chart_height = block_d3_chart_height|default() %}
+{% set block_d3_chart_width = block_d3_chart_width|default() %}
+{% set block_d3_chart_script = block_d3_chart_script|default() %}
+
+<div class="block block--d3-chart {{ block_d3_chart_classes }}">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <svg width="{{ block_d3_chart_width }}" height="{{ block_d3_chart_height }}"></svg>
+    <script src="{{ path_to_assets }}js/{{ block_d3_chart_script }}"></script>
+</div>
