@@ -1,48 +1,44 @@
-{% embed "@atoms/layout/site/_site.twig" %}
-    {% block main_content %}
-        {% embed "@atoms/layout/default/_default-master.twig" %}  
-            {% block header %}
-                {% include "@molecules/navigation/navigation.twig" %}
-            {% endblock %}
+{% embed "@atoms/layout/layout-site/_layout-site-master.twig" %}
+    {% block header %}
+        {% embed "@organisms/global/global-header/_global-header-master.twig" %}{% endembed %}
+    {% endblock %}
 
-            {% block hero %}
-                {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'skills-banner',"jumbo_image_credit": imageCredit} %}
-                    {% block jumbotron_content %}
-                        <h1 class="display-3">Skills</h1>
-                        <p class="lead">Check out my skills as well as some of the programs I use in my work.</p>
-                    {% endblock %}
-                {% endembed %}
-            {% endblock %}
-
-            {% block main %}
-                <div class="region--skils">
-                    <div class="container">
-                        {% include "@organisms/sections/section-stages/_section-stages-master.twig" with
-                            {
-                                "section_stages_data": stagesData,
-                                "section_stages_classes": "mb-4"
-                            }
-                        %}
-                        {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
-                            {
-                                "section_lists_data": techniquesData
-                            }
-                        %}
-                        <hr class="my-4 body_hr" style="color: white;">
-                        {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
-                            {
-                                "section_lists_data": programsData,
-                                "section_lists_title": "Programs & Software",
-                                "section_lists_classes": "mb-4"
-                            }
-                        %}
-                    </div>
-                </div>
-            {% endblock %}
-
-            {% block footer %}
-                {% include "@organisms/global/footer/footer.twig" %}
+    {% block hero %}
+        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'skills-banner',"jumbo_image_credit": imageCredit} %}
+            {% block jumbotron_content %}
+                <h1 class="display-3">Skills</h1>
+                <p class="lead">Check out my skills as well as some of the programs I use in my work.</p>
             {% endblock %}
         {% endembed %}
+    {% endblock %}
+
+    {% block main %}
+        <div class="region--skils">
+            <div class="container">
+                {% include "@organisms/sections/section-stages/_section-stages-master.twig" with
+                    {
+                        "section_stages_data": stagesData,
+                        "section_stages_classes": "mb-4"
+                    }
+                %}
+                {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                    {
+                        "section_lists_data": techniquesData
+                    }
+                %}
+                <hr class="my-4 body_hr" style="color: white;">
+                {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                    {
+                        "section_lists_data": programsData,
+                        "section_lists_title": "Programs & Software",
+                        "section_lists_classes": "mb-4"
+                    }
+                %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
     {% endblock %}
 {% endembed %}

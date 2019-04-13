@@ -1,7 +1,0 @@
-{% set columns = columns|default() %}
-{% set columns_classes = columns_classes|default() %}
-{% set columns_breakpoint = columns_breakpoint|default() %}
-
-<div class="col{% if columns_breakpoint is not empty %}-{{ columns_breakpoint }}{% endif %}{% if columns is not empty %}-{{ columns }}{% endif %} {{ columns_classes }}">
-    {% block column_content %}{% endblock %}
-</div>

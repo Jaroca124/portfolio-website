@@ -1,0 +1,11 @@
+{% set block_headshot_classes = block_headshot_classes|default() %}
+
+<div class="block-pl block--headshot {{ block_headshot_classes }}">
+    {% include "@atoms/images/default-image/default-image.twig" with 
+        {
+            "image_src": "index/headshot2.jpg",
+            "image_alt": "Jacob Caccamo Headshot",
+            "image_style": "home-headshot"
+        }
+    %}
+</div>

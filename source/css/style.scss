@@ -1,5 +1,11 @@
+/* BOOTSTRAP */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+/* MATERIALIZE */
+@import "scss/materialize/*.scss";
+@import "../node_modules/materialize-css/sass/components/_tabs.scss";
+
+/* PATTERNS */
 @import "scss/global/*.scss";
 @import "scss/components/*.scss";
 @import "../_patterns/**/*.scss";

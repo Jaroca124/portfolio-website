@@ -1,0 +1,26 @@
+.block--featured-item {
+
+    .title {
+        @extend .my-2;
+    }
+
+    .mobile-screen {
+        display: block;
+        @extend .mx-auto;
+        @include md-6dp;
+        height: 40vh;
+        width: auto;
+
+        @include media-breakpoint-up(md) {
+            width: 90%;
+            height: auto;
+        }
+    }
+
+    .description {
+        @extend .col-sm-12;
+        @extend .col-md-6;
+        @extend .my-auto;
+        text-align: center;
+    }
+}
