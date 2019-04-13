@@ -1,0 +1,12 @@
+{% set layout_site_classes = layout_site_classes|default %}
+
+<div class="layout-pl layout--site {{ layout_site_classes }}">
+    {% block header %}{% endblock %}
+    <div class="layout--site__body">
+        {% block hero %}{% endblock %}
+        <div class="layout--site__body__main">
+            {% block main %}{% endblock %}
+        </div>
+    </div>
+    {% block footer %}{% endblock %}
+</div>
