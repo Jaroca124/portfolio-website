@@ -5,7 +5,7 @@ $( document ).ready(function() {
     if ($("#shots").length) {
         var accessToken = '6b1ab673c477ebcc8b2812c1e9bef03b521df396cb746ccd546002982f30c0e9';
 
-        // Call Dribble v2 API
+        // DRIBBBLE
         $.ajax({
             url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
             dataType: 'json',
