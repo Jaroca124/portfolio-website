@@ -12,6 +12,15 @@
             "context": "RedHat, Inc. - Tufts Senior Capstone Project",
             "btn_text": "View Project",
             "btn_href": "project_pages/redhat.html",
+            "tags": [{"text": "React"}, {"text": "Java"}, {"text": "Development"}, {"text": "Frontend"}]
+        },
+        {
+            "img_src": "portfolio/login_page.png",
+            "img_alt": "Login to Ansible Galaxy - Redesigned",
+            "title": "Ansible Galaxy Redesign",
+            "context": "RedHat, Inc. - Tufts Senior Capstone Project",
+            "btn_text": "View Project",
+            "btn_href": "project_pages/redhat.html",
             "tags": [{"text": "Pattern Lab"}, {"text": "Atomic Design"}, {"text": "Development"}, {"text": "Frontend"}]
         },
         {

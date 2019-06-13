@@ -4,6 +4,15 @@
     "title": "Portfolio - Jacob Caccamo",
     "projects": [
         {
+            "img_src": "portfolio/burgerBuilder.png",
+            "img_alt": "Burger Builder Home Page",
+            "title": "React - Burger Builder",
+            "context": "Personal Development",
+            "btn_text": "View Project",
+            "btn_href": "https://react-burger-builder-26631.firebaseapp.com/",
+            "tags": [{"text": "React"}, {"text": "JavaScript"}, {"text": "Development"}, {"text": "Frontend"}]
+        },
+        {
             "img_src": "portfolio/pattern-lab.PNG",
             "img_alt": "Screenshot of the home page of this site.",
             "title": "Pattern Lab - Portfolio Website (In Progress)",
