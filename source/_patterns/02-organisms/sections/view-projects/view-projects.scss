@@ -1,6 +1,5 @@
 .view--projects {
-    @extend .py-5;
-    @extend .px-5;
+    padding: 1rem;
 
     .col-lg-6 {
         margin: 2rem 0;

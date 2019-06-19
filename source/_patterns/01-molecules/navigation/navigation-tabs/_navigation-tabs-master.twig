@@ -3,16 +3,16 @@
 <div class="navigation-pl navigation--tabs {{ navigation_tabs_classes }}">
     <ul class="tabs">
         <li class="tab"><a href="#section1" class="active">Projects</a></li>
-        {#<li class="tab"><a href="#section2">Dribbble</a></li>
-        <li class="tab"><a href="#section3">Instagram</a></li>#}
+        <li class="tab"><a href="#section2">Dribbble</a></li>
+        {#<li class="tab"><a href="#section3">Instagram</a></li>#}
     </ul>
     <div id="section1">
         {% block projects_content %}{% endblock %}
     </div>
-    {#<div id="section2">
+    <div id="section2">
         {% block dribbble_content %}{% endblock %}
     </div>
-    <div id="section3">
+    {#<div id="section3">
         {% block instagram_content %}{% endblock %}
     </div>#}
 </div>

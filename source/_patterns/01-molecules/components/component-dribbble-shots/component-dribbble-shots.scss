@@ -1,31 +1,12 @@
 .component--dribbble-shots {
-    @extend .py-5;
-    margin-top: 1rem;
-
-    .title {
-        color: #000;
-        padding-bottom: .25rem;
-    }
+    padding: 1rem;
+    @extend .container-fluid;
 
     .shot {
-      width: 100%;
-      color: white;
-      text-decoration: none;
-      margin-bottom: 2rem;
-      padding: 0 1rem;
-      display: block;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &:last-child {
-          margin-bottom: 0;
-      }
-  
-      img {
-        display: block;
-        max-width: 100%;
-      }
+        padding: 1rem;
+        img {
+            display: block;
+            max-width: 100%;
+        }
     }
 }

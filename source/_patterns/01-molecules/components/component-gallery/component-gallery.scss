@@ -1,11 +1,27 @@
 .component--gallery {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
 
-    .col-md-2 {
-        padding: 0;
+    .container-fluid {
+        .col-md-2 {
+            display: none;
+            padding: 0;
+        }   
     }
 
     .default-image {
         width: 100%;
         height: auto;
+    }
+
+    &__overlay {
+        display: none;
+        background: rgba(0,0,0,.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
 }
