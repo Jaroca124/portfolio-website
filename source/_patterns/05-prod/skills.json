@@ -1,4 +1,5 @@
 {
+    "prod_build": true,
     "path_to_assets": "pl/public/",
     "dep_path": "",
     "title": "Skills - Jacob Caccamo",
@@ -6,8 +7,7 @@
         "name": "Quino Al",
         "href": "https://unsplash.com/@quinoal"
     },
-    "stagesData": [
-        {
+    "stagesData": [{
             "img_src": "skills/stage1.png",
             "img_alt": "Identify",
             "description": "Identify: In this stage, I work to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience."
@@ -23,12 +23,10 @@
             "description": "Verify &amp; Validate: After multiple design concepts have been created, I test the feasibility of these designs with potential users. I then incorporate the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, I may implement this verified design."
         }
     ],
-    "techniquesData": [
-        {
+    "techniquesData": [{
             "title": "Identify Techniques",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "Literature Review"
                 },
                 {
@@ -57,8 +55,7 @@
         {
             "title": "Design Techniques",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "Design Thinking/Brainstorming"
                 },
                 {
@@ -75,8 +72,7 @@
         {
             "title": "Verify Techniques",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "Focus Groups for Design Iteration"
                 },
                 {
@@ -97,12 +93,10 @@
             ]
         }
     ],
-    "programsData": [
-        {
+    "programsData": [{
             "title": "UI/UX & Graphic Design",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "Adobe Illustrator"
                 },
                 {
@@ -128,8 +122,7 @@
         {
             "title": "3D Design & Modeling",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "Unity"
                 },
                 {
@@ -152,8 +145,7 @@
         {
             "title": "Web Development",
             "type": "ul",
-            "data": [
-                {
+            "data": [{
                     "text": "React"
                 },
                 {

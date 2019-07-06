@@ -1,16 +1,16 @@
 {
+    "prod_build": true,
     "path_to_assets": "pl/public/",
     "dep_path": "",
     "title": "Portfolio - Jacob Caccamo",
-    "projects": [
-        {
+    "projects": [{
             "img_src": "portfolio/burgerBuilder.png",
             "img_alt": "Burger Builder Home Page",
             "title": "React - Burger Builder",
             "context": "Personal Development",
             "btn_text": "View Project",
             "btn_href": "https://react-burger-builder-26631.firebaseapp.com/",
-            "tags": [{"text": "React"}, {"text": "JavaScript"}, {"text": "Development"}, {"text": "Frontend"}]
+            "tags": [{ "text": "React" }, { "text": "JavaScript" }, { "text": "Development" }, { "text": "Frontend" }]
         },
         {
             "img_src": "portfolio/pattern-lab.PNG",
@@ -19,7 +19,7 @@
             "context": "Atomic Design Implementation of This Site",
             "btn_text": "View Project",
             "btn_href": "pl/public/index.html",
-            "tags": [{"text": "Pattern Lab"}, {"text": "Atomic Design"}, {"text": "Development"}, {"text": "Frontend"}]
+            "tags": [{ "text": "Pattern Lab" }, { "text": "Atomic Design" }, { "text": "Development" }, { "text": "Frontend" }]
         },
         {
             "img_src": "portfolio/connected-crew.PNG",
@@ -28,7 +28,7 @@
             "context": "See how some of my favorite artists connect in terms of music collaborations.",
             "btn_text": "View Project",
             "btn_href": "connected-crew/connected-crew.html",
-            "tags": [{"text": "D3"}, {"text": "UX Design"}, {"text": "Development"}, {"text": "Frontend"}]
+            "tags": [{ "text": "D3" }, { "text": "UX Design" }, { "text": "Development" }, { "text": "Frontend" }]
         },
         {
             "img_src": "portfolio/login_page.png",
@@ -37,7 +37,7 @@
             "context": "RedHat, Inc. - Tufts Senior Capstone Project",
             "btn_text": "View Project",
             "btn_href": "project_pages/redhat.html",
-            "tags": [{"text": "Human Factors"}, {"text": "UX Design"}, {"text": "UI Design"}, {"text": "Engineering Psychology"}]
+            "tags": [{ "text": "Human Factors" }, { "text": "UX Design" }, { "text": "UI Design" }, { "text": "Engineering Psychology" }]
         },
         {
             "img_src": "portfolio/matthew-brodeur-214573.jpg",
@@ -46,7 +46,7 @@
             "context": "CABCS - Independent Research",
             "btn_text": "View Project",
             "btn_href": "project_pages/op_monitoring.html",
-            "tags": [{"text": "Engineering Psychology"}, {"text": "Research"}, {"text": "Interface Design"}, {"text": "Unity"}]
+            "tags": [{ "text": "Engineering Psychology" }, { "text": "Research" }, { "text": "Interface Design" }, { "text": "Unity" }]
         },
         {
             "img_src": "portfolio/benjamin-combs-27617.jpg",
@@ -55,14 +55,14 @@
             "context": "ENP 161 - Tufts Class Project",
             "btn_text": "View Project",
             "btn_href": "project_pages/vft_design.html",
-            "tags": [{"text": "Human Factors"}, {"text": "Product Design"}, {"text": "UX Design"}, {"text": "Engineering Psychology"}]
+            "tags": [{ "text": "Human Factors" }, { "text": "Product Design" }, { "text": "UX Design" }, { "text": "Engineering Psychology" }]
         },
         {
             "img_src": "portfolio/Editorial_Page.jpg",
             "img_alt": "A picture of an editorial page design.",
             "title": "Innovation Center Internal Website",
             "context": "Booz Allen Hamilton",
-            "tags": [{"text": "UI Design"}, {"text": "UX Design"}, {"text": "Frontend Development"}] 
+            "tags": [{ "text": "UI Design" }, { "text": "UX Design" }, { "text": "Frontend Development" }]
         },
         {
             "img_src": "portfolio/mjx.PNG",
@@ -71,7 +71,7 @@
             "context": "Website Design Inspired by Rowlan & G-Eazy",
             "btn_text": "Visit Page",
             "btn_href": "http://mjxofficial.com/",
-            "tags": [{"text": "UI Design"}, {"text": "UX Design"}, {"text": "Frontend Development"}] 
+            "tags": [{ "text": "UI Design" }, { "text": "UX Design" }, { "text": "Frontend Development" }]
         },
         {
             "img_src": "portfolio/ff.PNG",
@@ -80,7 +80,7 @@
             "context": "Created by Jacob Caccamo & Dylan Santos",
             "btn_text": "Learn US History",
             "btn_href": "ff.html",
-            "tags": [{"text": "Frontend Development"}]
+            "tags": [{ "text": "Frontend Development" }]
         },
         {
             "img_src": "portfolio/s0.png",
@@ -89,7 +89,7 @@
             "context": "COMP23 - Tufts Class Project",
             "btn_text": "Watch Presentation",
             "btn_href": "https://www.youtube.com/watch?v=2qqKjUXdKmI&t=3s",
-            "tags": [{"text": "Game Design"}, {"text": "Game Research"}, {"text": "Product Design"}]
+            "tags": [{ "text": "Game Design" }, { "text": "Game Research" }, { "text": "Product Design" }]
         },
         {
             "img_src": "portfolio/raze.PNG",
@@ -98,7 +98,7 @@
             "context": "COMP23 - Tufts Class Project",
             "btn_text": "Play Game",
             "btn_href": "http://jaroca124.github.io/comp23-project_raze/",
-            "tags": [{"text": "Phaser.io"}, {"text": "Game Development"}, {"text": "Game Design"}]
+            "tags": [{ "text": "Phaser.io" }, { "text": "Game Development" }, { "text": "Game Design" }]
         }
     ]
 }

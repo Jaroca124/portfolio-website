@@ -1,4 +1,5 @@
 {
+    "prod_build": true,
     "path_to_assets": "pl/public/",
     "dep_path": "",
     "title": "Education - Jacob Caccamo",

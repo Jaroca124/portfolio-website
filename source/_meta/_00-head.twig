@@ -14,7 +14,9 @@
     <link rel="icon" type="image/png" href="{{ path_to_assets }}assets/favicon/favicon-16x16.png" sizes="16x16" />
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-    {{ patternLabHead | raw }}
+    {% if prod_build == false %}
+        {{ patternLabHead | raw }}
+    {% endif %}
     <!-- End Pattern Lab -->
 
     <!-- Google Analytics -->
