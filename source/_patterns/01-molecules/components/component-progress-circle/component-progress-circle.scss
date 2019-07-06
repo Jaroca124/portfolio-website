@@ -1,11 +1,22 @@
 .component--progress-circle {
-    max-width: 500px;
+    max-width: 300px;
+    margin: 1rem auto;
     &__wrapper {
+        position: relative;
         &__content {
             position: absolute;
             top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            left: 050%;
+            h2 {
+                font-weight: 200;
+                margin: 0;
+                font-size: 3rem;
+            }
         }
+    }
+    &__label {
+        margin-top: 1rem;
+        text-align: center;
     }
 }

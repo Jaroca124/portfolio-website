@@ -13,11 +13,13 @@
     {% endblock %}
 
     {% block main %}
-        {% include "@organisms/sections/feed-posts/_feed-posts-master.twig" with 
-            {
-                "feed_posts_data": feedData
-            }
-        %}
+        <div class="container">
+            {% include "@organisms/sections/feed-posts/_feed-posts-master.twig" with 
+                {
+                    "feed_posts_data": feedData
+                }
+            %}
+        </div>
     {% endblock %}
 
     {% block footer %}

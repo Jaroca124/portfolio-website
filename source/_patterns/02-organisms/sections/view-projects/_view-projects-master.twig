@@ -1,7 +1,7 @@
 {% set view_projects_classes = view_projects_classes|default() %}
 {% set view_project_data = view_project_data|default() %}
 
-<div class="view-pl view--projects container-fluid {{ view_projects_classes }}">
+<div class="view-pl view--projects container {{ view_projects_classes }}">
     <div class="row">
         {% for project in view_project_data %}
             <div class="col-lg-6">

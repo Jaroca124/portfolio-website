@@ -36,7 +36,8 @@ var buildPaths = {
     home: './pl/public/patterns/05-prod-index/05-prod-index.html',
     portfolio: './pl/public/patterns/05-prod-portfolio/05-prod-portfolio.html',
     feed: './pl/public/patterns/05-prod-feed/05-prod-feed.html',
-    skills: './pl/public/patterns/05-prod-skills/05-prod-skills.html'
+    skills: './pl/public/patterns/05-prod-skills/05-prod-skills.html',
+    education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html'
 }
 
 var sassOption = {
@@ -121,6 +122,16 @@ gulp.task('build_prod', ['sass', 'pl'], function (cb) {
     }))
     .pipe(gulp.dest(buildPaths.target));
     console.log("Skills Build Finished");
+
+    // Education
+    console.log("Starting Education Build...");
+    gulp.src(buildPaths.education)
+    .pipe(rename({
+        basename: 'education',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest(buildPaths.target));
+    console.log("Education Build Finished");
 });
 
 // Start Static Server

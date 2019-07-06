@@ -3,6 +3,8 @@
     @include md-2dp;
     @extend .hoverable;
     height: 100%;
+    margin: 0 auto;
+    max-width: 30rem;
 
     &__image-wrapper {
         width: 100%;
