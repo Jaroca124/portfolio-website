@@ -1,4 +1,4 @@
-window.onload = function() {
+/*window.onload = function() {
   Particles.init({
     selector: '.background',
     color: "#ffffff",
@@ -16,4 +16,4 @@ window.onload = function() {
         }
     ]
   });
-};
+};*/

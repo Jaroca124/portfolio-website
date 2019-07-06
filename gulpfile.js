@@ -71,6 +71,15 @@ gulp.task('pl', ['sass'], function (cb) {
   });
 });
 
+gulp.task('js', ['pl'], function(cb) {
+    return gulp.src('./source/_patterns/**/*.js')
+        .pipe(concat('script.js'))
+        .pipe(minify())
+        .pipe(sourcemaps.write('./source/js'))
+        .pipe(gulp.dest('./source/js'))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('build_prod', ['sass', 'pl'], function (cb) {
     
     // Home Page
@@ -126,9 +135,10 @@ gulp.task('serve', ['sass', 'pl'], function() {
 });
 
 // Watching Source Files
-gulp.task('source:watch', ['sass', 'pl'], function () {
+gulp.task('source:watch', ['sass', 'pl', 'js'], function () {
     gulp.watch('./source/_patterns/**/*.twig', ['pl']);
     gulp.watch('./source/_patterns/**/*.scss', ['sass', 'pl']);
+    gulp.watch('./source/_patterns/**/*.js', ['pl', 'js']);
 });
 
 gulp.task('default', ['source:watch', 'serve']);

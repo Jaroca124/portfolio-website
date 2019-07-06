@@ -1,0 +1,24 @@
+{% set block_university_classes = block_university_classes|default() %}
+{% set block_university_img_src = block_university_img_src|default() %}
+{% set block_university_img_alt = block_university_img_alt|default() %}
+
+<div class="block-pl block--university {{ block_university_classes }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                {% include "@atoms/images/default-image/default-image.twig" with 
+                    {
+                        "image_src": block_university_img_src,
+                        "image_alt": block_university_img_alt,
+                        "image_style": "block--university__logo"
+                    }
+                %}
+            </div>
+            <div class="block--university__text col-sm">
+                <h2>Tufts University</h1>
+                <p>Engineering Psychology Major</p>
+                <p>Computer Science Special Interest</p>
+            </div>
+        </div>
+    </div>
+</div>

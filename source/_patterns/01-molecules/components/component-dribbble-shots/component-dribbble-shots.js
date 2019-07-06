@@ -16,7 +16,7 @@ $( document ).ready(function() {
                 $('#shots').prepend(
                     '<div class="shot col-md-6 col-xl-4"><a class="shot__link" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><img src="'+ val.images.hidpi +'"/></a></div>'
                     )
-                })
+                }); 
             }
             else {
                 $('#shots').append('<p>No shots yet!</p>');

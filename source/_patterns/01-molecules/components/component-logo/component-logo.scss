@@ -1,0 +1,47 @@
+.component--logo {
+    background: #000;
+    position: relative;
+
+    &__circle {
+        position: relative;
+
+        &__icon {
+            margin: auto;
+            background: #fff;
+            height: 200px;
+            width: 50px;
+            position: absolute;
+            top: 0; left: 0; bottom: 30px; right: 0;
+
+            &__top, &__bottom, &__left {
+                left: 50%;
+                transform: translateX(-50%);
+                background: #fff;
+                height: 50px;
+                width: 200px;
+                position: absolute;
+            }
+
+            &__bottom {
+                bottom: 0;
+            }
+
+            &__left {
+                height: 50px;
+                width: 50px;
+                bottom: 50px;
+                left: -50px;
+            }
+
+            &__text {
+                color: #fff;
+                font-weight: 200;
+                font-size: 3.1rem;
+                bottom: -70px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+            }
+        }
+    }
+}

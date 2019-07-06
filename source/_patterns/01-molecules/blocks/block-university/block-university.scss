@@ -1,0 +1,21 @@
+.block--university {
+    padding-top: 3rem;
+
+    &__logo {
+        @include md-0dp;
+        height: 15vh;
+        margin: 0 auto;
+    }
+
+    &__text {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
