@@ -1,5 +1,6 @@
 .layout--site {
     &__body {
+        overflow: hidden;
         &__main {
             max-width: 1475px;
             margin: 0 auto;

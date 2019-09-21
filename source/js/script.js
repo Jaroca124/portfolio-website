@@ -47,22 +47,30 @@ $( document ).ready(function() {
         });
     }
 });
-$( document ).ready(function() {
-    var delay = 200;
-    var shots = $('.component--gallery').find('.col-md-2');
-    for (i = 0; i < shots.length; i++ ) {
-        (function(i){
-            setTimeout(function(){
+$(document).ready(function() {
+    var delay = 150;
+    var shots = $('.component--gallery').find('.col-4');
+    var numberShots = shots.length;
+    for (i = 0; i < numberShots; i++) {
+        (function(i) {
+            setTimeout(function() {
                 $(shots[i]).fadeIn();
-            }, delay*i);
-            if (i == shots.length - 1) {
-                renderOverlay();
-            }
+                if (i == shots.length - 1) {
+                    renderOverlay();
+                }
+            }, delay * i);
         })(i);
     }
 
     function renderOverlay() {
-        $('component--gallery__overlay').fadeIn();
+        $('.hero--home__overlay').fadeIn(1000);
+        setTimeout(function() {
+            renderLogo();
+        }, 1000);
+    }
+
+    function renderLogo() {
+        $('.hero--home__overlay__content').fadeIn(500);
     }
 });
 $(document).ready(function() {

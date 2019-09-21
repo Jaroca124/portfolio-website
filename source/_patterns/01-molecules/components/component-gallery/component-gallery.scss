@@ -1,27 +1,24 @@
 .component--gallery {
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     position: relative;
-
+    overflow: hidden;
     .container-fluid {
-        .col-md-2 {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 110%;
+        width: 110%;
+        .col-4 {
             display: none;
             padding: 0;
-        }   
+        }
     }
-
     .default-image {
         width: 100%;
         height: auto;
-    }
-
-    &__overlay {
-        display: none;
-        background: rgba(0,0,0,.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
     }
 }

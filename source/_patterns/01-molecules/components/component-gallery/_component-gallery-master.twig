@@ -5,18 +5,15 @@
     <div class="container-fluid">
         <div class="row">
             {% for shot in component_gallery_data %}
-                <div class="col-md-2">
+                <div class="col-4 col-md-3 col-lg-2">
                     {% include "@atoms/images/default-image/default-image.twig" with 
                         {
-                            "image_src": "splash/s1.png",
-                            "image_alt": ""
+                            "image_src": shot.src,
+                            "image_alt": shot.alt
                         }
                     %}
                 </div>
             {% endfor %}
         </div>
-    </div>
-    <div class="component--gallery__overlay">
-        
     </div>
 </div>

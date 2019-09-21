@@ -1,0 +1,16 @@
+{% set hero_home_classes = hero_home_classes|default() %}
+{% set hero_home_shots = hero_home_shots|default() %}
+
+<div class="hero-pl hero--home {{ hero_home_classes }}">
+    {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" %}
+    {% include "@molecules/components/component-gallery/_component-gallery-master.twig" with
+        {
+            "component_gallery_data": hero_home_shots
+        }
+    %}
+    <div class="hero--home__overlay">
+        <div class="hero--home__overlay__content">
+            {% include "@atoms/images/image-logo/_image-logo-master.twig" %}
+        </div>
+    </div>
+</div>

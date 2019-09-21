@@ -1,0 +1,31 @@
+.hero--home {
+    position: relative;
+    .navbar {
+        background: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__overlay {
+        display: none;
+        background: rgba(0, 0, 0, .8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        &__content {
+            display: none;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            .image--logo {
+                display: block;
+                margin: 0 auto;
+                height: 12rem;
+                width: 12rem;
+            }
+        }
+    }
+}
