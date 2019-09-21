@@ -1,15 +1,19 @@
+{% set navigation_primary_showhome = navigation_primary_showhome|default() %}
+
 <nav class="navbar navbar-expand-md navbar-light custom-toggler md-whiteframe-4dp">
     <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <span class="navbar-text">&nbsp;</span>
-    {% include "@atoms/link/link.twig" with
-        {
-            "link_href": "index.html",
-            "link_classes": "navbar-brand text-white",
-            "link_text": "Jacob Caccamo"
-        }
-    %}
+    {% if navigation_primary_showhome %}
+        {% include "@atoms/link/link.twig" with
+            {
+                "link_href": "index.html",
+                "link_classes": "navbar-brand text-white",
+                "link_text": "Jacob Caccamo"
+            }
+        %}
+    {% endif %}
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             {% include "@atoms/link/link.twig" with

@@ -1,6 +1,7 @@
-{% set layout_site_classes = layout_site_classes|default %}
+{% set layout_site_classes = layout_site_classes|default() %}
+{% set layout_site_id = layout_site_id|default() %}
 
-<div class="layout-pl layout--site {{ layout_site_classes }}">
+<div {% if layout_site_id is not empty %}id="{{ layout_site_id }}"{% endif %} class="layout-pl layout--site {{ layout_site_classes }}">
     {% block header %}{% endblock %}
     <div class="layout--site__body">
         {% block hero %}{% endblock %}

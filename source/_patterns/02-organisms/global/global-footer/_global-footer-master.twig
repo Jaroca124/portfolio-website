@@ -1,24 +1,5 @@
 <footer class="global-pl global--footer">
     <div class="container">
-        <div class="row">    
-            <a class="col-xs-auto" href="https://www.linkedin.com/in/jacob-caccamo-1435a288">
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-linkedin-5-240.png" alt='Linkedin'>
-            </a>
-            <a class='col-xs-auto' href='https://github.com/Jaroca124'>
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-github-5-240.png" alt='Github'>
-            </a>
-            <a class='col-xs-auto' href='mailto:jacob.caccamo@gmail.com'>
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-email-11-240.png" alt='Email'>
-            </a>
-            <a class='col-xs-auto' href='https://dribbble.com/jacobcaccamo'>
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-dribbble-5-240.png" alt='Dribbble'>
-            </a>
-            <a class='col-xs-auto' href='https://www.instagram.com/jacobcaccamodesigns/'>
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-instagram-15-240.png" alt='Instagram'>
-            </a>   
-            <a class='col-xs-auto' href='https://www.behance.net/jacobcaccamo'>
-                <img class='icon' src="{{ path_to_assets }}assets/icons/iconmonstr-behance-5-240.png" alt='Behance'>
-            </a>
-        </div>
+        {% include "@molecules/components/component-media-links/_component-media-links-master.twig" %}
     </div>
 </footer>

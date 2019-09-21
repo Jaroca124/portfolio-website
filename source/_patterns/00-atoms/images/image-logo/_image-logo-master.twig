@@ -1,3 +1,4 @@
 {% set image_logo_classes = image_logo_classes|default() %}
+{% set image_logo_color = image_logo_color|default('JC_Logo.svg') %}
 
-<img id="{{ image_id }}" class="image-pl image--logo {{ image_logo_classes }}" src="{{ path_to_assets }}assets/JC_Logo.svg" alt="Jacob Caccamo Designs Logo">
+<img id="{{ image_id }}" class="image-pl image--logo {{ image_logo_classes }}" src="{{ path_to_assets }}assets/{{ image_logo_color }}" alt="Jacob Caccamo Designs Logo">

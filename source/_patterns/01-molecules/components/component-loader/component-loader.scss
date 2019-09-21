@@ -1,0 +1,43 @@
+.component--loader {
+    height: 100vh;
+    width: 100vw;
+    background: $white;
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .image--logo {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  .animate-flicker {
+     -webkit-animation: flickerAnimation 4s infinite;
+     -moz-animation: flickerAnimation 4s infinite;
+     -o-animation: flickerAnimation 4s infinite;
+      animation: flickerAnimation 4s infinite;
+  }

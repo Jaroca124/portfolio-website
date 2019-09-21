@@ -1,4 +1,8 @@
-{% embed "@atoms/layout/layout-site/_layout-site-master.twig" %}
+{% embed "@atoms/layout/layout-site/_layout-site-master.twig" with
+    {
+        "layout_site_id": "layout--index"
+    }
+%}
     {% block hero %}
         {% include "@organisms/heros/hero-home/_hero-home-master.twig" with
             {
