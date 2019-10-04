@@ -64,25 +64,6 @@ $(document).ready(function() {
         $('.component--scroll').fadeIn();
     }
 });
-/*window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    color: "#ffffff",
-    connectParticles: true,
-    maxParticles: 50,
-    speed: .25,
-    responsive: [
-        {
-            breakpoint: 
-                768,
-                options: {
-                    maxParticles: 0,
-                    connectParticles: true
-                }
-        }
-    ]
-  });
-};*/
 $( document ).ready(function() {
     $('.tabs').tabs();
 
@@ -110,9 +91,25 @@ $( document ).ready(function() {
         });
     }
 });
-$( document ).ready(function() {
-    $('.tabs').tabs();
-});
+/*window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    color: "#ffffff",
+    connectParticles: true,
+    maxParticles: 50,
+    speed: .25,
+    responsive: [
+        {
+            breakpoint: 
+                768,
+                options: {
+                    maxParticles: 0,
+                    connectParticles: true
+                }
+        }
+    ]
+  });
+};*/
 $(document).ready(function() {
     if ($('#component--logo__circle').length) {
         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -168,4 +165,7 @@ $(document).ready(function() {
         });
         majorGPA.animate(1.0); // Number from 0.0 to 1.0
     }
+});
+$( document ).ready(function() {
+    $('.tabs').tabs();
 });
