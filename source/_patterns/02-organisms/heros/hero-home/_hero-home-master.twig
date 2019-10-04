@@ -13,9 +13,20 @@
         }
     %}
     <div class="hero--home__overlay">
+        {% include "@molecules/components/component-media-links/_component-media-links-master.twig" with
+            {
+                "component_media_links_classes": "hero--home__overlay__social"
+            }
+        %}
         <div class="hero--home__overlay__content">
             {% include "@atoms/images/image-logo/_image-logo-master.twig" %}
+            {% include "@molecules/components/component-media-links/_component-media-links-master.twig" with
+                {
+                    "component_media_links_classes": "hero--home__overlay__content__social"
+                }
+            %}
         </div>
     </div>
+    {#{% include "@molecules/components/component-scroll/_component-scroll-master.twig" %}#}
 </div>
 {% include "@molecules/components/component-loader/_component-loader-master.twig" %}

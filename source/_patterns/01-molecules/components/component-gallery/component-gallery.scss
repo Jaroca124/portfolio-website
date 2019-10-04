@@ -12,8 +12,11 @@
         transform: translate(-50%, -50%);
         height: 110%;
         width: 110%;
-        .col-4 {
-            padding: 0;
+        .row {
+            height: 100%;
+            .col-4 {
+                padding: 0;
+            }
         }
     }
     .default-image {

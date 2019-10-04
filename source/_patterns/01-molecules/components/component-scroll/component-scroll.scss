@@ -1,0 +1,74 @@
+.component--scroll {
+    &__mouse {
+        display: inline-block;
+        height: 3rem;
+        width: 2rem;
+        border-radius: 1000px;
+        border: 2px solid #fff;
+        &:after {
+            height: 0.8rem;
+            width: 0.4rem;
+            border-radius: 1000px;
+            border: 2px solid #fff;
+            content: "";
+            display: block;
+            position: relative;
+            top: 0.65rem;
+            margin: 0 auto;
+        }
+    }
+    &__wrapper {
+        display: inline-block;
+        height: 3rem;
+        padding: .5rem 0;
+        &__arrow {
+            margin: 0 .7rem;
+            height: 2rem;
+            width: 2px;
+            background: #fff;
+            border-radius: 1000px;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -0.1rem;
+                height: .6rem;
+                width: 2px;
+                left: 0.2rem;
+                background: #fff;
+                transform: rotate(45deg);
+                -moz-transform:rotate(45deg);  
+                -webkit-transform:rotate(45deg);  
+                -o-transform:rotate(45deg);  
+                -ms-transform:rotate(45deg);
+            }
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -0.1rem;
+                height: .6rem;
+                width: 2px;
+                left: -0.2rem;
+                background: #fff;
+                transform: rotate(-45deg);
+                -moz-transform:rotate(-45deg);  
+                -webkit-transform:rotate(-45deg);  
+                -o-transform:rotate(-45deg);  
+                -ms-transform:rotate(-45deg);
+            }
+        }
+    }
+    &__text {
+        margin-left: 1rem;
+        display: inline-block;
+        color: #fff;
+        &__top {
+            display: block;
+        }
+        &__bottom {
+            display: block;
+        }
+    }
+}

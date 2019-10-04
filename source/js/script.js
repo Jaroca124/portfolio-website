@@ -1,3 +1,22 @@
+/*window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    color: "#ffffff",
+    connectParticles: true,
+    maxParticles: 50,
+    speed: .25,
+    responsive: [
+        {
+            breakpoint: 
+                768,
+                options: {
+                    maxParticles: 0,
+                    connectParticles: true
+                }
+        }
+    ]
+  });
+};*/
 $( document ).ready(function() {
     $('.tabs').tabs();
 
@@ -25,25 +44,6 @@ $( document ).ready(function() {
         });
     }
 });
-/*window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    color: "#ffffff",
-    connectParticles: true,
-    maxParticles: 50,
-    speed: .25,
-    responsive: [
-        {
-            breakpoint: 
-                768,
-                options: {
-                    maxParticles: 0,
-                    connectParticles: true
-                }
-        }
-    ]
-  });
-};*/
 $(document).ready(function() {
     if ($('#component--logo__circle').length) {
         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -58,9 +58,6 @@ $(document).ready(function() {
 
         bar.animate(1.0); // Number from 0.0 to 1.0
     }
-});
-$( document ).ready(function() {
-    $('.tabs').tabs();
 });
 $(document).ready(function() {
 
@@ -103,16 +100,19 @@ $(document).ready(function() {
         majorGPA.animate(1.0); // Number from 0.0 to 1.0
     }
 });
+$( document ).ready(function() {
+    $('.tabs').tabs();
+});
 $(document).ready(function() {
     var delay = 200;
     
     if ($('layout--index'.length)) {
         $('html, body').addClass('overflow-hidden');
-        setTimeout(function() {
+        $(window).on("load", function() {
             $('html, body').removeClass('overflow-hidden');
             $('.component--loader').fadeOut(100);
             startGallery();
-        }, 5500);
+        });
     }
 
     function startGallery() {
@@ -122,11 +122,11 @@ $(document).ready(function() {
         for (i = 0; i < numberShots; i++) {
             (function(i) {
                 setTimeout(function() {
-                    $(shots[randMap[i]]).animate({ opacity: 1 }, 600);
+                    $(shots[randMap[i]]).animate({ opacity: 1 }, 1500);
                     if (i == shots.length - 22) {
                         renderOverlay();
                     }
-                }, delay * i);
+                }, 100 * i);
             })(i);
         }
     }
@@ -142,6 +142,8 @@ $(document).ready(function() {
         $('.hero--home__overlay__content').fadeIn(500);
         setTimeout(function() {
             renderMenu();
+            renderSocials();
+            renderScroll();
         }, 500);
     }
 
@@ -153,5 +155,17 @@ $(document).ready(function() {
                 }, delay * i);
             })(i);
         }
+    }
+    function renderSocials() {
+        for (i = 0; i < $('.hero--home__overlay__social').find('img').length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    $($('.hero--home__overlay__social').find('img')[i]).fadeIn();
+                }, delay * i);
+            })(i);
+        }
+    }
+    function renderScroll() {
+        $('.component--scroll').fadeIn();
     }
 });

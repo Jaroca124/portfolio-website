@@ -32,6 +32,21 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            &__social {
+                margin-top: 2rem;
+                text-align: center;
+                .component--media-links__link {
+                    padding: 0 1rem;
+                    margin: .5rem 0;
+                    display: inline-block;
+                    .icon {
+                        height: 2rem;
+                    }
+                }
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
             .image--logo {
                 display: block;
                 margin: 0 auto;
@@ -43,5 +58,30 @@
                 }
             }
         }
+        &__social {
+            z-index: 1;
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            .component--media-links__link {
+                display: block;
+                margin-bottom: 1rem;
+                .icon {
+                    height: 2rem;
+                    display: none;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    .component--scroll {
+        display: none;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
