@@ -7,6 +7,103 @@
         "name": "Trevor Wilson",
         "href": "https://unsplash.com/@clevertrevor?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
     },
+    "heroShots": [{
+            "src": "index/heroShots/ARKHAM_Final.png",
+            "alt": "Batman Arkham Knight Shot"
+        },
+        {
+            "src": "index/heroShots/AVENGERS_Final.png",
+            "alt": "Avengers Shot"
+        },
+        {
+            "src": "index/heroShots/WWII_Final.png",
+            "alt": "Call of Duty WWII Shot"
+        },
+        {
+            "src": "index/heroShots/BEAR_Final.png",
+            "alt": "Music Visualizer - blackbear Shot"
+        },
+        {
+            "src": "index/heroShots/BOPS4_Final.png",
+            "alt": "Black Ops 4 Shot"
+        },
+        {
+            "src": "index/heroShots/CA_Final.png",
+            "alt": "Captain America Shot"
+        },
+        {
+            "src": "index/heroShots/CM_Final.png",
+            "alt": "Captain Marvel Shot"
+        },
+        {
+            "src": "index/heroShots/CONTROL_Final.png",
+            "alt": "Control Shot"
+        },
+        {
+            "src": "index/heroShots/EG_Final.png",
+            "alt": "Endgame Shot"
+        },
+        {
+            "src": "index/heroShots/IM_Final.png",
+            "alt": "Iron Man and Hulk Shot"
+        },
+        {
+            "src": "index/heroShots/WW_Final.png",
+            "alt": "Woof Walker Shot"
+        },
+        {
+            "src": "index/heroShots/IM3_Final.png",
+            "alt": "Iron Man 3 and Thor: The Dark World Shot"
+        },
+        {
+            "src": "index/heroShots/IW_Final.png",
+            "alt": "Infinity War Shot"
+        },
+        {
+            "src": "index/heroShots/MIXER_Final.png",
+            "alt": "Mixer (Cocktail Recipe Sharing App) Shot"
+        },
+        {
+            "src": "index/heroShots/PHANTOM_Final.png",
+            "alt": "Nike Phantom Splash Screen Shot"
+        },
+        {
+            "src": "index/heroShots/SHIELD_Final.png",
+            "alt": "Agents of SHIELD Shot"
+        },
+        {
+            "src": "index/heroShots/TECHRING_Final.png",
+            "alt": "Tech Ring Carousel Shot"
+        },
+        {
+            "src": "index/heroShots/TF_Final.png",
+            "alt": "Titanfall 2 Shot"
+        },
+        {
+            "src": "index/heroShots/THOR_Final.png",
+            "alt": "Thor: Ragnarok Shot"
+        },
+        {
+            "src": "index/heroShots/TR_Final.png",
+            "alt": "Tomb Raider Shot"
+        },
+        {
+            "src": "index/heroShots/WAVE_Final.png",
+            "alt": "Ride the Wave Shot"
+        },
+        {
+            "src": "index/heroShots/G_Final.png",
+            "alt": "G-Eazy Shot"
+        },
+        {
+            "src": "index/heroShots/WD_Final.png",
+            "alt": "Watch Dogs 2 Shot"
+        },
+        {
+            "src": "index/heroShots/PHANTOM2_Final.png",
+            "alt": "Nike Phantom Specs Screen Shot"
+        }
+    ],
     "cards": [{
             "title": "Experience",
             "text": "See how I've applied my design knowledge in professional settings.",

@@ -3,7 +3,35 @@
     "path_to_assets": "pl/public/",
     "dep_path": "",
     "title": "Portfolio - Jacob Caccamo",
-    "projects": [{
+    "projects": [
+        {
+            "img_src": "portfolio/login_page.png",
+            "img_alt": "Login to Ansible Galaxy - Redesigned",
+            "title": "Ansible Galaxy Redesign",
+            "context": "RedHat, Inc. - Tufts Senior Capstone Project",
+            "btn_text": "View Project",
+            "btn_href": "project_pages/redhat.html",
+            "tags": [{ "text": "Human Factors" }, { "text": "UX Design" }, { "text": "UI Design" }, { "text": "Engineering Psychology" }]
+        },
+        {
+            "img_src": "portfolio/mjx.PNG",
+            "img_alt": "MJx Music Splash Page",
+            "title": "MJx Music Splash Page",
+            "context": "Website Design Inspired by Rowlan & G-Eazy",
+            "btn_text": "Visit Page",
+            "btn_href": "http://mjxofficial.com/",
+            "tags": [{ "text": "UI Design" }, { "text": "UX Design" }, { "text": "Frontend Development" }]
+        },
+        {
+            "img_src": "portfolio/connected-crew.PNG",
+            "img_alt": "Screenshot of Connected Crew",
+            "title": "Connected Crew (In Progress)",
+            "context": "See how some of my favorite artists connect in terms of music collaborations.",
+            "btn_text": "View Project",
+            "btn_href": "connected-crew/connected-crew.html",
+            "tags": [{ "text": "D3" }, { "text": "UX Design" }, { "text": "Development" }, { "text": "Frontend" }]
+        },
+        {
             "img_src": "portfolio/burgerBuilder.png",
             "img_alt": "Burger Builder Home Page",
             "title": "React - Burger Builder",
@@ -20,24 +48,6 @@
             "btn_text": "View Project",
             "btn_href": "pl/public/index.html",
             "tags": [{ "text": "Pattern Lab" }, { "text": "Atomic Design" }, { "text": "Development" }, { "text": "Frontend" }]
-        },
-        {
-            "img_src": "portfolio/connected-crew.PNG",
-            "img_alt": "Screenshot of Connected Crew",
-            "title": "Connected Crew (In Progress)",
-            "context": "See how some of my favorite artists connect in terms of music collaborations.",
-            "btn_text": "View Project",
-            "btn_href": "connected-crew/connected-crew.html",
-            "tags": [{ "text": "D3" }, { "text": "UX Design" }, { "text": "Development" }, { "text": "Frontend" }]
-        },
-        {
-            "img_src": "portfolio/login_page.png",
-            "img_alt": "Login to Ansible Galaxy - Redesigned",
-            "title": "Ansible Galaxy Redesign",
-            "context": "RedHat, Inc. - Tufts Senior Capstone Project",
-            "btn_text": "View Project",
-            "btn_href": "project_pages/redhat.html",
-            "tags": [{ "text": "Human Factors" }, { "text": "UX Design" }, { "text": "UI Design" }, { "text": "Engineering Psychology" }]
         },
         {
             "img_src": "portfolio/matthew-brodeur-214573.jpg",
@@ -62,15 +72,6 @@
             "img_alt": "A picture of an editorial page design.",
             "title": "Innovation Center Internal Website",
             "context": "Booz Allen Hamilton",
-            "tags": [{ "text": "UI Design" }, { "text": "UX Design" }, { "text": "Frontend Development" }]
-        },
-        {
-            "img_src": "portfolio/mjx.PNG",
-            "img_alt": "MJx Music Splash Page",
-            "title": "MJx Music Splash Page",
-            "context": "Website Design Inspired by Rowlan & G-Eazy",
-            "btn_text": "Visit Page",
-            "btn_href": "http://mjxofficial.com/",
             "tags": [{ "text": "UI Design" }, { "text": "UX Design" }, { "text": "Frontend Development" }]
         },
         {

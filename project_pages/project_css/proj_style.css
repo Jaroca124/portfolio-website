@@ -6,6 +6,10 @@ html, body {
     color: white;   
 }
 
+.project .row {
+    margin: 1rem 0;
+}
+
 .section_wrapper {
     display: flex;
     align-items: center;

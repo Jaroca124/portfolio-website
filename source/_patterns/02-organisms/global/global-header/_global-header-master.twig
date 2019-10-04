@@ -2,6 +2,10 @@
 
 <header class="global-pl global--header {{ global_header_classes }}">
     {% block header_content %}
-        {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" %}
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" with
+            {
+                "navigation_primary_showhome": true
+            }
+        %}
     {% endblock %}
 </header>
