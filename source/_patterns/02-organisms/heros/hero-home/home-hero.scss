@@ -32,6 +32,25 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            /*&__name {
+                position: absolute;
+                color: $white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                span {
+                    display: inline-block;
+                    opacity: 0;
+                    margin: 0 .25rem;
+                    transition: transform 1s;
+                    &.slide-left {
+                        transform: translateY(-5rem);
+                    }
+                    &.slide-right {
+                        transform: translateY(-5rem);
+                    }
+                }
+            }*/
             &__social {
                 margin-top: 2rem;
                 text-align: center;
@@ -49,6 +68,7 @@
             }
             .image--logo {
                 display: block;
+                opacity: 0;
                 margin: 0 auto;
                 height: 12rem;
                 width: 12rem;

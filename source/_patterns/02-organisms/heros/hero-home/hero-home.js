@@ -35,11 +35,17 @@ $(document).ready(function() {
 
     function renderLogo() {
         $('.hero--home__overlay__content').fadeIn(500);
-        setTimeout(function() {
-            renderMenu();
-            renderSocials();
-            renderScroll();
-        }, 500);
+        $('.hero--home__overlay__content__name--first').fadeTo(500, 1, function() {
+            $('.hero--home__overlay__content__name--last').fadeTo(500, 1, function() {
+                $('.hero--home__overlay__content__name--first').addClass('slide-left');
+                $('.hero--home__overlay__content__name--last').addClass('slide-right');
+                setTimeout(function() {
+                    $('.hero--home__overlay__content').find('.image--logo').fadeTo(1000, 1);
+                }, 500);
+                renderMenu();
+                renderSocials();
+            });
+        });
     }
 
     function renderMenu() {
