@@ -1,0 +1,15 @@
+{% set block_images_classes = block_images_classes|default() %}
+{% set block_images_data = block_images_data|default() %}
+
+<div class="block-pl block--images {{ block_images_classes }}">
+    {% for img in block_images_data %}
+        <div class="block--images__image">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": img.src,
+                    "image_alt": img.alt
+                }
+            %}
+        </div>
+    {% endfor %}
+</div>

@@ -110,9 +110,6 @@ $( document ).ready(function() {
         });
     }
 });
-$( document ).ready(function() {
-    $('.tabs').tabs();
-});
 $(document).ready(function() {
     if ($('#component--logo__circle').length) {
         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -168,4 +165,7 @@ $(document).ready(function() {
         });
         majorGPA.animate(1.0); // Number from 0.0 to 1.0
     }
+});
+$( document ).ready(function() {
+    $('.tabs').tabs();
 });

@@ -20,7 +20,11 @@
     }
     &__overlay {
         display: none;
-        background: rgba(0, 0, 0, .8);
+        background: rgb(6,17,41);
+        background: -moz-linear-gradient(180deg, rgba(6,17,41,0.9) 0%, rgba(12,32,78,0.6) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(6,17,41,0.9) 0%, rgba(12,32,78,0.6) 100%);
+        background: linear-gradient(180deg, rgba(6,17,41,0.9) 0%, rgba(12,32,78,0.6) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#061129",endColorstr="#0c204e",GradientType=1);
         position: absolute;
         top: 0;
         left: 0;
@@ -62,8 +66,8 @@
             z-index: 1;
             display: none;
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 2.5rem;
+            right: 2.5rem;
             .component--media-links__link {
                 display: block;
                 margin-bottom: 1rem;

@@ -1,0 +1,12 @@
+.button--default {
+    border-radius: 1000px;
+    border: 1px solid $color-text-body;
+    padding: .5rem 2rem;
+    color: $color-text-body;
+    &:hover,
+    &:focus {
+        background: $color-text-body;
+        color: $white;
+        text-decoration: none;
+    }
+}

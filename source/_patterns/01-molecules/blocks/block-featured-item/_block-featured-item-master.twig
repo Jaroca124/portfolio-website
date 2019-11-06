@@ -6,7 +6,7 @@
     <div class="row">
         {% for img in featured_img %}
             <div class="col-sm-6 col-md-3">
-                {% include "@atoms/images/default-image/default-image.twig" with
+                {% include "@atoms/images/image-default/_image-default-master.twig" with
                     {
                         "image_src": img.src,
                         "image_alt": img.alt,

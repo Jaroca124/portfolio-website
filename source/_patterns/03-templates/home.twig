@@ -12,37 +12,34 @@
     {% endblock %}
 
     {% block main %}
-        <div class="overview container">
-            <div class="row">
-                {% include "@molecules/blocks/block-headshot/_block-headshot-master.twig" with
+        {% include "@organisms/sections/section-overview/_section-overview-master.twig" %}
+        {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+            {
+                "section_default_classes": "section--default--ncp",
+                "section_default_image_src": "index/ncp.png",
+                "section_default_image_orientation": "left"
+            }
+        %}
+            {% block section_default_content %}
+                <h2 class="section--default--ncp__title"><span class="section--default--ncp__title__1">Natural</span><br><span class="section--default--ncp__title__2">Inspiration.</span></h2>
+                <p class="section--default--ncp__subtitle">Natural Color Palette Collection</p>
+                <p>Beautiful color palettes, or collections of colors that work well together, can be found almost anywhere in the world. In my Natural Color Palette collection, I explore various color palettes derived from beautiful Unsplash photography, and a few of my more modest shots. These palettes can be found</p>
+                {% include "@molecules/blocks/block-images/_block-images-master.twig" with
                     {
-                        "block_headshot_classes": "col-md-6"
+                        "block_images_classes": "section--default--ncp__shots",
+                        "block_images_data": ncpImages
                     }
                 %}
-                <div class="col-md-6 intro-paragraph my-auto">
-                    <p class="my-sm-3">I am a UI/UX designer at Booz Allen Hamilton, Inc. who specializes in interaction design, user research, and the human factors iterative method. I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I coded this website using modern frameworks to showcase my front-end development skills. I hope you enjoy your experience on this site!</p>
-                </div>
-            </div>
-        </div>
-        <div class="quote container">
-            <div class="row">
-                <div class="col-12">
-                    {% include "@molecules/text/blockquote/_blockquote-master.twig" with
+                <div class="section--default--ncp__button">
+                    {% include "@atoms/button/button-default/_button-default-master.twig" with
                         {
-                            "blockquote_text": "Good design, when it's done well, becomes invisible. It's only when it's done poorly that we notice it.",
-                            "blockquote_author": "Jared Spool"
+                            "button_default_text": "See Full Collection",
+                            "button_default_href": "#"
                         }
                     %}
                 </div>
-            </div>
-        </div>
-        <div class="cards container">
-            {% include "@organisms/sections/cards/_cards-master.twig" with
-                {
-                    "cards_data": cards
-                }
-            %}
-        </div>
+            {% endblock %}
+        {% endembed %}
         <div class="featured-portfolio-piece my-5">
             {% include "@molecules/blocks/block-featured-item/_block-featured-item-master.twig" with
                 {

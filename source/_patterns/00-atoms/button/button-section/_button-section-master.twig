@@ -1,0 +1,13 @@
+{% set button_section_classes = button_section_classes|default() %}
+{% set button_section_img_src = button_section_img_src|default() %}
+{% set button_section_img_alt = button_section_img_alt|default() %}
+{% set button_section_href = button_section_href|default() %}
+
+<a class="button-pl button--section {{ button_section_classes }}" href="{{ button_section_href }}">
+    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+        {
+            "image_src": button_section_img_src,
+            "image_alt": button_section_img_alt
+        }
+    %}
+</a>

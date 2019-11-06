@@ -4,6 +4,18 @@
         "name": "Trevor Wilson",
         "href": "https://unsplash.com/@clevertrevor?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
     },
+    "headshot": {
+        "src": "index/headshot.jpg",
+        "alt": "Jacob Caccamo"
+    },
+    "sfGraphic": {
+        "src": "index/SF_Graphic.png",
+        "alt": "Graphic of the Golden Gate Bridge"
+    },
+    "dcGraphic": {
+        "src": "index/DC_Graphic.png",
+        "alt": "Graphic of Washington DC monuments"
+    },
     "heroShots": [{
             "src": "index/heroShots/ARKHAM_Final.png",
             "alt": "Batman Arkham Knight Shot"
@@ -101,45 +113,86 @@
             "alt": "Nike Phantom Specs Screen Shot"
         }
     ],
-    "cards": [{
-            "title": "Experience",
-            "text": "See how I've applied my design knowledge in professional settings.",
-            "img": {
-                "src": "index/carlos-muza-84523.jpg",
-                "alt": "A laptop showing a data program."
-            },
-            "btn_text": "Experience",
-            "btn_href": "experience.html"
+    "ncpImages": [
+        {
+            "src": "ncp/shot1.png",
+            "alt": "Beach Shot"
         },
         {
-            "title": "Education",
-            "text": "Get more info about my major and education at Tufts University.",
-            "img": {
-                "src": "index/william-iven-19843.jpg",
-                "alt": "A worker highlighting a piece of paper."
-            },
-            "btn_text": "Education",
-            "btn_href": "education.html"
+            "src": "ncp/shot2.png",
+            "alt": "Forrest Shot"
         },
         {
-            "title": "Skills",
-            "text": "View the tools & techniques I use in my design process.",
-            "img": {
-                "src": "index/quino-al-110318.jpg",
-                "alt": "Sculptor shaping clay."
-            },
-            "btn_text": "Skills",
-            "btn_href": "skills.html"
+            "src": "ncp/shot3.png",
+            "alt": "Sky Shot"
         },
         {
-            "title": "The Feed",
-            "text": "Explore cool articles about design, development, and technology.",
+            "src": "ncp/shot4.png",
+            "alt": "Mountain Shot"
+        },
+        {
+            "src": "ncp/shot5.png",
+            "alt": "Artic Fox Shot"
+        },
+        {
+            "src": "ncp/shot6.png",
+            "alt": "Flower Shot"
+        }
+    ],
+    "siteSections": [
+        {
+            "src": "index/sectionIcons/portfolio.svg",
+            "alt": "Briefcase",
+            "href": "portfolio.html"
+        },
+        {
+            "src": "index/sectionIcons/experience.svg",
+            "alt": "Gears",
+            "href": "experience.html"
+        },
+        {
+            "src": "index/sectionIcons/education.svg",
+            "alt": "Graduation Cap",
+            "href": "education.html"
+        },
+        {
+            "src": "index/sectionIcons/skills.svg",
+            "alt": "Arrow and target",
+            "href": "skills.html"
+        }
+    ],
+    "cards": [
+        {
+            "title": "Portfolio",
             "img": {
                 "src": "index/william-bout-264826.jpg",
                 "alt": "An artistic image of a web."
             },
-            "btn_text": "The Feed",
-            "btn_href": "feed.html"
+            "href": "feed.html"
+        },
+        {
+            "title": "Experience",
+            "img": {
+                "src": "index/carlos-muza-84523.jpg",
+                "alt": "A laptop showing a data program."
+            },
+            "href": "experience.html"
+        },
+        {
+            "title": "Education",
+            "img": {
+                "src": "index/william-iven-19843.jpg",
+                "alt": "A worker highlighting a piece of paper."
+            },
+            "href": "education.html"
+        },
+        {
+            "title": "Skills",
+            "img": {
+                "src": "index/quino-al-110318.jpg",
+                "alt": "Sculptor shaping clay."
+            },
+            "href": "skills.html"
         }
     ],
     "featured": [{

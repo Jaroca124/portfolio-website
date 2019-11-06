@@ -1,0 +1,6 @@
+{% set image_id = image_id|default('') %}
+{% set image_src = image_src|default('fpo_4x3.png') %}
+{% set image_alt = image_alt|default('') %}
+{% set image_style = image_style|default('') %}
+
+<img id="{{ image_id }}" class="image-pl image--default {{ image_style }}" src="{{ path_to_assets }}assets/{{ image_src }}" alt="{{ image_alt }}">

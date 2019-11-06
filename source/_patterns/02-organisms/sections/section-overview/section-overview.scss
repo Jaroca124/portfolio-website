@@ -1,0 +1,33 @@
+.section--overview {
+    background: $dark-mode-bg;
+    .col-md-6 {
+        margin: 0 auto;
+    }
+    .col-md-3 {
+        align-items: center;
+        display: flex;
+    }
+    &__headshot {
+        display: block;
+        margin: 4rem auto 3rem auto;
+        border-radius: 100%;
+        border: 2px solid $white;
+        height: 7.5rem;
+    }
+    &__text {
+        color: $white;
+        margin-bottom: 2rem;
+    }
+    .block--site-section {
+        padding-bottom: 3rem;
+        max-width: 50rem;
+    }
+    &__sf,
+    &__dc {
+        width: 90%;
+        box-shadow: none;
+    }
+    &__dc {
+        float: right;
+    }
+}
