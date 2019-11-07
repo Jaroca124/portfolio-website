@@ -7,12 +7,14 @@
     <div class="row">
         {% if section_default_image_orientation == "left" %}
             <div class="section--default__image col-md-6">
-                {% include "@atoms/images/image-default/_image-default-master.twig" with 
-                    {
-                        "image_src": section_default_image_src,
-                        "image_alt": section_default_image_alt
-                    }
-                %}
+                {% block section_default_image_left %}
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_src": section_default_image_src,
+                            "image_alt": section_default_image_alt
+                        }
+                    %}
+                {% endblock %}
             </div>
         {% endif %}
         <div class="col-md-6">
@@ -20,12 +22,14 @@
         </div>
         {% if section_default_image_orientation == "right" %}
             <div class="section--default__image col-md-6">
-                {% include "@atoms/images/image-default/_image-default-master.twig" with 
-                    {
-                        "image_src": section_default_image_src,
-                        "image_alt": section_default_image_alt
-                    }
-                %}
+                {% block section_default_image_right %}
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_src": section_default_image_src,
+                            "image_alt": section_default_image_alt
+                        }
+                    %}
+                {% endblock %}
             </div>
         {% endif %}
     </div>

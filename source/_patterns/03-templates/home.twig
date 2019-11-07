@@ -13,6 +13,7 @@
 
     {% block main %}
         {% include "@organisms/sections/section-overview/_section-overview-master.twig" %}
+        {# Natural Color Palette #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {
                 "section_default_classes": "section--default--ncp",
@@ -27,6 +28,7 @@
                 {% include "@molecules/blocks/block-images/_block-images-master.twig" with
                     {
                         "block_images_classes": "section--default--ncp__shots",
+                        "block_images_animation_direction": "from_left",
                         "block_images_data": ncpImages
                     }
                 %}
@@ -40,13 +42,72 @@
                 </div>
             {% endblock %}
         {% endembed %}
-        <div class="featured-portfolio-piece my-5">
-            {% include "@molecules/blocks/block-featured-item/_block-featured-item-master.twig" with
-                {
-                    "featured_img": featured
-                }
-            %}
-        </div>
+        {# Marvel Collection #}
+        {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+            {
+                "section_default_classes": "section--default--marvel",
+                "section_default_image_orientation": "right"
+            }
+        %}
+            {% block section_default_content %}
+                {% include "@atoms/images/image-default/_image-default-master.twig" with
+                    {
+                        "image_default_classes": "section--default--marvel__logo",
+                        "image_src": "marvel/logo.png",
+                        "image_alt": "Marvel Logo"
+                    }
+                %}
+                <h2 class="section--default--marvel__title"><span class="section--default--marvel__title__1">MCU Movie</span><br><span class="section--default--marvel__title__2">App Concept</span></h2>
+                <p>I love the Marvel Cinematic Universe, and in anticipation of Avengers: Endgame which released in early 2019, my friends and I watched one of the Marvel movies every Sunday. Shortly after our Marvelthon started, I created a design concept for an MCU movie app, in which theoretical users could view the whole series of films, learn more about their favorite characters, and get more details about the movies.</p>
+                <div class="section--default--marvel__button">
+                    {% include "@atoms/button/button-default/_button-default-master.twig" with
+                        {
+                            "button_default_text": "See Full Collection",
+                            "button_default_href": "#"
+                        }
+                    %}
+                </div>
+            {% endblock %}
+            {% block section_default_image_right %}
+                {% include "@molecules/blocks/block-images/_block-images-master.twig" with
+                    {
+                        "block_images_classes": "section--default--marvel__shots",
+                        "block_images_animation_direction": "from_left",
+                        "block_images_data": marvelImages
+                    }
+                %}
+            {% endblock %}
+        {% endembed %}
+        {# MJX Music #}
+        {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+            {
+                "section_default_classes": "section--default--mjx",
+                "section_default_image_orientation": "right"
+            }
+        %}
+            {% block section_default_content %}
+                <h2 class="section--default--mjx__title">MJx Music</h2>
+                <p class="section--default--mjx__subtitle">Website Design &amp; Development</p>
+                <p>My friend Michael Jacob is an aspiring rapper under the stage name MJx. He needed a website designed and developed for his music career and I offered to help him out. So far, I've completed the Music and About pages. Here are a few shots (Home, Music) from the mobile design concept.</p>
+                <div class="section--default--mjx__button">
+                    {% include "@atoms/button/button-default/_button-default-master.twig" with
+                        {
+                            "button_default_text": "View Live Site",
+                            "button_default_href": "http://www.mjxofficial.com"
+                        }
+                    %}
+                </div>
+            {% endblock %}
+            {% block section_default_image_right %}
+                {% include "@molecules/blocks/block-images/_block-images-master.twig" with
+                    {
+                        "block_images_classes": "section--default--mjx__shots",
+                        "block_images_animation_direction": "from_left",
+                        "block_images_data": mjxImages
+                    }
+                %}
+            {% endblock %}
+        {% endembed %}
         <div class="feed">
             <div class="container">
                 <h2>The Feed</h2>

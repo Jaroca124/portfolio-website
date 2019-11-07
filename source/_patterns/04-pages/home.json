@@ -139,6 +139,42 @@
             "alt": "Flower Shot"
         }
     ],
+    "marvelImages": [
+        {
+            "src": "marvel/MCC_2.png",
+            "alt": "Iron Man Shot"
+        },
+        {
+            "src": "marvel/MCC_5.png",
+            "alt": "Captain Marvel Shot"
+        },
+        {
+            "src": "marvel/MCC_1.png",
+            "alt": "Thor Shot"
+        },
+        {
+            "src": "marvel/MCC_6.png",
+            "alt": "Captain America Shot"
+        },
+        {
+            "src": "marvel/MCC_3.png",
+            "alt": "Agent Peggy Carter Shot"
+        },
+        {
+            "src": "marvel/MCC_4.png",
+            "alt": "Hulk Shot"
+        }
+    ],
+    "mjxImages": [
+        {
+            "src": "mjx/mjx_1Asset1.png",
+            "alt": "MJx Home Page on Mobile"
+        },
+        {
+            "src": "mjx/mjx_2Asset2.png",
+            "alt": "MJx Music Page on Mobile"
+        }
+    ],
     "siteSections": [
         {
             "src": "index/sectionIcons/portfolio.svg",

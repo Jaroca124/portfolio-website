@@ -1,5 +1,11 @@
 .section--default {
-    padding: 3rem;
+    padding: 3rem 8rem;
+    max-width: 1475px;
+    margin: 0 auto;
+    h2 {
+        font-weight: $fw-black;
+        font-size: 4rem;
+    }
     &__image {
         img {
             max-width: 100%;
@@ -8,15 +14,18 @@
     &--ncp {
         .section--default {
             &__image {
-                padding: 3rem;
+                padding: 6rem;
+                img {
+                    width: 26rem;
+                    display: block;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0 auto;
+                }
             }
         }
         &__title {
-            &__1,
-            &__2 {
-                font-weight: $fw-black;
-                font-size: 4rem;
-            }
             &__1 {
                 color: #668C6A;
             }
@@ -36,6 +45,8 @@
             justify-content: space-between;
             .block--images {
                 &__image {
+                    opacity: 0;
+                    margin-top: 2rem;
                     padding: 0 .5rem;
                     flex: 0 0 16.6666666667%;
                     max-width: 16.6666666667%;
@@ -48,6 +59,107 @@
         &__button {
             text-align: center;
             margin: 2rem 0;
+        }
+    }
+    &--marvel {
+        &__logo {
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+        &__title {
+            margin-bottom: 2rem;
+        }
+        &__shots {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            .block--images {
+                &__image {
+                    opacity: 0;
+                    margin-top: 2rem;
+                    &--1 {
+                        margin-left: 0;
+                        z-index: 6;
+                        img {
+                            height: 20rem;
+                        }
+                    }
+                    &--2 {
+                        margin-left: -6rem;
+                        z-index: 5;
+                        img {
+                            height: 18rem;
+                        }
+                    }
+                    &--3 {
+                        margin-left: -5.8rem;
+                        z-index: 4;
+                        img {
+                            height: 16rem;
+                        }
+                    }
+                    &--4 {
+                        margin-left: -5.4rem;
+                        z-index: 3;
+                        img {
+                            height: 14rem;
+                        }
+                    }
+                    &--5 {
+                        margin-left: -4.6rem;
+                        z-index: 2;
+                        img {
+                            height: 12rem;
+                        }
+                    }
+                    &--6 {
+                        margin-left: -3rem;
+                        z-index: 1;
+                        img {
+                            height: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+        &__button {
+            text-align: left;
+            margin: 2rem 0;
+        }
+    }
+    &--mjx {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        background: $dark-mode-bg;
+        .row {
+            max-width: 1475px;
+            padding: 3rem 8rem;
+            margin: 0 auto;
+        }
+        &__title, p {
+            color: $white;
+        }
+        &__subtitle {
+            font-size: 1.3333333333rem;
+            margin: 2rem 0;
+            font-weight: $fw-medium;
+        }
+        &__button {
+            margin: 2rem 0;
+            .button--default {
+                color: $white;
+                border-color: $white;
+                &:hover,
+                &:focus {
+                    background: $white;
+                    color: $dark-mode-bg;
+                }
+            }
         }
     }
 }
