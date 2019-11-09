@@ -17,11 +17,11 @@
                     <p class="date">Posted: {{ feed_post_date_posted }}</p>
                     <p class="comment">{{ feed_post_comment }}</p>
                     <a href="{{ feed_post_href }}">
-                        {% include "@atoms/images/default-image/default-image.twig" with
+                        {% include "@atoms/images/image-default/_image-default-master.twig" with
                             {
                                 "image_src": feed_post_img.src,
                                 "image_alt": feed_post_img.alt,
-                                "image_style": "img-thumbnail"
+                                "image_default_classes": "img-thumbnail"
                             }
                         %}
                     </a>

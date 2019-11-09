@@ -1,0 +1,37 @@
+{% set section_default_classes = section_default_classes|default() %}
+{% set section_default_image_orientation = section_default_image_orientation|default() %}
+{% set section_default_image_src = section_default_image_src|default() %}
+{% set section_default_image_alt = section_default_image_alt|default() %}
+
+<div class="section-pl section--default {{ section_default_classes }}">
+    <div class="row">
+        {% if section_default_image_orientation == "left" %}
+            <div class="section--default__image col-md-6">
+                {% block section_default_image_left %}
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_src": section_default_image_src,
+                            "image_alt": section_default_image_alt
+                        }
+                    %}
+                {% endblock %}
+            </div>
+        {% endif %}
+        <div class="col-md-6">
+            {% block section_default_content %}{% endblock %}
+        </div>
+        {% if section_default_image_orientation == "right" %}
+            <div class="section--default__image col-md-6">
+                {% block section_default_image_right %}
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_src": section_default_image_src,
+                            "image_alt": section_default_image_alt
+                        }
+                    %}
+                {% endblock %}
+            </div>
+        {% endif %}
+    </div>
+    {% block section_default_outside_content %}{% endblock %}
+</div>

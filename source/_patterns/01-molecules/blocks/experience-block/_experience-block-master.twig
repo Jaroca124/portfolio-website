@@ -10,11 +10,11 @@
 <div class="experience-block card {{ experience_block_classes }}">
     <div class="card-body">
         <div class="logo-wrapper">
-            {% include "@atoms/images/default-image/default-image.twig" with
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": experience_block_logo_img_src,
                     "image_alt": experience_block_logo_img_alt,
-                    "image_style": "experience-block-logo"
+                    "image_default_classes": "experience-block-logo"
                 }
             %}
         </div>

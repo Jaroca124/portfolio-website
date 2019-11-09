@@ -4,6 +4,18 @@
         "name": "Trevor Wilson",
         "href": "https://unsplash.com/@clevertrevor?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
     },
+    "headshot": {
+        "src": "index/headshot.jpg",
+        "alt": "Jacob Caccamo"
+    },
+    "sfGraphic": {
+        "src": "index/SF_Graphic.png",
+        "alt": "Graphic of the Golden Gate Bridge"
+    },
+    "dcGraphic": {
+        "src": "index/DC_Graphic.png",
+        "alt": "Graphic of Washington DC monuments"
+    },
     "heroShots": [{
             "src": "index/heroShots/ARKHAM_Final.png",
             "alt": "Batman Arkham Knight Shot"
@@ -101,81 +113,94 @@
             "alt": "Nike Phantom Specs Screen Shot"
         }
     ],
-    "cards": [{
-            "title": "Experience",
-            "text": "See how I've applied my design knowledge in professional settings.",
-            "img": {
-                "src": "index/carlos-muza-84523.jpg",
-                "alt": "A laptop showing a data program."
-            },
-            "btn_text": "Experience",
-            "btn_href": "experience.html"
+    "ncpImages": [
+        {
+            "src": "ncp/shot1.png",
+            "alt": "Beach Shot"
         },
         {
-            "title": "Education",
-            "text": "Get more info about my major and education at Tufts University.",
-            "img": {
-                "src": "index/william-iven-19843.jpg",
-                "alt": "A worker highlighting a piece of paper."
-            },
-            "btn_text": "Education",
-            "btn_href": "education.html"
+            "src": "ncp/shot2.png",
+            "alt": "Forrest Shot"
         },
         {
-            "title": "Skills",
-            "text": "View the tools & techniques I use in my design process.",
-            "img": {
-                "src": "index/quino-al-110318.jpg",
-                "alt": "Sculptor shaping clay."
-            },
-            "btn_text": "Skills",
-            "btn_href": "skills.html"
+            "src": "ncp/shot3.png",
+            "alt": "Sky Shot"
         },
         {
-            "title": "The Feed",
-            "text": "Explore cool articles about design, development, and technology.",
-            "img": {
-                "src": "index/william-bout-264826.jpg",
-                "alt": "An artistic image of a web."
-            },
-            "btn_text": "The Feed",
-            "btn_href": "feed.html"
+            "src": "ncp/shot4.png",
+            "alt": "Mountain Shot"
+        },
+        {
+            "src": "ncp/shot5.png",
+            "alt": "Artic Fox Shot"
+        },
+        {
+            "src": "ncp/shot6.png",
+            "alt": "Flower Shot"
         }
     ],
-    "featured": [{
-            "src": "index/mjx_1Asset1.png",
-            "alt": "Home page of MJx Music's webpage.",
-            "style": "mobile-screen my-4 mt-sm-5"
+    "marvelImages": [
+        {
+            "src": "marvel/MCC_2.png",
+            "alt": "Iron Man Shot"
         },
         {
-            "src": "index/mjx_2Asset2.png",
-            "alt": "Music page of MJx Music's webpage.",
-            "style": "mobile-screen my-4 mb-sm-5"
+            "src": "marvel/MCC_5.png",
+            "alt": "Captain Marvel Shot"
+        },
+        {
+            "src": "marvel/MCC_1.png",
+            "alt": "Thor Shot"
+        },
+        {
+            "src": "marvel/MCC_6.png",
+            "alt": "Captain America Shot"
+        },
+        {
+            "src": "marvel/MCC_3.png",
+            "alt": "Agent Peggy Carter Shot"
+        },
+        {
+            "src": "marvel/MCC_4.png",
+            "alt": "Hulk Shot"
         }
     ],
-    "feedPost": {
-        "title": "Pattern Lab - An Atomic Design System",
-        "date_posted": "Jul 28, 2018",
-        "source": "Pattern Lab",
-        "img": {
-            "src": "feed/thumbnails/pattern_lab.PNG",
-            "alt": "Screenshot of Pattern Lab website."
+    "mjxImages": [
+        {
+            "src": "mjx/mjx_1Asset1.png",
+            "alt": "MJx Home Page on Mobile"
         },
-        "href": "https://patternlab.io/",
-        "comment": "Pattern Lab is an incredibly powerful atomic design system that allows for rapid frontend development. The principle behind Pattern Lab and atomic design is that web components can be distilled into their most basic form, such as color, font, and button style, which are called atoms. Atoms can be combined to create molecules, like a search bar consisting of a button and an input field. Molecules can be combined to create organisms, such as a navigation bar, and finally, organisms can be used to create templates. When templates are supplied with data, they become full-fledged pages. The power of Pattern Lab is in its modularity – when you make a change to a button, for example, the same change will be applied everywhere that button appears. I am currently using Pattern Lab to build out a personal project and I highly recommend looking into it!",
-        "author": "Pattern Lab",
-        "tags": [{
-                "text": "Pattern Lab"
-            },
-            {
-                "text": "Atomic Design"
-            },
-            {
-                "text": "Development"
-            },
-            {
-                "text": "Frontend"
-            }
-        ]
-    }
+        {
+            "src": "mjx/mjx_2Asset2.png",
+            "alt": "MJx Music Page on Mobile"
+        }
+    ],
+    "dribbbleImage": [
+        {
+            "src": "dribbble.png",
+            "alt": "Jacob Caccamo's Dribbble"
+        }
+    ],
+    "siteSections": [
+        {
+            "src": "index/sectionIcons/portfolio.svg",
+            "alt": "Briefcase",
+            "href": "portfolio.html"
+        },
+        {
+            "src": "index/sectionIcons/experience.svg",
+            "alt": "Gears",
+            "href": "experience.html"
+        },
+        {
+            "src": "index/sectionIcons/education.svg",
+            "alt": "Graduation Cap",
+            "href": "education.html"
+        },
+        {
+            "src": "index/sectionIcons/skills.svg",
+            "alt": "Arrow and target",
+            "href": "skills.html"
+        }
+    ]
 }

@@ -31,12 +31,12 @@ var config = {
 };
 
 var buildPaths = {
-    target: './',
+    target: '../public_html',
     styleGuide: './pl/public/index.html',
-    home: './pl/public/patterns/05-prod-index/05-prod-index.html',
-    portfolio: './pl/public/patterns/05-prod-portfolio/05-prod-portfolio.html',
-    feed: './pl/public/patterns/05-prod-feed/05-prod-feed.html',
-    skills: './pl/public/patterns/05-prod-skills/05-prod-skills.html',
+    home: './pl/public/patterns/05-prod-index-index/05-prod-index-index.html',
+    portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
+    feed: './pl/public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
+    skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
     education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html'
 }
 
@@ -73,6 +73,15 @@ gulp.task('pl', ['sass'], function (cb) {
 });
 
 gulp.task('js', ['pl'], function(cb) {
+    gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(gulp.dest('./source/js'));
+    gulp.src('./node_modules/particlesjs/dist/particles.min.js')
+        .pipe(gulp.dest('./source/js'));
+    gulp.src('./node_modules/materialize-css/dist/js/materialize.min.js')
+        .pipe(gulp.dest('./source/js'));
+    gulp.src('./node_modules/progressbar.js/dist/progressbar.min.js')
+        .pipe(gulp.dest('./source/js'));
+
     return gulp.src('./source/_patterns/**/*.js')
         .pipe(concat('script.js'))
         .pipe(minify())
@@ -81,8 +90,9 @@ gulp.task('js', ['pl'], function(cb) {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build_prod', ['sass', 'pl'], function (cb) {
-    
+gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
+    //Pattern Lab and Sass Will be Generated First Based on Dependencies
+
     // Home Page
     console.log("Starting Home Build...");
     gulp.src(buildPaths.home)
@@ -97,41 +107,59 @@ gulp.task('build_prod', ['sass', 'pl'], function (cb) {
     console.log("Starting Portfolio Build...");
     gulp.src(buildPaths.portfolio)
     .pipe(rename({
-        basename: 'portfolio',
+        basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest(buildPaths.target));
+    .pipe(gulp.dest('../public_html/portfolio'));
     console.log("Portfolio Build Finished");
 
     // Feed
     console.log("Starting Feed Build...");
     gulp.src(buildPaths.feed)
     .pipe(rename({
-        basename: 'feed',
+        basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest(buildPaths.target));
+    .pipe(gulp.dest('../public_html/feed'));
     console.log("Feed Build Finished");
 
     // Skills
     console.log("Starting Skills Build...");
     gulp.src(buildPaths.skills)
     .pipe(rename({
-        basename: 'skills',
+        basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest(buildPaths.target));
+    .pipe(gulp.dest('../public_html/skills'));
     console.log("Skills Build Finished");
 
     // Education
     console.log("Starting Education Build...");
     gulp.src(buildPaths.education)
     .pipe(rename({
-        basename: 'education',
+        basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest(buildPaths.target));
+    .pipe(gulp.dest('../public_html/education'));
     console.log("Education Build Finished");
+
+    // Copy CSS
+    console.log("Starting Copy of CSS");
+    gulp.src('./source/css/style.css')
+        .pipe(gulp.dest('../public_html/css'));
+    console.log("Finished Copying CSS");
+
+    // Copy JS
+    console.log("Starting Copy of JS");
+    gulp.src('./source/js/*.js')
+        .pipe(gulp.dest('../public_html/js'));
+    console.log("Finished Copying JS");
+
+    // Copy Images
+    console.log("Starting Copy of Images");
+    gulp.src('./source/assets/**/*')
+        .pipe(gulp.dest('../public_html/assets'));
+    console.log("Finished Copying Images");
 });
 
 // Start Static Server

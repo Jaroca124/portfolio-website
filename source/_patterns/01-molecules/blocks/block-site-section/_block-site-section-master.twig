@@ -1,0 +1,16 @@
+{% set block_site_section_classes = block_site_section_classes|default() %}
+{% set block_site_section_data = block_site_section_data|default() %}
+
+<div class="block-pl block--site-section {{ block_site_section_classes }}">
+    {% for btn in block_site_section_data %}
+        <div class="block--site-section__button">
+            {% include "@atoms/button/button-section/_button-section-master.twig" with
+                {
+                    "button_section_img_src": btn.src,
+                    "button_section_img_alt": btn.alt,
+                    "button_section_href": btn.href
+                }
+            %}
+        </div>
+    {% endfor %}
+</div>
