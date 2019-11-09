@@ -175,6 +175,12 @@
             "alt": "MJx Music Page on Mobile"
         }
     ],
+    "dribbbleImage": [
+        {
+            "src": "dribbble.png",
+            "alt": "Jacob Caccamo's Dribbble"
+        }
+    ],
     "siteSections": [
         {
             "src": "index/sectionIcons/portfolio.svg",
