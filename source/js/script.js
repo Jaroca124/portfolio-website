@@ -42,6 +42,9 @@ function renderImages(direction, images) {
 };*/
 $( document ).ready(function() {
     $('.tabs').tabs();
+});
+$( document ).ready(function() {
+    $('.tabs').tabs();
 
     // Set the Access Token
     if ($("#shots").length) {
@@ -122,9 +125,6 @@ $(document).ready(function() {
         });
         majorGPA.animate(1.0); // Number from 0.0 to 1.0
     }
-});
-$( document ).ready(function() {
-    $('.tabs').tabs();
 });
 $(document).ready(function() {
     var delay = 200;
