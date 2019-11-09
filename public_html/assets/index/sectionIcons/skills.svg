@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="52px" viewBox="0 0 69 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-14" transform="translate(1.000000, -3.000000)" stroke="#A1F0BC">
+            <ellipse id="Oval" stroke-width="2" cx="24.3157895" cy="29.0224159" rx="24.3157895" ry="24.6139477"></ellipse>
+            <ellipse id="Oval" stroke-width="2" cx="24.3157895" cy="29.3897883" rx="14.7368421" ry="14.6948941"></ellipse>
+            <ellipse id="Oval" stroke-width="2" cx="24.6842105" cy="29.0224159" rx="4.78947368" ry="4.7758406"></ellipse>
+            <g id="Group-11" transform="translate(44.484333, 19.901746) rotate(-25.000000) translate(-44.484333, -19.901746) translate(22.010649, 8.880575)">
+                <line x1="1.98454336" y1="16.567143" x2="39.531882" y2="5.4420056" id="Line-11" stroke-width="2" stroke-linecap="round" transform="translate(20.758213, 11.004574) rotate(16.504361) translate(-20.758213, -11.004574) "></line>
+                <line x1="40.2115473" y1="10.9909763" x2="44.6019237" y2="7.06796045" id="Line-12" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="36.7849739" y1="10.9909763" x2="41.1753503" y2="7.06796045" id="Line-12" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="32.8688899" y1="10.9909763" x2="37.2592664" y2="7.06796045" id="Line-12" stroke-width="2" stroke-linecap="round"></line>
+                <line x1="40.2115473" y1="14.9275901" x2="44.6019237" y2="11.0045743" id="Line-12" stroke-width="2" stroke-linecap="round" transform="translate(42.406736, 12.966082) scale(1, -1) translate(-42.406736, -12.966082) "></line>
+                <line x1="36.7849739" y1="14.9275901" x2="41.1753503" y2="11.0045743" id="Line-12" stroke-width="2" stroke-linecap="round" transform="translate(38.980162, 12.966082) scale(1, -1) translate(-38.980162, -12.966082) "></line>
+                <line x1="32.8688899" y1="14.9275901" x2="37.2592664" y2="11.0045743" id="Line-12" stroke-width="2" stroke-linecap="round" transform="translate(35.064078, 12.966082) scale(1, -1) translate(-35.064078, -12.966082) "></line>
+                <polygon id="Rectangle" transform="translate(1.297809, 11.004574) rotate(-225.000000) translate(-1.297809, -11.004574) " points="1.76260298 10.1969625 2.10542129 11.8121861 0.490197644 11.4693678"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

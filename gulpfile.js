@@ -31,7 +31,7 @@ var config = {
 };
 
 var buildPaths = {
-    target: '../public_html',
+    target: './public_html',
     styleGuide: './pl/public/index.html',
     home: './pl/public/patterns/05-prod-index-index/05-prod-index-index.html',
     portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
@@ -110,7 +110,7 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
         basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest('../public_html/portfolio'));
+    .pipe(gulp.dest('./public_html/portfolio'));
     console.log("Portfolio Build Finished");
 
     // Feed
@@ -120,7 +120,7 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
         basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest('../public_html/feed'));
+    .pipe(gulp.dest('./public_html/feed'));
     console.log("Feed Build Finished");
 
     // Skills
@@ -130,7 +130,7 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
         basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest('../public_html/skills'));
+    .pipe(gulp.dest('./public_html/skills'));
     console.log("Skills Build Finished");
 
     // Education
@@ -140,25 +140,25 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
         basename: 'index',
         extname: '.html'
     }))
-    .pipe(gulp.dest('../public_html/education'));
+    .pipe(gulp.dest('./public_html/education'));
     console.log("Education Build Finished");
 
     // Copy CSS
     console.log("Starting Copy of CSS");
     gulp.src('./source/css/style.css')
-        .pipe(gulp.dest('../public_html/css'));
+        .pipe(gulp.dest('./public_html/css'));
     console.log("Finished Copying CSS");
 
     // Copy JS
     console.log("Starting Copy of JS");
     gulp.src('./source/js/*.js')
-        .pipe(gulp.dest('../public_html/js'));
+        .pipe(gulp.dest('./public_html/js'));
     console.log("Finished Copying JS");
 
     // Copy Images
     console.log("Starting Copy of Images");
     gulp.src('./source/assets/**/*')
-        .pipe(gulp.dest('../public_html/assets'));
+        .pipe(gulp.dest('./public_html/assets'));
     console.log("Finished Copying Images");
 });
 
