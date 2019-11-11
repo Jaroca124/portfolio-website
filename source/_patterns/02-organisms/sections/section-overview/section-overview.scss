@@ -1,5 +1,15 @@
 .section--overview {
     background: $dark-mode-bg;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 6rem;
+    }
+    .container-fluid {
+        padding: 0;
+        @include media-breakpoint-up(lg) {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
     .col-md-6 {
         margin: 0 auto;
     }
@@ -9,25 +19,49 @@
     }
     &__headshot {
         display: block;
-        margin: 4rem auto 3rem auto;
+        margin: 2.5rem auto;
         border-radius: 100%;
         border: 2px solid $white;
         height: 7.5rem;
+        @include media-breakpoint-up(lg) {
+            margin: 4rem auto 3rem auto;
+        }
     }
     &__text {
         color: $white;
-        margin-bottom: 2rem;
-    }
-    .block--site-section {
-        padding-bottom: 3rem;
-        max-width: 50rem;
+        padding: 0 2.5rem;
+        margin-bottom: 2.5rem;
+        max-width: 40rem;
+        margin: 0 auto;
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+            margin-bottom: 0;
+        }
     }
     &__sf,
     &__dc {
+        display: none;
         width: 90%;
         box-shadow: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
     }
     &__dc {
         float: right;
+    }
+    .col-lg-3 {
+        padding: 0;
+        @include media-breakpoint-up(lg) {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    .block--site-section {
+        @extend .row;
+        margin: 0 auto;
+        @include media-breakpoint-up(lg) {
+            transform: translateY(50%);
+        }
     }
 }

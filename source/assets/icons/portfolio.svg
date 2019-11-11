@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="212px" height="212px" viewBox="0 0 212 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Scratch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(6.000000, 6.000000)" stroke="#FFFFFF" stroke-width="12">
+            <path d="M9,40 L60.7666658,40 L60.7666658,40 L60.7666658,18 C60.7666658,8.0588745 68.8255403,4.27346535e-14 78.7666658,0 L122,0 C131.941125,-1.82615513e-15 140,8.0588745 140,18 L140,40 L140,40 L191,40 C195.970563,40 200,44.0294373 200,49 L200,191 C200,195.970563 195.970563,200 191,200 L9,200 C4.02943725,200 6.08718376e-16,195.970563 0,191 L0,49 C-2.38507522e-15,44.0294373 4.02943725,40 9,40 Z" id="Rectangle" stroke-linecap="round"></path>
+            <line x1="0.75" y1="100.25" x2="80" y2="100" id="Line-10" stroke-linecap="round"></line>
+            <line x1="120.625" y1="100.125" x2="199.875" y2="99.875" id="Line-10" stroke-linecap="round"></line>
+            <line x1="60.625" y1="40.125" x2="139.875" y2="39.875" id="Line-10" stroke-linecap="round"></line>
+            <rect id="Rectangle" x="80" y="80" width="40" height="40" rx="2"></rect>
+        </g>
+    </g>
+</svg>

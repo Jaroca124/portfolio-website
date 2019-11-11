@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="212px" height="223px" viewBox="0 0 212 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Scratch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(6.000000, 5.500000)" stroke="#FFFFFF" stroke-width="12">
+            <circle id="Oval" cx="100" cy="111.5" r="100"></circle>
+            <ellipse id="Oval" cx="100" cy="111.5" rx="60.4519774" ry="59.7765363"></ellipse>
+            <ellipse id="Oval" cx="100" cy="111.5" rx="19.7740113" ry="19.5530726"></ellipse>
+            <line x1="100" y1="110.5" x2="180" y2="20.5" id="Line" stroke-linecap="round"></line>
+            <line x1="180" y1="20.5" x2="200" y2="20.5" id="Line-3" stroke-linecap="round"></line>
+            <line x1="180" y1="20.5" x2="180" y2="0.5" id="Line-3" stroke-linecap="round"></line>
+            <line x1="160" y1="40.5" x2="180" y2="40.5" id="Line-3" stroke-linecap="round"></line>
+            <line x1="160" y1="40.5" x2="160" y2="20.5" id="Line-3" stroke-linecap="round"></line>
+            <line x1="170" y1="30.5" x2="190" y2="30.5" id="Line-3" stroke-linecap="round"></line>
+            <line x1="170" y1="30.5" x2="170" y2="10.5" id="Line-3" stroke-linecap="round"></line>
+        </g>
+    </g>
+</svg>

@@ -185,24 +185,28 @@
     ],
     "siteSections": [
         {
-            "src": "index/sectionIcons/portfolio.svg",
-            "alt": "Briefcase",
-            "href": "portfolio.html"
+            "src": "portfolio.jpg",
+            "alt": "Portfolio",
+            "text": "Portfolio",
+            "href": "/portfolio"
         },
         {
-            "src": "index/sectionIcons/experience.svg",
-            "alt": "Gears",
-            "href": "experience.html"
+            "src": "experience.jpg",
+            "alt": "Experience",
+            "text": "Experience",
+            "href": "/experience"
         },
         {
-            "src": "index/sectionIcons/education.svg",
-            "alt": "Graduation Cap",
-            "href": "education.html"
+            "src": "education.jpg",
+            "alt": "Education",
+            "text": "Education",
+            "href": "/education"
         },
         {
-            "src": "index/sectionIcons/skills.svg",
-            "alt": "Arrow and target",
-            "href": "skills.html"
+            "src": "skills.jpg",
+            "alt": "Skills",
+            "text": "Skills",
+            "href": "/skills"
         }
     ]
 }

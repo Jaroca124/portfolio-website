@@ -3,14 +3,17 @@
 
 <div class="block-pl block--site-section {{ block_site_section_classes }}">
     {% for btn in block_site_section_data %}
-        <div class="block--site-section__button">
-            {% include "@atoms/button/button-section/_button-section-master.twig" with
-                {
-                    "button_section_img_src": btn.src,
-                    "button_section_img_alt": btn.alt,
-                    "button_section_href": btn.href
-                }
-            %}
+        <div class="col-lg-3">
+            <div class="block--site-section__button">
+                {% include "@atoms/button/button-section/_button-section-master.twig" with
+                    {
+                        "button_section_img_src": btn.src,
+                        "button_section_img_alt": btn.alt,
+                        "button_section_href": btn.href,
+                        "button_section_text": btn.text
+                    }
+                %}
+            </div>
         </div>
     {% endfor %}
 </div>

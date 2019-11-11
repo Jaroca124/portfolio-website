@@ -1,10 +1,59 @@
 .button--section {
-    padding: 2rem;
-    background: transparent;
-    border-radius: .3125rem;
-    border: 2px solid #A1F0BC;
-    display: block;
-    height: 8rem;
-    width: 9rem;
-    margin: 0 auto;
+    &__card {
+        overflow: hidden;
+        height: 9rem;
+        @include md-4dp;
+        @extend .hoverable;
+        max-width: 500px;
+        position: relative;
+        border-radius: 0;
+        @include media-breakpoint-up(lg) {
+            border-radius: $border-radius-default;
+        }
+        &__image {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img {
+                flex-shrink: 0;
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 100%;
+                border-radius: 0;
+                @include media-breakpoint-up(lg) {
+                    border-radius: $border-radius-default;
+                }
+            }
+        }
+        &__text {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            transform: translateY(100%);
+            color: $white;
+            width: 100%;
+            padding-left: 1rem;
+            text-align: left;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 0;
+            @include media-breakpoint-up(lg) {
+                border-bottom-left-radius: $border-radius-default;
+                border-bottom-right-radius: $border-radius-default;
+            }
+            background: rgba(0,0,0, .8);
+            transition: transform .3s;
+        }
+    }
+    &:hover, &:focus {
+        .button--section__card {
+            &__text {
+                transform: translateY(0);
+            }
+        }
+    }
 }
