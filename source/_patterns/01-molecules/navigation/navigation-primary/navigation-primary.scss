@@ -1,45 +1,23 @@
-.navbar {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#191919+0,000000+100 */
-    background: #191919;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #191919 0%, #000000 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #191919 0%, #000000 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #191919 0%, #000000 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000', GradientType=0);
-    /* IE6-9 */
+.navigation--primary {
     height: auto;
     padding: 2rem;
     position: relative;
     z-index: 100;
     display: none;
     @include media-breakpoint-up(md) {
-        display: flex;
+        display: block;
     }
-    .navbar-nav {
-        padding-top: 1rem;
-        @include media-breakpoint-up(md) {
-            padding-top: 0;
-        }
-    }
-    .custom-toggler.navbar-toggler {
-        border-color: #ffffff;
-    }
-    .custom-toggler .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-    .nav-item,
-    .navbar-brand {
-        font-family: $font-family-heading;
-        font-size: 1.25rem;
-        font-weight: 400;
-        @include antialias;
+    &__home {
+        display: inline-block;
+        font-size: 1.4rem;
     }
     .link--default {
+        padding-bottom: .25rem;
+        margin-right: 1rem;
         position: relative;
         font-weight: 400;
+        font-size: 1.2rem;
+        color: $white;
         @include media-breakpoint-up(md) {
             &:after {
                 content: "";
@@ -52,6 +30,7 @@
                 transition: .3s;
             }
             &:hover, &:focus {
+                text-decoration: none;
                 &:after {
                     width: 100%;
                 }

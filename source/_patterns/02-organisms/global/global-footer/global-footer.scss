@@ -1,30 +1,112 @@
 .global--footer {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#191919+0,000000+100 */
-    background: #191919;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #191919 0%, #000000 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #191919 0%, #000000 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #191919 0%, #000000 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000', GradientType=0);
-    /* IE6-9 */
-    @include md-6dp;
-    height: 100px;
-    .container {
-        height: 100%;
-        .component--media-links {
-            @extend .row;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            &__link {
-                padding: 0 1.5rem;
-                .icon {
-                    height: 35px;
+    -webkit-box-shadow: 0px -8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px -16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px -6px 30px 5px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px -8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px -16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px -6px 30px 5px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px -8px 10px -5px rgba(0, 0, 0, 0.2),
+    0px -16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px -6px 30px 5px rgba(0, 0, 0, 0.12);
+    background: $dark-mode-bg;
+    position: relative;
+    z-index: 1;
+    .col-md-3 {
+        padding: 2rem;
+        @include media-breakpoint-up(md) {
+            padding: 3rem;
+        }
+    }
+    .navigation--primary {
+        display: block;
+        padding: 0;
+        @include media-breakpoint-up(md) {
+            padding: 2rem;
+        }
+        &__links {
+            .link--default {
+                font-size: .8rem;
+                display: block;
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
                 }
             }
+        }
+        &__home {
+            font-size: 1.4rem !important;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .col-md-6 {
+        padding: 0;
+        @include media-breakpoint-up(md) {
+            padding: 0 15px;
+        }
+        .component--media-links {
+            max-width: 900px;
+            margin: 0 auto;
+            &__link {
+                height: 5rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    height: 2rem;
+                }
+                &--dribbble {
+                    background: #EA4C89;
+                }
+                &--instagram {
+                    background: url('../assets/instagram-bg-hr.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    @include media-breakpoint-up(md) {
+                        background: url('../assets/instagram-bg.png');
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+                &--linkedin {
+                    background: #2867B2;
+                }
+                &--github {
+                    background: #24292E;
+                }
+                &--behance {
+                    background: #0057FF;
+                }
+                &--gmail {
+                    background: #D44638;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                height: 100%;
+                display: flex;
+                &__link {
+                    height: 100%;
+                    display: inline-flex;
+                    flex: 1 1 16.6666666667%;
+                    width: 5rem;
+                    transform: skew(-12deg);
+                    margin-left: -4px;
+                    img {
+                        transform: skew(12deg);
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .image--logo {
+        margin: 0 auto;
+        display: block;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
         }
     }
 }

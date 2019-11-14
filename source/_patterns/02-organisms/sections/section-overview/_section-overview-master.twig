@@ -2,11 +2,11 @@
 
 <div class="section-pl section--overview {{ section_overview_classes }}">
     <div class="container-fluid">
-        <div class="row">
+        <div class="section--overview__content row">
             <div class="col-md-3">
                 {% include "@atoms/images/image-default/_image-default-master.twig" with 
                     {
-                        "image_default_classes": "section--overview__sf",
+                        "image_default_classes": "section--overview__content__sf",
                         "image_src": sfGraphic.src,
                         "image_alt": sfGraphic.alt
                     }
@@ -15,17 +15,17 @@
             <div class="col-md-6">
                 {% include "@atoms/images/image-default/_image-default-master.twig" with 
                     {
-                        "image_default_classes": "section--overview__headshot",
+                        "image_default_classes": "section--overview__content__headshot",
                         "image_src": headshot.src,
                         "image_alt": headshot.alt
                     }
                 %}
-                <p class="section--overview__text">Hi! I’m a UI/UX Designer at Booz Allen Hamilton, Inc. in Washington DC. I specialize in interaction design, user research, the human factors iterative method, and front-end development. What does that mean? I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I am extremely passionate about what I do, and I coded this website from scratch to reflect that passion.</p>
+                <p class="section--overview__content__text">Hi! I’m a UI/UX Designer at Booz Allen Hamilton, Inc. in Washington DC. I specialize in interaction design, user research, the human factors iterative method, and front-end development. What does that mean? I believe that usability is at the core of all products; I work to ensure that websites, mobile applications, and software are effective, efficient, and satisfying. I am extremely passionate about what I do, and I coded this website from scratch to reflect that passion.</p>
             </div>
             <div class="col-md-3">
                 {% include "@atoms/images/image-default/_image-default-master.twig" with 
                     {
-                        "image_default_classes": "section--overview__dc",
+                        "image_default_classes": "section--overview__content__dc",
                         "image_src": dcGraphic.src,
                         "image_alt": dcGraphic.alt
                     }

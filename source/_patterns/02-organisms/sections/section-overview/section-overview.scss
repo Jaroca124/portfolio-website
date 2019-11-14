@@ -17,38 +17,43 @@
         align-items: center;
         display: flex;
     }
-    &__headshot {
-        display: block;
-        margin: 2.5rem auto;
-        border-radius: 100%;
-        border: 2px solid $white;
-        height: 7.5rem;
+    &__content {
+        margin: 0 auto 2.5rem auto;
+        max-width: $max-width-xl;
         @include media-breakpoint-up(lg) {
-            margin: 4rem auto 3rem auto;
+            margin: 0 auto;
         }
-    }
-    &__text {
-        color: $white;
-        padding: 0 2.5rem;
-        margin-bottom: 2.5rem;
-        max-width: 40rem;
-        margin: 0 auto;
-        @include media-breakpoint-up(lg) {
-            padding: 0;
-            margin-bottom: 0;
-        }
-    }
-    &__sf,
-    &__dc {
-        display: none;
-        width: 90%;
-        box-shadow: none;
-        @include media-breakpoint-up(lg) {
+        &__headshot {
             display: block;
+            margin: 2.5rem auto;
+            border-radius: 100%;
+            border: 2px solid $white;
+            height: 7.5rem;
+            @include media-breakpoint-up(lg) {
+                margin: 4rem auto 3rem auto;
+            }
         }
-    }
-    &__dc {
-        float: right;
+        &__text {
+            color: $white;
+            padding: 0 2.5rem;
+            max-width: 40rem;
+            margin: 0 auto;
+            @include media-breakpoint-up(lg) {
+                padding: 0;
+            }
+        }
+        &__sf,
+        &__dc {
+            display: none;
+            width: 90%;
+            box-shadow: none;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+        }
+        &__dc {
+            float: right;
+        }
     }
     .col-lg-3 {
         padding: 0;
@@ -60,8 +65,12 @@
     .block--site-section {
         @extend .row;
         margin: 0 auto;
+        max-width: 1000px;
         @include media-breakpoint-up(lg) {
             transform: translateY(50%);
+        }
+        @include media-breakpoint-up(xl) {
+            max-width: $max-width-xl;
         }
     }
 }

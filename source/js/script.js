@@ -16,7 +16,7 @@ function renderImages(direction, images) {
     for (i = 0; i < images.length; i++) {
         (function(i) {
             setTimeout(function() {
-                $(images[i]).animate({ opacity: 1, marginTop: 0 }, 750);
+                $(images[i]).css({ opacity: 1, transform: "translateY(0)" });
             }, 250 * i);
         })(i);
     }
@@ -65,6 +65,21 @@ $( document ).ready(function() {
             }
             }
         });
+    }
+});
+$(document).ready(function() {
+    if ($('#component--logo__circle').length) {
+        var bar = new ProgressBar.Circle('#component--logo__circle', {
+            strokeWidth: 3,
+            easing: 'easeInOut',
+            duration: 2000,
+            color: '#fff',
+            trailColor: '#000',
+            trailWidth: 0,
+            svgStyle: null
+        });
+
+        bar.animate(1.0); // Number from 0.0 to 1.0
     }
 });
 $(document).ready(function() {
@@ -161,10 +176,10 @@ $(document).ready(function() {
     }
 
     function renderMenu() {
-        for (i = 0; i < $('.navbar').find('a').length; i++) {
+        for (i = 0; i < $('.navigation--primary').find('a').length; i++) {
             (function(i) {
                 setTimeout(function() {
-                    $($('.navbar').find('a')[i]).fadeIn();
+                    $($('.navigation--primary').find('a')[i]).fadeIn();
                 }, delay * i);
             })(i);
         }
@@ -180,20 +195,5 @@ $(document).ready(function() {
     }
     function renderScroll() {
         $('.component--scroll').fadeIn();
-    }
-});
-$(document).ready(function() {
-    if ($('#component--logo__circle').length) {
-        var bar = new ProgressBar.Circle('#component--logo__circle', {
-            strokeWidth: 3,
-            easing: 'easeInOut',
-            duration: 2000,
-            color: '#fff',
-            trailColor: '#000',
-            trailWidth: 0,
-            svgStyle: null
-        });
-
-        bar.animate(1.0); // Number from 0.0 to 1.0
     }
 });

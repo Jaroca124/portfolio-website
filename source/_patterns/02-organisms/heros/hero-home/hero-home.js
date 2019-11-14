@@ -43,10 +43,10 @@ $(document).ready(function() {
     }
 
     function renderMenu() {
-        for (i = 0; i < $('.navbar').find('a').length; i++) {
+        for (i = 0; i < $('.navigation--primary').find('a').length; i++) {
             (function(i) {
                 setTimeout(function() {
-                    $($('.navbar').find('a')[i]).fadeIn();
+                    $($('.navigation--primary').find('a')[i]).fadeIn();
                 }, delay * i);
             })(i);
         }

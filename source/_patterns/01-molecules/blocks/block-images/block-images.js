@@ -16,7 +16,7 @@ function renderImages(direction, images) {
     for (i = 0; i < images.length; i++) {
         (function(i) {
             setTimeout(function() {
-                $(images[i]).animate({ opacity: 1, marginTop: 0 }, 750);
+                $(images[i]).css({ opacity: 1, transform: "translateY(0)" });
             }, 250 * i);
         })(i);
     }

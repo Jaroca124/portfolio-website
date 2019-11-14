@@ -1,55 +1,40 @@
+{% set navigation_primary_classes = navigation_primary_classes|default() %}
 {% set navigation_primary_showhome = navigation_primary_showhome|default() %}
 
-<nav class="navbar navbar-expand-md navbar-light custom-toggler md-whiteframe-4dp">
-    <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    {% if navigation_primary_showhome %}
+<nav class="navigation-pl navigation--primary {{ navigation_primary_classes }}">
+    <div class="navigation--primary__links">
+        {% if navigation_primary_showhome %}
+            {% include "@atoms/link/link.twig" with
+                {
+                    "link_classes": "navigation--primary__home",
+                    "link_href": "/",
+                    "link_text": "Jacob Caccamo"
+                }
+            %}
+        {% endif %}
         {% include "@atoms/link/link.twig" with
             {
-                "link_href": "/",
-                "link_classes": "navbar-brand text-white",
-                "link_text": "Jacob Caccamo"
+                "link_href": "/portfolio",
+                "link_text": "Portfolio"
             }
         %}
-    {% endif %}
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            {% include "@atoms/link/link.twig" with
-                {
-                    "link_href": "/portfolio",
-                    "link_classes": "nav-item nav-link text-white",
-                    "link_text": "Portfolio"
-                }
-            %}
-            {% include "@atoms/link/link.twig" with
-                {
-                    "link_href": "/experience",
-                    "link_classes": "nav-item nav-link text-white",
-                    "link_text": "Experience"
-                }
-            %}
-            {% include "@atoms/link/link.twig" with
-                {
-                    "link_href": "/education",
-                    "link_classes": "nav-item nav-link text-white",
-                    "link_text": "Education"
-                }
-            %}
-            {% include "@atoms/link/link.twig" with
-                {
-                    "link_href": "/skills",
-                    "link_classes": "nav-item nav-link text-white",
-                    "link_text": "Skills"
-                }
-            %}
-            {% include "@atoms/link/link.twig" with
-                {
-                    "link_href": "/feed",
-                    "link_classes": "nav-item nav-link text-white",
-                    "link_text": "The Feed"
-                }
-            %}
-        </div>
+        {% include "@atoms/link/link.twig" with
+            {
+                "link_href": "/experience",
+                "link_text": "Experience"
+            }
+        %}
+        {% include "@atoms/link/link.twig" with
+            {
+                "link_href": "/education",
+                "link_text": "Education"
+            }
+        %}
+        {% include "@atoms/link/link.twig" with
+            {
+                "link_href": "/skills",
+                "link_text": "Skills"
+            }
+        %}
     </div>
 </nav>

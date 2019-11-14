@@ -1,6 +1,6 @@
 .hero--home {
     position: relative;
-    .navbar {
+    .navigation--primary {
         @include media-breakpoint-up(md) {
             background: transparent;
             position: absolute;
