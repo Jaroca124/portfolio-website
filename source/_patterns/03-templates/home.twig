@@ -24,7 +24,7 @@
             {% block section_default_content %}
                 <h2 class="section--default--ncp__title"><span class="section--default--ncp__title__1">Natural</span><br><span class="section--default--ncp__title__2">Inspiration.</span></h2>
                 <p class="section--default--ncp__subtitle">Natural Color Palette Collection</p>
-                <p>Beautiful color palettes, or collections of colors that work well together, can be found almost anywhere in the world. In my Natural Color Palette collection, I explore various color palettes derived from beautiful Unsplash photography, and a few of my more modest shots. These palettes can be found</p>
+                <p>Beautiful color palettes, or collections of colors that work well together, can be found almost anywhere in the world. In my Natural Color Palette collection, I explore various color palettes derived from beautiful Unsplash photography, and a few of my more modest shots.</p>
                 {% include "@molecules/blocks/block-images/_block-images-master.twig" with
                     {
                         "block_images_classes": "section--default--ncp__shots",
@@ -81,7 +81,7 @@
         {# MJX Music #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {
-                "section_default_classes": "section--default--mjx",
+                "section_default_classes": "section--default--mjx section--default--full-width",
                 "section_default_image_orientation": "right"
             }
         %}
@@ -111,7 +111,7 @@
         {# Dribbble #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {
-                "section_default_classes": "section--default--dribbble",
+                "section_default_classes": "section--default--dribbble section--default--full-width",
                 "section_default_image_orientation": "right"
             }
         %}

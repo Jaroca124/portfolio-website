@@ -4,10 +4,10 @@
         height: 9rem;
         @include md-4dp;
         @extend .hoverable;
-        max-width: 500px;
         position: relative;
         border-radius: 0;
         @include media-breakpoint-up(lg) {
+            max-width: 500px;
             border-radius: $border-radius-default;
         }
         &__image {
@@ -32,7 +32,6 @@
             display: flex;
             align-items: center;
             font-size: 1.2rem;
-            transform: translateY(100%);
             color: $white;
             width: 100%;
             padding-left: 1rem;
@@ -42,6 +41,7 @@
             bottom: 0;
             border-radius: 0;
             @include media-breakpoint-up(lg) {
+                transform: translateY(100%);
                 border-bottom-left-radius: $border-radius-default;
                 border-bottom-right-radius: $border-radius-default;
             }
@@ -52,7 +52,9 @@
     &:hover, &:focus {
         .button--section__card {
             &__text {
-                transform: translateY(0);
+                @include media-breakpoint-up(lg) {
+                    transform: translateY(0);
+                }
             }
         }
     }

@@ -11,6 +11,12 @@
     background: $dark-mode-bg;
     position: relative;
     z-index: 1;
+    > .container-fluid {
+        > .row {
+            margin: 0 auto;
+            max-width: $max-width-xl;
+        }
+    }
     .col-md-3 {
         padding: 2rem;
         @include media-breakpoint-up(md) {
@@ -54,7 +60,7 @@
                 justify-content: center;
                 align-items: center;
                 img {
-                    height: 2rem;
+                    height: 3rem;
                 }
                 &--dribbble {
                     background: #EA4C89;
@@ -94,7 +100,6 @@
                     margin-left: -4px;
                     img {
                         transform: skew(12deg);
-                        height: 2rem;
                     }
                 }
             }

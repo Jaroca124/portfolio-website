@@ -3,7 +3,8 @@
         display: none;
     }
     &__menu-button {
-        @include md-24dp;
+        @include md-4dp;
+        @extend .hoverable;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -16,10 +17,13 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 1000;
-        background: $dark-mode-bg;
         color: $white;
         transition: box-shadow .25s;
-        border: 0.1125rem solid $white;
+        background: rgb(128,0,255);
+        background: -moz-linear-gradient(0deg, rgba(128,0,255,1) 0%, rgba(69,128,252,1) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(128,0,255,1) 0%, rgba(69,128,252,1) 100%);
+        background: linear-gradient(0deg, rgba(128,0,255,1) 0%, rgba(69,128,252,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8000ff",endColorstr="#4580fc",GradientType=1);
         .image--default {
             height: 1.5rem;
         }
