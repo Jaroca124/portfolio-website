@@ -37,7 +37,8 @@ var buildPaths = {
     portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
     feed: './pl/public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
     skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
-    education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html'
+    education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html',
+    marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html'
 }
 
 var sassOption = {
@@ -142,6 +143,16 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
     }))
     .pipe(gulp.dest('./public_html/education'));
     console.log("Education Build Finished");
+    
+    // Marvel
+    console.log("Starting Marvel Build...");
+    gulp.src(buildPaths.marvel)
+    .pipe(rename({
+        basename: 'index',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest('./public_html/marvel'));
+    console.log("Marvel Build Finished");
 
     // Copy CSS
     console.log("Starting Copy of CSS");

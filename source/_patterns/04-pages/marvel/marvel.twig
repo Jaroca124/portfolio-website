@@ -1,0 +1,12 @@
+{% embed "@templates/view-page.twig" with
+    {
+        "template_id": "portfolio--marvel"
+    }
+%}
+    {% block template_hero_content %}
+        <h1>Marvel</h1>
+    {% endblock %}
+    {% block template_main_content %}
+        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" %}
+    {% endblock %}
+{% endembed %}

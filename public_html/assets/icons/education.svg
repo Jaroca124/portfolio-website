@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="208px" height="172px" viewBox="0 0 208 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Scratch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(4.000000, 6.000000)">
+            <line x1="104" y1="48" x2="180" y2="20" id="Line-9" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"></line>
+            <line x1="180" y1="40" x2="180" y2="20" id="Line-9" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"></line>
+            <line x1="180" y1="100" x2="180" y2="60" id="Line-9" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"></line>
+            <path d="M40,70.9923674 L97.388431,98.7374094 C99.0381363,99.5349768 100.961864,99.5349768 102.611569,98.7374094 L160,70.9923674 L160,70.9923674 L160,153 C160,156.865993 156.865993,160 153,160 L47,160 C43.1340068,160 40,156.865993 40,153 L40,70.9923674 L40,70.9923674 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"></path>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" cx="100" cy="50" r="5"></circle>
+            <path d="M102.696557,1.37074958 L196.434058,49.0206461 C197.418711,49.5211781 197.811169,50.7251584 197.310637,51.7098114 C197.114528,52.0955989 196.798574,52.4073676 196.410207,52.5983151 L102.669723,98.687386 C100.987616,99.5144221 99.0156539,99.5078269 97.3391162,98.6695581 L3.57770876,51.7888544 C2.58975177,51.2948759 2.18930308,50.0935298 2.68328157,49.1055728 C2.87680898,48.718518 3.19065396,48.404673 3.57770876,48.2111456 L97.2943952,1.3528024 C98.9961134,0.501943321 101.000529,0.508602437 102.696557,1.37074958 Z" id="Rectangle" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"></path>
+            <rect id="Rectangle" fill="#FFFFFF" x="168" y="27" width="9" height="7"></rect>
+        </g>
+    </g>
+</svg>
