@@ -1,0 +1,27 @@
+{% set hero_generic_classes = hero_generic_classes|default() %}
+{% set hero_generic_background_src = hero_generic_background_src|default() %}
+{% set hero_generic_background_alt = hero_generic_background_alt|default() %}
+
+<div class="hero-pl hero--generic {{ hero_generic_classes }}">
+    <div class="hero--generic__background">
+        {% include "@atoms/images/image-default/_image-default-master.twig" with 
+            {
+                "image_src": hero_generic_background_src,
+                "image_alt": hero_generic_background_alt
+            }
+        %}
+    </div>
+    <div class="hero--generic__navigation">
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" with
+            {
+                "navigation_primary_showhome": true
+            }
+        %}
+        {% include "@molecules/components/component-media-links/_component-media-links-master.twig" %}
+    </div>
+    <div class="hero--generic__content">
+        <div class="hero--generic__content__inner">
+            {% block hero_generic_content %}{% endblock %}
+        </div>
+    </div>
+</div>

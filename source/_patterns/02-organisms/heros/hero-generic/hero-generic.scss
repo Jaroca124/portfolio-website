@@ -1,0 +1,48 @@
+.hero--generic {
+    width: 100%;
+    position: relative;
+    min-height: 600px;
+    height: 80vh;
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__navigation {
+        position: relative;
+        .component--media-links {
+            z-index: 1;
+            display: none;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            .component--media-links__link {
+                display: block;
+                margin-bottom: 1rem;
+                .icon {
+                    height: 2rem;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+    }
+    &--marvel {
+        .marvel-logo {
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: $white;
+            font-family: 'Bebas Neue', 'Roboto', sans-serif;
+        }
+    }
+}
