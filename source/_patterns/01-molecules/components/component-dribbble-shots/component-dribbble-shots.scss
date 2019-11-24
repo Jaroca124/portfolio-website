@@ -1,17 +1,25 @@
 .component--dribbble-shots {
-    padding: 1rem;
     @extend .container-fluid;
     text-align: center;
-
+    max-width: $max-width-xl;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    @include media-breakpoint-up(lg) {
+        padding: 3rem 8rem;
+    }
+    .row {
+        margin-bottom: 2rem;
+    }
     .shot {
         padding: 1rem;
         img {
             display: block;
             max-width: 100%;
+            @include md-2dp;
+            @extend .hoverable;
         }
     }
-
-    &__button {
-        margin: 1rem 0;
+    &--marvel {
+        margin-top: 3rem;
     }
 }

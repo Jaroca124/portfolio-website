@@ -10,4 +10,13 @@
         color: $white;
         text-decoration: none;
     }
+    &--dribbble {
+        border: 2px solid $dribbble;
+        color: $dribbble;
+        &:hover,
+        &:focus {
+            background: $dribbble;
+            border: 2px solid $dribbble;
+        }
+    }
 }

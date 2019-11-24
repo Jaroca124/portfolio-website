@@ -1,52 +1,54 @@
 {% set navigation_mobile_classes = navigation_mobile_classes|default() %}
 
 <div class="navigation-pl navigation--mobile {{ navigation_mobile_classes }}">
-    <button class="navigation--mobile__menu-button">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/menu.svg",
-                "image_alt": "Main Menu"
-            }
-        %}
-    </button>
-    <a class="navigation--mobile__link navigation--mobile__link--1" href="#">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/portfolio.svg",
-                "image_alt": "Portfolio"
-            }
-        %}
-    </a>
-    <a class="navigation--mobile__link navigation--mobile__link--2" href="#">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/experience.svg",
-                "image_alt": "Experience"
-            }
-        %}
-    </a>
-    <a class="navigation--mobile__link navigation--mobile__link--3" href="/">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/home.svg",
-                "image_alt": "Home"
-            }
-        %}
-    </a>
-    <a class="navigation--mobile__link navigation--mobile__link--4" href="#">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/education.svg",
-                "image_alt": "Education"
-            }
-        %}
-    </a>
-    <a class="navigation--mobile__link navigation--mobile__link--5" href="#">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/skills.svg",
-                "image_alt": "Skills"
-            }
-        %}
-    </a>
+    <div class="navigation--mobile__inner-wrapper">
+        <button class="navigation--mobile__menu-button">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/menu.svg",
+                    "image_alt": "Main Menu"
+                }
+            %}
+        </button>
+        <a class="navigation--mobile__link navigation--mobile__link--1" href="#">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/portfolio.svg",
+                    "image_alt": "Portfolio"
+                }
+            %}
+        </a>
+        <a class="navigation--mobile__link navigation--mobile__link--2" href="#">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/experience.svg",
+                    "image_alt": "Experience"
+                }
+            %}
+        </a>
+        <a class="navigation--mobile__link navigation--mobile__link--3" href="/">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/home.svg",
+                    "image_alt": "Home"
+                }
+            %}
+        </a>
+        <a class="navigation--mobile__link navigation--mobile__link--4" href="#">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/education.svg",
+                    "image_alt": "Education"
+                }
+            %}
+        </a>
+        <a class="navigation--mobile__link navigation--mobile__link--5" href="#">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {
+                    "image_src": "icons/skills.svg",
+                    "image_alt": "Skills"
+                }
+            %}
+        </a>
+    </div>
 </div>

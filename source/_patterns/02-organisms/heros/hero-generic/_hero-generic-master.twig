@@ -4,12 +4,14 @@
 
 <div class="hero-pl hero--generic {{ hero_generic_classes }}">
     <div class="hero--generic__background">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with 
-            {
-                "image_src": hero_generic_background_src,
-                "image_alt": hero_generic_background_alt
-            }
-        %}
+        <div class="hero--generic__background__inner-wrapper">
+            {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                {
+                    "image_src": hero_generic_background_src,
+                    "image_alt": hero_generic_background_alt
+                }
+            %}
+        </div>
     </div>
     <div class="hero--generic__navigation">
         {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" with
@@ -24,4 +26,5 @@
             {% block hero_generic_content %}{% endblock %}
         </div>
     </div>
+    {% block hero_generic_other %}{% endblock %}
 </div>

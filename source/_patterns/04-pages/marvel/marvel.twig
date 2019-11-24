@@ -23,9 +23,22 @@
                     <h1>MCU MOVIE<br>APP CONCEPT</h1>
                 </div>
             {% endblock %}
+            {% block hero_generic_other %}
+                {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                    {
+                        "image_default_classes": "marvel-hammer",
+                        "image_src": "marvel/mjolnir.png",
+                        "image_alt": "Mjolnir"
+                    }
+                %}
+            {% endblock %}
         {% endembed %}
     {% endblock %}
     {% block template_main_content %}
-        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" %}
+        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" with
+            {
+                "component_dribbble_shots_classes": "component--dribbble-shots--marvel"
+            }
+        %}
     {% endblock %}
 {% endembed %}

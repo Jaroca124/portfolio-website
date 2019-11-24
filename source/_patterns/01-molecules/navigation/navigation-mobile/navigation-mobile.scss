@@ -2,21 +2,22 @@
     @include media-breakpoint-up(md) {
         display: none;
     }
+    &__inner-wrapper {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3rem;
+        z-index: 1000;
+    }
     &__menu-button {
+        z-index: 900;
+        position: relative;
         @include md-4dp;
         @extend .hoverable;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border: 0;
-        position: fixed;
         height: 4rem;
         width: 4rem;
         border-radius: 100%;
-        bottom: 3rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
         color: $white;
         transition: box-shadow .25s;
         background: rgb(128,0,255);
@@ -30,28 +31,28 @@
     }
     &__link {
         @extend .navigation--mobile__menu-button;
-        transition: .3s;
-        z-index: 900;
         @include md-0dp;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        transition: .3s;
+        z-index: 899;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &--1 {
             &.open {
-                left: 30%;
-                bottom: 6rem;
+                transform: translate(-6rem, -3rem);
             }
         }
         &--2 {
             &.open {
-                left: 35%;
-                bottom: 10.45rem;
-                @include media-breakpoint-up(sm) {
-                    left: 38%;
-                    bottom: 10.4rem;
-                }
+                transform: translate(-4.4rem, -7.5rem);
             }
         }
         &--3 {
             &.open {
-                bottom: 12rem;
+                transform: translate(0, -10rem);
             }
             .image--default {
                 height: 1.5rem;
@@ -59,18 +60,12 @@
         }
         &--4 {
             &.open {
-                left: 65%;
-                bottom: 10.45rem;
-                @include media-breakpoint-up(sm) {
-                    left: 62%;
-                    bottom: 10.4rem;
-                }
+                transform: translate(4.4rem, -7.5rem);
             }
         }
         &--5 {
             &.open {
-                left: 70%;
-                bottom: 6rem;
+                transform: translate(6rem, -3rem);
             }
         }
     }
