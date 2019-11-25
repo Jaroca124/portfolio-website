@@ -4,36 +4,43 @@
 <nav class="navigation-pl navigation--primary {{ navigation_primary_classes }}">
     <div class="navigation--primary__links">
         {% if navigation_primary_showhome %}
-            {% include "@atoms/link/link.twig" with
+            <a href="/">
+                {% include "@atoms/images/image-logo/_image-logo-master.twig" %}
+            </a>
+            {% include "@atoms/link/link-default/_link-default-master.twig" with
                 {
-                    "link_classes": "navigation--primary__home",
-                    "link_href": "/",
-                    "link_text": "Jacob Caccamo"
+                    "link_default_classes": "navigation--primary__home",
+                    "link_default_href": "/",
+                    "link_default_text": "Jacob Caccamo"
                 }
             %}
         {% endif %}
-        {% include "@atoms/link/link.twig" with
+        {% include "@atoms/link/link-default/_link-default-master.twig" with
             {
-                "link_href": "/portfolio",
-                "link_text": "Portfolio"
+                "link_default_href": "/portfolio",
+                "link_default_text": "Portfolio",
+                "link_default_disabled": true
             }
         %}
-        {% include "@atoms/link/link.twig" with
+        {% include "@atoms/link/link-default/_link-default-master.twig" with
             {
-                "link_href": "/experience",
-                "link_text": "Experience"
+                "link_default_href": "/experience",
+                "link_default_text": "Experience",
+                "link_default_disabled": true
             }
         %}
-        {% include "@atoms/link/link.twig" with
+        {% include "@atoms/link/link-default/_link-default-master.twig" with
             {
-                "link_href": "/education",
-                "link_text": "Education"
+                "link_default_href": "/education",
+                "link_default_text": "Education",
+                "link_default_disabled": true
             }
         %}
-        {% include "@atoms/link/link.twig" with
+        {% include "@atoms/link/link-default/_link-default-master.twig" with
             {
-                "link_href": "/skills",
-                "link_text": "Skills"
+                "link_default_href": "/skills",
+                "link_default_text": "Skills",
+                "link_default_disabled": true
             }
         %}
     </div>

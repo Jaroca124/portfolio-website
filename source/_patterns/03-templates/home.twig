@@ -118,10 +118,11 @@
             {% block section_default_content %}
                 <h2 class="section--default--dribbble__title"><span class="section--default--dribbble__title__1">Find Me On</span><br><span class="section--default--dribbble__title__2">Dribbble.</span></h2>
                 <p class="section--default--dribbble__subtitle"><a href="https://dribbble.com/jacobcaccamo">@jacobcaccamo</a></p>
-                <p>Your support means a lot, and further helps motivate me to continue designing with passion and purpose.</p>
+                <p>Your support means a lot, and further helps motivate me to continue designing with passion and purpose. I hope you will consider checking out my Dribbble account!</p>
                 <div class="section--default--dribbble__button">
                     {% include "@atoms/button/button-default/_button-default-master.twig" with
                         {
+                            "button_default_classes": "button--default--dribbble",
                             "button_default_text": "Visit My Dribbble",
                             "button_default_href": "https://dribbble.com/jacobcaccamo"
                         }

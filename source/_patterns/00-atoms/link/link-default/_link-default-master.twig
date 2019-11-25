@@ -1,0 +1,6 @@
+{% set link_default_classes = link_default_classes|default() %}
+{% set link_default_href = link_default_href|default() %}
+{% set link_default_text = link_default_text|default('Link Text') %}
+{% set link_default_disabled = link_default_disabled|default(false) %}
+
+<{{ link_default_disabled == true ? 'span' : 'a' }} class="link-pl link--default {{ link_default_classes }}" href="{{ link_default_href }}" {{ link_default_attributes }}>{{ link_default_text }}</{{ link_default_disabled == true ? 'span' : 'a' }}>

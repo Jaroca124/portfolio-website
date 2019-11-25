@@ -1,7 +1,14 @@
 .view--shots {
+    max-width: $max-width-xl;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    @include media-breakpoint-up(lg) {
+        padding: 3rem 8rem;
+    }
     .container-fluid {
         .row {
             .view--shots__wrapper {
+                padding: 1rem;
                 img {
                     max-width: 100%;
                 }

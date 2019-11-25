@@ -7,6 +7,11 @@
     @include media-breakpoint-up(md) {
         display: block;
     }
+    .image--logo {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+    }
     &__home {
         display: inline-block;
         font-size: 1.4rem;
@@ -18,6 +23,11 @@
         font-weight: 400;
         font-size: 1.2rem;
         color: $white;
+    }
+    span.link--default {
+        color: rgba(255,255,255,.5);
+    }
+    a.link--default {
         @include media-breakpoint-up(md) {
             &:after {
                 content: "";

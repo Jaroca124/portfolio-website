@@ -41,6 +41,14 @@ function renderImages(direction, images) {
   });
 };*/
 $(document).ready(function() {
+    $('.navigation--mobile__menu-button').click(function() {
+        $('.navigation--mobile__link').toggleClass('open');
+    });
+});
+$( document ).ready(function() {
+    $('.tabs').tabs();
+});
+$(document).ready(function() {
     if ($("#shots").length) {
         var accessToken = 'b2394526e177d23b8da5a807806fc533a636027de359450b0c9d453b8499d9a1';
         var url = 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken+'&per_page=100';
@@ -126,14 +134,6 @@ $(document).ready(function() {
     }
 });
 $(document).ready(function() {
-    $('.navigation--mobile__menu-button').click(function() {
-        $('.navigation--mobile__link').toggleClass('open');
-    });
-});
-$( document ).ready(function() {
-    $('.tabs').tabs();
-});
-$(document).ready(function() {
     var delay = 200;
     
     if ($('layout--index'.length)) {
@@ -178,10 +178,10 @@ $(document).ready(function() {
     }
 
     function renderMenu() {
-        for (i = 0; i < $('.navigation--primary').find('a').length; i++) {
+        for (i = 0; i < $('.navigation--primary').find('a, span').length; i++) {
             (function(i) {
                 setTimeout(function() {
-                    $($('.navigation--primary').find('a')[i]).fadeIn();
+                    $($('.navigation--primary').find('a, span')[i]).fadeIn();
                 }, delay * i);
             })(i);
         }
