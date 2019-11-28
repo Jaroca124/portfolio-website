@@ -12,7 +12,7 @@
             }
         %}
             {% block hero_generic_content %}
-                <div class="">
+                <div>
                     {% include "@atoms/images/image-default/_image-default-master.twig" with
                         {
                             "image_default_classes": "marvel-logo",
@@ -24,6 +24,13 @@
                 </div>
             {% endblock %}
             {% block hero_generic_other %}
+                {% include "@atoms/images/image-default/_image-default-master.twig" with
+                    {
+                        "image_default_classes": "hero-bg--small",
+                        "image_src": "marvel/hero-bg-small.png",
+                        "image_alt": "Thor Slicing through an iPhone"
+                    }
+                %}
                 {% include "@atoms/images/image-default/_image-default-master.twig" with 
                     {
                         "image_default_classes": "marvel-hammer",

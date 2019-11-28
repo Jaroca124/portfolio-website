@@ -4,15 +4,13 @@
 <div class="section-pl section--cards row {{ section_cards_classes }}">
     {% for card in section_cards_data %}
         <div class="col-sm col-md-3">
-            {% include "@molecules/blocks/block-site-section/_block-site-section-master.twig" with 
+            {% include "@molecules/blocks/block-site-section/_block-site-section-master.twig" with
                 {
-                    "block_site_section_classes": card.style,
                     "block_site_section_title": card.title,
-                    "card_text": card.text,
                     "block_site_section_img_src": card.img.src,
                     "block_site_section_img_alt": card.img.alt,
-                    "card_btn_text": card.btn_text,
-                    "card_btn_href": card.btn_href
+                    "block_site_section_href": card.href,
+                    "block_site_section_text": card.text
                 }
             %}
         </div>

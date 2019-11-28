@@ -6,12 +6,14 @@
         <div class="row">
             {% for shot in view_shots_data %}
                 <div class="view--shots__wrapper col-12 col-md-6">
-                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
-                        {
-                            "image_src": shot.src,
-                            "image_alt": shot.alt
-                        }
-                    %}
+                    <a href="https://www.instagram.com/jacobcaccamodesigns/">
+                        {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                            {
+                                "image_src": shot.src,
+                                "image_alt": shot.alt
+                            }
+                        %}
+                    </a>
                 </div>
             {% endfor %}
         </div>

@@ -1,7 +1,22 @@
 .block--site-section {
-    display: flex;
-    max-width: 60rem;
-    margin: 0 auto;
+    @include md-2dp;
+    @extend .hoverable;
+    position: relative;
+    max-width: 50%;
+    &__image {
+        img {
+            max-width: 100%;
+        }
+    }
+    &__content {
+        padding: 1.5rem;
+        @include md-2dp;
+        background: $white;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        transform: translate(20%, 50%);
+    }
     &__button {
         flex: 0 0 25%;
         text-align: center;

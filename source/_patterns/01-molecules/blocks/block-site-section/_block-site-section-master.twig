@@ -1,19 +1,22 @@
 {% set block_site_section_classes = block_site_section_classes|default() %}
-{% set block_site_section_data = block_site_section_data|default() %}
+{% set block_site_section_title = block_site_section_title|default() %}
+{% set block_site_section_img_src = block_site_section_img_src|default() %}
+{% set block_site_section_img_alt = block_site_section_img_alt|default() %}
+{% set block_site_section_text = block_site_section_text|default() %}
+{% set block_site_section_href = block_site_section_href|default() %}
+
 
 <div class="block-pl block--site-section {{ block_site_section_classes }}">
-    {% for btn in block_site_section_data %}
-        <div class="col-lg-3">
-            <div class="block--site-section__button">
-                {% include "@atoms/button/button-section/_button-section-master.twig" with
-                    {
-                        "button_section_img_src": btn.src,
-                        "button_section_img_alt": btn.alt,
-                        "button_section_href": btn.href,
-                        "button_section_text": btn.text
-                    }
-                %}
-            </div>
-        </div>
-    {% endfor %}
+    <div class="block--site-section__image">
+        {% include "@atoms/images/image-default/_image-default-master.twig" with 
+            {
+                "image_src": block_site_section_img_src,
+                "image_alt": block_site_section_img_alt
+            }
+        %}
+    </div>
+    <div class="block--site-section__content">
+        <h2>{{ block_site_section_title }}</h2>
+        <p>{{ block_site_section_text }}</p>
+    </div>
 </div>

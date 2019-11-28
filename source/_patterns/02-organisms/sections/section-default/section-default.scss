@@ -38,7 +38,7 @@
             &__image {
                 padding-bottom: 3rem;
                 @include media-breakpoint-up(lg) {
-                    padding: 6rem;
+                    padding: 1rem;
                 }
                 img {
                     width: 26rem;
@@ -314,7 +314,7 @@
             right: -1rem;
             @include media-breakpoint-up(md) {
                 display: block;
-                top: 0;
+                top: 1rem;
                 max-width: 50%;
             }
         }

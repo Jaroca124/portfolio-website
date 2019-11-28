@@ -11,6 +11,8 @@
                 padding: 1rem;
                 img {
                     max-width: 100%;
+                    @include md-2dp;
+                    @extend .hoverable;
                 }
             }
         }
