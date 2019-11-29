@@ -26,7 +26,10 @@
     }
     h2 {
         font-weight: $fw-black;
-        font-size: 4rem;
+        font-size: 3rem;
+        @include media-breakpoint-up(sm) {
+            font-size: 4rem;
+        }
     }
     &__image {
         img {
@@ -62,6 +65,10 @@
             font-size: 1.3333333333rem;
             margin: 1.5rem 0;
             font-weight: $fw-medium;
+            line-height: 1.7;
+            @include media-breakpoint-up(sm) {
+                line-height: 2.2;
+            }
         }
         &__shots {
             display: flex;
@@ -69,15 +76,25 @@
             margin: 2rem -.5rem;
             justify-content: space-between;
             .block--images {
+                margin-top: 1rem;
+                @include media-breakpoint-up(sm) {
+                    margin: 0;
+                }
                 &__image {
                     opacity: 0;
                     transform: translateY(1rem);
                     padding: 0 .5rem;
-                    flex: 0 0 16.6666666667%;
-                    max-width: 16.6666666667%;
+                    flex: 0 0 33.33333333%;
+                    max-width: 33.33333333;
                     transition: .75s;
+                    margin-bottom: 1rem;
                     img {
                         width: 100%;
+                    }
+                    @include media-breakpoint-up(sm) {
+                        flex: 0 0 16.6666666667%;
+                        max-width: 16.6666666667%;
+                        margin: 0;
                     }
                 }
             }
@@ -134,7 +151,7 @@
                         }
                     }
                     &--2 {
-                        margin-left: -6rem;
+                        margin-left: -8rem;
                         z-index: 5;
                         img {
                             height: 18rem;
@@ -144,7 +161,7 @@
                         }
                     }
                     &--3 {
-                        margin-left: -5.8rem;
+                        margin-left: -7rem;
                         z-index: 4;
                         img {
                             height: 16rem;
@@ -154,7 +171,7 @@
                         }
                     }
                     &--4 {
-                        margin-left: -5.4rem;
+                        margin-left: -6rem;
                         z-index: 3;
                         img {
                             height: 14rem;
@@ -164,7 +181,7 @@
                         }
                     }
                     &--5 {
-                        margin-left: -4.6rem;
+                        margin-left: -5rem;
                         z-index: 2;
                         img {
                             height: 12rem;
@@ -174,7 +191,7 @@
                         }
                     }
                     &--6 {
-                        margin-left: -3rem;
+                        margin-left: -4rem;
                         z-index: 1;
                         img {
                             height: 10rem;

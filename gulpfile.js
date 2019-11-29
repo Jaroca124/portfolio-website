@@ -182,6 +182,12 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
     gulp.src('./source/assets/**/*')
         .pipe(gulp.dest('./public_html/assets'));
     console.log("Finished Copying Images");
+
+    // Copy Fonts
+    console.log("Starting Copy of Fonts");
+    gulp.src('./source/fonts/**/*')
+        .pipe(gulp.dest('./public_html/fonts'));
+    console.log("Finished Copying Fonts");
 });
 
 // Start Static Server
