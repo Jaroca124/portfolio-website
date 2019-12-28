@@ -39,7 +39,8 @@ var buildPaths = {
     skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
     education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html',
     marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
-    ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html'
+    ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
+    vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
 }
 
 var sassOption = {
@@ -154,6 +155,16 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
     }))
     .pipe(gulp.dest('./public_html/marvel'));
     console.log("Marvel Build Finished");
+    
+    // VGS
+    console.log("Starting VGS Build...");
+    gulp.src(buildPaths.vgs)
+    .pipe(rename({
+        basename: 'index',
+        extname: '.html'
+    }))
+    .pipe(gulp.dest('./public_html/video-game-series'));
+    console.log("VGS Build Finished");
 
     // NCP
     console.log("Starting NCP Build...");

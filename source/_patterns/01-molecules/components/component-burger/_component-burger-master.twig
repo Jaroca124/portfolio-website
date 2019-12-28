@@ -1,0 +1,53 @@
+{% set component_burger_classes = component_burger_classes|default() %}
+
+<div class="component-pl component--burger {{ component_burger_classes }}">
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--top-bun",
+            "image_src": "burgerbuilder/TopBun.png",
+            "image_alt": "Top Bun of Burger"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--bacon",
+            "image_src": "burgerbuilder/Bacon.png",
+            "image_alt": "Bacon"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--cheese",
+            "image_src": "burgerbuilder/Cheese.png",
+            "image_alt": "Cheese"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--meat",
+            "image_src": "burgerbuilder/Meat.png",
+            "image_alt": "Meat"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--tomatos",
+            "image_src": "burgerbuilder/Tomatos.png",
+            "image_alt": "Tomatos"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--lettuce",
+            "image_src": "burgerbuilder/Lettuce.png",
+            "image_alt": "Lettuce"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-master.twig" with
+        {
+            "image_default_classes": "component--burger__ingredient component--burger__ingredient--bottom-bun",
+            "image_src": "burgerbuilder/BottomBun.png",
+            "image_alt": "Bottom Bun of Burger"
+        }
+    %}
+</div>

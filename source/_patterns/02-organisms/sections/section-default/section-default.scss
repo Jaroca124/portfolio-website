@@ -36,6 +36,97 @@
             max-width: 100%;
         }
     }
+    &--vgs {
+        &__inner {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .section--default__image {
+            margin: 3rem 0;
+            text-align: center;
+            @include media-breakpoint-up(md) {
+                margin: 0;
+            }
+            img {
+                max-width: 100%;
+                @include media-breakpoint-up(md) {
+                    max-width: 30rem;
+                    display: block;
+                    padding: 0 4rem;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                @include media-breakpoint-up(lg) {
+                    max-width: 100%;
+                    padding: 0 1rem;
+                }
+            }
+        }
+        &__background {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+            .image--default {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                z-index: -1;
+            }
+        }
+    }
+    &--burgerbuilder {
+        &__inner {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            &__logo {
+                height: 3.5rem;
+                margin-bottom: 1rem;
+            }
+            &__title {
+                &__1 {
+                    color: #BE4F57;
+                }
+            }
+        }
+    }
+    &--cabcs {
+        position: relative;
+        overflow: hidden;
+        @include media-breakpoint-up(lg) {
+            padding: 4rem 8rem;
+        }
+        .row {
+            position: relative;
+            z-index: 1;
+        }
+        .section--default__image {
+            margin: 2rem 0;
+            img {
+                display: block;
+                top: 50%;
+                position: relative;
+                transition: 8s;
+                transform: scale(.1) translate(400%, 150%);
+            }
+        }
+        &__logo {
+            height: 3rem;
+            margin-bottom: 1rem;
+        }
+        &__background {
+            .image--default {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+            }
+        }
+    }
     &--ncp {
         .section--default {
             &__image {

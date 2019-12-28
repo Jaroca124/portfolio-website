@@ -1,0 +1,13 @@
+{% embed "@templates/view-page.twig" with
+    {
+        "template_id": "portfolio--vgs"
+    }
+%}
+    {% block template_main_content %}
+        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" with
+            {
+                "component_dribbble_shots_classes": "component--dribbble-shots--vgs"
+            }
+        %}
+    {% endblock %}
+{% endembed %}
