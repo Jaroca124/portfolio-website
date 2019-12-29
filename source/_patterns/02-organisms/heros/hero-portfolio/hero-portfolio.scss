@@ -33,7 +33,7 @@
             margin: 15rem auto 5rem auto;
         }
         @include media-breakpoint-up(md) {
-            margin: 10rem auto 5rem auto;
+            margin: 12rem auto 3rem auto;
         }
         &__headshot {
             height: 5rem;
@@ -54,7 +54,7 @@
             justify-content: space-between;
             max-width: 17.5rem;
             font-size: 1.25rem;
-            margin: 0 auto;
+            margin: 0 auto 1.5rem auto;
             padding: 0 1rem;
             font-size: 1rem;
             @include media-breakpoint-up(sm) {
