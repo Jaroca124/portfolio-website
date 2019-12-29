@@ -16,6 +16,14 @@
         display: inline-block;
         font-size: 1.4rem;
     }
+    &__links {
+        a {
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
     .link--default {
         padding-bottom: .25rem;
         margin-right: 1rem;
@@ -43,6 +51,23 @@
                 text-decoration: none;
                 &:after {
                     width: 100%;
+                }
+            }
+        }
+    }
+    &--dark {
+        .image--logo {
+            background: $color-text-body;
+            border-radius: 100%;
+            padding: .25rem;
+        }
+        .link--default {
+            color: $color-text-body;
+        }
+        a.link--default {
+            @include media-breakpoint-up(md) {
+                &:after {
+                    background: $color-text-body;
                 }
             }
         }

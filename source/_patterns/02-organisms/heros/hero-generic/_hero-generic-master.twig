@@ -1,6 +1,8 @@
 {% set hero_generic_classes = hero_generic_classes|default() %}
 {% set hero_generic_background_src = hero_generic_background_src|default() %}
 {% set hero_generic_background_alt = hero_generic_background_alt|default() %}
+{% set hero_generic_show_media_links = hero_generic_show_media_links|default('true') %}
+{% set hero_generic_navigation_classes = hero_generic_navigation_classes|default('true') %}
 
 <div class="hero-pl hero--generic {{ hero_generic_classes }}">
     <div class="hero--generic__background">
@@ -16,10 +18,13 @@
     <div class="hero--generic__navigation">
         {% include "@molecules/navigation/navigation-primary/_navigation-primary-master.twig" with
             {
-                "navigation_primary_showhome": true
+                "navigation_primary_classes": hero_generic_navigation_classes,
+                "navigation_primary_showhome": true,
             }
         %}
-        {% include "@molecules/components/component-media-links/_component-media-links-master.twig" %}
+        {% if hero_generic_show_media_links == 'true' %}
+            {% include "@molecules/components/component-media-links/_component-media-links-master.twig" %}
+        {% endif %}
     </div>
     <div class="hero--generic__content">
         <div class="hero--generic__content__inner">

@@ -3,6 +3,9 @@
         "layout_site_id": "layout--portfolio"
     }
 %}
+    {% block hero %}
+        {% include "@organisms/heros/hero-portfolio/_hero-portfolio-master.twig" %}
+    {% endblock %}
     {% block main %}
         {# Video Game Series (vgs) #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
@@ -78,7 +81,7 @@
             {% endblock %}
         {% endembed %}
         {# CABCS #}
-        {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+        {#{% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {
                 "section_default_classes": "section--default--cabcs",
                 "section_default_image_src": "portfolio/DroneV2.gif",
@@ -114,7 +117,7 @@
                     %}
                 </div>
             {% endblock %}
-        {% endembed %}
+        {% endembed %}#}
         {# Natural Color Palette #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {

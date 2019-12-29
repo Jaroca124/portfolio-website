@@ -1,0 +1,70 @@
+.hero--portfolio {
+    &__navigation {
+        position: relative;
+        .component--media-links {
+            z-index: 1;
+            display: none;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            z-index: 101;
+            .component--media-links__link {
+                display: block;
+                margin-bottom: 1rem;
+                .icon {
+                    background: $color-text-body;
+                    height: 2rem;
+                    border-radius: 100%;
+                    padding: .25rem;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        text-align: center;
+        margin: 5rem auto 2rem auto;
+        @include media-breakpoint-up(sm) {
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 15rem auto 5rem auto;
+        }
+        @include media-breakpoint-up(md) {
+            margin: 10rem auto 5rem auto;
+        }
+        &__headshot {
+            height: 5rem;
+            border-radius: 100%;
+            margin-bottom: 1rem;
+        }
+        &__title {
+            font-weight: $fw-black;
+            font-size: 4rem;
+            padding: 0 1rem;
+            @include media-breakpoint-up(sm) {
+                font-size: 5rem;
+                padding: 0;
+            }
+        }
+        &__subtitle {
+            display: flex;
+            justify-content: space-between;
+            max-width: 17.5rem;
+            font-size: 1.25rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+            font-size: 1rem;
+            @include media-breakpoint-up(sm) {
+                max-width: 19.5rem;
+                font-size: 1.25rem;
+                padding: 0;
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

@@ -1,12 +1,14 @@
 $(document).ready(function() {
-    var renderBurgerBool = true;
-    var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
-    $(window).scroll(function() {   
-        if ((($(window).scrollTop() + ($(window).height() / 2)) >= burgerTrigger) && renderBurgerBool) {
-            renderBurger();
-            renderBurgerBool = false;
-        }
-    });
+    if ($('.component--burger').length) {
+        var renderBurgerBool = true;
+        var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
+        $(window).scroll(function() {   
+            if ((($(window).scrollTop() + ($(window).height() / 2)) >= burgerTrigger) && renderBurgerBool) {
+                renderBurger();
+                renderBurgerBool = false;
+            }
+        });
+    }
 
     var ingredientPositions = {
         'top-bun': '173%',
