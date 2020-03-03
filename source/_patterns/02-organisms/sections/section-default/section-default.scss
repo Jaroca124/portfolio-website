@@ -70,6 +70,9 @@
             @include media-breakpoint-up(md) {
                 display: block;
             }
+            @media only screen and (min-width: 1475px) {
+                display: none;
+            }
             .image--default {
                 position: absolute;
                 top: 50%;
@@ -114,7 +117,6 @@
                 }
             }
         }
-        
     }
     &--cabcs {
         position: relative;
@@ -215,6 +217,67 @@
         &__button {
             text-align: center;
             margin: 2rem 0;
+        }
+    }
+    &--galaxy {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 5rem;
+        >.row {
+            padding: 0;
+            @include media-breakpoint-up(md) {
+                padding: 0 8rem !important;
+            }
+            .section--default__content {
+                @include media-breakpoint-up(md) {
+                    max-width: none;
+                }
+                @include media-breakpoint-up(xl) {
+                    max-width: 50%;
+                }
+            }
+        }
+        &__background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            &__image {
+                min-height: 100%;
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+                &--wide {
+                    display: block;
+                    @include media-breakpoint-up(md) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__content {
+            background: rgba(0, 0, 0, .8);
+            padding: 6rem 3rem;
+            &__title,
+            p {
+                color: $white;
+            }
+            &__button {
+                text-align: center;
+                margin-top: 1.5rem;
+                .button--default {
+                    color: $white;
+                    border-color: $white;
+                    &:hover,
+                    &:focus {
+                        background: $white;
+                        color: $dark-mode-bg;
+                    }
+                }
+            }
         }
     }
     &--marvel {
@@ -324,7 +387,7 @@
     &--mjx {
         position: relative;
         background: $dark-mode-bg;
-        > .row {
+        >.row {
             @include media-breakpoint-up(md) {
                 padding-bottom: 5rem;
             }
@@ -347,7 +410,8 @@
             bottom: -5rem;
             left: 0;
         }
-        &__title, p {
+        &__title,
+        p {
             color: $white;
         }
         &__subtitle {
@@ -417,7 +481,7 @@
     &--dribbble {
         position: relative;
         z-index: 1;
-        > .row {
+        >.row {
             padding-top: 6rem;
             @include media-breakpoint-up(md) {
                 padding-bottom: 3rem;

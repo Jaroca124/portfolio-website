@@ -41,14 +41,6 @@ function renderImages(direction, images) {
   });
 };*/
 $(document).ready(function() {
-    $('.navigation--mobile__menu-button').click(function() {
-        $('.navigation--mobile__link').toggleClass('open');
-    });
-});
-$( document ).ready(function() {
-    $('.tabs').tabs();
-});
-$(document).ready(function() {
     if ($('.component--burger').length) {
         var renderBurgerBool = true;
         var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
@@ -200,6 +192,14 @@ $(document).ready(function() {
 //         majorGPA.animate(1.0); // Number from 0.0 to 1.0
 //     }
 // });
+$(document).ready(function() {
+    $('.navigation--mobile__menu-button').click(function() {
+        $('.navigation--mobile__link').toggleClass('open');
+    });
+});
+$( document ).ready(function() {
+    $('.tabs').tabs();
+});
 $(document).ready(function() {
     var delay = 200;
     

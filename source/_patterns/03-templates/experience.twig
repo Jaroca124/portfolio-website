@@ -1,0 +1,40 @@
+{% embed "@atoms/layout/layout-site/_layout-site-master.twig" with
+    {
+        "layout_site_id": "layout--experience"
+    }
+%}
+    {% block hero %}
+        {% embed "@organisms/heros/hero-section/_hero-section-master.twig" with
+            {
+                "hero_section_title": "Experience"
+            }
+        %}
+            {% block hero_section_content %}
+                {% include "@atoms/button/button-default/_button-default-master.twig" with
+                    {
+                        "button_default_text": "View Resume",
+                        "button_default_href": "../assets/Jacob_Caccamo.pdf"
+                    }
+                %}
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+    
+    {% block main %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    {% include "@organisms/sections/view-experience/_view-experience-master.twig" with
+                        {
+                            "view_experience_data": experience_data
+                        }
+                    %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
+    {% endblock %}
+{% endembed %}

@@ -1,0 +1,25 @@
+.block--experience {
+    padding: 2rem;
+    border-left: 1px solid $color-text-body;
+    &__logo {
+        height: 3rem;
+    }
+    &__title, &__location {
+        line-height: 1rem;
+    }
+    &__title {
+        margin: .5rem 0;
+    }
+    &__location {
+        &__icon {
+            display: inline;
+            margin-right: .5rem;
+            height: 1rem;
+        }
+    }
+    h3 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: $fw-bold;
+    }
+}

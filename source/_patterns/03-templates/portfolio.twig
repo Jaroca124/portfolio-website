@@ -4,7 +4,11 @@
     }
 %}
     {% block hero %}
-        {% include "@organisms/heros/hero-portfolio/_hero-portfolio-master.twig" %}
+        {% include "@organisms/heros/hero-section/_hero-section-master.twig" with
+            {
+                "hero_section_title": "Portfolio"
+            }
+        %}
     {% endblock %}
     {% block main %}
         {# Video Game Series (vgs) #}
@@ -118,6 +122,45 @@
                 </div>
             {% endblock %}
         {% endembed %}#}
+        {# Ansible Galaxy #}
+        {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+            {
+                "section_default_classes": "section--default--galaxy section--default--full-width"
+            }
+        %}
+            {% block section_default_content %}
+                <div class="section--default--galaxy__content">
+                    <h2 class="section--default--galaxy__content__title"><span class="section--default--galaxy__content__title__1">Ansible Galaxy</span><br><span class="section--default--galaxy__content__title__2">Redesign</span></h2>
+                    <p>My Senior Capstone project at Tufts Unviersity was to redesign Ansible Galaxy, an IT automation, code sharing platform. Over the course of both semesters, our team assessed user needs, created design concepts and prototypes, and conducted usability tests.</p>
+                    <div class="section--default--galaxy__content__button">
+                        {% include "@atoms/button/button-default/_button-default-master.twig" with
+                            {
+                                "button_default_text": "Read Full Story",
+                                "button_default_href": "/galaxy"
+                            }
+                        %}
+                    </div>
+                </div>
+            {% endblock %}
+            {% block section_default_outside_content %}
+                <div class="section--default--galaxy__background">
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_default_classes": 'section--default--galaxy__background__image',
+                            "image_src": 'portfolio/galaxy.jpg',
+                            "image_alt": ""
+                        }
+                    %}
+                    {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                        {
+                            "image_default_classes": 'section--default--galaxy__background__image section--default--galaxy__background__image--wide',
+                            "image_src": 'portfolio/galaxy-wide.jpg',
+                            "image_alt": ""
+                        }
+                    %}
+                </div>
+            {% endblock %}
+        {% endembed %}
         {# Natural Color Palette #}
         {% embed "@organisms/sections/section-default/_section-default-master.twig" with
             {
