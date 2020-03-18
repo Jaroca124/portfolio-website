@@ -1,3 +1,13 @@
 .component--media-links {
-    
+    &__link {
+        .icon {
+            transition: .5s ease-out;
+        }
+        &:hover,
+        &:focus {
+            .icon {
+                transform: scale(1.2) !important;
+            }
+        }
+    }
 }

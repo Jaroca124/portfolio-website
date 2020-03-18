@@ -222,7 +222,9 @@
     &--galaxy {
         position: relative;
         overflow: hidden;
-        margin-bottom: 5rem;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 5rem;
+        }
         >.row {
             padding: 0;
             @include media-breakpoint-up(md) {
