@@ -5,6 +5,7 @@
     {% for listing in view_experience_data %}
         {% embed "@molecules/blocks/block-experience/_block-experience-master.twig" with
             {
+                "block_experience_classes": listing.classes,
                 "block_experience_company_logo_src": listing.logo.src,
                 "block_experience_company_logo_alt": listing.logo.alt,
                 "block_experience_company_name": listing.name,

@@ -21,9 +21,23 @@ a {
     color: $color-text-link;
 }
 
-a, p, ol, ul, li {
+a,
+p {
     letter-spacing: 0.01rem;
     line-height: 2.2;
+}
+
+ul {
+    li {
+        padding: .25rem 0;
+        ul {
+            padding-top: .25rem;
+            li {
+                padding: 0;
+                line-height: 2.0;
+            }
+        }
+    }
 }
 
 h1 {

@@ -30,20 +30,21 @@
         @include media-breakpoint-up(sm) {
             top: 50%;
             transform: translateY(-50%);
-            margin: 15rem auto 5rem auto;
+            margin: 15rem auto 0 auto;
         }
         @include media-breakpoint-up(md) {
-            margin: 12rem auto 3rem auto;
+            margin: 12rem auto 0 auto;
         }
         &__headshot {
             height: 5rem;
             border-radius: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
         }
         &__title {
             font-weight: $fw-black;
             font-size: 4rem;
             padding: 0 1rem;
+            margin-bottom: 1rem;
             @include media-breakpoint-up(sm) {
                 font-size: 5rem;
                 padding: 0;
@@ -54,7 +55,7 @@
             justify-content: space-between;
             max-width: 17.5rem;
             font-size: 1.25rem;
-            margin: 0 auto 1.5rem auto;
+            margin: -1rem auto 1.5rem auto;
             padding: 0 1rem;
             font-size: 1rem;
             @include media-breakpoint-up(sm) {

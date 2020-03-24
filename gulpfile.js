@@ -38,6 +38,7 @@ var buildPaths = {
     feed: './pl/public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
     skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
     education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html',
+    experience: './pl/public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
     marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
     ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
     vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
@@ -50,29 +51,30 @@ var sassOption = {
     includePaths: [
         config.sassWebFontPath + '/_web-fonts.scss',
         config.sassPath,
-        config.nodeModules]
+        config.nodeModules
+    ]
 };
 
 gulp.task('sass', function() {
-  return gulp.src(config.sassPath + '/**/style.scss')
-            .pipe(sassGlob())
-            .pipe(concat('style.css'))
-            .pipe(rename({
-                basename: 'style',
-                extname: '.css'
-            }))
-            .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-            .pipe(sourcemaps.write('./source/maps'))
-            .pipe(gulp.dest('./source/css'))
-            .pipe(browserSync.stream());
+    return gulp.src(config.sassPath + '/**/style.scss')
+        .pipe(sassGlob())
+        .pipe(concat('style.css'))
+        .pipe(rename({
+            basename: 'style',
+            extname: '.css'
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(sourcemaps.write('./source/maps'))
+        .pipe(gulp.dest('./source/css'))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('pl', ['sass'], function (cb) {
-  exec('php ./pl/core/console --generate', function (err, stdout, stderr) {
-    browserSync.reload();
-    cb(err);
-  });
+gulp.task('pl', ['sass'], function(cb) {
+    exec('php ./pl/core/console --generate', function(err, stdout, stderr) {
+        browserSync.reload();
+        cb(err);
+    });
 });
 
 gulp.task('js', ['pl'], function(cb) {
@@ -93,87 +95,97 @@ gulp.task('js', ['pl'], function(cb) {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
+gulp.task('build_prod', ['sass', 'js', 'pl'], function(cb) {
     //Pattern Lab and Sass Will be Generated First Based on Dependencies
 
     // Home Page
     console.log("Starting Home Build...");
     gulp.src(buildPaths.home)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest(buildPaths.target));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest(buildPaths.target));
     console.log("Home Build Finished");
 
     // Portfolio
     console.log("Starting Portfolio Build...");
     gulp.src(buildPaths.portfolio)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/portfolio'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/portfolio'));
     console.log("Portfolio Build Finished");
 
     // Feed
     console.log("Starting Feed Build...");
     gulp.src(buildPaths.feed)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/feed'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/feed'));
     console.log("Feed Build Finished");
 
     // Skills
     console.log("Starting Skills Build...");
     gulp.src(buildPaths.skills)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/skills'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/skills'));
     console.log("Skills Build Finished");
 
     // Education
     console.log("Starting Education Build...");
     gulp.src(buildPaths.education)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/education'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/education'));
     console.log("Education Build Finished");
-    
+
+    // Experience
+    console.log("Starting Experience Build...");
+    gulp.src(buildPaths.experience)
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/experience'));
+    console.log("Experience Build Finished");
+
     // Marvel
     console.log("Starting Marvel Build...");
     gulp.src(buildPaths.marvel)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/marvel'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/marvel'));
     console.log("Marvel Build Finished");
-    
+
     // VGS
     console.log("Starting VGS Build...");
     gulp.src(buildPaths.vgs)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/video-game-series'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/video-game-series'));
     console.log("VGS Build Finished");
 
     // NCP
     console.log("Starting NCP Build...");
     gulp.src(buildPaths.ncp)
-    .pipe(rename({
-        basename: 'index',
-        extname: '.html'
-    }))
-    .pipe(gulp.dest('./public_html/ncp'));
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/ncp'));
     console.log("NCP Build Finished");
 
     // Copy CSS
@@ -203,21 +215,21 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function (cb) {
 
 // Start Static Server
 gulp.task('serve', ['sass', 'pl'], function() {
-  browserSync.init({
-    server: {
-      baseDir: './',
-    },
-    startPath: 'pl/public/',
-    open: true
-  });
+    browserSync.init({
+        server: {
+            baseDir: './',
+        },
+        startPath: 'pl/public/',
+        open: true
+    });
 });
 
 // Watching Source Files
-gulp.task('source:watch', ['sass', 'pl', 'js'], function () {
+gulp.task('source:watch', ['sass', 'pl', 'js'], function() {
     gulp.watch('./source/_patterns/**/*.twig', ['pl']);
     gulp.watch('./source/_patterns/**/*.scss', ['sass', 'pl']);
+    gulp.watch('./source/css/scss/**/*.scss', ['sass', 'pl']);
     gulp.watch('./source/_patterns/**/*.js', ['pl', 'js']);
 });
 
 gulp.task('default', ['source:watch', 'serve']);
-
