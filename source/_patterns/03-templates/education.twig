@@ -1,75 +1,53 @@
-{% embed "@atoms/layout/layout-site/_layout-site-master.twig" %}
-    {% block header %}
-        {% embed "@organisms/global/global-header/_global-header-master.twig" %}{% endembed %}
-    {% endblock %}
+{% embed "@atoms/layout/layout-site/_layout-site-master.twig" with
+    {
+        "layout_site_id": "layout--education"
+    }
+%}
     {% block hero %}
-        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'education-banner',"jumbo_image_credit": imageCredit} %}
-            {% block jumbotron_content %}
-                <h1 class="display-3">Education</h1>
-                <p class="lead">Find out more about my studies in Engineering Psychology at Tufts University.</p>
-            {% endblock %}
-        {% endembed %}
-    {% endblock %}
-    {% block main %}
-        {% include "@molecules/blocks/block-university/_block-university-master.twig" with
+        {% embed "@organisms/heros/hero-section/_hero-section-master.twig" with
             {
-                "block_university_img_src": tuftsLogo.src,
-                "block_university_img_alt": tuftsLogo.alt
+                "hero_section_title": "Education"
             }
-        %}
-        {% include "@atoms/misc/misc-hr/_misc-hr-master.twig" %}
+        %}{% endembed %}
+    {% endblock %}
+    
+    {% block main %}
         <div class="container">
+            <div class="block--university mb-5">
+                {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                    {
+                        "image_src": tuftsLogo.src,
+                        "image_alt": tuftsLogo.alt,
+                        "image_default_classes": "block--university__logo"
+                    }
+                %}
+            </div>
             <div class="row">
                 <div class="col-sm">
-                    <h3 class="my-5 text-center">What did I study?</h3>
-                </div>
-                <div class="col-sm">
-                        <p class="mx-auto">Engineering psychology, human factors, and computer science courses at Tufts University prepared me to be an effective team member armed with the ability to lead successful design and development projects. Engineering psychology has broadened my skill set to include UI/UX development, human resources, research, and product management.</p>
+                    <h2 class="mb-4">Overview</h2>
+                    <p>B.S. in Engineering Psychology Major, Computer Science Special Interest</p>
+                    <p>Engineering psychology, human factors, and computer science courses at Tufts University prepared me to be an effective team member armed with the ability to lead successful design and development projects. Engineering psychology has broadened my skill set to include UI/UX development, human resources, research, and product management.</p>
                 </div>
             </div>
         </div>
-        {% include "@atoms/misc/misc-hr/_misc-hr-master.twig" %}
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4">
-                    {% embed "@molecules/components/component-progress-circle/_component-progress-circle-master.twig" with
-                        {
-                            "component_progress_circle_id": "overall-gpa-circle",
-                            "component_progress_circle_label": "Overall GPA"
-                        }
-                    %}
-                        {% block component_progress_circle_content %}
-                            <h2>3.96</h2>
-                        {% endblock %}
-                    {% endembed %}
-                </div>
-                <div class="col-sm-4">
-                    {% embed "@molecules/components/component-progress-circle/_component-progress-circle-master.twig" with
-                        {
-                            "component_progress_circle_id": "major-gpa-circle",
-                            "component_progress_circle_label": "Major GPA"
-                        }
-                    %}
-                        {% block component_progress_circle_content %}
-                            <h2>4.00</h2>
-                        {% endblock %}
-                    {% endembed %}
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-sm align-self-center">
-                    <h5 class='text-center'>Dean's List - Fall 2013, Spring 2014, Fall 2014, Spring 2015, Fall 2015, Spring 2016, Fall 2016</h5>
-                    <h5 class='text-center'>Recipient of the De Florez Prize in Human Engineering (2017)</h5>
-                    <h5 class='text-center'>Summa Cum Laude</h5>
-                </div>
-            </div>
-        </div> 
-        {% include "@atoms/misc/misc-hr/_misc-hr-master.twig" %}
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h3 class="mb-4 text-center">Industry Related Coursework</h3>
+                    <h2 class="mb-4">Achievements</h2>
+                    <ul>
+                        <li>Major GPA: 4.00</li>
+                        <li>Overall GPA: 3.96</li>
+                        <li>Dean's List - Fall 2013, Spring 2014, Fall 2014, Spring 2015, Fall 2015, Spring 2016, Fall 2016</li>
+                        <li>Recipient of the De Florez Prize in Human Engineering (2017)</li>
+                        <li>Summa Cum Laude</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h2 class="mb-4">Industry Related<br>Coursework</h2>
                 </div>
             </div>
             <div class="row">
@@ -91,7 +69,6 @@
                 </div>
             </div>
         </div>
-        {% include "@atoms/misc/misc-hr/_misc-hr-master.twig" %}
         {% include "@molecules/blocks/block-activities/_block-activities-master.twig" %}
     {% endblock %}
 

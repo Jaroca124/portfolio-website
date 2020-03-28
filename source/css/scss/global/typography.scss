@@ -45,7 +45,11 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-weight: $fw-black;
+    font-size: 3rem;
+    @include media-breakpoint-up(sm) {
+        font-size: 4rem;
+    }
 }
 
 h3 {

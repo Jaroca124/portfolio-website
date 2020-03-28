@@ -2,6 +2,10 @@
     "prod_build": true,
     "path_to_assets": "../",
     "title": "Education - Jacob Caccamo",
+    "headshot": {
+        "src": "index/headshot.jpg",
+        "alt": "Jacob Caccamo"
+    },
     "imageCredit": {
         "name": "William Iven",
         "href": "https://unsplash.com/@firmbee?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
@@ -39,12 +43,12 @@
         },
         {
             "text": "Introduction to Human Factors (ENP 0061)"
+        },
+        {
+            "text": "Introduction to Engineering Psychology (PSY 0053)"
         }
     ],
     "rightList": [{
-            "text": "Introduction to Engineering Psychology (PSY 0053)"
-        },
-        {
             "text": "Discrete Mathematics (COMP 0061)"
         },
         {

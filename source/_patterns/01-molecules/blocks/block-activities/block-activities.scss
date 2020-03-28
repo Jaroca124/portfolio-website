@@ -1,6 +1,9 @@
-.act_logo {
-    height: 10vh;
-    display: block;
-    @include md-0dp;
-    margin: 1rem auto;
+.block--activities {
+    margin-bottom: 3rem;
+    &__activity-logo {
+        height: 10vh;
+        display: block;
+        @include md-0dp;
+        margin: 1rem auto;
+    }
 }

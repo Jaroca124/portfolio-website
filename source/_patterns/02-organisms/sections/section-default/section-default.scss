@@ -24,13 +24,6 @@
             }
         }
     }
-    h2 {
-        font-weight: $fw-black;
-        font-size: 3rem;
-        @include media-breakpoint-up(sm) {
-            font-size: 4rem;
-        }
-    }
     &__image {
         img {
             max-width: 100%;
