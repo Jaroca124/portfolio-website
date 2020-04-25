@@ -1,4 +1,8 @@
 .hero--section {
+    height: 100vh;
+    @include media-breakpoint-up(lg) {
+        height: auto;
+    }
     &__navigation {
         position: relative;
         .component--media-links {
@@ -26,14 +30,13 @@
     &__content {
         position: relative;
         text-align: center;
-        margin: 5rem auto 2rem auto;
-        @include media-breakpoint-up(sm) {
-            top: 50%;
-            transform: translateY(-50%);
-            margin: 15rem auto 0 auto;
-        }
-        @include media-breakpoint-up(md) {
-            margin: 12rem auto 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-bottom: 5rem;
+        @include media-breakpoint-up(lg) {
+            margin: 6rem auto;
+            transform: none;
+            top: auto;
         }
         &__headshot {
             height: 5rem;
@@ -67,5 +70,14 @@
                 }
             }
         }
-    }
+        &__swipe {
+            margin-top: 3rem;
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+            span {
+                margin-left: 1rem;
+            }
+        }
+    }  
 }

@@ -1,0 +1,24 @@
+{% embed "@atoms/layout/layout-site/_layout-site-master.twig" with
+    {
+        "layout_site_id": "layout--galaxy"
+    }
+%}
+    {% block hero %}
+        
+    {% endblock %}
+    
+    {% block main %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-10 col-md-8 mx-auto">
+                    <h1 class="display-3">Ansible Galaxy Redesign</h1>
+                    <h2 class="mt-5">Red Hat &amp; Tufts University</h2>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
+    {% endblock %}
+{% endembed %}

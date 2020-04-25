@@ -2,14 +2,22 @@
 {% set navigation_primary_showhome = navigation_primary_showhome|default() %}
 
 <nav class="navigation-pl navigation--primary {{ navigation_primary_classes }}">
-    <div class="navigation--primary__links">
+    <button class="navigation--primary__menu-button">
+        {% include "@atoms/images/image-default/_image-default-master.twig" with
+            {
+                "image_src": "icons/menu.svg",
+                "image_alt": "Main Menu"
+            }
+        %}
+    </button>
+    <div class="navigation--primary__navbar">
         {% if navigation_primary_showhome %}
             <a href="/">
                 {% include "@atoms/images/image-logo/_image-logo-master.twig" %}
             </a>
             {% include "@atoms/link/link-default/_link-default-master.twig" with
                 {
-                    "link_default_classes": "navigation--primary__home",
+                    "link_default_classes": "navigation--primary__navbar__home",
                     "link_default_href": "/",
                     "link_default_text": "Jacob Caccamo"
                 }
@@ -33,11 +41,11 @@
                 "link_default_text": "Education"
             }
         %}
-        {# {% include "@atoms/link/link-default/_link-default-master.twig" with
-            {
-                "link_default_href": "/skills",
-                "link_default_text": "Skills"
-            }
-        %} #}
     </div>
+    {# {% include "@atoms/link/link-default/_link-default-master.twig" with
+        {
+            "link_default_href": "/skills",
+            "link_default_text": "Skills"
+        }
+    %} #}
 </nav>

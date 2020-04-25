@@ -3,56 +3,57 @@
     padding: 2rem;
     position: relative;
     z-index: 100;
-    display: none;
-    @include media-breakpoint-up(md) {
-        display: block;
-    }
-    .image--logo {
-        height: 3rem;
-        width: 3rem;
-        margin-right: 1rem;
-    }
-    &__home {
-        display: inline;
-        font-size: 1.4rem;
-    }
-    &__links {
+    &__navbar {
+        display: none;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+        .image--logo {
+            height: 3rem;
+            width: 3rem;
+            margin-right: 1rem;
+        }
         a {
             &:hover,
             &:focus {
                 text-decoration: none;
             }
         }
-    }
-    .link--default {
-        padding-bottom: .25rem;
-        margin-right: 1rem;
-        position: relative;
-        font-weight: 400;
-        font-size: 1.2rem;
-        color: $white;
-    }
-    span.link--default {
-        color: rgba(255,255,255,.5);
-    }
-    a.link--default {
-        @include media-breakpoint-up(md) {
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                background: $white;
-                height: 2px;
-                width: 0;
-                transition: .3s;
-            }
-            &:hover, &:focus {
-                text-decoration: none;
+        &__home {
+            display: inline;
+            font-size: 1.4rem;
+        }
+        .link--default {
+            padding-bottom: .25rem;
+            margin-right: 1rem;
+            position: relative;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: $white;
+            @include media-breakpoint-up(md) {
                 &:after {
-                    width: 100%;
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: $white;
+                    height: 2px;
+                    width: 0;
+                    transition: .3s;
+                }
+                &:hover, &:focus {
+                    text-decoration: none;
+                    &:after {
+                        width: 100%;
+                    }
                 }
             }
+        }
+    }
+    &__menu-button {
+        display: block;
+        @include media-breakpoint-up(md) {
+            display: none;
         }
     }
     &--dark {
@@ -63,8 +64,6 @@
         }
         .link--default {
             color: $color-text-body;
-        }
-        a.link--default {
             @include media-breakpoint-up(md) {
                 &:after {
                     background: $color-text-body;

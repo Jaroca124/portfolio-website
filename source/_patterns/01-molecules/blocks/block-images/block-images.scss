@@ -1,0 +1,7 @@
+.block--images {
+    &__image {
+        img {
+            border-radius: $border-radius-default;
+        }
+    }
+}

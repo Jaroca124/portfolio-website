@@ -29,6 +29,9 @@
             max-width: 100%;
         }
     }
+    &__button-wrapper {
+        margin-top: 2rem;
+    }
     &--vgs {
         position: relative;
         &__inner {
@@ -111,40 +114,8 @@
             }
         }
     }
-    &--cabcs {
-        position: relative;
-        overflow: hidden;
-        @include media-breakpoint-up(lg) {
-            padding: 4rem 8rem;
-        }
-        .row {
-            position: relative;
-            z-index: 1;
-        }
-        .section--default__image {
-            margin: 2rem 0;
-            img {
-                display: block;
-                top: 50%;
-                position: relative;
-                transition: 8s;
-                transform: scale(.1) translate(400%, 150%);
-            }
-        }
-        &__logo {
-            height: 3rem;
-            margin-bottom: 1rem;
-        }
-        &__background {
-            .image--default {
-                position: absolute;
-                top: 0;
-                left: 0;
-                max-width: 100%;
-            }
-        }
-    }
     &--ncp {
+        margin-top: 5rem;
         .section--default {
             &__image {
                 padding-bottom: 3rem;
@@ -162,6 +133,7 @@
             }
         }
         &__title {
+            margin-bottom: 1rem;
             &__1 {
                 color: #668C6A;
             }
@@ -212,65 +184,45 @@
             margin: 2rem 0;
         }
     }
-    &--galaxy {
+    &--cabcs {
         position: relative;
         overflow: hidden;
-        @include media-breakpoint-up(md) {
-            margin-bottom: 5rem;
+        @include media-breakpoint-up(lg) {
+            padding: 4rem 8rem;
         }
-        >.row {
-            padding: 0;
-            @include media-breakpoint-up(md) {
-                padding: 0 8rem !important;
-            }
-            .section--default__content {
-                @include media-breakpoint-up(md) {
-                    max-width: none;
-                }
-                @include media-breakpoint-up(xl) {
-                    max-width: 50%;
-                }
-            }
+        .row {
+            position: relative;
+            z-index: 1;
         }
-        &__background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            &__image {
-                min-height: 100%;
-                @include media-breakpoint-up(md) {
-                    display: none;
-                }
-                &--wide {
-                    display: block;
-                    @include media-breakpoint-up(md) {
-                        display: block;
-                    }
-                }
+        .section--default__image {
+            margin: 2rem 0;
+            img {
+                display: block;
+                top: 50%;
+                position: relative;
+                transition: 8s;
+                transform: scale(.1) translate(400%, 150%);
             }
         }
-        &__content {
-            background: rgba(0, 0, 0, .8);
-            padding: 6rem 3rem;
-            &__title,
-            p {
+        &__logo {
+            height: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &--galaxy,
+    &--cabcs {
+        &__title,
+        p {
+            color: $white;
+        }
+        &__button {
+            .button--default {
                 color: $white;
-            }
-            &__button {
-                text-align: center;
-                margin-top: 1.5rem;
-                .button--default {
-                    color: $white;
-                    border-color: $white;
-                    &:hover,
-                    &:focus {
-                        background: $white;
-                        color: $dark-mode-bg;
-                    }
+                border-color: $white;
+                &:hover,
+                &:focus {
+                    background: $white;
+                    color: $dark-mode-bg;
                 }
             }
         }
@@ -483,6 +435,7 @@
             }
         }
         &__title {
+            margin-bottom: 1rem;
             &__2 {
                 color: $dribbble;
             }
@@ -509,6 +462,28 @@
         }
         &__button {
             text-align: center;
+        }
+    }
+    &--double-wrapper {
+        position: relative;
+        overflow: hidden;
+        padding: 5rem 0;
+        background: url('../assets/portfolio/manuel-will-gd3t5Dtbwkw-unsplash.jpg') no-repeat center bottom;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        &__gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: rgb(0, 0, 0);
+            background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 16%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 16%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 16%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
         }
     }
 }
