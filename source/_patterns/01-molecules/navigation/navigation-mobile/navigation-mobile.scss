@@ -6,6 +6,8 @@
     display: block;
     width: 100vw;
     z-index: 1000;
+    margin: 0;
+    padding: 0;
     @include media-breakpoint-up(sm) {
         display: none;
     }
@@ -21,12 +23,14 @@
             flex: 1;
             padding: 0;
             margin: 0;
+            height: 100%;
             a {
                 color: $white;
                 display: block;
-                height: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: relative;
                 width: 100%;
-                padding: .5rem 0;
                 text-align: center;
                 .image--default {
                     width: 2rem;
