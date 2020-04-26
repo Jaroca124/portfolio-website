@@ -1,5 +1,6 @@
 {
     "prod_build": true,
+    "activeTab": "portfolio",
     "path_to_assets": "../",
     "title": "Portfolio - Jacob Caccamo",
     "headshot": {

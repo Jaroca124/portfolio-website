@@ -1,6 +1,7 @@
 {
     "prod_build": true,
     "path_to_assets": "../",
+    "activeTab": "experience",
     "title": "Experience - Jacob Caccamo",
     "headshot": {
         "src": "index/headshot.jpg",

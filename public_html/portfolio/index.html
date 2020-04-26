@@ -12,19 +12,17 @@
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-16x16.png" sizes="16x16" />
 
-    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-        <!-- End Pattern Lab -->
-
+    
     <!-- Google Analytics -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-86321174-1', 'auto');
-          ga('send', 'pageview');
-        </script>
+      ga('create', 'UA-86321174-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </head>
   <body class="">
 
@@ -35,16 +33,45 @@
     <div class="hero--section__navigation">
         
 <nav class="navigation-pl navigation--primary navigation--primary--dark">
-    <div class="navigation--primary__links">
+    <div class="navigation--primary__navbar">
                     <a href="/">
                 
 <img id="" class="image-pl image--logo " src="../assets/JC_Logo.svg" alt="Jacob Caccamo Designs Logo">            </a>
             
-<a class="link-pl link--default navigation--primary__home" href="/" >Jacob Caccamo</a>                
+<a class="link-pl link--default navigation--primary__navbar__home" href="/" >Jacob Caccamo</a>                
 <a class="link-pl link--default " href="/portfolio" >Portfolio</a>        
 <a class="link-pl link--default " href="/experience" >Experience</a>        
-<a class="link-pl link--default " href="/education" >Education</a>            </div>
-</nav>        
+<a class="link-pl link--default " href="/education" >Education</a>    </div>
+    </nav>
+
+<nav class="navigation-pl navigation--mobile ">
+    <ul class="navigation--mobile__links">
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--home">
+            <a href="/">
+            
+<img id="" class="image-pl image--default " src="../assets/icons/home.svg" alt="Home">            <span>Home</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--portfolio active">
+            <a href="/portfolio">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/portfolio.svg" alt="Portfolio">                <span>Portfolio</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--experience">
+            <a href="/experience">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/experience.svg" alt="Experience">                <span>Experience</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--education">
+            <a href="/education">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/education.svg" alt="Education">                <span>Education</span>
+            </a>
+        </li>
+    </ul>
+    </nav>        
 <div class="component-pl component--media-links ">
     <a class='component--media-links__link component--media-links__link--dribbble' href='https://dribbble.com/jacobcaccamo'>
         <img class='icon' src="../assets/icons/iconmonstr-dribbble-5-240.png" alt='Dribbble'>
@@ -76,7 +103,11 @@
                 <span>Research</span>
             </div>
             
-<a class="button-pl button--default " href="../assets/Jacob_Caccamo.pdf">View Resume</a>            </div>
+<a class="button-pl button--default " href="../assets/Jacob_Caccamo.pdf">View Resume</a>                <div class="hero--section__content__swipe">
+            
+<img id="" class="image-pl image--default " src="../assets/swipe.svg" alt="Swipe Icon">            <span>Swipe Up</span>
+        </div>
+    </div>
 </div>            <div class="layout--site__body__main">
                             
 <div class="section-pl section--default section--default--vgs">
@@ -85,7 +116,7 @@
                             <div class="section--default--vgs__inner">
                     <h2 class="section--default--vgs__title"><span class="section--default--vgs__title__1">Video Game</span><br><span class="section--default--vgs__title__2">Website Series</span></h2>
                     <p>My love of video games led me to create a series of website concepts for my favorite games. What started as a small exploration grew into one of my most comprehensive design sets yet. This series allowed me to develop my Photoshop &amp; Sketch skills and was a ton of fun. Check out the full collection on Dribbble.</p>
-                    <div class="section--default--vgs__button">
+                    <div class="section--default__button-wrapper section--default--vgs__button">
                         
 <a class="button-pl button--default " href="/video-game-series">See Full Collection</a>                    </div>
                 </div>
@@ -116,14 +147,46 @@
                     
 <img id="" class="image-pl image--default section--default--burgerbuilder__inner__logo" src="../assets/burgerbuilder/udemy-logo.png" alt="Udemy Logo">                    <h2 class="section--default--burgerbuilder__inner__title"><span class="section--default--burgerbuilder__inner__title__1">Burger Builder</span><br><span class="section--default--burgerbuilder__inner__title__2">React App</span></h2>
                     <p>As part of my front-end development learning, I took an intensive React.js Udemy course. The course taught the fundamentals of React.js, including lifecycle hooks, state management and manipulation, and Redux. For the main course project, we followed along with our instructor and made Burger Builder, a responsive web app for creating and ordering burgers.</p>
-                    <div class="section--default--burgerbuilder__inner__button">
+                    <div class="section--default__button-wrapper section--default--burgerbuilder__inner__button">
                         
 <a class="button-pl button--default button--default--burger-builder" href="https://react-burger-builder-26631.firebaseapp.com/">View Live App</a>                        
 <a class="button-pl button--default " href="https://github.com/Jaroca124/react-burger-builder">View Project Github</a>                    </div>
                 </div>
                     </div>
             </div>
-    </div>                                                
+    </div>                <div class="section--default--double-wrapper">
+            
+<div class="section-pl section--default section--default--galaxy">
+    <div class="row">
+                <div class="col-md-6 section--default__content">
+                                <h2 class="section--default--galaxy__title"><span class="section--default--galaxy__title__1">Ansible Galaxy</span><br><span class="section--default--galaxy__title__2">Redesign</span></h2>
+                    <p>My Senior Capstone project at Tufts Unviersity was to redesign Ansible Galaxy, an IT automation, code sharing platform. Over the course of both semesters, our team assessed user needs, created design concepts and prototypes, and conducted usability tests.</p>
+                    <div class="section--default__button-wrapper section--default--galaxy__button">
+                        
+<a class="button-pl button--default " href="/galaxy">Read Full Story</a>                    </div>
+                        </div>
+                    <div class="section--default__image col-md-6">
+                                    
+<img id="" class="image-pl image--default " src="../assets/portfolio/a-galaxy.png" alt="Computer with Ansible Galaxy Website Shown on It">                            </div>
+            </div>
+    </div>                        
+<div class="section-pl section--default section--default--cabcs">
+    <div class="row">
+                    <div class="section--default__image col-md-6">
+                                    
+<img id="" class="image-pl image--default " src="../assets/portfolio/DroneV2.gif" alt="">                            </div>
+                <div class="col-md-6 section--default__content">
+                                
+<img id="" class="image-pl image--default section--default--cabcs__logo" src="../assets/cabcs/CABCSLogo.png" alt="CABCS Logo">                    <h2 class="section--default--cabcs__title"><span class="section--default--cabcs__title__1">Drone Operator</span><br><span class="section--default--cabcs__title__2">Monitoring</span></h2>
+                    <p>I joined a project at the Center for Applied Brain &amp; Cogntivie Sciences (CABCS) in the summer before my Senior year at Tufts University. As an Engineering Psychology student, my role was to assess the cognitive state of a drone operator and use that as input into an adjustable autonomy algorithm in a human-drone system.</p>
+                    <div class="section--default--cabcs__button">
+                        
+<a class="button-pl button--default " href="/cabcs">Read Full Story</a>                    </div>
+                        </div>
+            </div>
+    </div>            <div class="section--default--double-wrapper__gradient"></div>
+        </div>
+                
 <div class="section-pl section--default section--default--ncp">
     <div class="row">
                     <div class="section--default__image col-md-6">
@@ -153,7 +216,7 @@
             <div class="block--images__image block--images__image--6" data-animation-index=6>
             
 <img id="" class="image-pl image--default " src="../assets/ncp/shot6.png" alt="Flower Shot">        </div>
-    </div>                <div class="section--default--ncp__button">
+    </div>                <div class="section--default__button-wrapper section--default--ncp__button">
                     
 <a class="button-pl button--default " href="/ncp">See Full Collection</a>                </div>
                     </div>
@@ -165,7 +228,7 @@
                             
 <img id="" class="image-pl image--default section--default--marvel__logo" src="../assets/marvel/logo.png" alt="Marvel Logo">                <h2 class="section--default--marvel__title"><span class="section--default--marvel__title__1">MCU Movie</span><br><span class="section--default--marvel__title__2">App Concept</span></h2>
                 <p>I love the Marvel Cinematic Universe, and in anticipation of Avengers: Endgame which released in early 2019, my friends and I watched one of the Marvel movies every Sunday. Shortly after our Marvelthon started, I created a design concept for a hypothetical MCU movie app, in which users could view the whole series of films, learn more about their favorite characters, and get more details about the movies.</p>
-                <div class="section--default--marvel__button">
+                <div class="section--default__button-wrapper section--default--marvel__button">
                     
 <a class="button-pl button--default " href="/marvel">See Full Collection</a>                </div>
                     </div>
@@ -199,7 +262,7 @@
                             <h2 class="section--default--mjx__title">MJx Music</h2>
                 <p class="section--default--mjx__subtitle">Website Design &amp; Development</p>
                 <p>My friend Michael Jacob is an aspiring rapper under the stage name MJx. He needed a website designed and developed for his music career and I offered to help him out. So far, I've completed the Music and About pages. Here are a few shots (Home, Music) from the mobile design concept.</p>
-                <div class="section--default--mjx__button">
+                <div class="section--default__button-wrapper section--default--mjx__button">
                     
 <a class="button-pl button--default " href="http://www.mjxofficial.com">View Live Site</a>                </div>
                     </div>
@@ -221,7 +284,7 @@
                             <h2 class="section--default--dribbble__title"><span class="section--default--dribbble__title__1">Find Me On</span><br><span class="section--default--dribbble__title__2">Dribbble.</span></h2>
                 <p class="section--default--dribbble__subtitle"><a href="https://dribbble.com/jacobcaccamo">@jacobcaccamo</a></p>
                 <p>Your support means a lot, and further helps motivate me to continue designing with passion and purpose. I hope you will consider checking out my Dribbble account!</p>
-                <div class="section--default--dribbble__button">
+                <div class="section--default__button-wrapper section--default--dribbble__button">
                     
 <a class="button-pl button--default button--default--dribbble" href="https://dribbble.com/jacobcaccamo">Visit My Dribbble</a>                </div>
                     </div>
@@ -239,16 +302,45 @@
             <div class="col-md-3">
                 
 <nav class="navigation-pl navigation--primary ">
-    <div class="navigation--primary__links">
+    <div class="navigation--primary__navbar">
                     <a href="/">
                 
 <img id="" class="image-pl image--logo " src="../assets/JC_Logo.svg" alt="Jacob Caccamo Designs Logo">            </a>
             
-<a class="link-pl link--default navigation--primary__home" href="/" >Jacob Caccamo</a>                
+<a class="link-pl link--default navigation--primary__navbar__home" href="/" >Jacob Caccamo</a>                
 <a class="link-pl link--default " href="/portfolio" >Portfolio</a>        
 <a class="link-pl link--default " href="/experience" >Experience</a>        
-<a class="link-pl link--default " href="/education" >Education</a>            </div>
-</nav>            </div>
+<a class="link-pl link--default " href="/education" >Education</a>    </div>
+    </nav>
+
+<nav class="navigation-pl navigation--mobile ">
+    <ul class="navigation--mobile__links">
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--home">
+            <a href="/">
+            
+<img id="" class="image-pl image--default " src="../assets/icons/home.svg" alt="Home">            <span>Home</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--portfolio active">
+            <a href="/portfolio">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/portfolio.svg" alt="Portfolio">                <span>Portfolio</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--experience">
+            <a href="/experience">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/experience.svg" alt="Experience">                <span>Experience</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--education">
+            <a href="/education">
+                
+<img id="" class="image-pl image--default " src="../assets/icons/education.svg" alt="Education">                <span>Education</span>
+            </a>
+        </li>
+    </ul>
+    </nav>            </div>
             <div class="col-md-6">
                 
 <div class="component-pl component--media-links ">
@@ -276,29 +368,7 @@
 <img id="" class="image-pl image--logo " src="../assets/JC_Logo.svg" alt="Jacob Caccamo Designs Logo">            </div>
         </div>
     </div>
-</footer>        
-<div class="navigation-pl navigation--mobile ">
-    <div class="navigation--mobile__inner-wrapper">
-        <button class="navigation--mobile__menu-button">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/menu.svg" alt="Main Menu">        </button>
-        <a href="/portfolio" class="navigation--mobile__link navigation--mobile__link--1">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/portfolio.svg" alt="Portfolio">        </a>
-        <a href="/experience" class="navigation--mobile__link navigation--mobile__link--2">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/experience.svg" alt="Experience">        </a>
-        <a href="/" class="navigation--mobile__link navigation--mobile__link--3">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/home.svg" alt="Home">        </a>
-        <a href="/education" class="navigation--mobile__link navigation--mobile__link--4">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/education.svg" alt="Education">        </a>
-        <span class="navigation--mobile__link navigation--mobile__link--5" href="#">
-            
-<img id="" class="image-pl image--default " src="../assets/icons/skills.svg" alt="Skills">        </span>
-    </div>
-</div></div>
+</footer>    </div>
   <!--DO NOT REMOVE-->
           <!--Bootstrap Scripts & Plugins-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

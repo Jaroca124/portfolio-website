@@ -2,14 +2,6 @@
 {% set navigation_primary_showhome = navigation_primary_showhome|default() %}
 
 <nav class="navigation-pl navigation--primary {{ navigation_primary_classes }}">
-    <button class="navigation--primary__menu-button">
-        {% include "@atoms/images/image-default/_image-default-master.twig" with
-            {
-                "image_src": "icons/menu.svg",
-                "image_alt": "Main Menu"
-            }
-        %}
-    </button>
     <div class="navigation--primary__navbar">
         {% if navigation_primary_showhome %}
             <a href="/">
@@ -49,3 +41,8 @@
         }
     %} #}
 </nav>
+{% include "@molecules/navigation/navigation-mobile/_navigation-mobile-master.twig" with
+    {
+        "navigation_mobile_active": activeTab
+    }
+%}

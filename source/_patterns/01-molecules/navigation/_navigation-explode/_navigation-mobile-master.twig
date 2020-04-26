@@ -1,8 +1,8 @@
-{% set navigation_drawer_classes = navigation_drawer_classes|default() %}
+{# {% set navigation_mobile_classes = navigation_mobile_classes|default() %}
 
-<div class="navigation-pl navigation--drawer {{ navigation_drawer_classes }}">
-    <div class="navigation--drawer__inner-wrapper">
-        <button id="menu-close" class="navigation--drawer__menu-button">
+<div class="navigation-pl navigation--mobile {{ navigation_mobile_classes }}">
+    <div class="navigation--mobile__inner-wrapper">
+        <button class="navigation--mobile__menu-button">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/menu.svg",
@@ -10,7 +10,7 @@
                 }
             %}
         </button>
-        <a href="/portfolio" class="navigation--drawer__link navigation--drawer__link--1">
+        <a href="/portfolio" class="navigation--mobile__link navigation--mobile__link--1">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/portfolio.svg",
@@ -18,7 +18,7 @@
                 }
             %}
         </a>
-        <a href="/experience" class="navigation--drawer__link navigation--drawer__link--2">
+        <a href="/experience" class="navigation--mobile__link navigation--mobile__link--2">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/experience.svg",
@@ -26,7 +26,7 @@
                 }
             %}
         </a>
-        <a href="/" class="navigation--drawer__link navigation--drawer__link--3">
+        <a href="/" class="navigation--mobile__link navigation--mobile__link--3">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/home.svg",
@@ -34,7 +34,7 @@
                 }
             %}
         </a>
-        <a href="/education" class="navigation--drawer__link navigation--drawer__link--4">
+        <a href="/education" class="navigation--mobile__link navigation--mobile__link--4">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/education.svg",
@@ -42,14 +42,13 @@
                 }
             %}
         </a>
-        {# <span class="navigation--drawer__link navigation--drawer__link--5" href="#">
+        <span class="navigation--mobile__link navigation--mobile__link--5" href="#">
             {% include "@atoms/images/image-default/_image-default-master.twig" with
                 {
                     "image_src": "icons/skills.svg",
                     "image_alt": "Skills"
                 }
             %}
-        </span> #}
+        </span>
     </div>
-</div>
-<div class="navigation--drawer--overlay"></div>
+</div> #}

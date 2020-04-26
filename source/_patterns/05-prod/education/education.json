@@ -1,6 +1,7 @@
 {
     "prod_build": true,
     "path_to_assets": "../",
+    "activeTab": "education",
     "title": "Education - Jacob Caccamo",
     "headshot": {
         "src": "index/headshot.jpg",
