@@ -4,7 +4,7 @@
     }
 %}
     {% block template_hero_content %}
-        {% embed "@organisms/heros/hero-generic/_hero-generic-master.twig" with
+        {% embed "@organisms/heros/hero-generic/_hero-generic-main.twig" with
             {
                 'hero_generic_classes': 'hero--generic--marvel',
                 'hero_generic_background_src': 'marvel/hero-bg.png',
@@ -13,7 +13,7 @@
         %}
             {% block hero_generic_content %}
                 <div>
-                    {% include "@atoms/images/image-default/_image-default-master.twig" with
+                    {% include "@atoms/images/image-default/_image-default-main.twig" with
                         {
                             "image_default_classes": "marvel-logo",
                             "image_src": "marvel/logo.png",
@@ -24,14 +24,14 @@
                 </div>
             {% endblock %}
             {% block hero_generic_other %}
-                {% include "@atoms/images/image-default/_image-default-master.twig" with
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
                     {
                         "image_default_classes": "hero-bg--small",
                         "image_src": "marvel/hero-bg-small.png",
                         "image_alt": "Thor Slicing through an iPhone"
                     }
                 %}
-                {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                {% include "@atoms/images/image-default/_image-default-main.twig" with 
                     {
                         "image_default_classes": "marvel-hammer",
                         "image_src": "marvel/mjolnir.png",
@@ -42,7 +42,7 @@
         {% endembed %}
     {% endblock %}
     {% block template_main_content %}
-        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" with
+        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-main.twig" with
             {
                 "component_dribbble_shots_classes": "component--dribbble-shots--marvel"
             }

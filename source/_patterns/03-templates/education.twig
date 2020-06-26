@@ -1,10 +1,10 @@
-{% embed "@atoms/layout/layout-site/_layout-site-master.twig" with
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" with
     {
         "layout_site_id": "layout--education"
     }
 %}
     {% block hero %}
-        {% embed "@organisms/heros/hero-section/_hero-section-master.twig" with
+        {% embed "@organisms/heros/hero-section/_hero-section-main.twig" with
             {
                 "hero_section_title": "Education"
             }
@@ -14,7 +14,7 @@
     {% block main %}
         <div class="container">
             <div class="block--university mb-5">
-                {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                {% include "@atoms/images/image-default/_image-default-main.twig" with 
                     {
                         "image_src": tuftsLogo.src,
                         "image_alt": tuftsLogo.alt,
@@ -52,7 +52,7 @@
             </div>
             <div class="row">
                 <div class="col-sm">
-                    {% include "@atoms/text/text-list/_text-list-master.twig" with
+                    {% include "@atoms/text/text-list/_text-list-main.twig" with
                         {
                             "text_list_type": "ul",
                             "text_list_data": leftList
@@ -60,7 +60,7 @@
                     %}
                 </div>
                 <div class="col-sm">
-                    {% include "@atoms/text/text-list/_text-list-master.twig" with
+                    {% include "@atoms/text/text-list/_text-list-main.twig" with
                         {
                             "text_list_type": "ul",
                             "text_list_data": rightList
@@ -69,10 +69,10 @@
                 </div>
             </div>
         </div>
-        {% include "@molecules/blocks/block-activities/_block-activities-master.twig" %}
+        {% include "@molecules/blocks/block-activities/_block-activities-main.twig" %}
     {% endblock %}
 
     {% block footer %}
-        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
     {% endblock %}
 {% endembed %}

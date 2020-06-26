@@ -1,0 +1,40 @@
+{% set feed_post_classes = feed_post_classes|default() %}
+{% set feed_post_title = feed_post_title|default() %}
+{% set feed_post_href = feed_post_href|default() %}
+{% set feed_post_date_posted = feed_post_date_posted|default() %}
+{% set feed_post_comment = feed_post_comment|default() %}
+{% set feed_post_img = feed_post_img|default() %}
+{% set feed_post_author = feed_post_author|default() %}
+{% set feed_post_source = feed_post_source|default() %}
+{% set feed_post_tags = feed_post_tags|default() %}
+
+<div class="feed-post {{ feed_post_classes }}">
+    <div class="card-body">
+        <div class="row main">
+            <div class="post col-md-10 col-md-offset-1">
+                <div class="content"> 
+                    <a class="title" href="{{ feed_post_href }}">{{ feed_post_title }}</a>
+                    <p class="date">Posted: {{ feed_post_date_posted }}</p>
+                    <p class="comment">{{ feed_post_comment }}</p>
+                    <a href="{{ feed_post_href }}">
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with
+                            {
+                                "image_src": feed_post_img.src,
+                                "image_alt": feed_post_img.alt,
+                                "image_default_classes": "img-thumbnail"
+                            }
+                        %}
+                    </a>
+                    <p class="author">Author(s): {{ feed_post_author }}</p>
+                    <p class="source">Source: {{ feed_post_source }}</p>
+                    <hr>
+                    {% include "@molecules/text/pills/_pills-main.twig" with
+                        {
+                            "pills": feed_post_tags
+                        }
+                    %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

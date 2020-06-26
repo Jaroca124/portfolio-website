@@ -1,0 +1,21 @@
+{% set view_experience_classes = view_experience_classes|default() %}
+{% set view_experience_data = view_experience_data|default() %}
+
+<div class="view-pl view--experience {{ view_experience_classes }}">
+    {% for listing in view_experience_data %}
+        {% embed "@molecules/blocks/block-experience/_block-experience-main.twig" with
+            {
+                "block_experience_classes": listing.classes,
+                "block_experience_company_logo_src": listing.logo.src,
+                "block_experience_company_logo_alt": listing.logo.alt,
+                "block_experience_company_name": listing.name,
+                "block_experience_company_title": listing.title,
+                "block_experience_company_location": listing.location
+            }
+        %}
+            {% block block_experience_company_description %}
+                {{ listing.description|raw }}
+            {% endblock %}
+        {% endembed %}
+    {% endfor %}
+</div>

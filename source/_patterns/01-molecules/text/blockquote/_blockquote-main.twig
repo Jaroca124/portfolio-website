@@ -1,0 +1,10 @@
+{% set blockquote_classes = blockquote_classes|default() %}
+{% set blockquote_text = blockquote_text|default() %}
+{% set blockquote_author = blockquote_author|default() %}
+
+<div class="blockquote {{ blockquote_classes }}">
+    {% include "@atoms/misc/misc-hr/_misc-hr-main.twig" %}
+        <p>{{ blockquote_text }}</p>
+        <footer class="blockquote-footer">{{ blockquote_author }}</footer>
+    {% include "@atoms/misc/misc-hr/_misc-hr-main.twig" %}
+</div>

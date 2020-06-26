@@ -4,7 +4,7 @@
     }
 %}
     {% block template_hero_content %}
-        {% embed "@organisms/heros/hero-generic/_hero-generic-master.twig" with
+        {% embed "@organisms/heros/hero-generic/_hero-generic-main.twig" with
             {
                 'hero_generic_classes': 'hero--generic--vgs',
                 "hero_generic_show_media_links": 'false',
@@ -12,7 +12,7 @@
             }
         %}
             {% block hero_generic_content %}
-                {% embed "@organisms/sections/section-default/_section-default-master.twig" with
+                {% embed "@organisms/sections/section-default/_section-default-main.twig" with
                     {
                         "section_default_classes": "section--default--vgs",
                         "section_default_image_src": "vgs/vgs--featured.png",
@@ -28,7 +28,7 @@
                     {% endblock %}
                     {% block section_default_outside_content %}
                         <div class="section--default--vgs__background">
-                            {% include "@atoms/images/image-default/_image-default-master.twig" with 
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with 
                                 {
                                     "image_src": "vgs/blob.svg",
                                     "image_alt": ""
@@ -41,7 +41,7 @@
         {% endembed %}
     {% endblock %}
     {% block template_main_content %}
-        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-master.twig" with
+        {% include "@molecules/components/component-dribbble-shots/_component-dribbble-shots-main.twig" with
             {
                 "component_dribbble_shots_classes": "component--dribbble-shots--vgs"
             }

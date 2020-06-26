@@ -1,0 +1,21 @@
+{% set view_shots_classes = view_shots_classes|default() %}
+{% set view_shots_data = view_shots_data|default() %}
+
+<div class="view-pl view--shots {{ view_shots_classes }}">
+    <div class="container-fluid">
+        <div class="row">
+            {% for shot in view_shots_data %}
+                <div class="view--shots__wrapper col-12 col-md-6">
+                    <a href="https://www.instagram.com/jacobcaccamodesigns/">
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_src": shot.src,
+                                "image_alt": shot.alt
+                            }
+                        %}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

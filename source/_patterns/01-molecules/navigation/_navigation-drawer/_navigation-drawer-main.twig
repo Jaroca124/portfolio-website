@@ -1,0 +1,63 @@
+{# {% set navigation_drawer_classes = navigation_drawer_classes|default() %}
+
+<div class="navigation-pl navigation--drawer {{ navigation_drawer_classes }}">
+    <div>
+        <button id="menu-close" class="navigation--drawer__menu-button">
+            {% include "@atoms/icon/icon-menu/_icon-menu-main.twig" with
+                {
+                    "icon_menu_hex_color": "fff"
+                }
+            %}
+        </button>
+    </div>
+    {% include "@atoms/images/image-default/_image-default-main.twig" with 
+        {
+            "image_default_classes": "hero--section__content__headshot",
+            "image_src": headshot.src,
+            "image_alt": headshot.alt
+        }
+    %}
+    <ul class="navigation--drawer__links">
+        <li>
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_default_classes": "navigation--drawer__links__icon",
+                    "image_src": "icons/home.svg",
+                    "image_alt": "Home"
+                }
+            %}
+            <a href="/" class="navigation--drawer__links__link">Home</a>
+        </li>
+        <li>
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_default_classes": "navigation--drawer__links__icon",
+                    "image_src": "icons/portfolio.svg",
+                    "image_alt": "Portfolio"
+                }
+            %}
+            <a href="/portfolio" class="navigation--drawer__links__link">Portfolio</a>
+        </li>
+        <li>
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_default_classes": "navigation--drawer__links__icon",
+                    "image_src": "icons/experience.svg",
+                    "image_alt": "Experience"
+                }
+            %}
+            <a href="/experience" class="navigation--drawer__links__link">Experience</a>
+        </li>
+        <li>
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_default_classes": "navigation--drawer__links__icon",
+                    "image_src": "icons/education.svg",
+                    "image_alt": "Education"
+                }
+            %}
+            <a href="/education" class="navigation--drawer__links__link">Education</a>
+        </li>
+    </ul>
+</div>
+<div class="navigation--drawer--overlay"></div> #}

@@ -6,7 +6,7 @@
 <div class="jumbotron-fluid" id="{{ jumbo_id }}">
     <div class="container-fluid" id="{{ jumbo_overlay_id }}">
         {% block jumbotron_content %}{% endblock %}
-        {% include "@atoms/button/image-credit/_image-credit-master.twig" with
+        {% include "@atoms/button/image-credit/_image-credit-main.twig" with
             {
                 "image_credit_name": jumbo_image_credit.name,
                 "image_credit_href": jumbo_image_credit.href

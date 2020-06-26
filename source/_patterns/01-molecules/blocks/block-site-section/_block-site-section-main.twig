@@ -1,0 +1,22 @@
+{% set block_site_section_classes = block_site_section_classes|default() %}
+{% set block_site_section_title = block_site_section_title|default() %}
+{% set block_site_section_img_src = block_site_section_img_src|default() %}
+{% set block_site_section_img_alt = block_site_section_img_alt|default() %}
+{% set block_site_section_text = block_site_section_text|default() %}
+{% set block_site_section_href = block_site_section_href|default() %}
+
+
+<div class="block-pl block--site-section {{ block_site_section_classes }}">
+    <div class="block--site-section__image">
+        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+            {
+                "image_src": block_site_section_img_src,
+                "image_alt": block_site_section_img_alt
+            }
+        %}
+    </div>
+    <div class="block--site-section__content">
+        <h2>{{ block_site_section_title }}</h2>
+        <p>{{ block_site_section_text }}</p>
+    </div>
+</div>

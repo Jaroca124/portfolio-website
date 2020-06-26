@@ -1,0 +1,16 @@
+{% set block_images_classes = block_images_classes|default() %}
+{% set block_images_data = block_images_data|default() %}
+{% set block_images_animation_direction = block_images_animation_direction|default() %}
+
+<div class="block-pl block--images {{ block_images_classes }}" {% if block_images_animation_direction is not empty %}data-animation-direction={{ block_images_animation_direction }}{% endif %}>
+    {% for img in block_images_data %}
+        <div class="block--images__image block--images__image--{{ loop.index }}" data-animation-index={{ loop.index }}>
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_src": img.src,
+                    "image_alt": img.alt
+                }
+            %}
+        </div>
+    {% endfor %}
+</div>

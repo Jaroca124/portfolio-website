@@ -1,6 +1,6 @@
-{% embed "@atoms/layout/layout-site/_layout-site-master.twig" %}
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" %}
     {% block header %}
-        {% embed "@organisms/global/global-header/_global-header-master.twig" %}{% endembed %}
+        {% embed "@organisms/global/global-header/_global-header-main.twig" %}{% endembed %}
     {% endblock %}
 
     {% block hero %}
@@ -15,19 +15,19 @@
     {% block main %}
         <div class="region--skils">
             <div class="container">
-                {% include "@organisms/sections/section-stages/_section-stages-master.twig" with
+                {% include "@organisms/sections/section-stages/_section-stages-main.twig" with
                     {
                         "section_stages_data": stagesData,
                         "section_stages_classes": "mb-4"
                     }
                 %}
-                {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                {% include "@organisms/sections/section-lists/_section-lists-main.twig" with
                     {
                         "section_lists_data": techniquesData
                     }
                 %}
                 <hr class="my-4 body_hr" style="color: white;">
-                {% include "@organisms/sections/section-lists/_section-lists-master.twig" with
+                {% include "@organisms/sections/section-lists/_section-lists-main.twig" with
                     {
                         "section_lists_data": programsData,
                         "section_lists_title": "Programs & Software",
@@ -39,6 +39,6 @@
     {% endblock %}
 
     {% block footer %}
-        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
     {% endblock %}
 {% endembed %}

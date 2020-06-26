@@ -1,0 +1,19 @@
+{% set component_gallery_classes = component_gallery_classes|default() %}
+{% set component_gallery_data = component_gallery_data|default() %}
+
+<div class="component-pl component--gallery {{ component_gallery_classes }}">
+    <div class="container-fluid">
+        <div class="row">
+            {% for shot in component_gallery_data %}
+                <div class="col-4 col-md-3 col-lg-2">
+                    {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                        {
+                            "image_src": shot.src,
+                            "image_alt": shot.alt
+                        }
+                    %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

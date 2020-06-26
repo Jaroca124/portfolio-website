@@ -1,6 +1,6 @@
-{% embed "@atoms/layout/layout-site/_layout-site-master.twig" %}
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" %}
     {% block header %}
-        {% embed "@organisms/global/global-header/_global-header-master.twig" %}{% endembed %}
+        {% embed "@organisms/global/global-header/_global-header-main.twig" %}{% endembed %}
     {% endblock %}
 
     {% block hero %}
@@ -14,7 +14,7 @@
 
     {% block main %}
         <div class="container">
-            {% include "@organisms/sections/feed-posts/_feed-posts-master.twig" with 
+            {% include "@organisms/sections/feed-posts/_feed-posts-main.twig" with 
                 {
                     "feed_posts_data": feedData
                 }
@@ -23,6 +23,6 @@
     {% endblock %}
 
     {% block footer %}
-        {% include "@organisms/global/global-footer/_global-footer-master.twig" %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
     {% endblock %}
 {% endembed %}

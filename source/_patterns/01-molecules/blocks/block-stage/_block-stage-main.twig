@@ -1,0 +1,15 @@
+{% set block_stage_classes = block_stage_classes|default() %}
+{% set block_stage_img_src = block_stage_img_src|default() %}
+{% set block_stage_img_alt = block_stage_img_alt|default() %}
+{% set block_stage_description = block_stage_description|default() %}
+
+<div class="block-pl block--stage {{ block_stage_classes }} col-md-4">
+    {% include "@atoms/images/image-default/_image-default-main.twig" with 
+        {
+            "image_src": block_stage_img_src,
+            "image_alt": block_stage_img_alt,
+            "image_default_classes": "block--stage__badge-image"
+        }
+    %}
+    <p class='block--stage__description'>{{ block_stage_description }}</p>
+</div>

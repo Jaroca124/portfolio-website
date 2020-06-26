@@ -1,0 +1,59 @@
+{% set navigation_mobile_classes = navigation_mobile_classes|default() %}
+{% set navigation_mobile_active = navigation_mobile_active|default() %}
+
+<nav class="navigation-pl navigation--mobile {{ navigation_mobile_classes }}">
+    <ul class="navigation--mobile__links">
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--home{% if navigation_mobile_active == "home" %} active{% endif %}">
+            <a href="/">
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_src": "icons/home.svg",
+                    "image_alt": "Home"
+                }
+            %}
+            <span>Home</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--portfolio{% if navigation_mobile_active == "portfolio" %} active{% endif %}">
+            <a href="/portfolio">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                    {
+                        "image_src": "icons/portfolio.svg",
+                        "image_alt": "Portfolio"
+                    }
+                %}
+                <span>Portfolio</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--experience{% if navigation_mobile_active == "experience" %} active{% endif %}">
+            <a href="/experience">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                    {
+                        "image_src": "icons/experience.svg",
+                        "image_alt": "Experience"
+                    }
+                %}
+                <span>Experience</span>
+            </a>
+        </li>
+        <li class="navigation--mobile__links__link navigation--mobile__links__link--education{% if navigation_mobile_active == "education" %} active{% endif %}">
+            <a href="/education">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                    {
+                        "image_src": "icons/education.svg",
+                        "image_alt": "Education"
+                    }
+                %}
+                <span>Education</span>
+            </a>
+        </li>
+    </ul>
+    {# <span class="navigation--mobile__link navigation--mobile__link--5" href="#">
+        {% include "@atoms/images/image-default/_image-default-main.twig" with
+            {
+                "image_src": "icons/skills.svg",
+                "image_alt": "Skills"
+            }
+        %}
+    </span> #}
+</nav>

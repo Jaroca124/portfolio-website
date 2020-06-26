@@ -1,6 +1,6 @@
 {% embed "@templates/view-page.twig" %}
     {% block template_hero_content %}
-        {% embed "@organisms/heros/hero-generic/_hero-generic-master.twig" with
+        {% embed "@organisms/heros/hero-generic/_hero-generic-main.twig" with
             {
                 'hero_generic_classes': 'hero--generic--ncp',
                 'hero_generic_background_src': 'ncp/hero-bg.jpg',
@@ -13,7 +13,7 @@
                     <span>Collection</span>
                 </div>
                 <div class="hero--generic__content__inner__img col-md-6">
-                    {% include "@atoms/images/image-default/_image-default-master.twig" with
+                    {% include "@atoms/images/image-default/_image-default-main.twig" with
                         {
                             "image_src": "ncp/leopard.png",
                             "image_alt": "Snow Leopard and color swatches"
@@ -24,6 +24,6 @@
         {% endembed %}
     {% endblock %}
     {% block template_main_content %}
-        {% include "@organisms/views/view-shots/_view-shots-master.twig" %}
+        {% include "@organisms/views/view-shots/_view-shots-main.twig" %}
     {% endblock %}
 {% endembed %}

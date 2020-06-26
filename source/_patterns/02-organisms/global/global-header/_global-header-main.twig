@@ -1,0 +1,11 @@
+{% set global_header_classes = global_header_classes|default() %}
+
+<header class="global-pl global--header {{ global_header_classes }}">
+    {% block header_content %}
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-main.twig" with
+            {
+                "navigation_primary_showhome": true
+            }
+        %}
+    {% endblock %}
+</header>

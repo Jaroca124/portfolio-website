@@ -1,0 +1,10 @@
+{% set component_loader_classes = component_loader_classes|default() %}
+
+<div class="component-pl component--loader {{ component_loader_classes }}">
+    {% include "@atoms/images/image-logo/_image-logo-main.twig" with
+        {
+            "image_logo_classes": "animate-flicker",
+            "image_logo_color": "JC_Logo_Black.svg"
+        }
+    %}
+</div>
