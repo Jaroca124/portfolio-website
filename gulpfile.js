@@ -42,6 +42,7 @@ var buildPaths = {
     marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
     ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
     vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
+    about: './pl/public/patterns/05-prod-about-about/05-prod-about-about.html'
 }
 
 var sassOption = {
@@ -157,6 +158,16 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function(cb) {
         }))
         .pipe(gulp.dest('./public_html/experience'));
     console.log("Experience Build Finished");
+
+    // About
+    console.log("Starting About Build...");
+    gulp.src(buildPaths.about)
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/about'));
+    console.log("About Build Finished");
 
     // Marvel
     console.log("Starting Marvel Build...");

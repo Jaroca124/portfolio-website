@@ -1,0 +1,10 @@
+{
+    "prod_build": true,
+    "path_to_assets": "../",
+    "activeTab": "about",
+    "title": "About - Jacob Caccamo",
+    "headshot": {
+        "src": "index/headshot.jpg",
+        "alt": "Jacob Caccamo"
+    }
+}
