@@ -4,7 +4,8 @@
     }
 }
 
-#layout--education {
+#layout--education,
+#layout--experience {
     .container {
         @extend .mb-5;
         padding: 0 2.5rem;
