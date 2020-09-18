@@ -1,5 +1,6 @@
 {% set button_default_classes = button_default_classes|default() %}
 {% set button_default_text = button_default_text|default() %}
 {% set button_default_href = button_default_href|default() %}
+{% set button_default_attributes = button_default_attributes|default() %}
 
-<a class="button-pl button--default {{ button_default_classes }}" href="{{ button_default_href }}">{{ button_default_text }}</a>
+<a class="button-pl button--default {{ button_default_classes }}" href="{{ button_default_href }}" {{ button_default_attributes }}>{{ button_default_text }}</a>

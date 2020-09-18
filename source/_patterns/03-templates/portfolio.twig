@@ -11,7 +11,7 @@
         %}
     {% endblock %}
     {% block main %}
-        {# Video Game Series (vgs) #}
+        {# Video Game Series (VGS) #}
         {% embed "@organisms/sections/section-default/_section-default-main.twig" with
             {
                 "section_default_classes": "section--default--vgs",
@@ -42,6 +42,25 @@
                             "image_alt": ""
                         }
                     %}
+                </div>
+            {% endblock %}
+        {% endembed %}
+        {# Allsafe #}
+        {% embed "@organisms/sections/section-default/_section-default-main.twig" with
+            {
+                "section_default_classes": "section--default--allsafe section--default--full-width",
+                "section_default_image_src": "allsafe/feature2.png",
+                "section_default_image_alt": "Shots from the Allsafe Application",
+                "section_default_image_orientation": "left"
+            }
+        %}
+            {% block section_default_content %}
+                <div class="section--default--allsafe__inner">
+                    <h2 class="section--default--allsafe__title"><span class="section--default--allsafe__title__1">Apps 4 Digital Peace - Allsafe</span></h2>
+                    <p>The goal of the Apps 4 Digital Peace competition, hosted jointly by the the Cybersecurity Tech Accord, the UN Office of Disarmament Affairs (UNODA), and the UN Office of the Envoy on Youth, was to design a cybersecuity solution that would help people navigate the dangerous waters of the internet. My team and I created Allsafe, a tool designed to democratize access to actionable cyber threat intelligence.</p>
+                    <div class="section--default__button-wrapper section--default--allsafe__button">
+                        <button disabled>More Coming Soon</button>
+                    </div>
                 </div>
             {% endblock %}
         {% endembed %}

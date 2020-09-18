@@ -7,8 +7,7 @@
 
     <link rel="stylesheet" href="{{ path_to_assets }}css/style.css{% if prod_build == false %}?{{ cacheBuster }}{% endif %}" media="all" />
     {% if prod_build == false %}<link rel="stylesheet" href="{{ path_to_assets }}css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />{% endif %}
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:400,700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="{{ path_to_assets }}assets/favicon/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="{{ path_to_assets }}assets/favicon/favicon-16x16.png" sizes="16x16" />
@@ -20,14 +19,16 @@
     {% endif %}
 
     <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    {% if prod_build == true %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-86321174-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+        ga('create', 'UA-86321174-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
   </head>
   <body class="{{ bodyClass }}">

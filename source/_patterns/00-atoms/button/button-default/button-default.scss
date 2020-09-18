@@ -4,6 +4,7 @@
     padding: .5rem 2rem;
     font-weight: $fw-bold;
     color: $color-text-body;
+    cursor: pointer;
     &:hover,
     &:focus {
         background: $color-text-body;
