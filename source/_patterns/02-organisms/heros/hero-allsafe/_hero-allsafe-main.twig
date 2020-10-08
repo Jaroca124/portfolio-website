@@ -1,0 +1,45 @@
+{% set hero_allsafe_classes = hero_allsafe_classes|default() %}
+{% set hero_allsafe_background_src = hero_allsafe_background_src|default() %}
+{% set hero_allsafe_background_alt = hero_allsafe_background_alt|default() %}
+{% set hero_allsafe_show_media_links = hero_allsafe_show_media_links|default('true') %}
+{% set hero_allsafe_navigation_classes = hero_allsafe_navigation_classes|default('true') %}
+
+<div class="hero-pl hero--allsafe {{ hero_allsafe_classes }}">
+    <div class="hero--allsafe__background">
+        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+            {
+                "image_src": hero_allsafe_background_src,
+                "image_alt": hero_allsafe_background_alt
+            }
+        %}
+    </div>
+    <div class="hero--allsafe__navigation">
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-main.twig" with
+            {
+                "navigation_primary_classes": hero_allsafe_navigation_classes,
+                "navigation_primary_showhome": true,
+            }
+        %}
+        {% if hero_allsafe_show_media_links == 'true' %}
+            {% include "@molecules/components/component-media-links/_component-media-links-main.twig" %}
+        {% endif %}
+    </div>
+    <div class="hero--allsafe__content container-fluid">
+        <div class="hero--allsafe__content__inner row">
+            <div class="hero--allsafe__content__inner__title">
+                <div>
+                    <h1>Apps 4 Digital Peace Competition - Allsafe</h1>
+                    <p>First Place</p>
+                </div>
+            </div>
+            <div class="hero--allsafe__content__inner__feature">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                    {
+                        "image_src": "allsafe/feature2.png",
+                        "image_alt": "Screenshot from Allsafe"
+                    }
+                %}
+            </div>
+        </div>
+    </div>
+</div>

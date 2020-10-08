@@ -42,7 +42,8 @@ var buildPaths = {
     marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
     ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
     vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
-    about: './pl/public/patterns/05-prod-about-about/05-prod-about-about.html'
+    about: './pl/public/patterns/05-prod-about-about/05-prod-about-about.html',
+    allsafe: './pl/public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
 }
 
 var sassOption = {
@@ -198,6 +199,16 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function(cb) {
         }))
         .pipe(gulp.dest('./public_html/ncp'));
     console.log("NCP Build Finished");
+    
+    // Allsafe
+    console.log("Starting Alsafe Build...");
+    gulp.src(buildPaths.allsafe)
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./public_html/allsafe'));
+    console.log("Allsafe Build Finished");
 
     // Copy CSS
     console.log("Starting Copy of CSS");
