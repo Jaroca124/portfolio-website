@@ -1,0 +1,27 @@
+{% embed "@organisms/sections/section-default/_section-default-main.twig" with
+    {
+        "section_default_classes": "section--default--covpn",
+        "section_default_image_src": "covpn/covpn.png",
+        "section_default_image_orientation": "left"
+    }
+%}
+    {% block section_default_content %}
+        {% include "@atoms/images/image-default/_image-default-main.twig" with
+            {
+                "image_default_classes": "section--default--covpn__logo",
+                "image_src": "covpn/logo.png",
+                "image_alt": "CoVPN Logo"
+            }
+        %}
+        <h2 class="section--default--ncp__title">Coronavirus Prevention Network</h2>
+        <p>My team at Booz Allen Hamilton and the National Institue of Allergy and Infectious Diseases (NIAID) with partners Fred Hutch and Oracle launched a website that will help scientists register volunteers for vaccine clinical studies. As a designer and the front-end developer on the project, I’m thrilled with how it turned out. Check out the live site!</p>
+        <div class="section--default__button-wrapper">
+            {% include "@atoms/button/button-default/_button-default-main.twig" with
+                {
+                    "button_default_text": "View Live Website",
+                    "button_default_href": "https://www.coronaviruspreventionnetwork.org/"
+                }
+            %}
+        </div>
+    {% endblock %}
+{% endembed %}

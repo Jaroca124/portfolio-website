@@ -222,15 +222,8 @@
         }
     }
     &--marvel {
-        @include media-breakpoint-up(md) {
-            margin-bottom: 2.5rem;
-        }
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 4rem;
-        }
         &__logo {
-            height: 2rem;
-            margin-bottom: 1rem;
+            height: 3rem;
         }
         &__title {
             margin-bottom: 2rem;
@@ -405,76 +398,6 @@
                     }
                 }
             }
-        }
-        &__button {
-            text-align: center;
-            margin: 2rem 0;
-            .button--default {
-                color: $white;
-                border-color: $white;
-                &:hover,
-                &:focus {
-                    background: $white;
-                    color: $dark-mode-bg;
-                }
-            }
-        }
-    }
-    &--allsafe {
-        position: relative;
-        background: $dark-mode-bg;
-        margin: 5rem 0;
-        .section--default__content {
-            @include media-breakpoint-up(md) {
-                padding-left: 3rem !important;
-            }
-            button {
-                @extend .button--default;
-                color: $white;
-                border-color: $white;
-                background: gray;
-                cursor: not-allowed;
-                &:hover,
-                &:focus {
-                    color: $white !important;
-                    background: gray !important;
-                }
-            }
-        }
-        .section--default__image {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3rem;
-            @include media-breakpoint-up(lg) {
-                margin-bottom: 0;
-            }
-        }
-        >.row {
-            @include media-breakpoint-up(md) {
-                padding-bottom: 5rem;
-            }
-        }
-        &:before {
-            content: "";
-            background-image: linear-gradient(to right bottom, $dark-mode-bg 50%, $dark-mode-bg 50%, transparent 51%);
-            position: absolute;
-            width: 100%;
-            height: 5rem;
-            bottom: -5rem;
-            left: 0;
-        }
-        &:after {
-            content: "";
-            background-image: linear-gradient(to right top, $dark-mode-bg 0%, $dark-mode-bg 50%, transparent 51%);
-            position: absolute;
-            width: 100%;
-            height: 5rem;
-            top: -5rem;
-            left: 0;
-        }
-        &__title,
-        p {
-            color: $white;
         }
         &__button {
             text-align: center;

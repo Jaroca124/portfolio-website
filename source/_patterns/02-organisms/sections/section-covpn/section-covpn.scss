@@ -1,0 +1,33 @@
+.section--default--covpn {
+    margin-bottom: 4rem !important;
+    &__logo {
+        height: 5rem;
+    }
+    .section--default__button-wrapper {
+        text-align: center;
+    }
+    .section--default__image {
+        display: flex;
+        align-items: center;
+    }
+    .section--default__image {
+        img {
+            width: 32rem;
+            margin: 0 auto;
+            @include media-breakpoint-up(md) {
+                width: 100%;
+            }
+        }
+        padding-bottom: 3rem;
+        @include media-breakpoint-up(md) {
+            padding-bottom: 0;
+        }
+    }
+
+    .section--default__image,
+    .section--default__content {
+        @include media-breakpoint-up(md) {
+            padding: 0 3rem;
+        }
+    }
+}
