@@ -27,7 +27,7 @@
         }
     }
     &__content {
-        padding: 4rem;
+        padding: 4rem 0;
         position: relative;
         text-align: center;
         &__headshot {
@@ -37,7 +37,7 @@
         }
         &__title {
             font-weight: $fw-black;
-            font-size: 4rem;
+            font-size: 3.5rem;
             padding: 0 1rem;
             margin-bottom: 1rem;
             @include media-breakpoint-up(sm) {
