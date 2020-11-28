@@ -1,0 +1,30 @@
+{% set section_echo_classes = section_echo_classes|default() %}
+
+<div class="section-pl section--echo container-fluid {{ section_echo_classes }}">
+    <div class="row">
+        <div class="section--echo__image col-12 col-md-6">
+            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                {
+                    "image_default_classes": "section--echo__image__dot",
+                    "image_src": "echo/dot.png",
+                    "image_alt": "Redesigned Echo Dot"
+                }
+            %}
+            <div class="pulse-ring pulse-ring--1"></div>
+            <div class="pulse-ring pulse-ring--2"></div>
+            <div class="pulse-ring pulse-ring--3"></div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h2>Echo Dot Reimagined</h2>
+            <p>Before the Echo Show was released, I thought it would be nice to be able to interact with the Echo Dot through touch. I noticed that most of the time I used Alexa, I was sitting at my desk, right next to my Dot. It was irritating to have to say something when I could reach for a touchscreen much faster, so I came up with this redesign concept.</p>
+            <div class="section--default__button-wrapper">
+                {% include "@atoms/button/button-default/_button-default-main.twig" with
+                    {
+                        "button_default_text": "View Project",
+                        "button_default_href": "#"
+                    }
+                %}
+            </div>
+        </div>
+    </div>
+</div>
