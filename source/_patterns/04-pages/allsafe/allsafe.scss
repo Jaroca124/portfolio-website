@@ -15,6 +15,11 @@
         }
         a {
             border-bottom: .0625rem solid #777;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                border-bottom: .0625rem solid transparent;
+            }
         }
         .container {
             .container-fluid {
@@ -33,6 +38,34 @@
                     }
                 }
             }
+        }
+    }
+    .teammate {
+        &__picture {
+            margin: 0 auto;
+            height: 4.35rem;
+            width: 4.35rem;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(131,124,247);
+            background: -moz-linear-gradient(0deg, rgba(131,124,247,1) 0%, rgba(107,214,248,1) 56%, rgba(116,251,216,1) 81%);
+            background: -webkit-linear-gradient(0deg, rgba(131,124,247,1) 0%, rgba(107,214,248,1) 56%, rgba(116,251,216,1) 81%);
+            background: linear-gradient(0deg, rgba(131,124,247,1) 0%, rgba(107,214,248,1) 56%, rgba(116,251,216,1) 81%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#837cf7",endColorstr="#74fbd8",GradientType=1);
+            img {
+                margin: 0 auto;
+                display: block;
+                max-width: 100%;
+                height: 4rem;
+                width: 4rem;
+                border-radius: 100%;
+            }
+        }
+        &__content {
+            margin-top: .5rem;
+            text-align: center;
         }
     }
 }
