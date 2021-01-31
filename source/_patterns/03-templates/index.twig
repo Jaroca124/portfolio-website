@@ -79,28 +79,7 @@
             {% endblock %}
         {% endembed %}
         {% include "@organisms/sections/section-covpn/_section-covpn-main.twig" %}
-        {# MJX Music #}
-        {% embed "@organisms/sections/section-default/_section-default-main.twig" with
-            {
-                "section_default_classes": "section--default--mjx section--default--full-width",
-                "section_default_image_orientation": "right"
-            }
-        %}
-            {% block section_default_content %}
-                <h2 class="section--default--mjx__title">MJx Music</h2>
-                <p class="section--default--mjx__subtitle">Website Design &amp; Development</p>
-                <p>My friend Michael Jacob is an aspiring rapper under the stage name MJx. He needed a website designed and developed for his music career and I offered to help him out. Here are a few shots (Home, Music) from the mobile design concept.</p>
-            {% endblock %}
-            {% block section_default_image_right %}
-                {% include "@molecules/blocks/block-images/_block-images-main.twig" with
-                    {
-                        "block_images_classes": "section--default--mjx__shots",
-                        "block_images_animation_direction": "from_left",
-                        "block_images_data": mjxImages
-                    }
-                %}
-            {% endblock %}
-        {% endembed %}
+        {% include "@organisms/sections/section-allsafe/_section-allsafe-main.twig" %}
         {# Dribbble #}
         {% embed "@organisms/sections/section-default/_section-default-main.twig" with
             {

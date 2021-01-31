@@ -1,0 +1,21 @@
+@media (min-width: 600px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+.container {
+    padding: 0 2.5rem;
+}

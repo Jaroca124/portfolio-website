@@ -41,22 +41,6 @@ function renderImages(direction, images) {
   });
 };*/
 $(document).ready(function() {
-    $("#contactUsForm").submit(function(e) {
-        e.preventDefault();
-        var form = $(this);
-        var url = form.attr('action');
-        $.ajax({
-               type: "POST",
-               url: url,
-               data: form.serialize(),
-               success: function(data)
-               {
-                   //alert(data);
-               }
-        });
-    });
-});
-$(document).ready(function() {
     if ($('.component--burger').length) {
         var renderBurgerBool = true;
         var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
@@ -95,6 +79,22 @@ $(document).ready(function() {
             $(targetIngredient).css({'transform': ingredientPosition});
         });
     }
+});
+$(document).ready(function() {
+    $("#contactUsForm").submit(function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+               type: "POST",
+               url: url,
+               data: form.serialize(),
+               success: function(data)
+               {
+                   //alert(data);
+               }
+        });
+    });
 });
 $(document).ready(function() {
     if ($("#shots").length) {

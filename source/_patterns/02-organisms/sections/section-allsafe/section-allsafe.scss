@@ -1,7 +1,6 @@
 .section--default--allsafe {
     position: relative;
     background: $dark-mode-bg;
-    margin: 5rem 0 !important;
     .section--default__content {
         @include media-breakpoint-up(md) {
             padding-left: 3rem !important;
@@ -38,24 +37,6 @@
             padding-bottom: 5rem;
         }
     }
-    &:before {
-        content: "";
-        background-image: linear-gradient(to right bottom, $dark-mode-bg 50%, $dark-mode-bg 50%, transparent 51%);
-        position: absolute;
-        width: 100%;
-        height: 5rem;
-        bottom: -5rem;
-        left: 0;
-    }
-    &:after {
-        content: "";
-        background-image: linear-gradient(to right top, $dark-mode-bg 0%, $dark-mode-bg 50%, transparent 51%);
-        position: absolute;
-        width: 100%;
-        height: 5rem;
-        top: -5rem;
-        left: 0;
-    }
     &__title,
     p {
         color: $white;
@@ -71,6 +52,53 @@
                 background: $white;
                 color: $dark-mode-bg;
             }
+        }
+    }
+}
+
+#layout--portfolio {
+    .section--default--allsafe {
+        margin: 5rem 0 !important;
+        &:before {
+            content: "";
+            background-image: linear-gradient(to right bottom, $dark-mode-bg 50%, $dark-mode-bg 50%, transparent 51%);
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            bottom: -5rem;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            background-image: linear-gradient(to right top, $dark-mode-bg 0%, $dark-mode-bg 50%, transparent 51%);
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            top: -5rem;
+            left: 0;
+        }
+    }
+}
+
+#layout--index {
+    .section--default--allsafe {
+        &:before {
+            content: "";
+            background-image: linear-gradient(to left top, $dark-mode-bg 50%, $dark-mode-bg 50%, transparent 51%);
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            top: -5rem;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            background-image: linear-gradient(to left bottom, $dark-mode-bg 0%, $dark-mode-bg 50%, transparent 51%);
+            position: absolute;
+            width: 100%;
+            height: 5rem;
+            bottom: -5rem;
+            left: 0;
         }
     }
 }
