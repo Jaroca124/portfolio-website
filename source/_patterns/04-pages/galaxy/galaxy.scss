@@ -1,0 +1,39 @@
+#layout--galaxy {
+    background: $dark-mode-bg;
+    * {
+        color: $white;
+    }
+    .container-fluid,
+    .container {
+        z-index: 1;
+        position: relative;
+    }
+    .section {
+        margin-bottom: 3rem;
+        &__image {
+            display: block;
+            margin: 1.5rem auto 0 auto;
+            max-width: 100%;
+            &.small {
+                width: 20rem;
+            }
+        }
+    }
+    .background {
+        &--foreground,
+        &--background {
+            width: 100%;
+            position: fixed;
+            left: 0;
+        }
+        &--foreground {
+            bottom: -3rem;
+            z-index: 2;
+        }
+        &--background {
+            opacity: .2;
+            z-index: 0;
+            top: 0;
+        }
+    }
+}
