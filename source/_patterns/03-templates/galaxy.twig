@@ -8,13 +8,13 @@
     {% endblock %}
     
     {% block main %}
-        {% include "@atoms/images/image-default/_image-default-main.twig" with
+        {# {% include "@atoms/images/image-default/_image-default-main.twig" with
             {
                 "image_default_classes": "background--foreground",
                 "image_src": "redhat/foreground.png",
                 "image_alt": ""
             }
-        %}
+        %} #}
 
         <div class="container">
             <div class="row">
@@ -436,13 +436,13 @@
             </div>
         </div>
 
-        {% include "@atoms/images/image-default/_image-default-main.twig" with
+        {# {% include "@atoms/images/image-default/_image-default-main.twig" with
             {
                 "image_default_classes": "background--background",
                 "image_src": "redhat/background.jpg",
                 "image_alt": ""
             }
-        %}
+        %} #}
     {% endblock %}
 
     {% block footer %}

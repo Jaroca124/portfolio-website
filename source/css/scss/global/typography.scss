@@ -1,18 +1,10 @@
-html,
-body {
-    font-family: $font-family-body;
-    font-weight: 400;
-    color: $color-text-body;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: $color-type-heading;
     font-family: $font-family-heading;
     font-weight: 400;
 }

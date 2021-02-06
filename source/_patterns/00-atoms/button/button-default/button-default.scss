@@ -1,13 +1,13 @@
 .button--default {
     border-radius: 1000px;
-    border: 2px solid $color-text-body;
+    border: 2px solid $color-text-link;
     padding: .5rem 2rem;
     font-weight: $fw-bold;
-    color: $color-text-body;
+    color: $color-text-link;
     cursor: pointer;
     &:hover,
     &:focus {
-        background: $color-text-body;
+        background: $color-text-link;
         color: $white;
         text-decoration: none;
     }

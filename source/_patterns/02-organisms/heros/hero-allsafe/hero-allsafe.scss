@@ -1,9 +1,18 @@
 .hero--allsafe {
     height: auto;
     width: 100%;
-    overflow: hidden;
     position: relative;
-    background: rgba(0,0,0,.7);
+    background: $dark-mode-bg;
+    margin-bottom: 5rem;
+    &:before {
+        content: "";
+        background-image: linear-gradient(to right bottom, $dark-mode-bg 50%, $dark-mode-bg 50%, transparent 51%);
+        position: absolute;
+        width: 100%;
+        height: 5rem;
+        bottom: -5rem;
+        left: 0;
+    }
     &__background {
         position: absolute;
         top: 0;
@@ -12,11 +21,11 @@
         height: 100%;
         img {
             position: absolute;
-            min-width: 100%;
+            width: 40rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: -1;
+            z-index: 0;
         }
     }
     &__navigation {
@@ -75,6 +84,7 @@
                 }
             }
             &__feature {
+                position: relative;
                 padding-top: 2rem;
                 @include media-breakpoint-up(md) {
                     padding: 4rem;
