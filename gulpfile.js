@@ -57,7 +57,7 @@ var sassOption = {
     ]
 };
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
     return gulp.src(config.sassPath + '/**/style.scss')
         .pipe(sassGlob())
         .pipe(concat('style.css'))
@@ -72,21 +72,19 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('pl', ['sass'], function(cb) {
+gulp.task('pl', (cb) => {
     exec('php ./pl/core/console --generate', function(err, stdout, stderr) {
         browserSync.reload();
         cb(err);
     });
 });
 
-gulp.task('js', ['pl'], function(cb) {
+gulp.task('js', () => {
     gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
         .pipe(gulp.dest('./source/js'));
     gulp.src('./node_modules/particlesjs/dist/particles.min.js')
         .pipe(gulp.dest('./source/js'));
     gulp.src('./node_modules/materialize-css/dist/js/materialize.min.js')
-        .pipe(gulp.dest('./source/js'));
-    gulp.src('./node_modules/progressbar.js/dist/progressbar.min.js')
         .pipe(gulp.dest('./source/js'));
 
     return gulp.src('./source/_patterns/**/*.js')
@@ -97,7 +95,7 @@ gulp.task('js', ['pl'], function(cb) {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build_prod', ['sass', 'js', 'pl'], function(cb) {
+gulp.task('moveAssets', () => {
     //Pattern Lab and Sass Will be Generated First Based on Dependencies
 
     // Home Page
@@ -235,8 +233,10 @@ gulp.task('build_prod', ['sass', 'js', 'pl'], function(cb) {
     console.log("Finished Copying Fonts");
 });
 
+gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
+
 // Start Static Server
-gulp.task('serve', ['sass', 'pl'], function() {
+gulp.task('serve', () => {
     browserSync.init({
         server: {
             baseDir: './',
@@ -247,11 +247,11 @@ gulp.task('serve', ['sass', 'pl'], function() {
 });
 
 // Watching Source Files
-gulp.task('source:watch', ['sass', 'pl', 'js'], function() {
+gulp.task('watch', () => {
     gulp.watch('./source/_patterns/**/*.twig', ['pl']);
     gulp.watch('./source/_patterns/**/*.scss', ['sass', 'pl']);
     gulp.watch('./source/css/scss/**/*.scss', ['sass', 'pl']);
     gulp.watch('./source/_patterns/**/*.js', ['pl', 'js']);
 });
 
-gulp.task('default', ['source:watch', 'serve']);
+gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve', 'watch'));
