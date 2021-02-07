@@ -1,0 +1,13 @@
+{% set button_icon_classes = button_icon_classes|default() %}
+{% set button_icon_src = button_icon_src|default() %}
+{% set button_icon_alt = button_icon_alt|default() %}
+{% set button_icon_href = button_icon_href|default() %}
+
+<a class="button-pl button--icon {{ button_icon_classes }}" href="{{ button_icon_href }}">
+    {% include "@atoms/images/image-default/_image-default-main.twig" with
+        {
+            "image_src": button_icon_src,
+            "image_alt": button_icon_alt
+        }
+    %}
+</a>

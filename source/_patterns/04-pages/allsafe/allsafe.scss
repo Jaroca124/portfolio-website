@@ -66,6 +66,19 @@
         &__content {
             margin-top: .5rem;
             text-align: center;
+            p {
+                color: $color-type-heading;
+                margin-bottom: 0;
+            }
+            &__socials {
+                .button--icon {
+                    border-bottom: 0;
+                    img {
+                        width: 1.25rem;
+                        margin: 0 .25rem;
+                    }
+                }
+            }
         }
     }
 }

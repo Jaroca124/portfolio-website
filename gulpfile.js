@@ -228,9 +228,8 @@ gulp.task('moveAssets', () => {
 
     // Copy Fonts
     console.log("Starting Copy of Fonts");
-    gulp.src('./source/fonts/**/*')
+    return gulp.src('./source/fonts/**/*')
         .pipe(gulp.dest('./public_html/fonts'));
-    console.log("Finished Copying Fonts");
 });
 
 gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
@@ -244,14 +243,11 @@ gulp.task('serve', () => {
         startPath: 'pl/public/',
         open: true
     });
+
+    gulp.watch('./source/_patterns/**/*.twig', gulp.series('sass','js','pl'));
+    gulp.watch('./source/_patterns/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./source/css/scss/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./source/_patterns/**/*.js', gulp.series('sass','js','pl'));
 });
 
-// Watching Source Files
-gulp.task('watch', () => {
-    gulp.watch('./source/_patterns/**/*.twig', ['pl']);
-    gulp.watch('./source/_patterns/**/*.scss', ['sass', 'pl']);
-    gulp.watch('./source/css/scss/**/*.scss', ['sass', 'pl']);
-    gulp.watch('./source/_patterns/**/*.js', ['pl', 'js']);
-});
-
-gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve', 'watch'));
+gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve'));
