@@ -2,7 +2,7 @@
     "prod_build": true,
     "activeTab": "portfolio",
     "path_to_assets": "../",
-    "title": "Portfolio - Jacob Caccamo",
+    "title": "Portfolio | Jacob Caccamo",
     "headshot": {
         "src": "index/headshot.jpg",
         "alt": "Jacob Caccamo"
