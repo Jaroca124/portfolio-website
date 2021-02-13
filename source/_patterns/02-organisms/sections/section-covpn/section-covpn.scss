@@ -23,7 +23,25 @@
             padding-bottom: 0;
         }
     }
-
+    .section--default--covpn__stats {
+        display: flex;
+        margin: 0 -1rem;
+        justify-content: center;
+        &__stat {
+            margin: 0 1rem;
+            font-size: .75rem;
+            span {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    .section--default--covpn__stat-disclaimer {
+        text-align: center;
+        width: 100%;
+        font-size: .5rem;
+        margin-top: .75rem;
+        font-style: italic;
+    }
     .section--default__image,
     .section--default__content {
         @include media-breakpoint-up(md) {

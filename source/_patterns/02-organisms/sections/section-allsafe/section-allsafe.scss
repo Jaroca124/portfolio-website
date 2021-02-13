@@ -33,9 +33,7 @@
         }
     }
     >.row {
-        @include media-breakpoint-up(md) {
-            padding-bottom: 5rem;
-        }
+        padding: 2rem 8rem 2rem 8rem !important;
     }
     &__title,
     p {
