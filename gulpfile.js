@@ -208,6 +208,9 @@ gulp.task('moveAssets', () => {
         .pipe(gulp.dest('./public_html/allsafe'));
     console.log("Allsafe Build Finished");
 
+    // Sitemap
+    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./public_html/sitemap/'));
+
     // Copy CSS
     console.log("Starting Copy of CSS");
     gulp.src('./source/css/style.css')

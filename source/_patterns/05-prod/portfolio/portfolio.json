@@ -3,6 +3,7 @@
     "activeTab": "portfolio",
     "path_to_assets": "../",
     "title": "Portfolio | Jacob Caccamo",
+    "metaDescription": "View my design, development, and user research portfolio.",
     "headshot": {
         "src": "index/Headshot_Original_Round.png",
         "alt": "Jacob Caccamo"

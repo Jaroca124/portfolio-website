@@ -3,6 +3,7 @@
     "path_to_assets": "../",
     "activeTab": "education",
     "title": "Education | Jacob Caccamo",
+    "metaDescription": "Information about my education including additional Udemy courses and achievements.",
     "headshot": {
         "src": "index/Headshot_Original_Round.png",
         "alt": "Jacob Caccamo"
