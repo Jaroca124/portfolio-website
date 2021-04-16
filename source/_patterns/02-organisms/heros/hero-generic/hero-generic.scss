@@ -112,67 +112,6 @@
             }
         }
     }
-    &--ncp {
-        height: auto;
-        min-height: auto;
-        position: relative;
-        .hero--generic__background {
-            background-color: rgba(0,0,0,.7);
-            &__inner-wrapper {
-                z-index: -1;
-                img {
-                    max-width: none;
-                    @include media-breakpoint-up(lg) {
-                        width: 100%;
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-        .hero--generic__content {
-            @extend .container-fluid;
-            &__inner {
-                @extend .row;
-                &__text {
-                    padding: 3rem;
-                    @include media-breakpoint-up(lg) {
-                        padding: 3rem 0 6rem 7rem;
-                    }
-                    h1 {
-                        color: $white;
-                        font-family: 'Seltons', 'Roboto', sans-serif;
-                        font-size: 6rem;
-                        line-height: 1.25;
-                        sup {
-                            font-size: 1rem;
-                            top: -4rem;
-                        }
-                        @include media-breakpoint-up(lg) {
-                            font-size: 8.8rem;
-                            sup {
-                                font-size: 1rem;
-                                top: -5.8em;
-                            }
-                        }
-                    }
-                    span {
-                        text-transform: uppercase;
-                        color: $white;
-                        font-weight: $fw-black;
-                        font-size: 2rem;
-                        letter-spacing: 0.15rem;
-                    }
-                }
-                &__img {
-                    display: flex;
-                    align-items: flex-end;
-                    img {
-                        max-width: 90%;
-                    }
-                }
-            }
-        }
-    }
     &--vgs {
         height: auto;
         min-height: auto;
