@@ -1,0 +1,9 @@
+{% set component_toc_classes = component_toc_classes|default() %}
+{% set component_toc_title = component_toc_title|default() %}
+
+<nav class="component-pl component--toc {{ component_toc_classes }}">
+    <p class="component--toc__title">{{ component_toc_title }}</p>
+    <div class="component--toc__list table-of-contents">
+        {% block component_toc_contents %}{% endblock %}
+    </div>
+</nav>

@@ -57,6 +57,15 @@ var sassOption = {
     ]
 };
 
+let scripts = [
+    './node_modules/particlesjs/dist/particles.min.js',
+    './node_modules/stickybits/dist/stickybits.min.js'
+];
+gulp.task('transfer', () => {
+    return gulp.src(scripts)
+        .pipe(gulp.dest('./source/js/'));
+});
+
 gulp.task('sass', () => {
     return gulp.src(config.sassPath + '/**/style.scss')
         .pipe(sassGlob())
@@ -235,7 +244,7 @@ gulp.task('moveAssets', () => {
         .pipe(gulp.dest('./public_html/fonts'));
 });
 
-gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
+gulp.task('build', gulp.series('transfer', 'sass', 'js', 'pl', 'moveAssets'));
 
 // Start Static Server
 gulp.task('serve', () => {
@@ -253,4 +262,4 @@ gulp.task('serve', () => {
     gulp.watch('./source/_patterns/**/*.js', gulp.series('sass','js','pl'));
 });
 
-gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve'));
+gulp.task('default', gulp.series('transfer', 'sass', 'js', 'pl', 'serve'));

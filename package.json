@@ -15,7 +15,7 @@
     "materialize-css": "^1.0.0",
     "npm": "^6.14.11",
     "particlesjs": "^2.2.3",
-    "stickybits": "^3.7.8"
+    "stickybits": "^3.7.9"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

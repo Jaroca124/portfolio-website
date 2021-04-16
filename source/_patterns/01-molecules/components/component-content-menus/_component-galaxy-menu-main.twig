@@ -1,0 +1,66 @@
+{% set component_content_menus_classes = component_content_menus_classes|default() %}
+
+<div class="component-pl component--content-menu {{ component_content_menus_classes }}" id="stickybits-target">
+    {% embed "@molecules/components/component-toc/_component-toc-main.twig" with
+        {
+            "component_toc_title": "Methods"
+        }
+    %}
+        {% block component_toc_contents %}
+            <div class="accordion" id="methodAccordion">
+                <div class="accordion--group">
+                    <div id="overviewAcc">
+                        <button type="button" data-toggle="collapse" data-target="#overviewCol" aria-expanded="true" aria-controls="overviewCol">Overview</button>
+                    </div>
+                    <div id="overviewCol" class="collapse show" aria-labelledby="overviewAcc" data-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#goals">Goals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <div id="identifyAcc">
+                        <button type="button" data-toggle="collapse" data-target="#identifyCol" aria-expanded="true" aria-controls="identifyCol">Identify</button>
+                    </div>
+                    <div id="identifyCol" class="collapse" aria-labelledby="identifyAcc" data-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#exploratory-interviews">Exploratory Interviews</a></li>
+                            <li><a href="#lit-review">Online Literature Review</a></li>
+                            <li><a href="#heuristic-review">Heuristic Review</a></li>
+                            <li><a href="#expert-review">Expert Review</a></li>
+                            <li><a href="#survey-creation">Survey Creation</a></li>
+                            <li><a href="#survey-results">Survey Results</a></li>
+                            <li><a href="#user-needs">User Needs Development</a></li>
+                            <li><a href="#system-requirements">System Requirements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <div id="designAcc">
+                        <button type="button" data-toggle="collapse" data-target="#designCol" aria-expanded="true" aria-controls="designCol">Design</button>
+                    </div>
+                    <div id="designCol" class="collapse" aria-labelledby="designAcc" data-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#developing-design">Developing Design Process</a></li>
+                            <li><a href="#design-brainstorming">Design Brainstorming</a></li>
+                            <li><a href="#feature-development">Feature Development</a></li>
+                            <li><a href="#concept-generation">Concept Generation</a></li>
+                            <li><a href="#user-testing-1">Usability Testing Round 1</a></li>
+                            <li><a href="#user-testing-1-results">Usability Testing Results</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <div id="verifyAcc">
+                        <button type="button" data-toggle="collapse" data-target="#verifyCol" aria-expanded="true" aria-controls="verifyCol">Verify &amp; Validate</button>
+                    </div>
+                    <div id="verifyCol" class="collapse" aria-labelledby="verifyAcc" data-parent="#methodAccordion">
+                        <ul>
+                            <li>Test</li>
+                        </ul>
+                    </div>
+                </div>
+        {% endblock %}
+    {% endembed %}
+</div>
