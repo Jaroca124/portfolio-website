@@ -167,15 +167,15 @@ $(document).ready(function() {
 //         bar.animate(1.0); // Number from 0.0 to 1.0
 //     }
 // });
-$(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-});
 // $(document).ready(function() {
 //     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
 //         $('.navigation--drawer').toggleClass('drawer--open');
 //         $('.navigation--drawer--overlay').toggle();
 //     });
 // });
+$(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+});
 // $(document).ready(function() {
 //     $('.navigation--mobile__menu-button').click(function() {
 //         $('.navigation--mobile__link').toggleClass('open');
