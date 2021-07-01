@@ -475,3 +475,7 @@
         }
     }
 }
+
+.section--default--vgs__title {
+    @extend h2;
+}

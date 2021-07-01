@@ -209,7 +209,7 @@ gulp.task('moveAssets', () => {
     console.log("Allsafe Build Finished");
 
     // Sitemap
-    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./public_html/sitemap/'));
+    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./public_html/'));
 
     // Copy CSS
     console.log("Starting Copy of CSS");
