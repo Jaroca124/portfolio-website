@@ -206,8 +206,8 @@ gulp.task('moveAssets', () => {
 
     // Copy Fonts
     console.log("Starting Copy of Fonts");
-    return gulp.src('./src/fonts/**/*')
-        .pipe(gulp.dest('./dist/fonts'));
+    return gulp.src('./src/webfonts/**/*')
+        .pipe(gulp.dest('./dist/webfonts'));
 });
 
 gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
