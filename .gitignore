@@ -1,8 +1,7 @@
-node_modules/
-connected-crew/node_modules/
-source/node_modules/
 .DS_Store
-
+node_modules/
 export/
 public/
 vendor/
+dist/
+archive/connected-crew/node_modules/
