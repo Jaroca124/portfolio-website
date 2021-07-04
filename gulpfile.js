@@ -1,30 +1,17 @@
-/**
- * Modified by Jake on 8/26/18
- */
-
-var BUILD = false;
-var DEV = false;
-var PROD = true;
-// Ends configuration setting
-
-if (BUILD && DEV) {
-    throw "Cannot have different environment true at same time";
-}
-
-var gulp = require('gulp'),
+var browserSync = require('browser-sync').create(),
+    concat = require('gulp-concat'),
+    exec = require('child_process').exec,
+    gulp = require('gulp'),
+    minify = require('gulp-minify'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     sourcemaps = require('gulp-sourcemaps'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    minify = require('gulp-minify'),
-    browserSync = require('browser-sync').create(),
-    exec = require('child_process').exec;
+    rename = require('gulp-rename');
 
 var config = {
-    sassPath: './source/css',
-    bootstrapPath: './source/node_modules/bootstrap/scss',
-    nodeModules: './source/node_modules',
+    sassPath: './src/css',
+    bootstrapPath: './src/node_modules/bootstrap/scss',
+    nodeModules: './src/node_modules',
     sassWebFontPath: './node_modules/sass-web-fonts',
     prodFolder: './pl/public'
 };
@@ -45,17 +32,6 @@ var buildPaths = {
     allsafe: './pl/public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
 }
 
-var sassOption = {
-    errLogToConsole: true,
-    // Default environment is dev
-    outputStyle: BUILD ? 'compressed' : 'expanded',
-    includePaths: [
-        config.sassWebFontPath + '/_web-fonts.scss',
-        config.sassPath,
-        config.nodeModules
-    ]
-};
-
 gulp.task('sass', () => {
     return gulp.src(config.sassPath + '/**/style.scss')
         .pipe(sassGlob())
@@ -66,8 +42,8 @@ gulp.task('sass', () => {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write('./source/maps'))
-        .pipe(gulp.dest('./source/css'))
+        .pipe(sourcemaps.write('./src/maps'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());
 });
 
@@ -80,17 +56,17 @@ gulp.task('pl', (cb) => {
 
 gulp.task('js', () => {
     gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
     gulp.src('./node_modules/particlesjs/dist/particles.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
     gulp.src('./node_modules/materialize-css/dist/js/materialize.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
 
-    return gulp.src('./source/_patterns/**/*.js')
+    return gulp.src('./src/_patterns/**/*.js')
         .pipe(concat('script.js'))
         .pipe(minify())
-        .pipe(sourcemaps.write('./source/js'))
-        .pipe(gulp.dest('./source/js'))
+        .pipe(sourcemaps.write('./src/js'))
+        .pipe(gulp.dest('./src/js'))
         .pipe(browserSync.stream());
 });
 
@@ -208,29 +184,29 @@ gulp.task('moveAssets', () => {
     console.log("Allsafe Build Finished");
 
     // Sitemap
-    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./dist/'));
+    gulp.src('./src/sitemap.xml').pipe(gulp.dest('./dist/'));
 
     // Copy CSS
     console.log("Starting Copy of CSS");
-    gulp.src('./source/css/style.css')
+    gulp.src('./src/css/style.css')
         .pipe(gulp.dest('./dist/css'));
     console.log("Finished Copying CSS");
 
     // Copy JS
     console.log("Starting Copy of JS");
-    gulp.src('./source/js/*.js')
+    gulp.src('./src/js/*.js')
         .pipe(gulp.dest('./dist/js'));
     console.log("Finished Copying JS");
 
     // Copy Images
     console.log("Starting Copy of Images");
-    gulp.src('./source/assets/**/*')
+    gulp.src('./src/assets/**/*')
         .pipe(gulp.dest('./dist/assets'));
     console.log("Finished Copying Images");
 
     // Copy Fonts
     console.log("Starting Copy of Fonts");
-    return gulp.src('./source/fonts/**/*')
+    return gulp.src('./src/fonts/**/*')
         .pipe(gulp.dest('./dist/fonts'));
 });
 
@@ -246,10 +222,10 @@ gulp.task('serve', () => {
         open: true
     });
 
-    gulp.watch('./source/_patterns/**/*.twig', gulp.series('sass','js','pl'));
-    gulp.watch('./source/_patterns/**/*.scss', gulp.series('sass','js','pl'));
-    gulp.watch('./source/css/scss/**/*.scss', gulp.series('sass','js','pl'));
-    gulp.watch('./source/_patterns/**/*.js', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.twig', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./src/css/scss/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.js', gulp.series('sass','js','pl'));
 });
 
 gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve'));
