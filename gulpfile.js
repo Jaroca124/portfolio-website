@@ -1,5 +1,4 @@
 /**
- * Created by Pradip on 5/11/2016.
  * Modified by Jake on 8/26/18
  */
 
@@ -31,7 +30,7 @@ var config = {
 };
 
 var buildPaths = {
-    target: './public_html',
+    target: './dist',
     styleGuide: './pl/public/index.html',
     home: './pl/public/patterns/05-prod-index-index/05-prod-index-index.html',
     portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
@@ -115,7 +114,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/portfolio'));
+        .pipe(gulp.dest('./dist/portfolio'));
     console.log("Portfolio Build Finished");
 
     // Feed
@@ -125,7 +124,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/feed'));
+        .pipe(gulp.dest('./dist/feed'));
     console.log("Feed Build Finished");
 
     // Skills
@@ -135,7 +134,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/skills'));
+        .pipe(gulp.dest('./dist/skills'));
     console.log("Skills Build Finished");
 
     // Education
@@ -145,7 +144,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/education'));
+        .pipe(gulp.dest('./dist/education'));
     console.log("Education Build Finished");
 
     // Experience
@@ -155,7 +154,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/experience'));
+        .pipe(gulp.dest('./dist/experience'));
     console.log("Experience Build Finished");
 
     // About
@@ -165,7 +164,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/about'));
+        .pipe(gulp.dest('./dist/about'));
     console.log("About Build Finished");
 
     // Marvel
@@ -175,7 +174,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/marvel'));
+        .pipe(gulp.dest('./dist/marvel'));
     console.log("Marvel Build Finished");
 
     // VGS
@@ -185,7 +184,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/video-game-series'));
+        .pipe(gulp.dest('./dist/video-game-series'));
     console.log("VGS Build Finished");
 
     // NCP
@@ -195,7 +194,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/ncp'));
+        .pipe(gulp.dest('./dist/ncp'));
     console.log("NCP Build Finished");
     
     // Allsafe
@@ -205,34 +204,34 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/allsafe'));
+        .pipe(gulp.dest('./dist/allsafe'));
     console.log("Allsafe Build Finished");
 
     // Sitemap
-    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./public_html/'));
+    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./dist/'));
 
     // Copy CSS
     console.log("Starting Copy of CSS");
     gulp.src('./source/css/style.css')
-        .pipe(gulp.dest('./public_html/css'));
+        .pipe(gulp.dest('./dist/css'));
     console.log("Finished Copying CSS");
 
     // Copy JS
     console.log("Starting Copy of JS");
     gulp.src('./source/js/*.js')
-        .pipe(gulp.dest('./public_html/js'));
+        .pipe(gulp.dest('./dist/js'));
     console.log("Finished Copying JS");
 
     // Copy Images
     console.log("Starting Copy of Images");
     gulp.src('./source/assets/**/*')
-        .pipe(gulp.dest('./public_html/assets'));
+        .pipe(gulp.dest('./dist/assets'));
     console.log("Finished Copying Images");
 
     // Copy Fonts
     console.log("Starting Copy of Fonts");
     return gulp.src('./source/fonts/**/*')
-        .pipe(gulp.dest('./public_html/fonts'));
+        .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
