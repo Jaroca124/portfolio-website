@@ -97,6 +97,22 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function() {
+    if ($('.section--default--cabcs').length) {
+        var renderDroneBool = true;
+        var droneTrigger = $('.section--default--cabcs').offset().top;
+        $(window).scroll(function() {   
+            if ((($(window).scrollTop() + ($(window).height() / 2)) >= droneTrigger) && renderDroneBool) {
+                renderDrone();
+                renderDroneBool = false;
+            }
+        });
+    }
+
+    function renderDrone() {
+        $('.section--default--cabcs').find('.section--default__image').find('img').css({transform: "translate(0, -50%) scale(.8)"});
+    }
+});
+$(document).ready(function() {
     if ($("#shots").length) {
         var projectID = "";
         // Determine Project
@@ -136,22 +152,6 @@ function parseData(data, projectID) {
         $('#shots').append('<p>No shots yet!</p>');
     }
 }
-$(document).ready(function() {
-    if ($('.section--default--cabcs').length) {
-        var renderDroneBool = true;
-        var droneTrigger = $('.section--default--cabcs').offset().top;
-        $(window).scroll(function() {   
-            if ((($(window).scrollTop() + ($(window).height() / 2)) >= droneTrigger) && renderDroneBool) {
-                renderDrone();
-                renderDroneBool = false;
-            }
-        });
-    }
-
-    function renderDrone() {
-        $('.section--default--cabcs').find('.section--default__image').find('img').css({transform: "translate(0, -50%) scale(.8)"});
-    }
-});
 // $(document).ready(function() {
 //     if ($('#component--logo__circle').length) {
 //         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -171,14 +171,14 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy();
 });
 // $(document).ready(function() {
-//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
-//         $('.navigation--drawer').toggleClass('drawer--open');
-//         $('.navigation--drawer--overlay').toggle();
+//     $('.navigation--mobile__menu-button').click(function() {
+//         $('.navigation--mobile__link').toggleClass('open');
 //     });
 // });
 // $(document).ready(function() {
-//     $('.navigation--mobile__menu-button').click(function() {
-//         $('.navigation--mobile__link').toggleClass('open');
+//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
+//         $('.navigation--drawer').toggleClass('drawer--open');
+//         $('.navigation--drawer--overlay').toggle();
 //     });
 // });
 $( document ).ready(function() {

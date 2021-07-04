@@ -40,15 +40,13 @@ gulp.task('sass', () => {
             basename: 'style',
             extname: '.css'
         }))
-        .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write('./src/maps'))
         .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('pl', (cb) => {
-    exec('php ./pl/core/console --generate', function(err, stdout, stderr) {
+    exec('php core/console --generate', function(err, stdout, stderr) {
         browserSync.reload();
         cb(err);
     });
@@ -65,7 +63,6 @@ gulp.task('js', () => {
     return gulp.src('./src/_patterns/**/*.js')
         .pipe(concat('script.js'))
         .pipe(minify())
-        .pipe(sourcemaps.write('./src/js'))
         .pipe(gulp.dest('./src/js'))
         .pipe(browserSync.stream());
 });
@@ -218,7 +215,7 @@ gulp.task('serve', () => {
         server: {
             baseDir: './',
         },
-        startPath: 'pl/public/',
+        startPath: 'public/',
         open: true
     });
 

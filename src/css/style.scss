@@ -2,7 +2,7 @@
 @import "scss/reset/breakpoints.scss";
 
 /* BOOTSTRAP */
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 /* VARIABLES */
 @import "scss/variables.scss";
@@ -11,8 +11,8 @@
 @import "scss/materialize/*.scss";
 
 /* MATERIALIZE */
-@import "../node_modules/materialize-css/sass/components/_tabs.scss";
-@import "../node_modules/materialize-css/sass/components/_table_of_contents.scss";
+@import "../../node_modules/materialize-css/sass/components/_tabs.scss";
+@import "../../node_modules/materialize-css/sass/components/_table_of_contents.scss";
 
 /* PATTERNS */
 @import "scss/global/*.scss";
