@@ -5,57 +5,386 @@
         "src": "index/Headshot_Original_Round.png",
         "alt": "Jacob Caccamo Headshot"
     },
-    "experience_data": [
-        {
-            "classes": "bah",
-            "logo": {
-                "src": "experience/logos/bahLogo.png",
-                "alt": "Test Logo"
+    "index": {
+        "heroShots": [
+            {
+                "src": "index/heroShots/ARKHAM_Final.png",
+                "alt": "Batman Arkham Knight Shot"
             },
-            "name": "Booz Allen Hamilton",
-            "title": "UI/UX Designer – Lead Technologist (Associate)",
-            "location": "Washington, DC",
-            "description": "<h3>National Institute of Allergy &amp; Infectious Diseases (NIAID, NIH)</h3> <ul><li>Designed and developed the <a href='https://www.coronaviruspreventionnetwork.org/'>COVID-19 Prevention Network</a> to help recruit volunteers for COVID-19 vaccine trials.<ul><li>19K Daily Average Users, 11M+ Page Views</li></ul></li><li>Developed the visual theme of the NIAID intranet as part of an end-to-end redesign and migration project (SharePoint to Drupal 8).</li><li>Led the visual design refresh and front-end development effort for the NIAID public website: www.niaid.nih.gov.</li><li>Created the Pattern Lab instance for Drupal 8, using HTML, CSS, JavaScript, and Twig, which serves as the creative guide and design platform to reduce front-end development time.</li><li>Built a master prototype to guide the Drupal development team in creating UX-verified layouts.</li><li>Designed and facilitated an eye tracking study to evaluate and enhance the intranet and public websites’ visual designs.</li><li>Facilitated a Design Sprint with key stakeholders to assess and improve the overall digital experience of NIAID employees.</li></ul><h3>Innovation Center – Internal Website (Enterprise-Wide Web App) Redesign</h3><ul><li>Conducted brainstorming sessions with stakeholders to create the design and development roadmap for a four-stage deployment process.</li><li>Gained project plan approval from directorate leadership for the web app, accessible to 25K+ employees.</li><li>Produced wireframes and high-fidelity mockups to more effectively display content and improve user comprehension/satisfaction.</li><li>Managed the UI development and directed interaction choices to bolster site UX.</li></ul>"
+            {
+                "src": "index/heroShots/AVENGERS_Final.png",
+                "alt": "Avengers Shot"
+            },
+            {
+                "src": "index/heroShots/WWII_Final.png",
+                "alt": "Call of Duty WWII Shot"
+            },
+            {
+                "src": "index/heroShots/BEAR_Final.png",
+                "alt": "Music Visualizer - blackbear Shot"
+            },
+            {
+                "src": "index/heroShots/BOPS4_Final.png",
+                "alt": "Black Ops 4 Shot"
+            },
+            {
+                "src": "index/heroShots/CA_Final.png",
+                "alt": "Captain America Shot"
+            },
+            {
+                "src": "index/heroShots/CM_Final.png",
+                "alt": "Captain Marvel Shot"
+            },
+            {
+                "src": "index/heroShots/CONTROL_Final.png",
+                "alt": "Control Shot"
+            },
+            {
+                "src": "index/heroShots/EG_Final.png",
+                "alt": "Endgame Shot"
+            },
+            {
+                "src": "index/heroShots/IM_Final.png",
+                "alt": "Iron Man and Hulk Shot"
+            },
+            {
+                "src": "index/heroShots/WW_Final.png",
+                "alt": "Woof Walker Shot"
+            },
+            {
+                "src": "index/heroShots/IM3_Final.png",
+                "alt": "Iron Man 3 and Thor: The Dark World Shot"
+            },
+            {
+                "src": "index/heroShots/IW_Final.png",
+                "alt": "Infinity War Shot"
+            },
+            {
+                "src": "index/heroShots/MIXER_Final.png",
+                "alt": "Mixer (Cocktail Recipe Sharing App) Shot"
+            },
+            {
+                "src": "index/heroShots/PHANTOM_Final.png",
+                "alt": "Nike Phantom Splash Screen Shot"
+            },
+            {
+                "src": "index/heroShots/SHIELD_Final.png",
+                "alt": "Agents of SHIELD Shot"
+            },
+            {
+                "src": "index/heroShots/TECHRING_Final.png",
+                "alt": "Tech Ring Carousel Shot"
+            },
+            {
+                "src": "index/heroShots/TF_Final.png",
+                "alt": "Titanfall 2 Shot"
+            },
+            {
+                "src": "index/heroShots/THOR_Final.png",
+                "alt": "Thor: Ragnarok Shot"
+            },
+            {
+                "src": "index/heroShots/TR_Final.png",
+                "alt": "Tomb Raider Shot"
+            },
+            {
+                "src": "index/heroShots/WAVE_Final.png",
+                "alt": "Ride the Wave Shot"
+            },
+            {
+                "src": "index/heroShots/G_Final.png",
+                "alt": "G-Eazy Shot"
+            },
+            {
+                "src": "index/heroShots/WD_Final.png",
+                "alt": "Watch Dogs 2 Shot"
+            },
+            {
+                "src": "index/heroShots/PHANTOM2_Final.png",
+                "alt": "Nike Phantom Specs Screen Shot"
+            }
+        ],
+        "ncpImages": [
+            {
+                "src": "ncp/shot1.png",
+                "alt": "Beach Shot"
+            },
+            {
+                "src": "ncp/shot2.png",
+                "alt": "Forrest Shot"
+            },
+            {
+                "src": "ncp/shot3.png",
+                "alt": "Sky Shot"
+            },
+            {
+                "src": "ncp/shot4.png",
+                "alt": "Mountain Shot"
+            },
+            {
+                "src": "ncp/shot5.png",
+                "alt": "Artic Fox Shot"
+            },
+            {
+                "src": "ncp/shot6.png",
+                "alt": "Flower Shot"
+            }
+        ],
+        "marvelImages": [
+            {
+                "src": "marvel/MCC_2.png",
+                "alt": "Iron Man Shot"
+            },
+            {
+                "src": "marvel/MCC_5.png",
+                "alt": "Captain Marvel Shot"
+            },
+            {
+                "src": "marvel/MCC_1.png",
+                "alt": "Thor Shot"
+            },
+            {
+                "src": "marvel/MCC_6.png",
+                "alt": "Captain America Shot"
+            },
+            {
+                "src": "marvel/MCC_3.png",
+                "alt": "Agent Peggy Carter Shot"
+            },
+            {
+                "src": "marvel/MCC_4.png",
+                "alt": "Hulk Shot"
+            }
+        ],
+        "mjxImages": [
+            {
+                "src": "mjx/mjx_1Asset1.png",
+                "alt": "MJx Home Page on Mobile"
+            },
+            {
+                "src": "mjx/mjx_2Asset2.png",
+                "alt": "MJx Music Page on Mobile"
+            }
+        ],
+        "dribbbleImage": [
+            {
+                "src": "dribbble.png",
+                "alt": "Jacob Caccamo's Dribbble"
+            }
+        ],
+        "siteSections": [
+            {
+                "src": "portfolio.jpg",
+                "alt": "Portfolio",
+                "text": "Portfolio",
+                "href": "/portfolio"
+            },
+            {
+                "src": "experience.jpg",
+                "alt": "Experience",
+                "text": "Experience",
+                "href": "/experience"
+            },
+            {
+                "src": "education.jpg",
+                "alt": "Education",
+                "text": "Education",
+                "href": "/education"
+            },
+            {
+                "src": "skills.jpg",
+                "alt": "Skills",
+                "text": "Skills",
+                "href": "/skills"
+            }
+        ]
+    },
+    "education": {
+        "tuftsLogo": {
+            "src": "experience/logos/L0.jpg",
+            "alt": "Tufts University Logo"
         },
-        {
-            "logo": {
-                "src": "experience/logos/L0.jpg",
-                "alt": "Tufts University Logo"
+        "leftList": [
+            {
+                "text": "Stats for Behavioral Science (PSY 0031)"
             },
-            "name": "Red Hat, Inc., Tufts University",
-            "title": "Tufts Team Lead & Designer (Senior Capstone Project)",
-            "location": "Tufts University",
-            "description": "<ul><li>Led the design team of the Ansible Galaxy redesign, a web-based IT automation sharing platform.</li><li>Conducted human factors research to characterize users and identify areas of UX improvement.</li><li>Employed design principles and methods to develop an improved UI.</li><ul>"
-        },
-        {
-            "logo": {
-                "src": "experience/logos/CABCSLogo.png",
-                "alt": "CABCS Logo"
+            {
+                "text": "Introduction to Computing in Engineering (ES 0002)"
             },
-            "name": "Center for Applied Brain & Cognitive Sciences, Tufts University",
-            "title": "Human Factors/Engineering Psychology Researcher (Full-time summer/paid, course credit)",
-            "location": "Tufts University",
-            "description": "<ul><li>Explored an extension of the adjustable autonomy concept working with quadrotor drones.</li><li>Led research and development for an operator monitoring scheme to assess user cognitive state.</li><li>Designed the experimental protocol for testing the adjustable autonomy concept.</li><li>Researched a variety of physiological indices for potential operator monitoring input modalities.</li><li>Coded a Unity simulation of the autonomy experiment and tested participants for data collection/analysis.</li><ul>"
-        },
-        {
-            "logo": {
-                "src": "experience/logos/L1.png",
-                "alt": "Resilinc, Inc. Logo"
+            {
+                "text": "Introduction to Computer Science (COMP 0011)"
             },
-            "name": "Resilinc, Inc.",
-            "title": "UI/UX Intern (Full-time summer/paid intern)",
-            "location": "Milpitas, CA",
-            "description": "<p>Resilinc is a leading cloud provider of global supply chain risk intelligence and analytics.</p><ul><li>Developed initial mobile app prototype for a real-time supply chain event monitoring service.</li><li>Designed an application dashboard to optimize contact interaction and task management.</li><li>Coded a program utilizing dashboard data to determine the most frequently used app modules.</li><li>Assisted in determining the style and theme for a new website and designed key branding elements.</li><li>Created the website (theresiliencycouncil.org) using WordPress, HTML, and CSS.</li></ul>"
-        },
-        {
-            "logo": {
-                "src": "experience/logos/L2.jpg",
-                "alt": "Audience Logo"
+            {
+                "text": "Introduction to Psychology (PSY 0001)"
             },
-            "name": "Audience, Inc.",
-            "title": "Engineering/Algorithm Intern (Full-time summer/paid intern)",
-            "location": "Mountain View, CA",
-            "description": "<p>Audience is a leader in advanced voice and audio processing technologies for mobile devices.</p><ul><li>Collected, categorized, and documented field data for a machine learning project.</li><li>Performed research for a new work management process leveraging Amazon Mechanical Turk.</li><li>Created a detailed manual describing the process for hosting audio files on Mechanical Turk.</li><li>Prepared an informational presentation for internal education/training purposes.</li></ul>"
-        }
-    ]
+            {
+                "text": "Data Structures (COMP 0015)"
+            },
+            {
+                "text": "Computer Aided Design w/ Lab (ES 0018)"
+            },
+            {
+                "text": "Web Programming (COMP 0020)"
+            },
+            {
+                "text": "Experimental Psychology (PSY 0032)"
+            },
+            {
+                "text": "Computer Interface Design (ENP 0166)"
+            },
+            {
+                "text": "Introduction to Human Factors (ENP 0061)"
+            },
+            {
+                "text": "Introduction to Engineering Psychology (PSY 0053)"
+            }
+        ],
+        "rightList": [
+            {
+                "text": "Discrete Mathematics (COMP 0061)"
+            },
+            {
+                "text": "Game Development (COMP 0023)"
+            },
+            {
+                "text": "Emotion (PSY 0022)"
+            },
+            {
+                "text": "Ergonomics (ENP 0193)"
+            },
+            {
+                "text": "Human Factors Product Design (ENP 0161)"
+            },
+            {
+                "text": "Human-Robot System Design (ENP 0162)"
+            },
+            {
+                "text": "Independent Research (PSY 0191)"
+            },
+            {
+                "text": "Human Computer Interaction (PSY 0171)"
+            },
+            {
+                "text": "Starting a Tech Company (EXP 0022)"
+            },
+            {
+                "text": "Senior Capstone (ENP 0120)"
+            }
+        ]
+    },
+    "experience": {
+        "experience_data": [
+            {
+                "classes": "bah",
+                "logo": {
+                    "src": "experience/logos/bahLogo.png",
+                    "alt": "Test Logo"
+                },
+                "name": "Booz Allen Hamilton",
+                "title": "UI/UX Designer – Lead Technologist (Associate)",
+                "location": "Washington, DC",
+                "description": "<h3>National Institute of Allergy &amp; Infectious Diseases (NIAID, NIH)</h3> <ul><li>Designed and developed the <a href='https://www.coronaviruspreventionnetwork.org/'>COVID-19 Prevention Network</a> to help recruit volunteers for COVID-19 vaccine trials.<ul><li>19K Daily Average Users, 11M+ Page Views</li></ul></li><li>Developed the visual theme of the NIAID intranet as part of an end-to-end redesign and migration project (SharePoint to Drupal 8).</li><li>Led the visual design refresh and front-end development effort for the NIAID public website: www.niaid.nih.gov.</li><li>Created the Pattern Lab instance for Drupal 8, using HTML, CSS, JavaScript, and Twig, which serves as the creative guide and design platform to reduce front-end development time.</li><li>Built a master prototype to guide the Drupal development team in creating UX-verified layouts.</li><li>Designed and facilitated an eye tracking study to evaluate and enhance the intranet and public websites’ visual designs.</li><li>Facilitated a Design Sprint with key stakeholders to assess and improve the overall digital experience of NIAID employees.</li></ul><h3>Innovation Center – Internal Website (Enterprise-Wide Web App) Redesign</h3><ul><li>Conducted brainstorming sessions with stakeholders to create the design and development roadmap for a four-stage deployment process.</li><li>Gained project plan approval from directorate leadership for the web app, accessible to 25K+ employees.</li><li>Produced wireframes and high-fidelity mockups to more effectively display content and improve user comprehension/satisfaction.</li><li>Managed the UI development and directed interaction choices to bolster site UX.</li></ul>"
+            },
+            {
+                "logo": {
+                    "src": "experience/logos/L0.jpg",
+                    "alt": "Tufts University Logo"
+                },
+                "name": "Red Hat, Inc., Tufts University",
+                "title": "Tufts Team Lead & Designer (Senior Capstone Project)",
+                "location": "Tufts University",
+                "description": "<ul><li>Led the design team of the Ansible Galaxy redesign, a web-based IT automation sharing platform.</li><li>Conducted human factors research to characterize users and identify areas of UX improvement.</li><li>Employed design principles and methods to develop an improved UI.</li><ul>"
+            },
+            {
+                "logo": {
+                    "src": "experience/logos/CABCSLogo.png",
+                    "alt": "CABCS Logo"
+                },
+                "name": "Center for Applied Brain & Cognitive Sciences, Tufts University",
+                "title": "Human Factors/Engineering Psychology Researcher (Full-time summer/paid, course credit)",
+                "location": "Tufts University",
+                "description": "<ul><li>Explored an extension of the adjustable autonomy concept working with quadrotor drones.</li><li>Led research and development for an operator monitoring scheme to assess user cognitive state.</li><li>Designed the experimental protocol for testing the adjustable autonomy concept.</li><li>Researched a variety of physiological indices for potential operator monitoring input modalities.</li><li>Coded a Unity simulation of the autonomy experiment and tested participants for data collection/analysis.</li><ul>"
+            },
+            {
+                "logo": {
+                    "src": "experience/logos/L1.png",
+                    "alt": "Resilinc, Inc. Logo"
+                },
+                "name": "Resilinc, Inc.",
+                "title": "UI/UX Intern (Full-time summer/paid intern)",
+                "location": "Milpitas, CA",
+                "description": "<p>Resilinc is a leading cloud provider of global supply chain risk intelligence and analytics.</p><ul><li>Developed initial mobile app prototype for a real-time supply chain event monitoring service.</li><li>Designed an application dashboard to optimize contact interaction and task management.</li><li>Coded a program utilizing dashboard data to determine the most frequently used app modules.</li><li>Assisted in determining the style and theme for a new website and designed key branding elements.</li><li>Created the website (theresiliencycouncil.org) using WordPress, HTML, and CSS.</li></ul>"
+            },
+            {
+                "logo": {
+                    "src": "experience/logos/L2.jpg",
+                    "alt": "Audience Logo"
+                },
+                "name": "Audience, Inc.",
+                "title": "Engineering/Algorithm Intern (Full-time summer/paid intern)",
+                "location": "Mountain View, CA",
+                "description": "<p>Audience is a leader in advanced voice and audio processing technologies for mobile devices.</p><ul><li>Collected, categorized, and documented field data for a machine learning project.</li><li>Performed research for a new work management process leveraging Amazon Mechanical Turk.</li><li>Created a detailed manual describing the process for hosting audio files on Mechanical Turk.</li><li>Prepared an informational presentation for internal education/training purposes.</li></ul>"
+            }
+        ]
+    },
+    "ncp": {
+        "view_shots_data": [
+            {
+                "src": "ncp/shot1.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot2.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot3.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot4.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot5.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot6.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot7.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot8.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot9.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot10.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot11.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot12.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot13.png",
+                "alt": "Beach Palette Shot"
+            },
+            {
+                "src": "ncp/shot14.png",
+                "alt": "Beach Palette Shot"
+            }
+        ]
+    }
 }

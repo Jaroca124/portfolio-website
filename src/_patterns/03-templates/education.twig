@@ -16,8 +16,8 @@
             <div class="block--university mb-3">
                 {% include "@atoms/images/image-default/_image-default-main.twig" with 
                     {
-                        "image_src": tuftsLogo.src,
-                        "image_alt": tuftsLogo.alt,
+                        "image_src": education.tuftsLogo.src,
+                        "image_alt": education.tuftsLogo.alt,
                         "image_default_classes": "block--university__logo"
                     }
                 %}
@@ -55,7 +55,7 @@
                     {% include "@atoms/text/text-list/_text-list-main.twig" with
                         {
                             "text_list_type": "ul",
-                            "text_list_data": leftList
+                            "text_list_data": education.leftList
                         }
                     %}
                 </div>
@@ -63,7 +63,7 @@
                     {% include "@atoms/text/text-list/_text-list-main.twig" with
                         {
                             "text_list_type": "ul",
-                            "text_list_data": rightList
+                            "text_list_data": education.rightList
                         }
                     %}
                 </div>

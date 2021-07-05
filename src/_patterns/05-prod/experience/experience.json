@@ -1,7 +1,7 @@
 {
-    "prod_build": true,
-    "path_to_assets": "../",
-    "activeTab": "experience",
     "title": "Experience | Jacob Caccamo",
-    "metaDescription": "View my professional experience and my key contributions."
+    "metaDescription": "View my professional experience and my key contributions.",
+    "activeTab": "experience",
+    "prod_build": true,
+    "path_to_assets": "../"
 }
