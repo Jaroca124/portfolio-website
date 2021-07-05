@@ -13,23 +13,23 @@ var config = {
     bootstrapPath: './src/node_modules/bootstrap/scss',
     nodeModules: './src/node_modules',
     sassWebFontPath: './node_modules/sass-web-fonts',
-    prodFolder: './pl/public'
+    prodFolder: 'public'
 };
 
 var buildPaths = {
     target: './dist',
-    styleGuide: './pl/public/index.html',
-    home: './pl/public/patterns/05-prod-index-index/05-prod-index-index.html',
-    portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
-    feed: './pl/public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
-    skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
-    education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html',
-    experience: './pl/public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
-    marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
-    ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
-    vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
-    about: './pl/public/patterns/05-prod-about-about/05-prod-about-about.html',
-    allsafe: './pl/public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
+    styleGuide: 'public/index.html',
+    home: 'public/patterns/05-prod-index-index/05-prod-index-index.html',
+    portfolio: 'public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
+    feed: 'public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
+    skills: 'public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
+    education: 'public/patterns/05-prod-education-education/05-prod-education-education.html',
+    experience: 'public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
+    marvel: 'public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
+    ncp: 'public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
+    vgs: 'public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
+    about: 'public/patterns/05-prod-about-about/05-prod-about-about.html',
+    allsafe: 'public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
 }
 
 gulp.task('sass', () => {
@@ -207,7 +207,7 @@ gulp.task('moveAssets', () => {
         .pipe(gulp.dest('./dist/webfonts'));
 });
 
-gulp.task('buildProd', gulp.series('sass', 'js', 'pl', 'moveAssets'));
+gulp.task('build', gulp.series('sass', 'js', 'pl', 'moveAssets'));
 
 // Start Static Server
 gulp.task('serve', () => {
