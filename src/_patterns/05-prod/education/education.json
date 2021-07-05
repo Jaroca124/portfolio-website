@@ -4,10 +4,6 @@
     "activeTab": "education",
     "title": "Education | Jacob Caccamo",
     "metaDescription": "Information about my education including additional Udemy courses and achievements.",
-    "headshot": {
-        "src": "index/Headshot_Original_Round.png",
-        "alt": "Jacob Caccamo"
-    },
     "imageCredit": {
         "name": "William Iven",
         "href": "https://unsplash.com/@firmbee?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
@@ -16,7 +12,8 @@
         "src": "experience/logos/L0.jpg",
         "alt": "Tufts University Logo"
     },
-    "leftList": [{
+    "leftList": [
+        {
             "text": "Stats for Behavioral Science (PSY 0031)"
         },
         {
@@ -50,7 +47,8 @@
             "text": "Introduction to Engineering Psychology (PSY 0053)"
         }
     ],
-    "rightList": [{
+    "rightList": [
+        {
             "text": "Discrete Mathematics (COMP 0061)"
         },
         {

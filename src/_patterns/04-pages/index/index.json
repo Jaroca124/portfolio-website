@@ -5,10 +5,6 @@
         "name": "Trevor Wilson",
         "href": "https://unsplash.com/@clevertrevor?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
     },
-    "headshot": {
-        "src": "index/Headshot_Original_Round.png",
-        "alt": "Jacob Caccamo"
-    },
     "sfGraphic": {
         "src": "index/SF_Graphic.png",
         "alt": "Graphic of the Golden Gate Bridge"
@@ -17,7 +13,8 @@
         "src": "index/DC_Graphic.png",
         "alt": "Graphic of Washington DC monuments"
     },
-    "heroShots": [{
+    "heroShots": [
+        {
             "src": "index/heroShots/ARKHAM_Final.png",
             "alt": "Batman Arkham Knight Shot"
         },
