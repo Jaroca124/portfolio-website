@@ -6,4 +6,9 @@
         @include md-0dp;
         margin: 1rem auto;
     }
+    .col-12 {
+        @include media-breakpoint-up(lg) {
+            padding: 0 2rem;
+        }
+    }
 }
