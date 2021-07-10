@@ -1,0 +1,9 @@
+.ncp-shots {
+    padding: 0 3rem;
+    &__shot {
+        @extend .col-12;
+        @extend .col-md-6;
+        @extend .col-xl-4;
+        margin: 1rem 0;
+    }
+}
