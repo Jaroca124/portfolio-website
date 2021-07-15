@@ -41,7 +41,7 @@
             padding: 0 1rem;
             margin-bottom: 1rem;
             @include media-breakpoint-up(sm) {
-                font-size: 5rem;
+                @include font-size(5rem);
                 padding: 0;
             }
         }

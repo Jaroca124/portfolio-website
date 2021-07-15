@@ -1,14 +1,14 @@
 .block--activities {
     margin-bottom: 3rem;
-    &__activity-logo {
-        height: 10vh;
-        display: block;
-        @include md-0dp;
-        margin: 1rem auto;
-    }
-    .col-12 {
-        @include media-breakpoint-up(lg) {
-            padding: 0 2rem;
+    &__title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &__logo {
+            height: 10vh;
+            display: block;
+            @include md-0dp;
+            margin: 1rem 1rem 1rem 0;
         }
     }
 }

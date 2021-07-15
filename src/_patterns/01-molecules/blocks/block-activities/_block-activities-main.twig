@@ -4,33 +4,41 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h2 class="text-center mb-4">Activities</h2>
+                <h2 class="mb-4">Activities</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-6">
-                {% include "@atoms/images/image-default/_image-default-main.twig" with 
-                    {
-                        "image_src": "education/thfes.png",
-                        "image_alt": "Tufts Human Factors &amp; Ergonomics Society logo",
-                        "image_default_classes": "block--activities__activity-logo"
-                    }
-                %}
-                <h5 class="text-center">Tufts Human Factors &amp; Ergonomics Society</h5>
-                <h6 class="text-center">Treasurer &amp; Board Member</h6>
-                <p class="mt-4">I served as a board member on the Tufts Human Factors &amp; Ergonomics Society starting my freshman year. This society was designed to support underclassmen as they choose their fields of study and to create social events for students in the major. After two years on the board, I become the treasurer. In this role, I was in charge of outlining our yearly budget and coordinating with the Tufts Treasury to gain approval.</p>
+            <div class="col-12 mb-4">
+                <div class="block--activities__title-wrapper">
+                    {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                        {
+                            "image_src": "education/thfes.png",
+                            "image_alt": "Tufts Human Factors &amp; Ergonomics Society logo",
+                            "image_default_classes": "block--activities__title-wrapper__logo"
+                        }
+                    %}
+                    <div>
+                        <h3>Tufts Human Factors &amp; Ergonomics Society</h3>
+                        <h4>Treasurer &amp; Board Member</h4>
+                    </div>
+                </div>
+                <p>I served as a board member on the Tufts Human Factors &amp; Ergonomics Society starting my freshman year. This society was designed to support underclassmen as they choose their fields of study and to create social events for students in the major. After two years on the board, I become the treasurer. In this role, I was in charge of outlining our yearly budget and coordinating with the Tufts Treasury to gain approval.</p>
             </div>
-            <div class="col-12 col-lg-6">
-                {% include "@atoms/images/image-default/_image-default-main.twig" with 
-                    {
-                        "image_src": "education/fsfc.png",
-                        "image_alt": "FSFC (Club Soccer)",
-                        "image_default_classes": "block--activities__activity-logo"
-                    }
-                %}
-                <h5 class="text-center">FSFC (Club Soccer)</h5>
-                <h6 class="text-center">Captain &amp; Teammate</h6>
-                <p class="mt-4">I played Tufts Club B soccer for two years before budget cuts ended the team. As captain starting my junior year, I helped our team disaffiliate from the university to become an independent club team, competing in the same league that we played in before the budget cuts.</p>
+            <div class="col-12">
+                <div class="block--activities__title-wrapper">
+                    {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                        {
+                            "image_src": "education/fsfc.png",
+                            "image_alt": "FSFC (Club Soccer)",
+                            "image_default_classes": "block--activities__title-wrapper__logo"
+                        }
+                    %}
+                    <div>
+                        <h3>FSFC (Club Soccer)</h3>
+                        <h4>Captain &amp; Teammate</h4>
+                    </div>
+                </div>
+                <p>I played Tufts Club B soccer for two years before budget cuts ended the team. As captain starting my junior year, I helped our team disaffiliate from the university to become an independent club team, competing in the same league that we played in before the budget cuts.</p>
             </div>
         </div>
     </div>
