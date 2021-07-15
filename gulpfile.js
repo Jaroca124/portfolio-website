@@ -1,5 +1,6 @@
 var browserSync = require('browser-sync').create(),
     concat = require('gulp-concat'),
+    del = require('del'),
     exec = require('child_process').exec,
     gulp = require('gulp'),
     minify = require('gulp-minify'),
@@ -147,7 +148,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./dist/marvel'));
+        .pipe(gulp.dest('./dist/marvel-movie-app'));
     console.log("Marvel Build Finished");
 
     // VGS
@@ -167,7 +168,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./dist/ncp'));
+        .pipe(gulp.dest('./dist/natural-color-palette'));
     console.log("NCP Build Finished");
     
     // Allsafe
@@ -207,7 +208,11 @@ gulp.task('moveAssets', () => {
         .pipe(gulp.dest('./dist/webfonts'));
 });
 
-gulp.task('build', gulp.series('sass', 'js', 'pl', 'moveAssets'));
+gulp.task('clean', () => {
+    return del(['./dist/**'], {"dot": true});
+});
+
+gulp.task('build', gulp.series('clean', 'sass', 'js', 'pl', 'moveAssets'));
 
 // Start Static Server
 gulp.task('serve', () => {

@@ -6,17 +6,12 @@ h5,
 h6 {
     color: $color-type-heading;
     font-family: $font-family-heading;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-heading;
 }
 
 a {
     color: $color-text-link;
-}
-
-a,
-p {
-    letter-spacing: 0.01rem;
-    line-height: 2.2;
 }
 
 ul {

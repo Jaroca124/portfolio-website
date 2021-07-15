@@ -1,13 +1,13 @@
 .button--default {
     border-radius: 1000px;
-    border: 2px solid $color-text-link;
+    border: 2px solid $color-button;
     padding: .5rem 2rem;
-    font-weight: $fw-bold;
-    color: $color-text-link;
+    font-weight: $font-weight-bold;
+    color: $color-button;
     cursor: pointer;
     &:hover,
     &:focus {
-        background: $color-text-link;
+        background: $color-button;
         color: $white;
         text-decoration: none;
     }
@@ -21,13 +21,13 @@
         }
     }
     &--burger-builder {
-        border: 2px solid #BE4F57;
-        background: #BE4F57;
+        border: 2px solid $burger-builder;
+        background: $burger-builder;
         color: $white;
         &:hover,
         &:focus {
             background: $white;
-            color: #BE4F57;
+            color: $burger-builder;
         }
     }
 }

@@ -1,28 +1,47 @@
-/* Fonts */
+/* ----- VARIABLES ----- */
+
+/* ----- TYPOGRAPHY ----- */
+
+/* ----- Font Family ----- */
 $font-family-heading: 'Montserrat', sans-serif !default;
 $font-family-body: 'Open Sans', 'Roboto', sans-serif !default;
 
-/* Typography */
-$fw-medium: 600;
-$fw-bold: 700;
-$fw-black: 900;
+/* ----- Font Weight ----- */
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
-/* Borders */
+/* ----- Line Height ----- */
+$line-height-regular: 1.5;
+$line-height-heading: 1.3;
+
+/* ----- Letter Spacing ----- */
+$letter-spacing-default: 0.01rem;
+
+/* ----- Font Size ----- */
+$font-size-default: 16px;
+
+/* ----- BORDERS ----- */
+
+/* ----- Border Radius ----- */
 $border-radius-default: .3125rem;
 
-/* Colors */
+/* ----- COLORS ----- */
 
-/* General */
+/* ----- General ----- */
 $white: #ffffff;
 $black: #000000;
 $dribbble: #EA4C89;
-
-/* Theme */
+$burger-builder: #BE4F57;
 $color-page-background: #f8fafc;
 $color-type-heading: #2f2f2f;
 $color-text-body: #454656;
 $color-text-link: #1273D4;
-
+$color-button: #4B6BEC;
 $dark-mode-bg: #131415;
 
+/* ----- LAYOUT ----- */
+
+/* ----- Screen Size ----- */
 $max-width-xl: 1475px;

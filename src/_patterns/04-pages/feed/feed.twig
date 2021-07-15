@@ -1,1 +1,28 @@
-{% embed "@templates/feed.twig" %}{% endembed %}
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" %}
+    {% block header %}
+        {% embed "@organisms/global/global-header/_global-header-main.twig" %}{% endembed %}
+    {% endblock %}
+
+    {% block hero %}
+        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'feed-banner'} %}
+            {% block jumbotron_content %}
+                <h1 class="display-3">The Feed</h1>
+                <p class="lead">Find interesting articles on design, development, emerging technologies, and more.</p>
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+
+    {% block main %}
+        <div class="container">
+            {% include "@organisms/sections/feed-posts/_feed-posts-main.twig" with 
+                {
+                    "feed_posts_data": feedData
+                }
+            %}
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
+    {% endblock %}
+{% endembed %}

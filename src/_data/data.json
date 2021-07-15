@@ -5,6 +5,16 @@
         "src": "index/Headshot_Original_Round.png",
         "alt": "Jacob Caccamo Headshot"
     },
+    "links": {
+        "index": "/",
+        "portfolio": "/portfolio",
+        "experience": "/experience",
+        "education": "/education",
+        "ncp": "/natural-color-palette",
+        "marvel": "/marvel-movie-app",
+        "vgs": "/video-game-series",
+        "allsafe": "/allsafe"
+    },
     "generic": {
         "ncpImages": [
             {

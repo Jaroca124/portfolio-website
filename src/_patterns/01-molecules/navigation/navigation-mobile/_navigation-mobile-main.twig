@@ -4,7 +4,7 @@
 <nav class="navigation-pl navigation--mobile {{ navigation_mobile_classes }}">
     <ul class="navigation--mobile__links">
         <li class="navigation--mobile__links__link navigation--mobile__links__link--home{% if navigation_mobile_active == "home" %} active{% endif %}">
-            <a href="/">
+            <a href="{{ links.index }}">
             {% include "@atoms/images/image-default/_image-default-main.twig" with
                 {
                     "image_src": "icons/home.svg",
@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="navigation--mobile__links__link navigation--mobile__links__link--portfolio{% if navigation_mobile_active == "portfolio" %} active{% endif %}">
-            <a href="/portfolio">
+            <a href="{{ links.portfolio }}">
                 {% include "@atoms/images/image-default/_image-default-main.twig" with
                     {
                         "image_src": "icons/portfolio.svg",
@@ -26,7 +26,7 @@
             </a>
         </li>
         <li class="navigation--mobile__links__link navigation--mobile__links__link--experience{% if navigation_mobile_active == "experience" %} active{% endif %}">
-            <a href="/experience">
+            <a href="{{ links.experience }}">
                 {% include "@atoms/images/image-default/_image-default-main.twig" with
                     {
                         "image_src": "icons/experience.svg",
@@ -37,7 +37,7 @@
             </a>
         </li>
         <li class="navigation--mobile__links__link navigation--mobile__links__link--education{% if navigation_mobile_active == "education" %} active{% endif %}">
-            <a href="/education">
+            <a href="{{ links.education }}">
                 {% include "@atoms/images/image-default/_image-default-main.twig" with
                     {
                         "image_src": "icons/education.svg",

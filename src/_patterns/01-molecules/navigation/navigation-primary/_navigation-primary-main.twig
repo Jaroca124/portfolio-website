@@ -10,26 +10,26 @@
             {% include "@atoms/link/link-default/_link-default-main.twig" with
                 {
                     "link_default_classes": "navigation--primary__navbar__home",
-                    "link_default_href": "/",
+                    "link_default_href": links.index,
                     "link_default_text": "Jacob Caccamo"
                 }
             %}
         {% endif %}
         {% include "@atoms/link/link-default/_link-default-main.twig" with
             {
-                "link_default_href": "/portfolio",
+                "link_default_href": links.portfolio,
                 "link_default_text": "Portfolio"
             }
         %}
         {% include "@atoms/link/link-default/_link-default-main.twig" with
             {
-                "link_default_href": "/experience",
+                "link_default_href": links.experience,
                 "link_default_text": "Experience"
             }
         %}
         {% include "@atoms/link/link-default/_link-default-main.twig" with
             {
-                "link_default_href": "/education",
+                "link_default_href": links.education,
                 "link_default_text": "Education"
             }
         %}

@@ -1,1 +1,21 @@
-{% embed "@templates/about.twig" %}{% endembed %}
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" with
+    {
+        "layout_site_id": "layout--about"
+    }
+%}
+    {% block hero %}
+        {% embed "@organisms/heros/hero-section/_hero-section-main.twig" with
+            {
+                "hero_section_title": "About"
+            }
+        %}{% endembed %}
+    {% endblock %}
+    
+    {% block main %}
+        {% include "@molecules/components/component-contact-form/_component-contact-form-main.twig" %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
+    {% endblock %}
+{% endembed %}
