@@ -147,22 +147,6 @@ $(document).ready(function() {
     }
 });
 $(document).ready(function() {
-    $("#contactUsForm").submit(function(e) {
-        e.preventDefault();
-        var form = $(this);
-        var url = form.attr('action');
-        $.ajax({
-               type: "POST",
-               url: url,
-               data: form.serialize(),
-               success: function(data)
-               {
-                   //alert(data);
-               }
-        });
-    });
-});
-$(document).ready(function() {
     if ($("#shots").length) {
         var projectID = "";
         // Determine Project
@@ -218,6 +202,22 @@ $(document).ready(function() {
         $('.section--default--cabcs').find('.section--default__image').find('img').css({transform: "translate(0, -50%) scale(.8)"});
     }
 });
+$(document).ready(function() {
+    $("#contactUsForm").submit(function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var url = form.attr('action');
+        $.ajax({
+               type: "POST",
+               url: url,
+               data: form.serialize(),
+               success: function(data)
+               {
+                   //alert(data);
+               }
+        });
+    });
+});
 // $(document).ready(function() {
 //     if ($('#component--logo__circle').length) {
 //         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -237,14 +237,14 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy();
 });
 // $(document).ready(function() {
-//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
-//         $('.navigation--drawer').toggleClass('drawer--open');
-//         $('.navigation--drawer--overlay').toggle();
+//     $('.navigation--mobile__menu-button').click(function() {
+//         $('.navigation--mobile__link').toggleClass('open');
 //     });
 // });
 // $(document).ready(function() {
-//     $('.navigation--mobile__menu-button').click(function() {
-//         $('.navigation--mobile__link').toggleClass('open');
+//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
+//         $('.navigation--drawer').toggleClass('drawer--open');
+//         $('.navigation--drawer--overlay').toggle();
 //     });
 // });
 $( document ).ready(function() {

@@ -27,6 +27,7 @@
         @include font-size(1.3333333333rem);
         margin: 1.5rem 0;
         font-weight: $font-weight-medium;
+        line-height: $line-height-heading;
     }
     &__shots {
         display: flex;
