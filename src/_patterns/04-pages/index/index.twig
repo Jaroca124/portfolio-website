@@ -13,35 +13,7 @@
 
     {% block main %}
         {# {% include "@organisms/sections/section-overview/_section-overview-main.twig" %} #}
-        {# Natural Color Palette #}
-        {% embed "@organisms/sections/section-default/_section-default-main.twig" with
-            {
-                "section_default_classes": "section--default--ncp",
-                "section_default_image_src": "index/ncp.png",
-                "section_default_image_orientation": "left"
-            }
-        %}
-            {% block section_default_content %}
-                <h2 class="section--default--ncp__title"><span class="section--default--ncp__title__1">Natural</span><br><span class="section--default--ncp__title__2">Inspiration.</span></h2>
-                <p class="section--default--ncp__subtitle">Natural Color Palette Collection</p>
-                <p>Beautiful color palettes, or collections of colors that work well together, can be found almost anywhere in the world. In my Natural Color Palette collection, I explore various color palettes derived from beautiful Unsplash photography, and a few of my more modest shots.</p>
-                {% include "@molecules/blocks/block-images/_block-images-main.twig" with
-                    {
-                        "block_images_classes": "section--default--ncp__shots",
-                        "block_images_animation_direction": "from_left",
-                        "block_images_data": generic.ncpImages
-                    }
-                %}
-                <div class="section--default--ncp__button">
-                    {% include "@atoms/button/button-default/_button-default-main.twig" with
-                        {
-                            "button_default_text": "See Full Collection",
-                            "button_default_href": "/ncp"
-                        }
-                    %}
-                </div>
-            {% endblock %}
-        {% endembed %}
+        {% include "@organisms/sections/section-ncp/_section-ncp-main.twig" %}
         {% include "@organisms/sections/section-marvel/_section-marvel-main.twig" %}
         {% include "@organisms/sections/section-covpn/_section-covpn-main.twig" %}
         {% include "@organisms/sections/section-allsafe/_section-allsafe-main.twig" %}
