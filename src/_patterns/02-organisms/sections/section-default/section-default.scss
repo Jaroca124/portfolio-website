@@ -18,17 +18,11 @@
         max-width: none;
         padding: 0;
         .row {
-            padding: 3rem 2.5rem 0 2.5rem;
             max-width: $max-width-xl;
             margin: 0 auto;
+            padding: 2rem 2.5rem;
             @include media-breakpoint-up(lg) {
-                padding: 6rem 8rem 0 8rem;
-            }
-            .col-md-6 {
-                padding: 0;
-                @include media-breakpoint-up(md) {
-                    padding: 0 1rem;
-                }
+                padding: 3rem 8rem;
             }
         }
     }
