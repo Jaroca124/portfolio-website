@@ -1,0 +1,27 @@
+.feed-post {
+    @extend .my-4;
+    @include md-2dp;
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .post {
+        background-color: white;
+        height: auto;
+        padding: 2vh;
+        margin: 0 auto;
+    }
+
+    .img-thumbnail {
+        height: auto;
+        width: 50vw;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .date, .author {
+        padding-top: 1.5vh;
+    }
+}

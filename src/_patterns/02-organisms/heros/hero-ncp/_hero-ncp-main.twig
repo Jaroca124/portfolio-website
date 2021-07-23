@@ -1,0 +1,38 @@
+<div class="hero-pl hero--generic hero--generic--ncp">
+    <div class="hero--generic__background">
+        <div class="hero--generic__background__inner-wrapper">
+            {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                {
+                    "image_src": 'ncp/hero-bg.jpg',
+                    "image_alt": 'Snowy Forest'
+                }
+            %}
+        </div>
+    </div>
+    <div class="hero--generic__overlay"></div>
+    <div class="hero--generic__navigation">
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-main.twig" with
+            {
+                "navigation_primary_classes": hero_generic_navigation_classes,
+                "navigation_primary_showhome": true,
+            }
+        %}
+        {% include "@molecules/components/component-media-links/_component-media-links-main.twig" %}
+    </div>
+    <div class="hero--generic__content">
+        <div class="hero--generic__content__inner">
+            <div class="hero--generic__content__inner__text col-md-6">
+                <h1>Natural Color Palette<sup>TM</sup></h1>
+                <span>Collection</span>
+            </div>
+            <div class="hero--generic__content__inner__img col-md-6">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                    {
+                        "image_src": "ncp/leopard.png",
+                        "image_alt": "Snow Leopard and color swatches"
+                    }
+                %}
+            </div>
+        </div>
+    </div>
+</div>

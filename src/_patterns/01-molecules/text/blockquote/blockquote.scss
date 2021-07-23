@@ -1,0 +1,12 @@
+.blockquote {
+    @extend .my-sm-3;
+    
+    hr {
+        width: auto;
+    }
+
+    p {
+        @extend .mb-0;
+        @extend .px-3;  
+    }
+}

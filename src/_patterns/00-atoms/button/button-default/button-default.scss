@@ -1,0 +1,33 @@
+.button--default {
+    border-radius: 1000px;
+    border: 2px solid $color-button;
+    padding: .5rem 2rem;
+    font-weight: $font-weight-bold;
+    color: $color-button;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        background: $color-button;
+        color: $white;
+        text-decoration: none;
+    }
+    &--dribbble {
+        border: 2px solid $dribbble;
+        color: $dribbble;
+        &:hover,
+        &:focus {
+            background: $dribbble;
+            border: 2px solid $dribbble;
+        }
+    }
+    &--burger-builder {
+        border: 2px solid $burger-builder;
+        background: $burger-builder;
+        color: $white;
+        &:hover,
+        &:focus {
+            background: $white;
+            color: $burger-builder;
+        }
+    }
+}

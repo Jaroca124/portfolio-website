@@ -1,0 +1,37 @@
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" with
+    {
+        "layout_site_id": "layout--about"
+    }
+%}
+    {% block hero %}
+        {% include "@organisms/heros/hero-section/_hero-section-main.twig" with
+            {
+                "hero_section_title": "About"
+            }
+        %}
+    {% endblock %}
+    
+    {% block main %}
+        <div class="container">
+            <p>Hi there! My name is Jake and I'm a UI/UX Designer and Front-end Developer at Booz Allen Hamilton. I appreciate you coming to my site!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for img in about.lorraine %}
+                    <div class="col-3">
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_src": img.src,
+                                "image_alt": img.alt
+                            }
+                        %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
+    {% endblock %}
+{% endembed %}

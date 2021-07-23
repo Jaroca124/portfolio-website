@@ -1,9 +1,0 @@
-.pill {
-    @extend .badge;
-    @extend .badge-pill;
-    @extend .badge-primary;
-    @extend .p-2;
-    background: transparent;
-    border: 1px solid #5e5e5e;
-    color: #5e5e5e;
-}

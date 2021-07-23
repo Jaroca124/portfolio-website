@@ -1,5 +1,7 @@
-node_modules/
-connected-crew/node_modules/
-source/node_modules/
-BuildNotes.txt
 .DS_Store
+.vscode/
+node_modules/
+export/
+public/
+vendor/
+archive/connected-crew/node_modules/

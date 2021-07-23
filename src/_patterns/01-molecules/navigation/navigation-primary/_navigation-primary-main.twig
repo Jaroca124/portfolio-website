@@ -1,0 +1,48 @@
+{% set navigation_primary_classes = navigation_primary_classes|default() %}
+{% set navigation_primary_showhome = navigation_primary_showhome|default() %}
+
+<nav class="navigation-pl navigation--primary {{ navigation_primary_classes }}">
+    <div class="navigation--primary__navbar">
+        {% if navigation_primary_showhome %}
+            <a href="/">
+                {% include "@atoms/images/image-logo/_image-logo-main.twig" %}
+            </a>
+            {% include "@atoms/link/link-default/_link-default-main.twig" with
+                {
+                    "link_default_classes": "navigation--primary__navbar__home",
+                    "link_default_href": links.index,
+                    "link_default_text": "Jacob Caccamo"
+                }
+            %}
+        {% endif %}
+        {% include "@atoms/link/link-default/_link-default-main.twig" with
+            {
+                "link_default_href": links.portfolio,
+                "link_default_text": "Portfolio"
+            }
+        %}
+        {% include "@atoms/link/link-default/_link-default-main.twig" with
+            {
+                "link_default_href": links.experience,
+                "link_default_text": "Experience"
+            }
+        %}
+        {% include "@atoms/link/link-default/_link-default-main.twig" with
+            {
+                "link_default_href": links.education,
+                "link_default_text": "Education"
+            }
+        %}
+    </div>
+    {# {% include "@atoms/link/link-default/_link-default-main.twig" with
+        {
+            "link_default_href": "/skills",
+            "link_default_text": "Skills"
+        }
+    %} #}
+</nav>
+{% include "@molecules/navigation/navigation-mobile/_navigation-mobile-main.twig" with
+    {
+        "navigation_mobile_active": activeTab
+    }
+%}

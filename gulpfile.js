@@ -1,70 +1,37 @@
-/**
- * Created by Pradip on 5/11/2016.
- * Modified by Jake on 8/26/18
- */
-
-var BUILD = false;
-var DEV = false;
-var PROD = true;
-// Ends configuration setting
-
-if (BUILD && DEV) {
-    throw "Cannot have different environment true at same time";
-}
-
-var gulp = require('gulp'),
+var browserSync = require('browser-sync').create(),
+    concat = require('gulp-concat'),
+    del = require('del'),
+    exec = require('child_process').exec,
+    gulp = require('gulp'),
+    minify = require('gulp-minify'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     sourcemaps = require('gulp-sourcemaps'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    minify = require('gulp-minify'),
-    browserSync = require('browser-sync').create(),
-    exec = require('child_process').exec;
+    rename = require('gulp-rename');
 
 var config = {
-    sassPath: './source/css',
-    bootstrapPath: './source/node_modules/bootstrap/scss',
-    nodeModules: './source/node_modules',
+    sassPath: './src/css',
+    bootstrapPath: './src/node_modules/bootstrap/scss',
+    nodeModules: './src/node_modules',
     sassWebFontPath: './node_modules/sass-web-fonts',
-    prodFolder: './pl/public'
+    prodFolder: 'public'
 };
 
 var buildPaths = {
-    target: './public_html',
-    styleGuide: './pl/public/index.html',
-    home: './pl/public/patterns/05-prod-index-index/05-prod-index-index.html',
-    portfolio: './pl/public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
-    feed: './pl/public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
-    skills: './pl/public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
-    education: './pl/public/patterns/05-prod-education-education/05-prod-education-education.html',
-    experience: './pl/public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
-    marvel: './pl/public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
-    ncp: './pl/public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
-    vgs: './pl/public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
-    about: './pl/public/patterns/05-prod-about-about/05-prod-about-about.html',
-    allsafe: './pl/public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
+    target: './dist',
+    styleGuide: 'public/index.html',
+    home: 'public/patterns/05-prod-index-index/05-prod-index-index.html',
+    portfolio: 'public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
+    feed: 'public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
+    skills: 'public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
+    education: 'public/patterns/05-prod-education-education/05-prod-education-education.html',
+    experience: 'public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
+    marvel: 'public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
+    ncp: 'public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
+    vgs: 'public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
+    about: 'public/patterns/05-prod-about-about/05-prod-about-about.html',
+    allsafe: 'public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
 }
-
-var sassOption = {
-    errLogToConsole: true,
-    // Default environment is dev
-    outputStyle: BUILD ? 'compressed' : 'expanded',
-    includePaths: [
-        config.sassWebFontPath + '/_web-fonts.scss',
-        config.sassPath,
-        config.nodeModules
-    ]
-};
-
-let scripts = [
-    './node_modules/particlesjs/dist/particles.min.js',
-    './node_modules/stickybits/dist/stickybits.min.js'
-];
-gulp.task('transfer', () => {
-    return gulp.src(scripts)
-        .pipe(gulp.dest('./source/js/'));
-});
 
 gulp.task('sass', () => {
     return gulp.src(config.sassPath + '/**/style.scss')
@@ -74,15 +41,13 @@ gulp.task('sass', () => {
             basename: 'style',
             extname: '.css'
         }))
-        .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(sourcemaps.write('./source/maps'))
-        .pipe(gulp.dest('./source/css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('pl', (cb) => {
-    exec('php ./pl/core/console --generate', function(err, stdout, stderr) {
+    exec('php core/console --generate', function(err, stdout, stderr) {
         browserSync.reload();
         cb(err);
     });
@@ -90,17 +55,16 @@ gulp.task('pl', (cb) => {
 
 gulp.task('js', () => {
     gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
     gulp.src('./node_modules/particlesjs/dist/particles.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
     gulp.src('./node_modules/materialize-css/dist/js/materialize.min.js')
-        .pipe(gulp.dest('./source/js'));
+        .pipe(gulp.dest('./src/js'));
 
-    return gulp.src('./source/_patterns/**/*.js')
+    return gulp.src('./src/_patterns/**/*.js')
         .pipe(concat('script.js'))
         .pipe(minify())
-        .pipe(sourcemaps.write('./source/js'))
-        .pipe(gulp.dest('./source/js'))
+        .pipe(gulp.dest('./src/js'))
         .pipe(browserSync.stream());
 });
 
@@ -124,7 +88,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/portfolio'));
+        .pipe(gulp.dest('./dist/portfolio'));
     console.log("Portfolio Build Finished");
 
     // Feed
@@ -134,7 +98,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/feed'));
+        .pipe(gulp.dest('./dist/feed'));
     console.log("Feed Build Finished");
 
     // Skills
@@ -144,7 +108,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/skills'));
+        .pipe(gulp.dest('./dist/skills'));
     console.log("Skills Build Finished");
 
     // Education
@@ -154,7 +118,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/education'));
+        .pipe(gulp.dest('./dist/education'));
     console.log("Education Build Finished");
 
     // Experience
@@ -164,7 +128,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/experience'));
+        .pipe(gulp.dest('./dist/experience'));
     console.log("Experience Build Finished");
 
     // About
@@ -174,7 +138,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/about'));
+        .pipe(gulp.dest('./dist/about'));
     console.log("About Build Finished");
 
     // Marvel
@@ -184,7 +148,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/marvel'));
+        .pipe(gulp.dest('./dist/marvel-movie-app'));
     console.log("Marvel Build Finished");
 
     // VGS
@@ -194,7 +158,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/video-game-series'));
+        .pipe(gulp.dest('./dist/video-game-series'));
     console.log("VGS Build Finished");
 
     // NCP
@@ -204,7 +168,7 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/ncp'));
+        .pipe(gulp.dest('./dist/natural-color-palette'));
     console.log("NCP Build Finished");
     
     // Allsafe
@@ -214,37 +178,41 @@ gulp.task('moveAssets', () => {
             basename: 'index',
             extname: '.html'
         }))
-        .pipe(gulp.dest('./public_html/allsafe'));
+        .pipe(gulp.dest('./dist/allsafe'));
     console.log("Allsafe Build Finished");
 
     // Sitemap
-    gulp.src('./source/sitemap.xml').pipe(gulp.dest('./public_html/sitemap/'));
+    gulp.src('./src/sitemap.xml').pipe(gulp.dest('./dist/'));
 
     // Copy CSS
     console.log("Starting Copy of CSS");
-    gulp.src('./source/css/style.css')
-        .pipe(gulp.dest('./public_html/css'));
+    gulp.src('./src/css/style.css')
+        .pipe(gulp.dest('./dist/css'));
     console.log("Finished Copying CSS");
 
     // Copy JS
     console.log("Starting Copy of JS");
-    gulp.src('./source/js/*.js')
-        .pipe(gulp.dest('./public_html/js'));
+    gulp.src('./src/js/*.js')
+        .pipe(gulp.dest('./dist/js'));
     console.log("Finished Copying JS");
 
     // Copy Images
     console.log("Starting Copy of Images");
-    gulp.src('./source/assets/**/*')
-        .pipe(gulp.dest('./public_html/assets'));
+    gulp.src('./src/assets/**/*')
+        .pipe(gulp.dest('./dist/assets'));
     console.log("Finished Copying Images");
 
     // Copy Fonts
     console.log("Starting Copy of Fonts");
-    return gulp.src('./source/fonts/**/*')
-        .pipe(gulp.dest('./public_html/fonts'));
+    return gulp.src('./src/webfonts/**/*')
+        .pipe(gulp.dest('./dist/webfonts'));
 });
 
-gulp.task('build', gulp.series('transfer', 'sass', 'js', 'pl', 'moveAssets'));
+gulp.task('clean', () => {
+    return del(['./dist/**'], {"dot": true});
+});
+
+gulp.task('build', gulp.series('clean', 'sass', 'js', 'pl', 'moveAssets'));
 
 // Start Static Server
 gulp.task('serve', () => {
@@ -252,14 +220,14 @@ gulp.task('serve', () => {
         server: {
             baseDir: './',
         },
-        startPath: 'pl/public/',
+        startPath: 'public/',
         open: true
     });
 
-    gulp.watch('./source/_patterns/**/*.twig', gulp.series('sass','js','pl'));
-    gulp.watch('./source/_patterns/**/*.scss', gulp.series('sass','js','pl'));
-    gulp.watch('./source/css/scss/**/*.scss', gulp.series('sass','js','pl'));
-    gulp.watch('./source/_patterns/**/*.js', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.twig', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./src/css/scss/**/*.scss', gulp.series('sass','js','pl'));
+    gulp.watch('./src/_patterns/**/*.js', gulp.series('sass','js','pl'));
 });
 
-gulp.task('default', gulp.series('transfer', 'sass', 'js', 'pl', 'serve'));
+gulp.task('default', gulp.series('sass', 'js', 'pl', 'serve'));

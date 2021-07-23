@@ -1,0 +1,11 @@
+.ncp-shots {
+    padding: 2rem 0;
+    &__shot {
+        @extend .col-12;
+        @extend .col-md-6;
+        margin: 1rem 0;
+        iframe {
+            margin: 0 auto !important;
+        }
+    }
+}
