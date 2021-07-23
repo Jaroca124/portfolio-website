@@ -6,7 +6,6 @@ var browserSync = require('browser-sync').create(),
     minify = require('gulp-minify'),
     sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
-    sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename');
 
 var config = {
@@ -55,11 +54,13 @@ gulp.task('pl', (cb) => {
 
 gulp.task('js', () => {
     gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./src/js/libraries/bootstrap'));
     gulp.src('./node_modules/particlesjs/dist/particles.min.js')
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./src/js/libraries/particles'));
     gulp.src('./node_modules/materialize-css/dist/js/materialize.min.js')
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./src/js/libraries/materialize'));
+    gulp.src('./node_modules/stickybits/dist/stickybits.min.js')
+        .pipe(gulp.dest('./src/js/libraries/stickybits'));
 
     return gulp.src('./src/_patterns/**/*.js')
         .pipe(concat('script.js'))

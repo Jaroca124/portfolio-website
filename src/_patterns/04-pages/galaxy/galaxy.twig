@@ -4,25 +4,24 @@
     }
 %}
     {% block hero %}
-        
-    {% endblock %}
-    
-    {% block main %}
-        {# {% include "@atoms/images/image-default/_image-default-main.twig" with
+        {% embed "@organisms/heros/hero-generic/_hero-generic-main.twig" with
             {
-                "image_default_classes": "background--foreground",
-                "image_src": "redhat/foreground.png",
-                "image_alt": ""
+                'hero_generic_background_src': 'crop-galaxy.jpg',
+                'hero_generic_background_alt': 'Galaxy of stars'
             }
-        %} #}
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-10 col-md-8 mx-auto">
-                    <h1 class="display-3">Ansible Galaxy Redesign</h1>
-                    <h2 class="mt-5">Red Hat &amp; Tufts University</h2>
+        %}
+            {% block hero_generic_content %}
+                <div class="row">
+                    <div class="col-12 col-sm-10 col-md-8 mx-auto">
+                        <h1 class="display-3">Ansible Galaxy Redesign</h1>
+                        <h2 class="mt-5">Red Hat &amp; Tufts University</h2>
+                    </div>
                 </div>
-            </div>
+            {% endblock %}
+        {% endembed %}
+    {% endblock %}
+    {% block main %}
+        <div class="container">
             <div class="row">
                 <div class="col section">
                     <h2 class='section__title'>Design Method</h2>
@@ -43,7 +42,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-3">
@@ -429,16 +427,7 @@
                 </div>
             </div>
         </div>
-
-        {# {% include "@atoms/images/image-default/_image-default-main.twig" with
-            {
-                "image_default_classes": "background--background",
-                "image_src": "redhat/background.jpg",
-                "image_alt": ""
-            }
-        %} #}
     {% endblock %}
-
     {% block footer %}
         {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
     {% endblock %}

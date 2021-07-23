@@ -87,6 +87,25 @@ function renderImages(direction, images) {
         })(i);
     }
 }
+/*window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    color: "#ffffff",
+    connectParticles: true,
+    maxParticles: 50,
+    speed: .25,
+    responsive: [
+        {
+            breakpoint: 
+                768,
+                options: {
+                    maxParticles: 0,
+                    connectParticles: true
+                }
+        }
+    ]
+  });
+};*/
 $(document).ready(function() {
     if ($('.component--burger').length) {
         var renderBurgerBool = true;
@@ -127,25 +146,6 @@ $(document).ready(function() {
         });
     }
 });
-/*window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    color: "#ffffff",
-    connectParticles: true,
-    maxParticles: 50,
-    speed: .25,
-    responsive: [
-        {
-            breakpoint: 
-                768,
-                options: {
-                    maxParticles: 0,
-                    connectParticles: true
-                }
-        }
-    ]
-  });
-};*/
 $(document).ready(function() {
     $("#contactUsForm").submit(function(e) {
         e.preventDefault();
@@ -161,22 +161,6 @@ $(document).ready(function() {
                }
         });
     });
-});
-$(document).ready(function() {
-    if ($('.section--default--cabcs').length) {
-        var renderDroneBool = true;
-        var droneTrigger = $('.section--default--cabcs').offset().top;
-        $(window).scroll(function() {   
-            if ((($(window).scrollTop() + ($(window).height() / 2)) >= droneTrigger) && renderDroneBool) {
-                renderDrone();
-                renderDroneBool = false;
-            }
-        });
-    }
-
-    function renderDrone() {
-        $('.section--default--cabcs').find('.section--default__image').find('img').css({transform: "translate(0, -50%) scale(.8)"});
-    }
 });
 $(document).ready(function() {
     if ($("#shots").length) {
@@ -218,6 +202,22 @@ function parseData(data, projectID) {
         $('#shots').append('<p>No shots yet!</p>');
     }
 }
+$(document).ready(function() {
+    if ($('.section--default--cabcs').length) {
+        var renderDroneBool = true;
+        var droneTrigger = $('.section--default--cabcs').offset().top;
+        $(window).scroll(function() {   
+            if ((($(window).scrollTop() + ($(window).height() / 2)) >= droneTrigger) && renderDroneBool) {
+                renderDrone();
+                renderDroneBool = false;
+            }
+        });
+    }
+
+    function renderDrone() {
+        $('.section--default--cabcs').find('.section--default__image').find('img').css({transform: "translate(0, -50%) scale(.8)"});
+    }
+});
 // $(document).ready(function() {
 //     if ($('#component--logo__circle').length) {
 //         var bar = new ProgressBar.Circle('#component--logo__circle', {
@@ -234,11 +234,11 @@ function parseData(data, projectID) {
 //     }
 // });
 $(document).ready(function() {
-    $('.scrollspy').scrollSpy();
-}); 
-$(document).ready(function() {
     stickybits('#stickybits-target', { useStickyClasses: true });
 });
+$(document).ready(function() {
+    $('.scrollspy').scrollSpy();
+}); 
 // $(document).ready(function() {
 //     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
 //         $('.navigation--drawer').toggleClass('drawer--open');
