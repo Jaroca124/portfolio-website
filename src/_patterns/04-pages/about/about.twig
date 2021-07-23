@@ -4,15 +4,31 @@
     }
 %}
     {% block hero %}
-        {% embed "@organisms/heros/hero-section/_hero-section-main.twig" with
+        {% include "@organisms/heros/hero-section/_hero-section-main.twig" with
             {
                 "hero_section_title": "About"
             }
-        %}{% endembed %}
+        %}
     {% endblock %}
     
     {% block main %}
-        {% include "@molecules/components/component-contact-form/_component-contact-form-main.twig" %}
+        <div class="container">
+            <p>Hi there! My name is Jake and I'm a UI/UX Designer and Front-end Developer at Booz Allen Hamilton. I appreciate you coming to my site!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for img in about.lorraine %}
+                    <div class="col-3">
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_src": img.src,
+                                "image_alt": img.alt
+                            }
+                        %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     {% endblock %}
 
     {% block footer %}

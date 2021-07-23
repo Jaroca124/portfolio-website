@@ -439,5 +439,33 @@
                 "description": "<p>Audience is a leader in advanced voice and audio processing technologies for mobile devices.</p><ul><li>Collected, categorized, and documented field data for a machine learning project.</li><li>Performed research for a new work management process leveraging Amazon Mechanical Turk.</li><li>Created a detailed manual describing the process for hosting audio files on Mechanical Turk.</li><li>Prepared an informational presentation for internal education/training purposes.</li></ul>"
             }
         ]
+    },
+    "about": {
+        "lorraine": [
+            {
+                "src": "lorraine/IMG_9374.JPG",
+                "alt": "Lorraine and Computer"
+            },
+            {
+                "src": "lorraine/IMG_9376.JPG",
+                "alt": "Lorraine on bed"
+            },
+            {
+                "src": "lorraine/IMG_9642.jpg",
+                "alt": "Lorraine on bed"
+            },
+            {
+                "src": "lorraine/IMG_9679.JPG",
+                "alt": "Lorraine on bed"
+            },
+            {
+                "src": "lorraine/IMG_9781.jpg",
+                "alt": "Lorraine on bed"
+            },
+            {
+                "src": "lorraine/IMG_9899.JPG",
+                "alt": "Lorraine on bed"
+            }
+        ]
     }
 }
