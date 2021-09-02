@@ -29,7 +29,8 @@ var buildPaths = {
     ncp: 'public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
     vgs: 'public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
     about: 'public/patterns/05-prod-about-about/05-prod-about-about.html',
-    allsafe: 'public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html'
+    allsafe: 'public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html',
+    galaxy: 'public/patterns/05-prod-galaxy-galaxy/05-prod-galaxy-galaxy.html'
 }
 
 gulp.task('sass', () => {
@@ -62,7 +63,7 @@ gulp.task('js', () => {
     gulp.src('./node_modules/stickybits/dist/stickybits.min.js')
         .pipe(gulp.dest('./src/js/libraries/stickybits'));
 
-    return gulp.src('./src/_patterns/**/*.js')
+    return gulp.src(['./src/js/init.js', './src/_patterns/**/*.js'])
         .pipe(concat('script.js'))
         .pipe(minify())
         .pipe(gulp.dest('./src/js'))
@@ -173,7 +174,7 @@ gulp.task('moveAssets', () => {
     console.log("NCP Build Finished");
     
     // Allsafe
-    console.log("Starting Alsafe Build...");
+    console.log("Starting Allsafe Build...");
     gulp.src(buildPaths.allsafe)
         .pipe(rename({
             basename: 'index',
@@ -181,6 +182,16 @@ gulp.task('moveAssets', () => {
         }))
         .pipe(gulp.dest('./dist/allsafe'));
     console.log("Allsafe Build Finished");
+    
+    // Galaxy
+    console.log("Starting Galaxy Build...");
+    gulp.src(buildPaths.galaxy)
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./dist/redhat-ansible-galaxy'));
+    console.log("Galaxy Build Finished");
 
     // Sitemap
     gulp.src('./src/sitemap.xml').pipe(gulp.dest('./dist/'));

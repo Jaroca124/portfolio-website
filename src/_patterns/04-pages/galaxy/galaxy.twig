@@ -11,43 +11,51 @@
             }
         %}
             {% block hero_generic_content %}
-                <div class="row">
-                    <div class="col-12 col-sm-10 col-md-8 mx-auto">
+                <div class="row hero-content">
+                    <div class="hero-content__content col-12 col-md-7">
                         <h1 class="display-3">Ansible Galaxy Redesign</h1>
                         <h2 class="mt-5">Red Hat &amp; Tufts University</h2>
+                    </div>
+                    <div class="hero-content__image col-12 col-md-5">
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with
+                            {
+                                "image_src": "portfolio/a-galaxy.png",
+                                "image_alt": "Ansible Galaxy website on a laptop"
+                            }
+                        %}
                     </div>
                 </div>
             {% endblock %}
         {% endembed %}
     {% endblock %}
     {% block main %}
-        <div class="container">
+        <div class="design-method">
             <div class="row">
                 <div class="col section">
                     <h2 class='section__title'>Design Method</h2>
                 </div>
             </div>
-            <div class="row badge_row">
-                <div class="col-md-4">
-                    <img class='d-block mx-auto my-4 stage_button' src="project_assets/general/stage1Asset%2013@4x.png">
-                    <p class='my-4 mx-3 stage_description'>Identify: In this stage, the research and design team works to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience.</p>
+            <div class="row design-method__stages">
+                <div class="design-method__stages__stage">
+                    <h3>1. Identify</h3>
+                    <p class='my-4'>In this stage, the research and design team works to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience.</p>
                 </div>
-                <div class="col-md-4">
-                    <img class='d-block mx-auto my-4 stage_button' src="project_assets/general/stage2Asset%2012@4x.png">
-                    <p class='my-4 mx-3 stage_description'>Design: In this stage, the team brainstorms different features or modifications for inclusion in the redesign. The team typically creates wireframes, templates, and design concepts utilizing the user needs generated from Identify as a guide. Multiple designs are generated in order to present a range of different choices.</p>
+                <div class="design-method__stages__stage">
+                    <h3>2. Design</h3>
+                    <p class='my-4'>In this stage, the team brainstorms different features or modifications for inclusion in the redesign. The team typically creates wireframes, templates, and design concepts utilizing the user needs generated from Identify as a guide. Multiple designs are generated in order to present a range of different choices.</p>
                 </div>
-                <div class="col-md-4 ">
-                    <img class='d-block mx-auto my-4 stage_button' src="project_assets/general/stage3Asset%2011@4x.png">
-                    <p class='my-4 mx-3 stage_description'>Verify &amp; Validate: After multiple design concepts have been created, the team tests the feasibility of these designs with potential users. The team incorporates the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, the team may implement this verified design.</p>
+                <div class="design-method__stages__stage">
+                    <h3>3. Verify &amp; Validate</h3>
+                    <p class='my-4'>After multiple design concepts have been created, the team tests the feasibility of these designs with potential users. The team incorporates the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, the team may implement this verified design.</p>
                 </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 col-md-3 d-none d-md-block">
                     {% include "@molecules/components/component-content-menus/_component-galaxy-menu-main.twig" %}
                 </div>
-                <div class="col-9">
+                <div class="col-12 col-md-9">
                     <div class="container mx-auto">
                         <div class="row">
                             <div id="overview" class="scrollspy section col">
@@ -258,7 +266,7 @@
                             </div>
                         </div>      
                         <div class="row">
-                            <div class="scrollspy col section">
+                            <div id="user-testing-2" class="scrollspy col section">
                                 <h2 class='section__title'>Usability Testing Round 2:<br>Low Fidelity Mockups</h2>
                                 <p class='section__description'>Following the insights generated from the first round of usability testing, the best two concepts were identified for each feature set, and in some cases adjustments were made in response to user feedback. These concepts were then arranged and aggregated into two full website concepts, A and B, and made into two separate prototypes using Invision. The goal for this round of usability testing was to arrive at a single preferred concept for each feature set and thus gather the feedback necessary to begin constructing a final, high fidelity website design. The team utilized the feedback from this round to determine whether the final concept for each feature would be one of our two alternate concepts, some combination of them, or a new concept entirely.</p>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
@@ -271,7 +279,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="scrollspy col section">
+                            <div id="user-testing-2-results" class="scrollspy col section">
                                 <h2 class='section__title'>Usability Testing Round 2:<br>Results &amp; Conclusions</h2>
                                 <p class='section__description'>The team codified the results of the second design round in two ways. First, participants’ rank order preferences of concepts for each feature were recorded in a spreadsheet. We used these rankings in combination with rankings from the first round of demonstration and reaction sessions in order to determine which concepts would not move on to the next design round. The results from the first round were comparable in most cases because participants had been shown the same two concepts as in Round 2, in addition to a third which has already been eliminated. We adjusted Round 1 rankings to be compatible (first choice, not first choice) with Round 2 rankings and used them to supplement the six data points we gathered in Round 2. Finally, because we had limited feedback from true Galaxy users, we weighted the three data points from these users in order to make our decisions as user-centered as possible. This informed our “weighted” vote totals. We simply doubled votes by Galaxy users (highlighted in purple below) in order to create these weighted totals. For each feature (with the exception of the bookmarks feature), the concept with the highest weighted ranking will be used in our final aesthetic concepts.</p>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
@@ -284,7 +292,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="scrollspy col section">
+                            <div id="user-testing-3" class="scrollspy col section">
                                 <h2 class='section__title'>Usability Testing Round 3:<br>Informal Expert Review</h2>
                                 <p class='section__description'>The goal of this stage of research was to create a single, high-fidelity design solution and to share it with our Red Hat, Inc. UX sponsors to receive iterative feedback. Following the second round of demonstration and reaction sessions, the team narrowed down all features to the winning concept. The team began to weave these concepts into one fully-developed, aesthetic concept using Adobe Illustrator. Once a first iteration of each website screen was designed, the team conducted a screenshare conference with UX professionals from Red Hat, Inc. This session was conducted for the purposes of gathering strictly UX and design feedback on the high-fidelity screens. Please see Appendix K for the full set of initial high fidelity screens.</p>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
@@ -297,7 +305,7 @@
                             </div>
                         </div>  
                         <div class="row">
-                            <div class="scrollspy col section">
+                            <div id="user-testing-3-results" class="scrollspy col section">
                                 <h2 class='section__title'>Usability Testing Round 3:<br>Results &amp; Conclusions</h2>
                                 <p class='section__description'>Following the collection and consideration of the comments and suggestions received from this session, the team refined the screen designs as well as any relevant design elements. The team grouped feedback and comments by each website screen. While not explicitly suggested, this round of feedback also inspired deeper thought in a number of key areas and functionalities of the website, which prompted other changes.Following these modifications to the high fidelity mockup, the ultimate result of this round of usability feedback was the creation of the Design Specification, which details all of Andromeda Design’s final design decisions along with detailed documentation of styles and interactions. Furthermore, the team produced a final set of high-fidelity website screens.</p>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
@@ -310,117 +318,171 @@
                             </div>
                         </div>    
                         <div class="row">
-                            <div class="scrollspy col section">
+                            <div id="system-req-verification" class="scrollspy col section">
                                 <h2 class='section__title'>System Requirement Verification</h2>
                                 <p class='section__description'>Following the finalization of the screens and the Design Specification, the team verified that the final design addressed each of our system requirements in full, or otherwise explained our rationale for deviating from the original requirement. Below we have mapped each system requirement to our design solution, thus demonstrating the successful conclusion of the Human Factors iterative design method. With the successful mapping of system requirement to its design solution, the team proved that the final design was inspired by and grounded in user-centric design decisions.</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="scrollspy col section">
-                                <h2 class='section__title'>Final Screens</h2>
+                                <h2 id="final-screens" class='section__title'>Final Screens</h2>
                                 <p class='section__description'>Featured below are some of the most important screens of the Ansible Galaxy site. The current, live version of the website is shown on the left, and our proposed redesign is shown on the right. Working with the Red Hat UX team has been a phenomenal experience. My team and I received an incredible amount of support and we are proud to deliver our designs to Red Hat. Special thanks to Red Hat sponsors/supervisors Colleen Hart and Serena Doyle, capstone professor David Aurelio, and my incredible team - Laura Brooks, Alexander Golin, and Alejandro Osio - for making this project successful.</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>Login Screen</h2>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section section">
+                                <h2 class='mockups__section__title'>Login Screen</h2>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
                                     {
-                                        "image_default_classes": "section__image",
+                                        "image_default_classes": "mockups__section__images__image",
                                         "image_src": "redhat/originalScreens/login.PNG",
                                         "image_alt": ""
                                     }
                                 %}
                             </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
                                 {% include "@atoms/images/image-default/_image-default-main.twig" with
                                     {
-                                        "image_default_classes": "section__image",
+                                        "image_default_classes": "mockups__section__images__image",
                                         "image_src": "redhat/newScreens/LoginPage.png",
                                         "image_alt": ""
                                     }
                                 %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>Home Page</h2>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section__title section">
+                                <h2 class='mockups__section__title__text'>Home Page</h2>
+                            </div>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/originalScreens/homeScreen.PNG",
+                                        "image_alt": "Orignal Home Screen of Ansible Galaxy"
+                                    }
+                                %}
+                            </div>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/newScreens/HomePageSpotlightSearch@2x.png.png",
+                                        "image_alt": "Redesign Home Screen of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/originalScreens/homeScreen.PNG'>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section section">
+                                <h2 class='mockups__section__title'>Search Results Page</h2>
                             </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/newScreens/HomePageSpotlightSearch@2x.png.png'>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/originalScreens/searchResults.PNG",
+                                        "image_alt": "Original Home Screen of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>Search Results Page</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/originalScreens/searchResults.PNG'>
-                            </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/newScreens/SearchResults@2x.png.png'>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>Role Page</h2>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/newScreens/SearchResults@2x.png.png",
+                                        "image_alt": "Redesign Home Screen of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/originalScreens/roleOverview.PNG'>
-                            </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/newScreens/RolePage@2x.png.png'>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section section">
+                                <h2 class='mockups__section__title'>Role Page</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>Upload</h2>
+                        <div class="row mockups__section">
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/originalScreens/roleOverview.PNG",
+                                        "image_alt": "Original Role Page of Ansible Galaxy"
+                                    }
+                                %}
+                            </div>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/newScreens/RolePage@2x.png.png",
+                                        "image_alt": "Redesigned Role Page of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/originalScreens/upload.PNG'>
-                            </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/newScreens/Upload@2x.png.png'>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section section">
+                                <h2 class='mockups__section__title'>Upload</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 class='section__title'>User Profile</h2>
+                        <div class="row mockups__section">
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/originalScreens/upload.PNG",
+                                        "image_alt": "Original Upload of Ansible Galaxy"
+                                    }
+                                %}
+                            </div>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/newScreens/Upload@2x.png.png",
+                                        "image_alt": "Redesigned Upload of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Original</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/originalScreens/otherProfile.PNG'>
+                        <div class="row mockups__section">
+                            <div class="scrollspy mockups__section section">
+                                <h2 class='mockups__section__title'>User Profile</h2>
                             </div>
-                            <div class="col-lg-6 my-2 mx-0 px-0">
-                                <h3 class="my-3 w-100 mx-auto text-center">Redesigned</h3>
-                                <img class="d-block mx-auto screen_img" src='redhat/newScreens/Profile(Personal)@2x.png.png'>
+                        </div>
+                        <div class="row mockups__section">
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Original</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/originalScreens/otherProfile.PNG",
+                                        "image_alt": "Original User Profile of Ansible Galaxy"
+                                    }
+                                %}
+                            </div>
+                            <div class="mockups__section__images">
+                                <h3 class="mockups__section__images__label">Redesigned</h3>
+                                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                    {
+                                        "image_default_classes": "mockups__section__images__image",
+                                        "image_src": "redhat/newScreens/Profile(Personal)@2x.png.png",
+                                        "image_alt": "Redesigned User Profile of Ansible Galaxy"
+                                    }
+                                %}
                             </div>
                         </div>
                     </div>

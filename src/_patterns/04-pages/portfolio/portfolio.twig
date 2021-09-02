@@ -103,7 +103,7 @@
                         {% include "@atoms/button/button-default/_button-default-main.twig" with
                             {
                                 "button_default_text": "Read Full Story",
-                                "button_default_href": "/galaxy"
+                                "button_default_href": "/redhat-ansible-galaxy"
                             }
                         %}
                     </div>
@@ -112,7 +112,7 @@
             {% embed "@organisms/sections/section-default/_section-default-main.twig" with
                 {
                     "section_default_classes": "section--default--cabcs",
-                    "section_default_image_src": "portfolio/DroneV2.gif",
+                    "section_default_image_src": "portfolio/drone-static.png",
                     "section_default_image_orientation": "left"
                 }
             %}
@@ -129,8 +129,10 @@
                     <div class="section--default--cabcs__button">
                         {% include "@atoms/button/button-default/_button-default-main.twig" with
                             {
-                                "button_default_text": "Read Full Story",
-                                "button_default_href": "/cabcs"
+                                "button_default_classes": "cabcs-button",
+                                "button_default_text": "Coming Soon",
+                                "button_default_href": "#",
+                                "button_default_attributes": "disabled"
                             }
                         %}
                     </div>
