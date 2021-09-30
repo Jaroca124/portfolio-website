@@ -314,7 +314,7 @@
     },
     "education": {
         "tuftsLogo": {
-            "src": "experience/logos/L0.jpg",
+            "src": "experience/logos/tufts-logo.svg",
             "alt": "Tufts University Logo"
         },
         "leftList": [
@@ -390,7 +390,7 @@
             {
                 "classes": "bah",
                 "logo": {
-                    "src": "experience/logos/bahLogo.png",
+                    "src": "experience/logos/bah-logo.png",
                     "alt": "Test Logo"
                 },
                 "name": "Booz Allen Hamilton",
@@ -400,7 +400,7 @@
             },
             {
                 "logo": {
-                    "src": "experience/logos/L0.jpg",
+                    "src": "experience/logos/tufts-logo.svg",
                     "alt": "Tufts University Logo"
                 },
                 "name": "Red Hat, Inc., Tufts University",
@@ -410,7 +410,7 @@
             },
             {
                 "logo": {
-                    "src": "experience/logos/CABCSLogo.png",
+                    "src": "experience/logos/cabcs-logo.png",
                     "alt": "CABCS Logo"
                 },
                 "name": "Center for Applied Brain & Cognitive Sciences, Tufts University",
@@ -420,7 +420,7 @@
             },
             {
                 "logo": {
-                    "src": "experience/logos/L1.png",
+                    "src": "experience/logos/resilinc-logo.png",
                     "alt": "Resilinc, Inc. Logo"
                 },
                 "name": "Resilinc, Inc.",
@@ -430,7 +430,7 @@
             },
             {
                 "logo": {
-                    "src": "experience/logos/L2.jpg",
+                    "src": "experience/logos/audience-logo.png",
                     "alt": "Audience Logo"
                 },
                 "name": "Audience, Inc.",

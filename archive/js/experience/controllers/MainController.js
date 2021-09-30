@@ -20,7 +20,7 @@ app.controller('ExperienceData', ['$scope', function($scope) {
     },
     {
       companyName: 'Resilinc, Inc.', 
-      companyLogo: "../../assets/experience/logos/L1.png",
+      companyLogo: "../../assets/experience/logos/resilinc-logo.png",
       position: "UI/UX Intern (Fulltime - Paid)",
       period: "Summer 2015",
       companyDescription: "Resilinc is a leading cloud provider of global supply chain intelligence and analytics. Resilinc delivers powerful and fast results by leveraging an extensive big data platform and advanced analytics such as machine intelligence and cognitive computing to transform risks into opportunities to grow, steal market share and beat competition.",
@@ -29,7 +29,7 @@ app.controller('ExperienceData', ['$scope', function($scope) {
     },
     {
       companyName: 'Audience, Inc.', 
-      companyLogo: "../../assets/experience/logos/L2.jpg",
+      companyLogo: "../../assets/experience/logos/audience-logo.png",
       position: "Algorithm Intern (Fulltime - Paid)",
       period: "Summer 2014",
       companyDescription: "Audience is an American mobile voice and audio-processing company based in Mountain View, California, and is one of the 34 founding members of The Open Handset Alliance. They specialize in improving voice clarity and noise suppression for a broad range of consumer products, including cellular phones, mobile devices and PCs.",
