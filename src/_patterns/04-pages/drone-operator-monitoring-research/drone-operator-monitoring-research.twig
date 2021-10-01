@@ -1,0 +1,45 @@
+{% embed "@atoms/layout/layout-site/_layout-site-main.twig" with
+    {
+        "layout_site_id": "layout--cabcs"
+    }
+%}
+    {% block hero %}
+        {% include "@organisms/heros/hero-cabcs/_hero-cabcs-main.twig" %}
+    {% endblock %}
+    {% block main %}
+        <div class="design-method">
+            <div class="row">
+                <div class="col section">
+                    <h2 class='section__title'>Design Method</h2>
+                </div>
+            </div>
+            <div class="row design-method__stages">
+                <div class="design-method__stages__stage">
+                    <h3>1. Identify</h3>
+                    <p class='my-4'>In this stage, the research and design team works to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience.</p>
+                </div>
+                <div class="design-method__stages__stage">
+                    <h3>2. Design</h3>
+                    <p class='my-4'>In this stage, the team brainstorms different features or modifications for inclusion in the redesign. The team typically creates wireframes, templates, and design concepts utilizing the user needs generated from Identify as a guide. Multiple designs are generated in order to present a range of different choices.</p>
+                </div>
+                <div class="design-method__stages__stage">
+                    <h3>3. Verify &amp; Validate</h3>
+                    <p class='my-4'>After multiple design concepts have been created, the team tests the feasibility of these designs with potential users. The team incorporates the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, the team may implement this verified design.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-3 d-none d-md-block">
+                    MENU
+                </div>
+                <div class="col-12 col-md-9 p-0">
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    {% block footer %}
+        {% include "@organisms/global/global-footer/_global-footer-main.twig" %}
+    {% endblock %}
+{% endembed %}

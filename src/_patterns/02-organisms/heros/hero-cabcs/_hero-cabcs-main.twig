@@ -1,0 +1,25 @@
+{% set hero_cabcs_classes = hero_cabcs_classes|default() %}
+
+<div class="hero-pl hero--cabcs {{ hero_cabcs_classes }}">
+    <div class="hero--cabcs__navigation">
+        {% include "@molecules/navigation/navigation-primary/_navigation-primary-main.twig" with
+            {
+                "navigation_primary_classes": hero_generic_navigation_classes,
+                "navigation_primary_showhome": true,
+            }
+        %}
+        {% include "@molecules/components/component-media-links/_component-media-links-main.twig" %}
+    </div>
+    {% include "@organisms/sections/section-cabcs/_section-cabcs-main.twig" with
+        {
+            "section_cabcs_display_button": "false"
+        }
+    %}
+    {% include "@atoms/images/image-default/_image-default-main.twig" with
+        {
+            "image_default_classes": "hero--cabcs__background",
+            "image_src": "cabcs/nathanael-desmeules-O22IYMJZnkM-unsplash.jpg",
+            "image_alt": "Overcast sky over a snowy mountain peak."
+        }
+    %}
+</div>

@@ -1,0 +1,26 @@
+{% set section_cabcs_display_button = section_cabcs_display_button|default('true') %}
+
+{% embed "@organisms/sections/section-default/_section-default-main.twig" with
+    {
+        "section_default_classes": "section--default--cabcs",
+        "section_default_image_src": "portfolio/drone-static.png",
+        "section_default_image_orientation": "left"
+    }
+%}
+    {% block section_default_content %}
+        <h2 class="section--default--cabcs__title"><span class="section--default--cabcs__title__1">Drone Operator</span><br><span class="section--default--cabcs__title__2">Monitoring</span></h2>
+        <p>I joined a project at the Center for Applied Brain &amp; Cogntivie Sciences (CABCS) in the summer before my Senior year at Tufts University. As an Engineering Psychology student, my role was to assess the cognitive state of a drone operator and use that as input into an adjustable autonomy algorithm in a human-drone system.</p>
+        {% if section_cabcs_display_button == "true" %}
+            <div class="section--default--cabcs__button">
+                {% include "@atoms/button/button-default/_button-default-main.twig" with
+                    {
+                        "button_default_classes": "cabcs-button",
+                        "button_default_text": "Coming Soon",
+                        "button_default_href": "#",
+                        "button_default_attributes": "disabled"
+                    }
+                %}
+            </div>
+        {% endif %}
+    {% endblock %}
+{% endembed %}

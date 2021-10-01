@@ -1,0 +1,47 @@
+.hero--cabcs {
+    position: relative;
+    overflow: hidden;
+    &__background {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        @include media-breakpoint-down($mobile-breakpoint) {
+            width: auto;
+            height: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        @include media-breakpoint-up($mobile-breakpoint) {
+            width: 100vw;
+            height: auto;
+        }
+    }
+    &__navigation {
+        z-index: 1;
+        position: relative;
+        .component--media-links {
+            z-index: 1;
+            display: none;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            z-index: 101;
+            .component--media-links__link {
+                display: block;
+                margin-bottom: 1rem;
+                .icon {
+                    height: 2rem;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    .section--default--cabcs {
+        padding: 2rem;
+        @include media-breakpoint-up($mobile-breakpoint) {
+            padding: 1rem 8rem 8rem 8rem;
+        }
+    }
+}
