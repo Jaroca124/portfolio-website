@@ -3,15 +3,6 @@
         {% embed "@organisms/global/global-header/_global-header-main.twig" %}{% endembed %}
     {% endblock %}
 
-    {% block hero %}
-        {% embed "@molecules/blocks/jumbotron/jumbotron.twig" with {'jumbo_id':'skills-banner',"jumbo_image_credit": imageCredit} %}
-            {% block jumbotron_content %}
-                <h1 class="display-3">Skills</h1>
-                <p class="lead">Check out my skills as well as some of the programs I use in my work.</p>
-            {% endblock %}
-        {% endembed %}
-    {% endblock %}
-
     {% block main %}
         <div class="region--skils">
             <div class="container">

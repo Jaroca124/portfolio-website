@@ -19,18 +19,18 @@ var config = {
 var buildPaths = {
     target: './dist',
     styleGuide: 'public/index.html',
-    home: 'public/patterns/05-prod-index-index/05-prod-index-index.html',
-    portfolio: 'public/patterns/05-prod-portfolio-portfolio/05-prod-portfolio-portfolio.html',
-    feed: 'public/patterns/05-prod-feed-feed/05-prod-feed-feed.html',
-    skills: 'public/patterns/05-prod-skills-skills/05-prod-skills-skills.html',
-    education: 'public/patterns/05-prod-education-education/05-prod-education-education.html',
-    experience: 'public/patterns/05-prod-experience-experience/05-prod-experience-experience.html',
-    marvel: 'public/patterns/05-prod-marvel-marvel/05-prod-marvel-marvel.html',
-    ncp: 'public/patterns/05-prod-ncp-ncp/05-prod-ncp-ncp.html',
-    vgs: 'public/patterns/05-prod-video-game-series-video-game-series/05-prod-video-game-series-video-game-series.html',
-    about: 'public/patterns/05-prod-about-about/05-prod-about-about.html',
-    allsafe: 'public/patterns/05-prod-allsafe-allsafe/05-prod-allsafe-allsafe.html',
-    galaxy: 'public/patterns/05-prod-galaxy-galaxy/05-prod-galaxy-galaxy.html'
+    home: 'public/patterns/prod-index-index/prod-index-index.html',
+    portfolio: 'public/patterns/prod-portfolio-portfolio/prod-portfolio-portfolio.html',
+    feed: 'public/patterns/prod-feed-feed/prod-feed-feed.html',
+    skills: 'public/patterns/prod-skills-skills/prod-skills-skills.html',
+    education: 'public/patterns/prod-education-education/prod-education-education.html',
+    experience: 'public/patterns/prod-experience-experience/prod-experience-experience.html',
+    marvel: 'public/patterns/prod-marvel-marvel/prod-marvel-marvel.html',
+    ncp: 'public/patterns/prod-ncp-ncp/prod-ncp-ncp.html',
+    vgs: 'public/patterns/prod-video-game-series-video-game-series/prod-video-game-series-video-game-series.html',
+    about: 'public/patterns/prod-about-about/prod-about-about.html',
+    allsafe: 'public/patterns/prod-allsafe-allsafe/prod-allsafe-allsafe.html',
+    galaxy: 'public/patterns/prod-galaxy-galaxy/prod-galaxy-galaxy.html'
 }
 
 gulp.task('sass', () => {
@@ -47,7 +47,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('pl', (cb) => {
-    exec('php core/console --generate', function(err, stdout, stderr) {
+    exec('npm run build', function(err, stdout, stderr) {
         browserSync.reload();
         cb(err);
     });

@@ -4,7 +4,6 @@
 {% set block_experience_company_name = block_experience_company_name|default() %}
 {% set block_experience_company_title = block_experience_company_title|default() %}
 {% set block_experience_company_location = block_experience_company_location|default() %}
-{% set block_experience_company_description = block('block_experience_company_description') %}
 
 <div class="block-pl block--experience {{ block_experience_classes }}">
     {% include "@atoms/images/image-default/_image-default-main.twig" with
@@ -25,7 +24,5 @@
             }
         %}{{ block_experience_company_location }}
     </p>
-    {% if block_experience_company_description|trim is not empty %}
-        {{ block_experience_company_description|raw }}
-    {% endif %}
+    {% block block_experience_company_description %}{% endblock %}
 </div>

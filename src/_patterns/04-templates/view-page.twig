@@ -1,6 +1,10 @@
 {% set template_id = template_id|default() %}
-{% set template_hero_content = block('template_hero_content') %}
-{% set template_main_content = block('template_main_content') %}
+{% set template_hero_content %}
+    {% block template_hero_content %}{% endblock %}
+{% endset %}
+{% set template_main_content %}
+    {% block template_main_content %}{% endblock %}
+{% endset %}
 
 {% embed "@atoms/layout/layout-site/_layout-site-main.twig" with
     {

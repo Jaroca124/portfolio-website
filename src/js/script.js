@@ -1,6 +1,48 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     componentContentMenu.init();
 });
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $('.block--images').each(function() {
+            var scrollTrigger = $(this).parentsUntil('.section--default').parent().offset().top;
+            if (($(window).scrollTop() + ($(window).height() / 2)) >= scrollTrigger) {
+                var direction = $(this).attr('data-animation-direction');
+                if (typeof direction !== typeof undefined && direction !== false) {
+                    renderImages(direction, $(this).find('.block--images__image'));
+                }
+            }
+        });
+    });
+});
+
+function renderImages(direction, images) {
+    for (i = 0; i < images.length; i++) {
+        (function(i) {
+            setTimeout(function() {
+                $(images[i]).css({ opacity: 1, transform: "translateY(0)" });
+            }, 250 * i);
+        })(i);
+    }
+}
+/*window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    color: "#ffffff",
+    connectParticles: true,
+    maxParticles: 50,
+    speed: .25,
+    responsive: [
+        {
+            breakpoint: 
+                768,
+                options: {
+                    maxParticles: 0,
+                    connectParticles: true
+                }
+        }
+    ]
+  });
+};*/
 // $(document).ready(function() {
 //     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
 //         $('.navigation--drawer').toggleClass('drawer--open');
@@ -178,48 +220,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.scrollspy').scrollSpy();
 }); 
-$(document).ready(function() {
-    $(window).scroll(function() {
-        $('.block--images').each(function() {
-            var scrollTrigger = $(this).parentsUntil('.section--default').parent().offset().top;
-            if (($(window).scrollTop() + ($(window).height() / 2)) >= scrollTrigger) {
-                var direction = $(this).attr('data-animation-direction');
-                if (typeof direction !== typeof undefined && direction !== false) {
-                    renderImages(direction, $(this).find('.block--images__image'));
-                }
-            }
-        });
-    });
-});
-
-function renderImages(direction, images) {
-    for (i = 0; i < images.length; i++) {
-        (function(i) {
-            setTimeout(function() {
-                $(images[i]).css({ opacity: 1, transform: "translateY(0)" });
-            }, 250 * i);
-        })(i);
-    }
-}
-/*window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    color: "#ffffff",
-    connectParticles: true,
-    maxParticles: 50,
-    speed: .25,
-    responsive: [
-        {
-            breakpoint: 
-                768,
-                options: {
-                    maxParticles: 0,
-                    connectParticles: true
-                }
-        }
-    ]
-  });
-};*/
 $(document).ready(function() {
     var delay = 200;
     
