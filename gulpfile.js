@@ -4,9 +4,10 @@ var browserSync = require('browser-sync').create(),
     exec = require('child_process').exec,
     gulp = require('gulp'),
     minify = require('gulp-minify'),
-    sass = require('gulp-sass'),
     sassGlob = require('gulp-sass-glob'),
     rename = require('gulp-rename');
+
+var sass = require('gulp-sass')(require('sass'));
 
 var config = {
     sassPath: './src/css',

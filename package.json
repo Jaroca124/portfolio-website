@@ -15,6 +15,7 @@
     "dev": "node ./node_modules/@pattern-lab/uikit-workshop/build-tools.js"
   },
   "keywords": [],
+  "repository": "https://github.com/Jaroca124/portfolio-website",
   "author": "Jacob Caccamo",
   "license": "ISC",
   "dependencies": {
@@ -35,7 +36,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.0.9",
     "gulp-sourcemaps": "^2.6.5"
   }
