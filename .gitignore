@@ -3,5 +3,5 @@
 node_modules/
 export/
 public/
-vendor/
 archive/connected-crew/node_modules/
+dependencyGraph.json
