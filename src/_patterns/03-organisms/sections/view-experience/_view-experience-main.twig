@@ -17,5 +17,8 @@
                 {{ listing.description|raw }}
             {% endblock %}
         {% endembed %}
+        {% if not loop.last %}
+            <hr class="mb-5">
+        {% endif %}
     {% endfor %}
 </div>

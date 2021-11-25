@@ -388,15 +388,26 @@
     "experience": {
         "experience_data": [
             {
+                "classes": "fidelis",
+                "logo": {
+                    "src": "experience/logos/logo-Fidelis-green-lg.svg",
+                    "alt": "Fidelis Logo"
+                },
+                "name": "Fidelis Cybersecurity",
+                "title": "UI/UX Designer",
+                "location": "Washington, DC",
+                "description": ""
+            },
+            {
                 "classes": "bah",
                 "logo": {
                     "src": "experience/logos/bah-logo.png",
-                    "alt": "Test Logo"
+                    "alt": "Booz Allen Hamilton Logo"
                 },
                 "name": "Booz Allen Hamilton",
                 "title": "UI/UX Designer – Lead Technologist (Associate)",
                 "location": "Washington, DC",
-                "description": "<h3>National Institute of Allergy &amp; Infectious Diseases (NIAID, NIH)</h3> <ul><li>Designed and developed the <a href='https://www.coronaviruspreventionnetwork.org/'>COVID-19 Prevention Network</a> to help recruit volunteers for COVID-19 vaccine trials.<ul><li>19K Daily Average Users, 11M+ Page Views</li></ul></li><li>Developed the visual theme of the NIAID intranet as part of an end-to-end redesign and migration project (SharePoint to Drupal 8).</li><li>Led the visual design refresh and front-end development effort for the <a href='https://www.niaid.nih.gov'>NIAID public website.</a></li><li>Created the Pattern Lab instance for Drupal 8, using HTML, CSS, JavaScript, and Twig, which serves as the creative guide and design platform to reduce front-end development time.</li><li>Built a master prototype to guide the Drupal development team in creating UX-verified layouts.</li><li>Designed and facilitated an eye tracking study to evaluate and enhance the intranet and public websites’ visual designs.</li><li>Facilitated a Design Sprint with key stakeholders to assess and improve the overall digital experience of NIAID employees.</li></ul><h3>Innovation Center – Internal Website (Enterprise-Wide Web App) Redesign</h3><ul><li>Conducted brainstorming sessions with stakeholders to create the design and development roadmap for a four-stage deployment process.</li><li>Gained project plan approval from directorate leadership for the web app, accessible to 25K+ employees.</li><li>Produced wireframes and high-fidelity mockups to more effectively display content and improve user comprehension/satisfaction.</li><li>Managed the UI development and directed interaction choices to bolster site UX.</li></ul>"
+                "description": "<h3>National Institute of Allergy &amp; Infectious Diseases (NIAID, NIH)</h3><ul><li>Created the latest visual design for and led the front-end development of NIAID’s flagship public website <a href='https://www.niaid.nih.gov'>www.niaid.nih.gov.</a></li><li>Architected, designed, and built the NIAID Design System (NDS) to unify front-end design and development experiences across NIAID digital properties.<ul><li>Created a comprehensive library of responsive and accessible components.</li><li>Created a documentation website providing access to the design system components and further information on design and development with NDS.</li><li>Integrated NDS with three web products, including NIAID’s flagship public website.</li></ul></li><li>Designed and developed the <a href='https://www.coronaviruspreventionnetwork.org/'>COVID-19 Prevention Network</a> website to help recruit volunteers for COVID-19 vaccine trials. 19K Daily Average Users, 11M+ Page Views</li><li>Developed the visual theme of the NIAID intranet as part of an end-to-end redesign and migration project (SharePoint to Drupal).</li><li>Created the Pattern Lab instance for Drupal, using HTML, CSS, JavaScript, and Twig, which serves as the creative guide and design platform to reduce front-end development time.</li><li>Built a master prototype to guide the Drupal development team in creating UX-verified layouts.</li><li>Designed and facilitated an eye tracking study to evaluate and enhance the intranet and public websites’ visual designs.</li><li>Facilitated a Design Sprint with key stakeholders to improve the overall digital experience of NIAID employees.</li></ul><h3>Innovation Center – Internal Website (Enterprise-Wide Web App) Redesign</h3><ul><li>Conducted brainstorming sessions with stakeholders to create the design and development roadmap for a four-stage deployment process.</li><li>Gained project plan approval from directorate leadership for the web app, accessible to 25K+ employees.</li><li>Produced wireframes and high-fidelity mockups to more effectively display content and improve user comprehension/satisfaction.</li><li>Managed the UI development and directed interaction choices to bolster site UX.</li></ul>"
             },
             {
                 "logo": {

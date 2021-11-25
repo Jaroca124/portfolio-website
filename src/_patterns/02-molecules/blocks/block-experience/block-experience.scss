@@ -43,4 +43,12 @@
     &:last-child {
         padding-bottom: 4rem;
     }
+    ul {
+        ul {
+            margin-left: 2rem;
+            li {
+                list-style: circle;
+            }
+        }
+    }
 }
