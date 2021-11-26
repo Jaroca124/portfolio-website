@@ -1,11 +1,16 @@
 {% set layout_project_classes = layout_project_classes|default() %}
+{% set layout_project_menu %}
+    {% block layout_project_menu %}{% endblock %}
+{% endset %}
 
 <div class="layout-pl layout--project container-fluid {{ layout_project_classes }}">
     <div class="row">
-        <div class="col-12 col-md-3 d-none d-md-block">
-            {% block layout_project_menu %}{% endblock %}
-        </div>
-        <div class="col-12 col-md-9 p-0">
+        {% if layout_project_menu|trim is not empty %}
+            <div class="col-12 col-md-3 d-none d-md-block">
+                {{ layout_project_menu }}
+            </div>
+        {% endif %}
+        <div class="col-12 col-md-9 p-0 mx-auto">
             {% block layout_project_content %}{% endblock %}
         </div>
     </div>

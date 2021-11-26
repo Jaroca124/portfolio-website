@@ -31,7 +31,8 @@ var buildPaths = {
     vgs: 'public/patterns/prod-video-game-series-video-game-series/prod-video-game-series-video-game-series.html',
     about: 'public/patterns/prod-about-about/prod-about-about.html',
     allsafe: 'public/patterns/prod-allsafe-allsafe/prod-allsafe-allsafe.html',
-    galaxy: 'public/patterns/prod-galaxy-galaxy/prod-galaxy-galaxy.html'
+    galaxy: 'public/patterns/prod-galaxy-galaxy/prod-galaxy-galaxy.html',
+    cabcs: 'public/patterns/prod-cabcs-cabcs/prod-cabcs-cabcs.html'
 }
 
 gulp.task('sass', () => {
@@ -193,6 +194,16 @@ gulp.task('moveAssets', () => {
         }))
         .pipe(gulp.dest('./dist/redhat-ansible-galaxy'));
     console.log("Galaxy Build Finished");
+
+    // CABCS
+    console.log("Starting CABCS Build...");
+    gulp.src(buildPaths.cabcs)
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('./dist/drone-operator-monitoring-research'));
+    console.log("CABCS Build Finished");
 
     // Sitemap
     gulp.src('./src/sitemap.xml').pipe(gulp.dest('./dist/'));

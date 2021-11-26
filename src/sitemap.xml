@@ -47,4 +47,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://jacobcaccamo.com/redhat-ansible-galaxy/</loc>
+        <lastmod>2021-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://jacobcaccamo.com/drone-operator-monitoring-research/</loc>
+        <lastmod>2021-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
