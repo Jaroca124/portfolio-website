@@ -29,466 +29,374 @@
         {% endembed %}
     {% endblock %}
     {% block main %}
-        <div class="design-method">
-            <div class="row">
-                <div class="col section">
-                    <h2 class='section__title'>Design Method</h2>
-                </div>
-            </div>
-            <div class="row design-method__stages">
-                <div class="design-method__stages__stage">
-                    <h3>1. Identify</h3>
-                    <p class='my-4'>In this stage, the research and design team works to characterize users of the product or platform. This is achieved through the use of observations, interviews, online research, reviews, and surveys. After conducting these methods, a set of critical user needs is identified, a list of the most important qualities of the product that users need to have an optimal user experience.</p>
-                </div>
-                <div class="design-method__stages__stage">
-                    <h3>2. Design</h3>
-                    <p class='my-4'>In this stage, the team brainstorms different features or modifications for inclusion in the redesign. The team typically creates wireframes, templates, and design concepts utilizing the user needs generated from Identify as a guide. Multiple designs are generated in order to present a range of different choices.</p>
-                </div>
-                <div class="design-method__stages__stage">
-                    <h3>3. Verify &amp; Validate</h3>
-                    <p class='my-4'>After multiple design concepts have been created, the team tests the feasibility of these designs with potential users. The team incorporates the feedback gained in this stage to converge onto a single concept and to finalize this design. Finally, the team may implement this verified design.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md-3 d-none d-md-block">
-                    {% include "@molecules/components/component-content-menus/_component-galaxy-menu-main.twig" %}
-                </div>
-                <div class="col-12 col-md-9 p-0">
-                    <div class="container mx-auto">
-                        <div class="row">
-                            <div id="overview" class="scrollspy section col">
-                                <h2 class='section__title'>What is Ansible Galaxy?</h2>
-                                <p class='section__description'>As a part of our Senior Capstone at Tufts University, my team is working on the task of redesigning the Ansible Galaxy website. This website supplements the Ansible platform, which is used for automating IT processes. Ansible is a large suite of tools that are utilized both through command line and web interfaces. Galaxy is a unified repository of brilliant IT automation solutions created for the Ansible platform that people from all over the world have shared. Anyone can download roles that another user has contributed. Our team's ongoing mission is to enhance this service even further by applying principles of user-centered design in order to bring an unparalleled experience to its users.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/Ansible_Logo@2x.png",
-                                        "image_alt": "Ansible Logo"
-                                    }
-                                %}
-                            </div>
-                        </div>      
-                        <div class="row">
-                            <div id="goals" class="scrollspy section col">
-                                <h2 class='section__title'>Project Expectations &amp; Goals</h2>
-                                <p class='section__description'>In accordance with the mission of Ansible Galaxy, our team detailed the following goals - The main goal of the project is to redesign the Ansible Galaxy website (galaxy.ansible.com) for improved user experience. The team will conduct user research to define user needs and design the best user interface based on these needs. Modules from the PatternFly Design Library will be used wherever applicable, and our newly designed patterns will be contributed to PatternFly. We have also taken on the stretch goal of fully implementing the newly designed website.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/andromeda_verticalAsset%2022@3x.png",
-                                        "image_alt": "Team Andromeda Logo"
-                                    }
-                                %}
-                            </div>
+        {% include "@molecules/blocks/block-design-method/_block-design-method-main.twig" %}
+        {% embed "@atoms/layout/layout-project/_layout-project-main.twig" %}
+            {% block layout_project_menu %}
+                {% include "@molecules/components/component-content-menus/_component-galaxy-menu-main.twig" %}
+            {% endblock %}
+            {% block layout_project_content %}
+                <div class="container mx-auto">
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "overview",
+                            "block_step_title": "What is Ansible Galaxy?",
+                            "block_step_description": "As a part of our Senior Capstone at Tufts University, my team is working on the task of redesigning the Ansible Galaxy website. This website supplements the Ansible platform, which is used for automating IT processes. Ansible is a large suite of tools that are utilized both through command line and web interfaces. Galaxy is a unified repository of brilliant IT automation solutions created for the Ansible platform that people from all over the world have shared. Anyone can download roles that another user has contributed. Our team's ongoing mission is to enhance this service even further by applying principles of user-centered design in order to bring an unparalleled experience to its users.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/Ansible_Logo@2x.png",
+                            "block_step_img_alt": "Ansible Logo"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "goals",
+                            "block_step_title": "Project Expectations & Goals",
+                            "block_step_description": "In accordance with the mission of Ansible Galaxy, our team detailed the following goals - The main goal of the project is to redesign the Ansible Galaxy website (galaxy.ansible.com) for improved user experience. The team will conduct user research to define user needs and design the best user interface based on these needs. Modules from the PatternFly Design Library will be used wherever applicable, and our newly designed patterns will be contributed to PatternFly. We have also taken on the stretch goal of fully implementing the newly designed website.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/andromeda_verticalAsset%2022@3x.png",
+                            "block_step_img_alt": "Team Andromeda Logo"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "exploratory-interviews",
+                            "block_step_title": "Exploratory Interviews",
+                            "block_step_description": "The first step of characterizing Ansible Galaxy users was to meet with Red Hat sponsors in order to better understand the project expectations and goals. Given that the team was not familiar with the IT domain prior to this project, the video conference allowed the team to gain a better perspective on the product itself. The team learned about Galaxy’s role within the community and the types of interactions that users might have while using the website. The team set up a weekly meeting time in order to maintain consistent contact with Red Hat sponsors.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/exploreAsset%2031@4x.png",
+                            "block_step_img_alt": "Question Bubbles"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "lit-review",
+                            "block_step_title": "Online Literature Review",
+                            "block_step_description": "To supplement the information learned in the exploratory interview with Red Hat, the team performed an online literature review. This review was designed to fill in critical knowledge gaps in terms of IT automation and the Ansible Galaxy product domain. A variety of different sources were reviewed, covering topics from current impressions of Ansible Galaxy to typical IT tasks. Each article was reviewed by team members and a final bulleted list for each article was compiled. This literature review provided the team with a foundation moving forward into a heuristic analysis of Galaxy and its competitors.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/online_litAsset%2016@4x.png",
+                            "block_step_img_alt": "Laptop with Question Mark"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "heuristic-review",
+                            "block_step_title": "Heuristic Review",
+                            "block_step_description": "The next task involved conducting a heuristic analysis of Ansible Galaxy, Docker Hub, and the newly-created Docker Store Beta. A heuristic analysis is a method of comparing products along a set of predefined characteristics. The team used Nielsen's 10 Heuristics for Good User Interface Design (Nielsen, 1995). This set defines ten separate metrics, such as error recovery and overall aesthetic quality. This heuristic review provided us with a bird’s eye view qualitative assessment of each of the three evaluated platforms, which served as a crucial stepping stone in extrapolating a quantitative analysis in our expert review. This heuristic review served as an effective and succinct platform from which we could begin to identify possible missed use-cases. The review ultimately helped to inform our creation of user needs by informing the development of survey items.",
+                            "block_step_img_src": "redhat/heuristics.png",
+                            "block_step_img_alt": "Usability Heuristics Guide"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "expert-review",
+                            "block_step_title": "Expert Review",
+                            "block_step_description": "After completing our heuristic review, we conducted an expert review of Ansible Galaxy, Docker Hub, and the Docker Store Beta site in order to have a quantitative measure of the current sharing platforms. Each member of the team ranked each platform on a scale of 0-5 for a variety of metrics defined by the team (i.e. “Ease of browsing”). This provided a more quantitative set of metrics for comparing overall quality of each site’s user experience as well as an item by item comparison of which sites have better flows for specific tasks. Similar to the heuristic review, this helped the team concentrate the survey questionnaire items in order to uncover user needs from areas where Ansible Galaxy could specifically be improved.",
+                            "block_step_img_src": "redhat/Expert.PNG",
+                            "block_step_img_alt": "Excel spreadsheat detailing ratings from the expert review."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "survey-creation",
+                            "block_step_title": "Survey Creation & Modification",
+                            "block_step_description": "Following the expert review and TTS exploratory interview, the team began to more precisely characterize the users of Ansible Galaxy. In order to do so, we utilized our preliminary findings to develop a structured survey for current and potential users about their needs. This survey was piloted to Red Hat sponsors, Dr. Aurelio (professor of Capstone course), and a current TTS employee. The team modified the survey according to the feedback received, ensuring that the survey would generate applicable and relevant information. This survey was then distributed to locally accessible system administrators, members of the Ansible Galaxy User community through Red Hat sponsors, and IT professionals on a Reddit Ansible community forum. The team had initially proposed to reach out to Ansible Galaxy users via their GitHub repositories, however, this process would have been less efficient than the one conducted.",
+                            "block_step_img_src": "redhat/Survey.PNG",
+                            "block_step_img_alt": "Google Forms interface of our created survey."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "survey-results",
+                            "block_step_title": "Survey Results",
+                            "block_step_description": "The team used Google Forms’ built-in functionality for analyzing survey responses and codified open-ended questions based on commonly mentioned ideas. This helped us determine what users found to be the most salient issues or important features of IT automation sharing platforms. Averages were generated for specific questions, providing quantitative results. The qualitative questionnaire results were coded by identifying themes and tallying up responses that fell into each category. In total, 18 responses were considered in our results analysis. Based on what users consistently stated were important features for these platforms, we were able to develop a specific and refined list of user needs.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/chartAsset%2026@3x.png",
+                            "block_step_img_alt": "Generic pie chart graphic."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-needs",
+                            "block_step_title": "User Needs Development",
+                            "block_step_description": "Based on the results of the survey, Andromeda was able to paint a detailed portrait of a typical Ansible Galaxy user. Additionally, the team identified good and bad elements of current automation platforms. Good IT automation platforms such as Ansible Galaxy need to host reliable content, support easy interaction, and offer a variety of choices.  Conversely, less satisfactory platforms lack curated lists, provide poorly coded modules, and ineffective or incomplete documentation. The methods conducted by the Andromeda team resulted in the development of a set of ten user needs that ultimately factored into initial concept generation.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/needsAsset%2029@4x.png",
+                            "block_step_img_alt": "Generic image of an ordered list."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "system-requirements",
+                            "block_step_title": "Translating User Needs into System Requirements",
+                            "block_step_description": "With user needs and their detailed justifications from the research findings established, the team then proceeded to map out how these needs and justifications translated to system requirements. To accomplish this, the team simply compiled a table that tied each piece of feedback to a user need. The wording of each user need was then adjusted to reflect a more concrete requirement of the system. For each of these system requirements, the team assigned a priority ranging from Priority 1 to Priority 3 (P1-P3). These scores will serve as a reference to keep the team on track by focusing on the most critical system features first.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/sys_reqsAsset%2030@4x.png",
+                            "block_step_img_alt": "Generic image of an ordered list with checkmarks."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "developing-design",
+                            "block_step_title": "Developing Our Design Process",
+                            "block_step_description": "With a better understanding of Ansible Galaxy and its users, the team developed a multi-stage design process that prioritized user-centric design decisions. This process contained three stages. In the first stage, the team would develop a set of features for inclusion in the redesign. For each of these features, three different concepts would be created. After usability testing, the team would eliminate one of these three concepts. In the second stage, the two remaining concepts would be divided among two low-fidelity prototypes. Another round of usability testing would reveal the single winning concept per feature. Stage three would involve aesthetic concept testing and refinement.",
+                            "block_step_img_src": "redhat/des_flow.png",
+                            "block_step_img_alt": "Graphic showing how feature concepts merge into two prototypes and finally merge into one design. That design then is subject to testing."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "design-brainstorming",
+                            "block_step_title": "Design Brainstorming",
+                            "block_step_description": "Andromeda began the process of designing a solution that fulfills these needs and requirements from a purely creative perspective first. The team performed a brainstorming exercise in which each member wrote singular features or concepts on Post-Its for consideration and inclusion in the new designs. The team had three minutes to write as many features as possible. In this stage, no ideas were discouraged; the purpose was to generate as many ideas as possible. Following this exercise, the team grouped the Post-Its together under high-level categories as well as ratings for importance of inclusion in the redesign.",
+                            "block_step_img_src": "redhat/design_brainstorming.JPG",
+                            "block_step_img_alt": "Picture of the team performing design brainstorming exercises."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "feature-development",
+                            "block_step_title": "Feature Development",
+                            "block_step_description": "The team then outlined design features across high-level categories. The purpose of this exercise was to brainstorm differences in features for presentation to users. Upon returning from Thanksgiving Break, the team met to determine which features were going to be included in the first round of concept development. Some of the features that we came up with in our brainstorming activity relied too heavily on aesthetic design. For this reason, the team decided to hold off on developing these concepts until the next round, where style would be a principal focus.",
+                            "block_step_img_classes": "small",
+                            "block_step_img_src": "redhat/feature_mockup.JPG",
+                            "block_step_img_alt": "Whiteboarding session"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "concept-generation",
+                            "block_step_title": "Concept Generation",
+                            "block_step_description": "Following the identification of key features, the team developed three different concepts (referred to below as “options”) for each feature. These concepts were created using a wire-framing tool called Balsamiq, which allowed each team member to produce concepts at the same level of fidelity. This ensured that the aesthetic design across concepts within a given feature would not confound our feedback.",
+                            "block_step_img_src": "redhat/Concept%20Generation@3x.png",
+                            "block_step_img_alt": "Example of various concept options."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-1",
+                            "block_step_title": "Usability Testing Round 1: Feature Sets",
+                            "block_step_description": "In this first round of usability testing, the team introduced participants to the feature sets they designed in order to try to home in on the best concepts in each feature set. With a low fidelity series of screens meant primarily to convey different fundamental solutions to the high priority functionalities of Ansible Galaxy, we felt that a Demonstration-Reaction approach would best suit our research needs. Rather than skipping straight to a more detailed mockup with a more rigorous form of design feedback to go along with it, Andromeda saw clear benefits to talking through our concepts with a small sample of experts and users first. By having these unstructured discussions, the team’s goal was to both verify the strengths and weaknesses of the concepts as well as gather outside perspectives on possible alternative solutions for each feature. More concretely, the purpose of these interviews was to ultimately determine the best two concepts for each feature.",
+                            "block_step_img_src": "redhat/interview.png",
+                            "block_step_img_alt": "Example of various concept options, showing one eliminated."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-1-results",
+                            "block_step_title": "Usability Testing Round 1: Results & Conclusions",
+                            "block_step_description": "The team codified the results of the demonstration and reaction sessions. Participants’ rank order preferences of concepts for each feature were recorded in a spreadsheet in order to determine which concepts would not move on to the next design round. The concept with the worst ranking (highlighted in red in the image to the right) was removed from further consideration, after reviewing and considering the qualitative comments that were gathered from participants. As the team prepared to move to a higher level of fidelity, our next step was to design two alternative, interactive mockups of Ansible Galaxy as a whole. Naturally, these mockups would be largely comprised of the components developed and tested up to this point as individual features. While each alternative prototype broadly employed one of the two preferred solutions for each feature, Andromeda also took the qualitative suggestions and ideas gathered in this round of feedback into account during the next stage of design.",
+                            "block_step_img_src": "redhat/round1_results.PNG",
+                            "block_step_img_alt": "Spreadsheet showing feature option scores."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-2",
+                            "block_step_title": "Usability Testing Round 2: Low Fidelity Mockups",
+                            "block_step_description": "Following the insights generated from the first round of usability testing, the best two concepts were identified for each feature set, and in some cases adjustments were made in response to user feedback. These concepts were then arranged and aggregated into two full website concepts, A and B, and made into two separate prototypes using Invision. The goal for this round of usability testing was to arrive at a single preferred concept for each feature set and thus gather the feedback necessary to begin constructing a final, high fidelity website design. The team utilized the feedback from this round to determine whether the final concept for each feature would be one of our two alternate concepts, some combination of them, or a new concept entirely.",
+                            "block_step_img_src": "redhat/invision.PNG",
+                            "block_step_img_alt": "Invision prototype"
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-2-results",
+                            "block_step_title": "Usability Testing Round 2: Results & Conclusions",
+                            "block_step_description": "The team codified the results of the second design round in two ways. First, participants’ rank order preferences of concepts for each feature were recorded in a spreadsheet. We used these rankings in combination with rankings from the first round of demonstration and reaction sessions in order to determine which concepts would not move on to the next design round. The results from the first round were comparable in most cases because participants had been shown the same two concepts as in Round 2, in addition to a third which has already been eliminated. We adjusted Round 1 rankings to be compatible (first choice, not first choice) with Round 2 rankings and used them to supplement the six data points we gathered in Round 2. Finally, because we had limited feedback from true Galaxy users, we weighted the three data points from these users in order to make our decisions as user-centered as possible. This informed our “weighted” vote totals. We simply doubled votes by Galaxy users (highlighted in purple below) in order to create these weighted totals. For each feature (with the exception of the bookmarks feature), the concept with the highest weighted ranking will be used in our final aesthetic concepts.",
+                            "block_step_img_src": "redhat/round2_results.PNG",
+                            "block_step_img_alt": "Codified round 2 results in a spreadsheet."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-3",
+                            "block_step_title": "Usability Testing Round 3: Informal Expert Review",
+                            "block_step_description": "The goal of this stage of research was to create a single, high-fidelity design solution and to share it with our Red Hat, Inc. UX sponsors to receive iterative feedback. Following the second round of demonstration and reaction sessions, the team narrowed down all features to the winning concept. The team began to weave these concepts into one fully-developed, aesthetic concept using Adobe Illustrator. Once a first iteration of each website screen was designed, the team conducted a screenshare conference with UX professionals from Red Hat, Inc. This session was conducted for the purposes of gathering strictly UX and design feedback on the high-fidelity screens. Please see Appendix K for the full set of initial high fidelity screens.",
+                            "block_step_img_src": "redhat/round3.PNG",
+                            "block_step_img_alt": "High fidelity screen of the redesign."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "user-testing-3-results",
+                            "block_step_title": "Usability Testing Round 3: Results & Conclusions",
+                            "block_step_description": "Following the collection and consideration of the comments and suggestions received from this session, the team refined the screen designs as well as any relevant design elements. The team grouped feedback and comments by each website screen. While not explicitly suggested, this round of feedback also inspired deeper thought in a number of key areas and functionalities of the website, which prompted other changes.Following these modifications to the high fidelity mockup, the ultimate result of this round of usability feedback was the creation of the Design Specification, which details all of Andromeda Design’s final design decisions along with detailed documentation of styles and interactions. Furthermore, the team produced a final set of high-fidelity website screens.",
+                            "block_step_img_src": "redhat/round3_results.png",
+                            "block_step_img_alt": "High fidelity screen of the redesign."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "system-req-verification",
+                            "block_step_title": "System Requirement Verification",
+                            "block_step_description": "Following the finalization of the screens and the Design Specification, the team verified that the final design addressed each of our system requirements in full, or otherwise explained our rationale for deviating from the original requirement. Below we have mapped each system requirement to our design solution, thus demonstrating the successful conclusion of the Human Factors iterative design method. With the successful mapping of system requirement to its design solution, the team proved that the final design was inspired by and grounded in user-centric design decisions."
+                        }
+                    %}
+                    {% include "@molecules/blocks/block-step/_block-step-main.twig" with
+                        {
+                            "block_step_id": "final-screens",
+                            "block_step_title": "Final Screens",
+                            "block_step_description": "Featured below are some of the most important screens of the Ansible Galaxy site. The current, live version of the website is shown on the left, and our proposed redesign is shown on the right. Working with the Red Hat UX team has been a phenomenal experience. My team and I received an incredible amount of support and we are proud to deliver our designs to Red Hat. Special thanks to Red Hat sponsors/supervisors Colleen Hart and Serena Doyle, capstone professor David Aurelio, and my incredible team - Laura Brooks, Alexander Golin, and Alejandro Osio - for making this project successful."
+                        }
+                    %}
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section section">
+                            <h2 class='mockups__section__title'>Login Screen</h2>
                         </div>
-                        <div class="row">
-                            <div id="exploratory-interviews" class="scrollspy col section">
-                                <h2 class='section__title'>Exploratory Interviews</h2>
-                                <p class='section__description'>The first step of characterizing Ansible Galaxy users was to meet with Red Hat sponsors in order to better understand the project expectations and goals. Given that the team was not familiar with the IT domain prior to this project, the video conference allowed the team to gain a better perspective on the product itself. The team learned about Galaxy’s role within the community and the types of interactions that users might have while using the website. The team set up a weekly meeting time in order to maintain consistent contact with Red Hat sponsors.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/exploreAsset%2031@4x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/login.PNG",
+                                    "image_alt": ""
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="lit-review" class="scrollspy col section">
-                                <h2 class='section__title'>Online Literature Review</h2>
-                                <p class='section__description'>To supplement the information learned in the exploratory interview with Red Hat, the team performed an online literature review. This review was designed to fill in critical knowledge gaps in terms of IT automation and the Ansible Galaxy product domain. A variety of different sources were reviewed, covering topics from current impressions of Ansible Galaxy to typical IT tasks. Each article was reviewed by team members and a final bulleted list for each article was compiled. This literature review provided the team with a foundation moving forward into a heuristic analysis of Galaxy and its competitors.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/online_litAsset%2016@4x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/LoginPage.png",
+                                    "image_alt": ""
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="heuristic-review" class="scrollspy col section">
-                                <h2 class='section__title'>Heuristic Review</h2>
-                                <p class='section__description'>The next task involved conducting a heuristic analysis of Ansible Galaxy, Docker Hub, and the newly-created Docker Store Beta. A heuristic analysis is a method of comparing products along a set of predefined characteristics. The team used Nielsen's 10 Heuristics for Good User Interface Design (Nielsen, 1995). This set defines ten separate metrics, such as error recovery and overall aesthetic quality. This heuristic review provided us with a bird’s eye view qualitative assessment of each of the three evaluated platforms, which served as a crucial stepping stone in extrapolating a quantitative analysis in our expert review. This heuristic review served as an effective and succinct platform from which we could begin to identify possible missed use-cases. The review ultimately helped to inform our creation of user needs by informing the development of survey items.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/heuristics.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section__title section">
+                            <h2 class='mockups__section__title__text'>Home Page</h2>
                         </div>
-                        <div class="row">
-                            <div id="expert-review" class="scrollspy col section">
-                                <h2 class='section__title'>Expert Review</h2>
-                                <p class='section__description'>After completing our heuristic review, we conducted an expert review of Ansible Galaxy, Docker Hub, and the Docker Store Beta site in order to have a quantitative measure of the current sharing platforms. Each member of the team ranked each platform on a scale of 0-5 for a variety of metrics defined by the team (i.e. “Ease of browsing”). This provided a more quantitative set of metrics for comparing overall quality of each site’s user experience as well as an item by item comparison of which sites have better flows for specific tasks. Similar to the heuristic review, this helped the team concentrate the survey questionnaire items in order to uncover user needs from areas where Ansible Galaxy could specifically be improved.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/Expert.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/homeScreen.PNG",
+                                    "image_alt": "Orignal Home Screen of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="survey-creation" class="scrollspy col section">
-                                <h2 class='section__title'>Survey Creation &amp; Modification</h2>
-                                <p class='section__description'>Following the expert review and TTS exploratory interview, the team began to more precisely characterize the users of Ansible Galaxy. In order to do so, we utilized our preliminary findings to develop a structured survey for current and potential users about their needs. This survey was piloted to Red Hat sponsors, Dr. Aurelio (professor of Capstone course), and a current TTS employee. The team modified the survey according to the feedback received, ensuring that the survey would generate applicable and relevant information. This survey was then distributed to locally accessible system administrators, members of the Ansible Galaxy User community through Red Hat sponsors, and IT professionals on a Reddit Ansible community forum. The team had initially proposed to reach out to Ansible Galaxy users via their GitHub repositories, however, this process would have been less efficient than the one conducted.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/Survey.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/HomePageSpotlightSearch@2x.png.png",
+                                    "image_alt": "Redesign Home Screen of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="survey-results" class="scrollspy col section">
-                                <h2 class='section__title'>Survey Results</h2>
-                                <p class='section__description'>The team used Google Forms’ built-in functionality for analyzing survey responses and codified open-ended questions based on commonly mentioned ideas. This helped us determine what users found to be the most salient issues or important features of IT automation sharing platforms. Averages were generated for specific questions, providing quantitative results. The qualitative questionnaire results were coded by identifying themes and tallying up responses that fell into each category. In total, 18 responses were considered in our results analysis. Based on what users consistently stated were important features for these platforms, we were able to develop a specific and refined list of user needs.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/chartAsset%2026@3x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section section">
+                            <h2 class='mockups__section__title'>Search Results Page</h2>
                         </div>
-                        <div class="row">
-                            <div id="user-needs" class="scrollspy col section">
-                                <h2 class='section__title'>User Needs Development</h2>
-                                <p class='section__description'>Based on the results of the survey, Andromeda was able to paint a detailed portrait of a typical Ansible Galaxy user. Additionally, the team identified good and bad elements of current automation platforms. Good IT automation platforms such as Ansible Galaxy need to host reliable content, support easy interaction, and offer a variety of choices.  Conversely, less satisfactory platforms lack curated lists, provide poorly coded modules, and ineffective or incomplete documentation. The methods conducted by the Andromeda team resulted in the development of a set of ten user needs that ultimately factored into initial concept generation.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/needsAsset%2029@4x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/searchResults.PNG",
+                                    "image_alt": "Original Home Screen of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="system-requirements" class="scrollspy col section">
-                                <h2 class='section__title'>Translating User Needs into<br>System Requirements</h2>
-                                <p class='section__description'>With user needs and their detailed justifications from the research findings established, the team then proceeded to map out how these needs and justifications translated to system requirements. To accomplish this, the team simply compiled a table that tied each piece of feedback to a user need. The wording of each user need was then adjusted to reflect a more concrete requirement of the system. For each of these system requirements, the team assigned a priority ranging from Priority 1 to Priority 3 (P1-P3). These scores will serve as a reference to keep the team on track by focusing on the most critical system features first.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/sys_reqsAsset%2030@4x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/SearchResults@2x.png.png",
+                                    "image_alt": "Redesign Home Screen of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="developing-design" class="scrollspy col section">
-                                <h2 class='section__title'>Developing Our Design Process</h2>
-                                <p class='section__description'>With a better understanding of Ansible Galaxy and its users, the team developed a multi-stage design process that prioritized user-centric design decisions. This process contained three stages. In the first stage, the team would develop a set of features for inclusion in the redesign. For each of these features, three different concepts would be created. After usability testing, the team would eliminate one of these three concepts. In the second stage, the two remaining concepts would be divided among two low-fidelity prototypes. Another round of usability testing would reveal the single winning concept per feature. Stage three would involve aesthetic concept testing and refinement.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/des_flow.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section section">
+                            <h2 class='mockups__section__title'>Role Page</h2>
                         </div>
-                        <div class="row">
-                            <div id="design-brainstorming" class="scrollspy col section">
-                                <h2 class='section__title'>Design Brainstorming</h2>
-                                <p class='section__description'>Andromeda began the process of designing a solution that fulfills these needs and requirements from a purely creative perspective first. The team performed a brainstorming exercise in which each member wrote singular features or concepts on Post-Its for consideration and inclusion in the new designs. The team had three minutes to write as many features as possible. In this stage, no ideas were discouraged; the purpose was to generate as many ideas as possible. Following this exercise, the team grouped the Post-Its together under high-level categories as well as ratings for importance of inclusion in the redesign.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/design_brainstorming.JPG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/roleOverview.PNG",
+                                    "image_alt": "Original Role Page of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="feature-development" class="scrollspy col section">
-                                <h2 class='section__title'>Feature Development</h2>
-                                <p class='section__description'>The team then outlined design features across high-level categories. The purpose of this exercise was to brainstorm differences in features for presentation to users. Upon returning from Thanksgiving Break, the team met to determine which features were going to be included in the first round of concept development. Some of the features that we came up with in our brainstorming activity relied too heavily on aesthetic design. For this reason, the team decided to hold off on developing these concepts until the next round, where style would be a principal focus.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image small",
-                                        "image_src": "redhat/feature_mockup.JPG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/RolePage@2x.png.png",
+                                    "image_alt": "Redesigned Role Page of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="concept-generation" class="scrollspy col section">
-                                <h2 class='section__title'>Concept Generation</h2>
-                                <p class='section__description'>Following the identification of key features, the team developed three different concepts (referred to below as “options”) for each feature. These concepts were created using a wire-framing tool called Balsamiq, which allowed each team member to produce concepts at the same level of fidelity. This ensured that the aesthetic design across concepts within a given feature would not confound our feedback.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/Concept%20Generation@3x.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                        </div>  
-                        <div class="row">
-                            <div id="user-testing-1" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 1: Feature Sets</h2>
-                                <p class='section__description'>In this first round of usability testing, the team introduced participants to the feature sets they designed in order to try to home in on the best concepts in each feature set. With a low fidelity series of screens meant primarily to convey different fundamental solutions to the high priority functionalities of Ansible Galaxy, we felt that a Demonstration-Reaction approach would best suit our research needs. Rather than skipping straight to a more detailed mockup with a more rigorous form of design feedback to go along with it, Andromeda saw clear benefits to talking through our concepts with a small sample of experts and users first. By having these unstructured discussions, the team’s goal was to both verify the strengths and weaknesses of the concepts as well as gather outside perspectives on possible alternative solutions for each feature. More concretely, the purpose of these interviews was to ultimately determine the best two concepts for each feature.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/interview.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div id="user-testing-1-results" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 1: Results &amp; Conclusions</h2>
-                                <p class='section__description'>The team codified the results of the demonstration and reaction sessions. Participants’ rank order preferences of concepts for each feature were recorded in a spreadsheet in order to determine which concepts would not move on to the next design round. The concept with the worst ranking (highlighted in red in the image to the right) was removed from further consideration, after reviewing and considering the qualitative comments that were gathered from participants. As the team prepared to move to a higher level of fidelity, our next step was to design two alternative, interactive mockups of Ansible Galaxy as a whole. Naturally, these mockups would be largely comprised of the components developed and tested up to this point as individual features. While each alternative prototype broadly employed one of the two preferred solutions for each feature, Andromeda also took the qualitative suggestions and ideas gathered in this round of feedback into account during the next stage of design.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/round1_results.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                        </div>      
-                        <div class="row">
-                            <div id="user-testing-2" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 2: Low Fidelity Mockups</h2>
-                                <p class='section__description'>Following the insights generated from the first round of usability testing, the best two concepts were identified for each feature set, and in some cases adjustments were made in response to user feedback. These concepts were then arranged and aggregated into two full website concepts, A and B, and made into two separate prototypes using Invision. The goal for this round of usability testing was to arrive at a single preferred concept for each feature set and thus gather the feedback necessary to begin constructing a final, high fidelity website design. The team utilized the feedback from this round to determine whether the final concept for each feature would be one of our two alternate concepts, some combination of them, or a new concept entirely.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/invision.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section section">
+                            <h2 class='mockups__section__title'>Upload</h2>
                         </div>
-                        <div class="row">
-                            <div id="user-testing-2-results" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 2: Results &amp; Conclusions</h2>
-                                <p class='section__description'>The team codified the results of the second design round in two ways. First, participants’ rank order preferences of concepts for each feature were recorded in a spreadsheet. We used these rankings in combination with rankings from the first round of demonstration and reaction sessions in order to determine which concepts would not move on to the next design round. The results from the first round were comparable in most cases because participants had been shown the same two concepts as in Round 2, in addition to a third which has already been eliminated. We adjusted Round 1 rankings to be compatible (first choice, not first choice) with Round 2 rankings and used them to supplement the six data points we gathered in Round 2. Finally, because we had limited feedback from true Galaxy users, we weighted the three data points from these users in order to make our decisions as user-centered as possible. This informed our “weighted” vote totals. We simply doubled votes by Galaxy users (highlighted in purple below) in order to create these weighted totals. For each feature (with the exception of the bookmarks feature), the concept with the highest weighted ranking will be used in our final aesthetic concepts.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/round2_results.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/upload.PNG",
+                                    "image_alt": "Original Upload of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div id="user-testing-3" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 3: Informal Expert Review</h2>
-                                <p class='section__description'>The goal of this stage of research was to create a single, high-fidelity design solution and to share it with our Red Hat, Inc. UX sponsors to receive iterative feedback. Following the second round of demonstration and reaction sessions, the team narrowed down all features to the winning concept. The team began to weave these concepts into one fully-developed, aesthetic concept using Adobe Illustrator. Once a first iteration of each website screen was designed, the team conducted a screenshare conference with UX professionals from Red Hat, Inc. This session was conducted for the purposes of gathering strictly UX and design feedback on the high-fidelity screens. Please see Appendix K for the full set of initial high fidelity screens.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/round3.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                        </div>  
-                        <div class="row">
-                            <div id="user-testing-3-results" class="scrollspy col section">
-                                <h2 class='section__title'>Usability Testing Round 3: Results &amp; Conclusions</h2>
-                                <p class='section__description'>Following the collection and consideration of the comments and suggestions received from this session, the team refined the screen designs as well as any relevant design elements. The team grouped feedback and comments by each website screen. While not explicitly suggested, this round of feedback also inspired deeper thought in a number of key areas and functionalities of the website, which prompted other changes.Following these modifications to the high fidelity mockup, the ultimate result of this round of usability feedback was the creation of the Design Specification, which details all of Andromeda Design’s final design decisions along with detailed documentation of styles and interactions. Furthermore, the team produced a final set of high-fidelity website screens.</p>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "section__image",
-                                        "image_src": "redhat/round3_results.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                        </div>    
-                        <div class="row">
-                            <div id="system-req-verification" class="scrollspy col section">
-                                <h2 class='section__title'>System Requirement Verification</h2>
-                                <p class='section__description'>Following the finalization of the screens and the Design Specification, the team verified that the final design addressed each of our system requirements in full, or otherwise explained our rationale for deviating from the original requirement. Below we have mapped each system requirement to our design solution, thus demonstrating the successful conclusion of the Human Factors iterative design method. With the successful mapping of system requirement to its design solution, the team proved that the final design was inspired by and grounded in user-centric design decisions.</p>
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/Upload@2x.png.png",
+                                    "image_alt": "Redesigned Upload of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row">
-                            <div class="scrollspy col section">
-                                <h2 id="final-screens" class='section__title'>Final Screens</h2>
-                                <p class='section__description'>Featured below are some of the most important screens of the Ansible Galaxy site. The current, live version of the website is shown on the left, and our proposed redesign is shown on the right. Working with the Red Hat UX team has been a phenomenal experience. My team and I received an incredible amount of support and we are proud to deliver our designs to Red Hat. Special thanks to Red Hat sponsors/supervisors Colleen Hart and Serena Doyle, capstone professor David Aurelio, and my incredible team - Laura Brooks, Alexander Golin, and Alejandro Osio - for making this project successful.</p>
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="scrollspy mockups__section section">
+                            <h2 class='mockups__section__title'>User Profile</h2>
                         </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section section">
-                                <h2 class='mockups__section__title'>Login Screen</h2>
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/login.PNG",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/LoginPage.png",
-                                        "image_alt": ""
-                                    }
-                                %}
-                            </div>
+                    </div>
+                    <div class="row mockups__section">
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Original</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/originalScreens/otherProfile.PNG",
+                                    "image_alt": "Original User Profile of Ansible Galaxy"
+                                }
+                            %}
                         </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section__title section">
-                                <h2 class='mockups__section__title__text'>Home Page</h2>
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/homeScreen.PNG",
-                                        "image_alt": "Orignal Home Screen of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/HomePageSpotlightSearch@2x.png.png",
-                                        "image_alt": "Redesign Home Screen of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section section">
-                                <h2 class='mockups__section__title'>Search Results Page</h2>
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/searchResults.PNG",
-                                        "image_alt": "Original Home Screen of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/SearchResults@2x.png.png",
-                                        "image_alt": "Redesign Home Screen of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section section">
-                                <h2 class='mockups__section__title'>Role Page</h2>
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/roleOverview.PNG",
-                                        "image_alt": "Original Role Page of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/RolePage@2x.png.png",
-                                        "image_alt": "Redesigned Role Page of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section section">
-                                <h2 class='mockups__section__title'>Upload</h2>
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/upload.PNG",
-                                        "image_alt": "Original Upload of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/Upload@2x.png.png",
-                                        "image_alt": "Redesigned Upload of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="scrollspy mockups__section section">
-                                <h2 class='mockups__section__title'>User Profile</h2>
-                            </div>
-                        </div>
-                        <div class="row mockups__section">
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Original</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/originalScreens/otherProfile.PNG",
-                                        "image_alt": "Original User Profile of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
-                            <div class="mockups__section__images">
-                                <h3 class="mockups__section__images__label">Redesigned</h3>
-                                {% include "@atoms/images/image-default/_image-default-main.twig" with
-                                    {
-                                        "image_default_classes": "mockups__section__images__image",
-                                        "image_src": "redhat/newScreens/Profile(Personal)@2x.png.png",
-                                        "image_alt": "Redesigned User Profile of Ansible Galaxy"
-                                    }
-                                %}
-                            </div>
+                        <div class="mockups__section__images">
+                            <h3 class="mockups__section__images__label">Redesigned</h3>
+                            {% include "@atoms/images/image-default/_image-default-main.twig" with
+                                {
+                                    "image_default_classes": "mockups__section__images__image",
+                                    "image_src": "redhat/newScreens/Profile(Personal)@2x.png.png",
+                                    "image_alt": "Redesigned User Profile of Ansible Galaxy"
+                                }
+                            %}
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {% endblock %}
+        {% endembed %}
     {% endblock %}
     {% block footer %}
         {% include "@organisms/global/global-footer/_global-footer-main.twig" %}

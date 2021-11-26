@@ -1,0 +1,25 @@
+{% set block_step_classes = block_step_classes|default() %}
+{% set block_step_id = block_step_id|default() %}
+{% set block_step_title = block_step_title|default() %}
+{% set block_step_description = block_step_description|default() %}
+{% set block_step_img_classes = block_step_img_classes|default() %}
+{% set block_step_img_src = block_step_img_src|default() %}
+{% set block_step_img_alt = block_step_img_alt|default() %}
+
+<div class="block-pl block--step {{ block_step_classes }}">
+    <div id="{{ block_step_id }}" class="scrollspy">
+        <h2 class='block--step__title'>{{ block_step_title }}</h2>
+        <p class='block--step__description'>{{ block_step_description }}</p>
+        {% block block_step_image %}
+            {% if block_step_img_src is not empty %}
+                {% include "@atoms/images/image-default/_image-default-main.twig" with
+                    {
+                        "image_default_classes": "block--step__image " ~ block_step_img_classes,
+                        "image_src": block_step_img_src,
+                        "image_alt": block_step_img_alt
+                    }
+                %}
+            {% endif %}
+        {% endblock %}
+    </div>
+</div>  

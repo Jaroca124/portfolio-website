@@ -1,0 +1,15 @@
+.block--step {
+    @extend .row;
+    margin-bottom: 3rem;
+    .scrollspy {
+        @extend .col;
+    }
+    &__image {
+        display: block;
+        margin: 1.5rem auto 0 auto;
+        max-width: 100%;
+        &.small {
+            width: 20rem;
+        }
+    }
+}

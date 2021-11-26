@@ -1,0 +1,100 @@
+{% set component_content_menus_classes = component_content_menus_classes|default() %}
+
+<div class="component-pl component--content-menu {{ component_content_menus_classes }}" id="stickybits-target">
+    {% embed "@molecules/components/component-toc/_component-toc-main.twig" with
+        {
+            "component_toc_title": "Methods"
+        }
+    %}
+        {% block component_toc_contents %}
+            <div class="accordion" id="methodAccordion">
+                <div class="accordion--group">
+                    <button id="overviewAcc" type="button" data-bs-toggle="collapse" data-bs-target="#overviewCol" aria-expanded="true" aria-controls="overviewCol">
+                        <span>Overview</span>
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_classes": "",
+                                "image_src": "icons/chevron.svg",
+                                "image_alt": ""
+                            }
+                        %}
+                    </button>
+                    <div id="overviewCol" class="collapse show" aria-labelledby="overviewAcc" data-bs-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#goals">Goals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <button id="identifyAcc" type="button" data-bs-toggle="collapse" data-bs-target="#identifyCol" aria-expanded="false" aria-controls="identifyCol">
+                        <span>Identify</span>
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_classes": "",
+                                "image_src": "icons/chevron.svg",
+                                "image_alt": ""
+                            }
+                        %}
+                    </button>
+                    <div id="identifyCol" class="collapse" aria-labelledby="identifyAcc" data-bs-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#exploratory-interviews">Exploratory Interviews</a></li>
+                            <li><a href="#lit-review">Online Literature Review</a></li>
+                            <li><a href="#heuristic-review">Heuristic Review</a></li>
+                            <li><a href="#expert-review">Expert Review</a></li>
+                            <li><a href="#survey-creation">Survey Creation</a></li>
+                            <li><a href="#survey-results">Survey Results</a></li>
+                            <li><a href="#user-needs">User Needs Development</a></li>
+                            <li><a href="#system-requirements">System Requirements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <button id="designAcc" type="button" data-bs-toggle="collapse" data-bs-target="#designCol" aria-expanded="false" aria-controls="designCol">
+                        <span>Design</span>
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_classes": "",
+                                "image_src": "icons/chevron.svg",
+                                "image_alt": ""
+                            }
+                        %}
+                    </button>
+                    <div id="designCol" class="collapse" aria-labelledby="designAcc" data-bs-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#developing-design">Developing Design Process</a></li>
+                            <li><a href="#design-brainstorming">Design Brainstorming</a></li>
+                            <li><a href="#feature-development">Feature Development</a></li>
+                            <li><a href="#concept-generation">Concept Generation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion--group">
+                    <button id="verifyAcc" type="button" data-bs-toggle="collapse" data-bs-target="#verifyCol" aria-expanded="false" aria-controls="verifyCol">
+                        <span>Verify &amp; Validate</span>
+                        {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                            {
+                                "image_classes": "",
+                                "image_src": "icons/chevron.svg",
+                                "image_alt": ""
+                            }
+                        %}
+                    </button>
+                    </div>
+                    <div id="verifyCol" class="collapse" aria-labelledby="verifyAcc" data-bs-parent="#methodAccordion">
+                        <ul>
+                            <li><a href="#user-testing-1">Usability Testing Round 1</a></li>
+                            <li><a href="#user-testing-1-results">Round 1 Results</a></li>
+                            <li><a href="#user-testing-2">Usability Testing Round 2</a></li>
+                            <li><a href="#user-testing-2-results">Round 2 Results</a></li>
+                            <li><a href="#user-testing-3">Usability Testing Round 3</a></li>
+                            <li><a href="#user-testing-3-results">Round 3 Results</a></li>
+                            <li><a href="#system-req-verification">System Requirements Verification</a></li>
+                            <li><a href="#final-screens">Final Screens</a></li>
+                        </ul>
+                    </div>
+                </div>
+        {% endblock %}
+    {% endembed %}
+</div>

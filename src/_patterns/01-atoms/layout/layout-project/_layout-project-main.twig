@@ -1,0 +1,12 @@
+{% set layout_project_classes = layout_project_classes|default() %}
+
+<div class="layout-pl layout--project container-fluid {{ layout_project_classes }}">
+    <div class="row">
+        <div class="col-12 col-md-3 d-none d-md-block">
+            {% block layout_project_menu %}{% endblock %}
+        </div>
+        <div class="col-12 col-md-9 p-0">
+            {% block layout_project_content %}{% endblock %}
+        </div>
+    </div>
+</div>

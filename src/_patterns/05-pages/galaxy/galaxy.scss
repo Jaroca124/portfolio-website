@@ -63,29 +63,6 @@
         z-index: 1;
         position: relative;
     }
-    .section {
-        margin-bottom: 3rem;
-        &__image {
-            display: block;
-            margin: 1.5rem auto 0 auto;
-            max-width: 100%;
-            &.small {
-                width: 20rem;
-            }
-        }
-    }
-    .design-method {
-        @extend .container-fluid;
-        padding: 3rem 4rem 4rem 4rem;
-        &__stages {
-            margin: 0 -2rem;
-            &__stage {
-                @extend .col-12;
-                @extend .col-md-4;
-                padding: 0 2rem;
-            }
-        }
-    }
     .background {
         &--foreground,
         &--background {

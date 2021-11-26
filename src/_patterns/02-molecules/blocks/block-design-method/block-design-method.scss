@@ -1,0 +1,12 @@
+.block--design-method {
+    @extend .container-fluid;
+    padding: 3rem 4rem 4rem 4rem;
+    &__stages {
+        margin: 0 -2rem;
+        &__stage {
+            @extend .col-12;
+            @extend .col-md-4;
+            padding: 0 2rem;
+        }
+    }
+}
