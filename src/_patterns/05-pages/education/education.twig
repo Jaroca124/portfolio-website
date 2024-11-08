@@ -13,6 +13,22 @@
     
     {% block main %}
         <div class="container">
+            <div class="mb-3">
+                {% include "@atoms/images/image-default/_image-default-main.twig" with 
+                    {
+                        "image_src": education.yc.src,
+                        "image_alt": education.yc.alt,
+                        "image_default_classes": 'yc-logo'
+                    }
+                %}
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <p>In the summer of 2023, Synaptiq participated in Y Combinator, a renowned startup accelerator in San Francisco. Through this transformative program, we gained invaluable insights into building a scalable business, refining our product-market fit, and navigating the complexities of startup growth and funding. YC's mentorship, resources, and network empowered us to clarify our vision, connect with like-minded founders, and continue to grow our business.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="block--university mb-3">
                 {% include "@atoms/images/image-default/_image-default-main.twig" with 
                     {

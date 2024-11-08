@@ -2,7 +2,7 @@
     "prod_build": false,
     "path_to_assets": "../../",
     "headshot": {
-        "src": "index/Headshot_Original_Round.png",
+        "src": "index/jake.jpg",
         "alt": "Jacob Caccamo Headshot"
     },
     "links": {
@@ -313,6 +313,10 @@
         ]
     },
     "education": {
+        "yc": {
+            "src": "education/YC_Logo_Expanded.svg",
+            "alt": "Y Combinator"
+        },
         "tuftsLogo": {
             "src": "experience/logos/tufts-logo.svg",
             "alt": "Tufts University Logo"
@@ -387,6 +391,17 @@
     },
     "experience": {
         "experience_data": [
+            {
+                "classes": "synaptiq",
+                "logo": {
+                    "src": "experience/logos/synaptiq-logo-full.svg",
+                    "alt": "Synaptiq Logo"
+                },
+                "name": "Synaptiq",
+                "title": "Co-Founder & COO, Head of Design",
+                "location": "Washington, DC",
+                "description": "<a href='https://synaptiq.co' target='_blank'>Vist the Website</a>"
+            },
             {
                 "classes": "fidelis",
                 "logo": {

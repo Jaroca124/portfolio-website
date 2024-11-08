@@ -2,72 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     componentContentMenu.init();
 });
 $(document).ready(function() {
-    var delay = 200;
-    
-    if ($('layout--index'.length)) {
-        $('html, body').addClass('overflow-hidden');
-        $(window).on("load", function() {
-            $('html, body').removeClass('overflow-hidden');
-            $('.component--loader').fadeOut(100);
-            startGallery();
-        });
-    }
-
-    function startGallery() {
-        var shots = $('.component--gallery').find('.col-4');
-        var numberShots = shots.length;
-        var randMap = [11, 9, 15, 8, 14, 6, 1, 22, 12, 5, 2, 7, 19, 21, 18, 3, 16, 10, 0, 13, 20, 17, 4, 23];
-        for (i = 0; i < numberShots; i++) {
-            (function(i) {
-                setTimeout(function() {
-                    $(shots[randMap[i]]).animate({ opacity: 1 }, 1500);
-                    if (i == shots.length - 22) {
-                        renderOverlay();
-                    }
-                }, 100 * i);
-            })(i);
-        }
-    }
-
-    function renderOverlay() {
-        $('.hero--home__overlay').fadeIn(5000);
-        setTimeout(function() {
-            renderLogo();
-        }, 4000);
-    }
-
-    function renderLogo() {
-        $('.hero--home__overlay__content').fadeIn(500);
-        setTimeout(function() {
-            renderMenu();
-            renderSocials();
-            renderScroll();
-        }, 500);
-    }
-
-    function renderMenu() {
-        for (i = 0; i < $('.navigation--primary').find('a, span').length; i++) {
-            (function(i) {
-                setTimeout(function() {
-                    $($('.navigation--primary').find('a, span')[i]).fadeIn();
-                }, delay * i);
-            })(i);
-        }
-    }
-    function renderSocials() {
-        for (i = 0; i < $('.hero--home__overlay__social').find('img').length; i++) {
-            (function(i) {
-                setTimeout(function() {
-                    $($('.hero--home__overlay__social').find('img')[i]).fadeIn();
-                }, delay * i);
-            })(i);
-        }
-    }
-    function renderScroll() {
-        $('.component--scroll').fadeIn();
-    }
-});
-$(document).ready(function() {
     $(window).scroll(function() {
         $('.block--images').each(function() {
             var scrollTrigger = $(this).parentsUntil('.section--default').parent().offset().top;
@@ -109,60 +43,6 @@ function renderImages(direction, images) {
     ]
   });
 };*/
-// $(document).ready(function() {
-//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
-//         $('.navigation--drawer').toggleClass('drawer--open');
-//         $('.navigation--drawer--overlay').toggle();
-//     });
-// });
-// $(document).ready(function() {
-//     $('.navigation--mobile__menu-button').click(function() {
-//         $('.navigation--mobile__link').toggleClass('open');
-//     });
-// });
-$( document ).ready(function() {
-    $('.tabs').tabs();
-});
-$(document).ready(function() {
-    if ($('.component--burger').length) {
-        var renderBurgerBool = true;
-        var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
-        $(window).scroll(function() {   
-            if ((($(window).scrollTop() + ($(window).height() / 2)) >= burgerTrigger) && renderBurgerBool) {
-                renderBurger();
-                renderBurgerBool = false;
-            }
-        });
-    }
-
-    var ingredientPositions = {
-        'top-bun': '173%',
-        'bacon': '189%',
-        'cheese': '72%',
-        'meat': '-28%',
-        'tomatos': '-90%',
-        'lettuce': '-97%',
-        'bottom-bun': '-269%'
-    };
-
-    function renderBurger() {
-        $('.component--burger__ingredient').each(function() {
-            $(this).css({'transform': 'translate(0, 0)'});
-        });
-        setTimeout(function() {
-            returnIngredients();
-        }, 3000);
-    }
-
-    function returnIngredients() {
-        $('.component--burger__ingredient').each(function() {
-            var ingredient = $(this).attr('class').split('component--burger__ingredient--')[1];
-            var ingredientPosition = 'translate(0, ' + ingredientPositions[ingredient] + ')';
-            var targetIngredient = '.component--burger__ingredient--' + ingredient;
-            $(targetIngredient).css({'transform': ingredientPosition});
-        });
-    }
-});
 $(document).ready(function() {
     $("#contactUsForm").submit(function(e) {
         e.preventDefault();
@@ -248,6 +128,46 @@ function parseData(data, projectID) {
     }
 }
 $(document).ready(function() {
+    if ($('.component--burger').length) {
+        var renderBurgerBool = true;
+        var burgerTrigger = $('.section--default--burgerbuilder').offset().top;
+        $(window).scroll(function() {   
+            if ((($(window).scrollTop() + ($(window).height() / 2)) >= burgerTrigger) && renderBurgerBool) {
+                renderBurger();
+                renderBurgerBool = false;
+            }
+        });
+    }
+
+    var ingredientPositions = {
+        'top-bun': '173%',
+        'bacon': '189%',
+        'cheese': '72%',
+        'meat': '-28%',
+        'tomatos': '-90%',
+        'lettuce': '-97%',
+        'bottom-bun': '-269%'
+    };
+
+    function renderBurger() {
+        $('.component--burger__ingredient').each(function() {
+            $(this).css({'transform': 'translate(0, 0)'});
+        });
+        setTimeout(function() {
+            returnIngredients();
+        }, 3000);
+    }
+
+    function returnIngredients() {
+        $('.component--burger__ingredient').each(function() {
+            var ingredient = $(this).attr('class').split('component--burger__ingredient--')[1];
+            var ingredientPosition = 'translate(0, ' + ingredientPositions[ingredient] + ')';
+            var targetIngredient = '.component--burger__ingredient--' + ingredient;
+            $(targetIngredient).css({'transform': ingredientPosition});
+        });
+    }
+});
+$(document).ready(function() {
     if ($('.section--default--cabcs').length) {
         var renderDroneBool = true;
         var droneTrigger = $('.section--default--cabcs').offset().top;
@@ -286,3 +206,83 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.scrollspy').scrollSpy();
 }); 
+// $(document).ready(function() {
+//     $('.navigation--primary__menu-button, #menu-close, .navigation--drawer--overlay').click(function() {
+//         $('.navigation--drawer').toggleClass('drawer--open');
+//         $('.navigation--drawer--overlay').toggle();
+//     });
+// });
+// $(document).ready(function() {
+//     $('.navigation--mobile__menu-button').click(function() {
+//         $('.navigation--mobile__link').toggleClass('open');
+//     });
+// });
+$( document ).ready(function() {
+    $('.tabs').tabs();
+});
+$(document).ready(function() {
+    var delay = 200;
+    
+    if ($('layout--index'.length)) {
+        $('html, body').addClass('overflow-hidden');
+        $(window).on("load", function() {
+            $('html, body').removeClass('overflow-hidden');
+            $('.component--loader').fadeOut(100);
+            startGallery();
+        });
+    }
+
+    function startGallery() {
+        var shots = $('.component--gallery').find('.col-4');
+        var numberShots = shots.length;
+        var randMap = [11, 9, 15, 8, 14, 6, 1, 22, 12, 5, 2, 7, 19, 21, 18, 3, 16, 10, 0, 13, 20, 17, 4, 23];
+        for (i = 0; i < numberShots; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    $(shots[randMap[i]]).animate({ opacity: 1 }, 1500);
+                    if (i == shots.length - 22) {
+                        renderOverlay();
+                    }
+                }, 100 * i);
+            })(i);
+        }
+    }
+
+    function renderOverlay() {
+        $('.hero--home__overlay').fadeIn(5000);
+        setTimeout(function() {
+            renderLogo();
+        }, 4000);
+    }
+
+    function renderLogo() {
+        $('.hero--home__overlay__content').fadeIn(500);
+        setTimeout(function() {
+            renderMenu();
+            renderSocials();
+            renderScroll();
+        }, 500);
+    }
+
+    function renderMenu() {
+        for (i = 0; i < $('.navigation--primary').find('a, span').length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    $($('.navigation--primary').find('a, span')[i]).fadeIn();
+                }, delay * i);
+            })(i);
+        }
+    }
+    function renderSocials() {
+        for (i = 0; i < $('.hero--home__overlay__social').find('img').length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    $($('.hero--home__overlay__social').find('img')[i]).fadeIn();
+                }, delay * i);
+            })(i);
+        }
+    }
+    function renderScroll() {
+        $('.component--scroll').fadeIn();
+    }
+});
